@@ -1,0 +1,14 @@
+# FS22 data (provided by the user)
+fs22-data-source/
+
+# Duże embeddingi / indexy
+*.bin
+*.npy
+*/full_index.sqlite
+
+# Python cache
+__pycache__/
+*.py[cod]
+
+# System files
+.DS_Store
