@@ -1,3 +1,8 @@
+-- RuntimeInspector.lua
+-- Command-based tool for exploring in-game data.
+-- Console prefix: ri*
+-- Global: g_ri
+
 ---@class RuntimeInspector
 RuntimeInspector = {}
 
@@ -10,16 +15,16 @@ RuntimeInspector.MAX_NODES     = 50000
 RuntimeInspector.WATCH_LIMIT   = 12
 RuntimeInspector.LOG_PREFIX    = "[RuntimeInspector] "
 
+-- Output directory mode (kept simple: modSettings only)
 RuntimeInspector.OUT_MODE            = "modSettings"
 RuntimeInspector.MOD_SETTINGS_FOLDER = "FS22_RuntimeInspector"
-RuntimeInspector.PER_SAVE_SUBFOLDER  = "documentation"
 
 -- =========================
 -- UTILS
 -- =========================
-local function logi(msg) Logging.info(RuntimeInspector.LOG_PREFIX .. msg) end
+local function logi(msg) Logging.info   (RuntimeInspector.LOG_PREFIX .. msg) end
 local function logw(msg) Logging.warning(RuntimeInspector.LOG_PREFIX .. msg) end
-local function loge(msg) Logging.error(RuntimeInspector.LOG_PREFIX .. msg) end
+local function loge(msg) Logging.error  (RuntimeInspector.LOG_PREFIX .. msg) end
 
 local function safeToString(v)
     local t = type(v)
@@ -27,8 +32,6 @@ local function safeToString(v)
         return string.format("table:%s", tostring(v):gsub("table: ", ""))
     elseif t == "function" then
         return "function"
-    elseif t == "userdata" then
-        return tostring(v)
     else
         return tostring(v)
     end
@@ -77,7 +80,7 @@ end
 
 function RuntimeInspector:getOutDir()
     if self.OUT_MODE == "modSettings" then
-        local base = g_modSettingsDirectory or (getUserProfileAppPath() .. RuntimeInspector.OUT_MODE .. "/")
+        local base = g_modSettingsDirectory or (getUserProfileAppPath() .. "modSettings/")
         local dir  = base .. self.MOD_SETTINGS_FOLDER .. "/"
         ensureDir(dir)
         return dir, nil
@@ -86,6 +89,19 @@ function RuntimeInspector:getOutDir()
     end
 end
 
+-- Expose small util bundle for submodules
+RuntimeInspector._util = {
+    logi = logi, logw = logw, loge = loge,
+    safeToString = safeToString,
+    split = split,
+    sortedPairs = sortedPairs,
+    isServer = isServer
+}
+
+-- =========================
+-- PATH RESOLUTION: "g_name.foo[3].bar"
+-- Returns: parent, key/index, value  (or nil, "error")
+-- =========================
 local function parseFragment(fragment)
     local name, idx = string.match(fragment, "^([_%w]+)%[(%d+)%]$")
     if name then
@@ -164,7 +180,7 @@ function RuntimeInspector:addWatch(path)
         return logw("Already watching: " .. path)
     end
     if #self.watchOrder >= self.WATCH_LIMIT then
-        return loge("watch limit reached (" .. tostring(self.WATCH_LIMIT) .. ")")
+        return loge("Watch limit reached (" .. tostring(self.WATCH_LIMIT) .. ")")
     end
     self.watchList[path] = true
     table.insert(self.watchOrder, path)
@@ -182,7 +198,6 @@ function RuntimeInspector:removeWatch(path)
     end
     logi("Unwatched: " .. path)
 end
-
 
 function RuntimeInspector:draw()
     if #self.watchOrder == 0 then return end
@@ -205,135 +220,7 @@ function RuntimeInspector:draw()
 end
 
 -- =========================
--- XML DUMP
--- =========================
-function RuntimeInspector:writeTable(xmlId, xmlPath, depth, visited, tbl, counters, state)
-    if depth <= 0 then
-        setXMLBool(xmlId, xmlPath .. "#maxDepthReached", true)
-        return
-    end
-    if state.nodes >= RuntimeInspector.MAX_NODES then
-        setXMLBool(xmlId, xmlPath .. "#maxNodesReached", true)
-        return
-    end
-
-    local addr = tostring(tbl)
-    if visited[addr] then
-        local basePath = xmlPath .. ".table"
-        counters[basePath] = (counters[basePath] or 0) + 1
-        local idx = counters[basePath] - 1
-        local childPath = basePath .. "(" .. idx .. ")"
-
-        setXMLString(xmlId, childPath .. "#key", tostring(visited.keys[addr]))
-        setXMLString(xmlId, childPath .. "#type", "table")
-        setXMLString(xmlId, childPath .. "#refAddress", addr)
-        setXMLBool  (xmlId, childPath .. "#alreadyRendered", true)
-        state.nodes = state.nodes + 1
-        return
-    end
-
-    visited[addr] = true
-
-    for k, v in sortedPairs(tbl) do
-        if state.nodes >= RuntimeInspector.MAX_NODES then break end
-        local t = type(v)
-        local nodeName = (t == "table") and "table" or "field"
-        local basePath = xmlPath .. "." .. nodeName
-        counters[basePath] = (counters[basePath] or 0) + 1
-        local idx = counters[basePath] - 1
-        local childPath = basePath .. "(" .. idx .. ")"
-
-        setXMLString(xmlId, childPath .. "#key", tostring(k))
-        setXMLString(xmlId, childPath .. "#type", t)
-        state.nodes = state.nodes + 1
-
-        if t == "table" then
-            if next(v) == nil then
-                setXMLBool(xmlId, childPath .. "#empty", true)
-            else
-                local childAddr = tostring(v)
-                visited.keys[childAddr] = k
-                self:writeTable(xmlId, childPath, depth - 1, visited, v, counters, state)
-            end
-        elseif t == "boolean" then
-            setXMLBool (xmlId, childPath .. "#value", v)
-        elseif t == "number" then
-            setXMLFloat(xmlId, childPath .. "#value", v)
-        elseif t == "string" then
-            setXMLString(xmlId, childPath .. "#value", v)
-        else
-            setXMLString(xmlId, childPath .. "#value", safeToString(v))
-        end
-    end
-end
-
-function RuntimeInspector:dumpXML(globalPath, depthArg, rootTag, fileNameBase)
-    if not globalPath then return loge("Usage: riDumpXML <globalPath> [depth] [rootTag] [fileName]") end
-
-    local parts = split(globalPath, "%.")
-    local rootName = table.remove(parts, 1)
-    local tbl = _G[rootName]
-    if tbl == nil then return loge("Global '" .. rootName .. "' not found") end
-
-    -- zejście po ścieżce (jeśli jest)
-    local current = tbl
-    for _, key in ipairs(parts) do
-        if type(current) ~= "table" or current[key] == nil then
-            return loge("Path '" .. key .. "' not valid in " .. safeToString(current))
-        end
-        current = current[key]
-    end
-
-    local depth = tonumber(depthArg) or RuntimeInspector.DEFAULT_DEPTH
-    if depth < 1 or depth > RuntimeInspector.MAX_DEPTH then
-        return loge("Depth must be in the range 1–" .. tostring(RuntimeInspector.MAX_DEPTH))
-    end
-
-    local dir, derr = self:getOutDir()
-    if not dir then return loge("Cannot resolve output dir: " .. tostring(derr)) end
-
-    local suffix      = table.concat(split(globalPath, "%."), "_")
-    local depthSuffix = string.format("_%02d", depth)
-    local fileName    = (fileNameBase and fileNameBase ~= "" and fileNameBase or suffix) .. depthSuffix .. ".xml"
-    local fullPath    = dir .. fileName
-
-    local tag = rootTag or "global"
-    local xmlId = createXMLFile("RuntimeInspectorDump", fullPath, tag)
-    if xmlId == 0 then return loge("Failed to create XML file: " .. fullPath) end
-
-    setXMLString(xmlId, tag .. "#name", globalPath)
-
-    if type(current) ~= "table" then
-        local leafKey = parts[#parts] or rootName
-        setXMLString(xmlId, tag .. ".field(0)#key", leafKey)
-        setXMLString(xmlId, tag .. ".field(0)#type", type(current))
-        local t = type(current)
-        if t == "boolean" then
-            setXMLBool(xmlId, tag .. ".field(0)#value", current)
-        elseif t == "number" then
-            setXMLFloat(xmlId, tag .. ".field(0)#value", current)
-        else
-            setXMLString(xmlId, tag .. ".field(0)#value", tostring(current))
-        end
-        saveXMLFile(xmlId); delete(xmlId)
-        return logi("DumpXML: saved scalar to " .. fullPath)
-    end
-
-    local visited = { keys = {} }
-    visited.keys[tostring(tbl)] = rootName
-
-    local counters = {}
-    local state = { nodes = 0 }
-    self:writeTable(xmlId, tag, depth, visited, current, counters, state)
-
-    setXMLInt(xmlId, tag .. "#nodeCount", state.nodes)
-    saveXMLFile(xmlId)
-    delete(xmlId)
-    logi(string.format("DumpXML: saved %d nodes to %s (rootTag=%s)", state.nodes, fullPath, tag))
-end
-
--- =========================
--- INSPEKCJA I WARTOŚCI
+-- INSPECT & VALUES
 -- =========================
 function RuntimeInspector:inspect(name, depthArg)
     if not name or name == "" then return loge("Usage: riInspect <g_name> [depth]") end
@@ -449,19 +336,47 @@ function RuntimeInspector:setValue(path, newValue)
     logi(string.format("Set %s: %s → %s", path, safeToString(old), safeToString(conv)))
 end
 
+-- More robust function finder:
 function RuntimeInspector:listFuncs(pattern)
-  pattern = pattern or "^(create|load|save|delete|getXML|setXML|file|addConsole|removeConsole|getUserProfileAppPath)"
+  -- If no pattern: use useful prefixes
   local names = {}
-  for k, v in pairs(_G) do
-    if type(k) == "string" and type(v) == "function" and string.match(k, pattern) then
-      table.insert(names, k)
-    end
+  if not pattern or pattern == "" then
+      local prefixes = {
+          "create","load","save","delete","getXML","setXML","file",
+          "addConsole","removeConsole","getUserProfileAppPath"
+      }
+      for k, v in pairs(_G) do
+          if type(k) == "string" and type(v) == "function" then
+              for _, pfx in ipairs(prefixes) do
+                  if string.sub(k, 1, #pfx) == pfx then
+                      table.insert(names, k)
+                      break
+                  end
+              end
+          end
+      end
+  else
+      -- Treat as plain substring by default; if user gives a Lua pattern, it still works.
+      for k, v in pairs(_G) do
+          if type(k) == "string" and type(v) == "function" then
+              local ok = false
+              -- plain find
+              if string.find(k, pattern, 1, true) then ok = true end
+              -- fallback to Lua pattern if it contains meta chars
+              if not ok and pattern:find("[%^%$%[%]%%().%*%+%-%?]") then
+                  local okMatch = pcall(function() return string.match(k, pattern) end)
+                  if okMatch then ok = string.match(k, pattern) ~= nil end
+              end
+              if ok then table.insert(names, k) end
+          end
+      end
   end
+
   table.sort(names)
   if #names == 0 then
-    return logw("No functions matched pattern: " .. pattern)
+    return logw("No functions matched pattern: " .. (pattern or "(default)"))
   end
-  logi("Functions matching /" .. pattern .. "/:")
+  logi("Functions matching " .. (pattern and ("/" .. pattern .. "/") or "(default prefixes)") .. ":")
   for _, n in ipairs(names) do logi("  " .. n) end
 end
 
@@ -471,38 +386,34 @@ function RuntimeInspector:outDir()
 end
 
 function RuntimeInspector:help()
-  logi("=== RuntimeInspector (RuntimeInspector) ===")
-  logi("riInspect <g_name> [depth]     - podgląd tabeli / wartości")
-  logi("riInspectAll [depth]           - lista g_* (depth 1–2)")
-  logi("riShow <path>                  - pokaż wartość (np. g_fieldManager.fields[1].fruitType)")
-  logi("riSet <path> <val>             - ustaw wartość (server/SP; bool/num/str)")
-  logi("riWatch <path> / riUnwatch     - HUD watch (limit " .. tostring(self.WATCH_LIMIT) .. ")")
-  logi("riDumpXML <globalPath> [d] [tag] [file] - eksport do XML (domyślnie d=" .. tostring(self.DEFAULT_DEPTH) .. ")")
-  logi("riOutDir                       - pokaż katalog wyjściowy")
-  logi("riFuncs [pattern]              - pokaż globalne funkcje pasujące do wzorca")
+  logi("=== RuntimeInspector ===")
+  logi("riInspect <g_name> [depth]       - inspect a table/value")
+  logi("riInspectAll [depth]             - list all g_* (depth 1–2)")
+  logi("riShow <path>                    - show value (e.g. g_fieldManager.fields[1].fruitType)")
+  logi("riSet <path> <value>             - set scalar (server/SP; bool/num/str)")
+  logi("riWatch <path> / riUnwatch       - HUD watch (limit " .. tostring(self.WATCH_LIMIT) .. ")")
+  logi("riDumpXML <globalPath> [d] [tag] [file] - export to XML values")
+  logi("riDumpSignature <globalPath> [depth] [file] - export type/signature XML")
+  logi("riOutDir                         - show resolved output directory")
+  logi("riFuncs [substring-or-pattern]   - list global functions")
+  logi("Example: riDumpXML g_currentMission 2")
 end
-
 
 -- =========================
 -- COMMAND REGISTRATION
 -- =========================
 function RuntimeInspector:register()
-    addConsoleCommand("riInspect",    "Inspect a g_* (table/value)",      "inspect",     self)
-    addConsoleCommand("riInspectAll", "List all g_* (optionally shallow)", "inspectAll",  self)
-    addConsoleCommand("riShow",       "Show value of a global path",       "showValue",   self)
-    addConsoleCommand("riSet",        "Set scalar value (server/SP)",      "setValue",    self)
-    addConsoleCommand("riWatch",      "Watch path on HUD",                 "addWatch",    self)
-    addConsoleCommand("riUnwatch",    "Stop watching path",                "removeWatch", self)
-    addConsoleCommand("riDumpXML",    "Dump nested path to XML",           "dumpXML",     self)
-    addConsoleCommand("riOutDir",     "Show resolved output directory",    "outDir",      self)
-    addConsoleCommand("riFuncs", "List global functions (optional Lua pattern)", "listFuncs", self)
-    addConsoleCommand("riHelp", "Show RuntimeInspector usage", "help", self)
-    addModEventListener(self) -- draw()
+    addConsoleCommand("riInspect",    "Inspect a g_* (table/value)",             "inspect",     self)
+    addConsoleCommand("riInspectAll", "List all g_* (optionally shallow)",       "inspectAll",  self)
+    addConsoleCommand("riShow",       "Show value of a global path",             "showValue",   self)
+    addConsoleCommand("riSet",        "Set scalar value (server/SP)",            "setValue",    self)
+    addConsoleCommand("riWatch",      "Watch path on HUD",                       "addWatch",    self)
+    addConsoleCommand("riUnwatch",    "Stop watching path",                      "removeWatch", self)
+    addConsoleCommand("riDumpXML",    "Dump nested path to XML",                 "dumpXML",     self) -- from ri_xml.lua
+    addConsoleCommand("riDumpSignature",    "Dump nested path to XML",           "dumpSignature",     self) -- from ri_xml.lua
+    addConsoleCommand("riOutDir",     "Show resolved output directory",          "outDir",      self)
+    addConsoleCommand("riFuncs",      "List global functions (substring/pattern)","listFuncs",   self)
+    addConsoleCommand("riHelp",       "Show RuntimeInspector usage",             "help",        self)
+    addModEventListener(self)
     logi("RuntimeInspector registered")
 end
-
--- =========================
--- BOOT
--- =========================
-g_ri = RuntimeInspector
-g_ri:register()
