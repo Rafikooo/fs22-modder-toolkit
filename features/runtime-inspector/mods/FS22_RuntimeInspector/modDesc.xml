@@ -16,5 +16,8 @@
 
     <extraSourceFiles>
         <sourceFile filename="scripts/RuntimeInspector.lua"/>
+        <sourceFile filename="scripts/SchemaDumper.lua"/>
+        <sourceFile filename="scripts/XmlDumper.lua"/>
+        <sourceFile filename="scripts/Init.lua"/>
     </extraSourceFiles>
 </modDesc>
