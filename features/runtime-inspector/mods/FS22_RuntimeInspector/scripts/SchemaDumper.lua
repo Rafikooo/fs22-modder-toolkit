@@ -106,35 +106,27 @@ function Sig:writeTableSchema(xmlId, xmlPath, tbl, depth, visited)
     end
     visited[addr] = true
 
-    local wrote, fieldIdx = 0, 0
+    local wrote, fieldIdx, tableIdx = 0, 0, 0
 
     for k, v in sortedPairs(tbl) do
-        if type(k) ~= "string" then
-            -- pomiń nie-stringowe klucze w mapie
-        else
-            if self.KEY_BLACKLIST and self.KEY_BLACKLIST[k] then
-                if self.EMIT_SKIPPED_PLACEHOLDER then
-                    writeSkippedPlaceholder(xmlId, xmlPath, fieldIdx, k, v)
-                    fieldIdx = fieldIdx + 1
-                    wrote = wrote + 1
-                end
+        if type(k) == "string" and not (self.KEY_BLACKLIST and self.KEY_BLACKLIST[k]) then
+            local tv = type(v)
+            if tv == "table" then
+                local childPath = string.format("%s.table(%d)", xmlPath, tableIdx)
+                setXMLString(xmlId, childPath .. "#name", k)
+                self:writeValueSchema(xmlId, childPath, v, depth - 1, visited)
+                tableIdx = tableIdx + 1
             else
-                local tv = type(v)
-                if tv == "table" then
-                    local childPath = string.format("%s.table(%d)", xmlPath, fieldIdx)
-                    setXMLString(xmlId, childPath .. "#name", k)
-                    self:writeValueSchema(xmlId, childPath, v, depth - 1, visited)
-                else
-                    writeField(xmlId, xmlPath, fieldIdx, k, tv)
-                end
+                local p = string.format("%s.field(%d)", xmlPath, fieldIdx)
+                setXMLString(xmlId, p .. "#name", k)
+                setXMLString(xmlId, p .. "#type", tv)
                 fieldIdx = fieldIdx + 1
-                wrote = wrote + 1
             end
-        end
-
-        if wrote >= self.MAX_FIELDS_PER_TABLE then
-            setXMLBool(xmlId, xmlPath .. "#childrenTruncated", true)
-            break
+            wrote = wrote + 1
+            if wrote >= self.MAX_FIELDS_PER_TABLE then
+                setXMLBool(xmlId, xmlPath .. "#childrenTruncated", true)
+                break
+            end
         end
     end
 end
@@ -148,26 +140,24 @@ function Sig:writeValueSchema(xmlId, xmlPath, val, depth, visited)
 
     if isArrayLike(val) then
         local arrPath = xmlPath .. ".array"
-        -- nazwa dziedziczona z rodzica (jeśli ustawiona wyżej)
-        local parentName = getXMLString(xmlId, xmlPath .. "#name") or ""
-        setXMLString(xmlId, arrPath .. "#name", parentName)
-        setXMLInt   (xmlId, arrPath .. "#lengthHint", arrayLengthLike(val))
+        local parentName = getXMLString(xmlId, xmlPath .. "#name")
+        if parentName and parentName ~= "" then
+            setXMLString(xmlId, arrPath .. "#name", parentName)
+        end
 
-        -- 1) policz typy elementów i czy są tam tabele
+        setXMLInt(xmlId,  arrPath .. "#lengthHint", arrayLengthLike(val))
+
         local keys       = sortedNumericKeys(val)
         local sampleKeys = pickEvenly(keys, self.SAMPLE_COUNT)
 
-        local elemTypeSet = nil
-        local sawTable    = false
+        local elemTypeSet, sawTable = nil, false
         for _, idx in ipairs(sampleKeys) do
-            local ev = val[idx]
-            local et = typeTag(ev)
+            local et = typeTag(val[idx])
             elemTypeSet = mergeTypeSets(elemTypeSet, et)
             if et == "table" then sawTable = true end
         end
         setXMLString(xmlId, arrPath .. "#elementType", elemTypeSet or "nil")
 
-        -- 2) jeśli elementy to tabele i mamy jeszcze budżet głębokości – zbuduj elementSchema
         if sawTable and depth > 0 then
             local merged, appear = {}, {}
             for _, idx in ipairs(sampleKeys) do
@@ -185,8 +175,8 @@ function Sig:writeValueSchema(xmlId, xmlPath, val, depth, visited)
                     end
                 end
             end
-            local elemPath, i = arrPath .. ".elementSchema", 0
-            for name, typ in pairs(merged) do
+            local i, elemPath = 0, arrPath .. ".elementSchema"
+            for name, typ in sortedPairs(merged) do
                 local f = string.format("%s.field(%d)", elemPath, i)
                 setXMLString(xmlId, f .. "#name", name)
                 setXMLString(xmlId, f .. "#type", typ)
