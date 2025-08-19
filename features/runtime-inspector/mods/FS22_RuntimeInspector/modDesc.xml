@@ -4,7 +4,7 @@
 
     <version>0.0.1.0</version>
 
-    <multiplayer supported="true" />
+    <multiplayer supported="true"/>
 
     <title>
         <en>Runtime Inspector</en>
@@ -18,7 +18,8 @@
         <sourceFile filename="scripts/Util.lua"/>
         <sourceFile filename="scripts/Path.lua"/>
         <sourceFile filename="scripts/Inspect.lua"/>
-        <sourceFile filename="scripts/Export.lua"/>
+        <sourceFile filename="scripts/ExportValues.lua"/>
+        <sourceFile filename="scripts/ExportSchema.lua"/>
         <sourceFile filename="scripts/HUD.lua"/>
         <sourceFile filename="scripts/RuntimeInspector.lua"/>
     </extraSourceFiles>

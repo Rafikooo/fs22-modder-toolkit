@@ -1,6 +1,4 @@
 -- Util.lua
--- Wspólne utilsy dla RuntimeInspector (logi, katalogi, sort, dopasowania, itp.)
-
 RuntimeInspector = RuntimeInspector or {}
 
 function RuntimeInspector.logi(msg) Logging.info   ((RuntimeInspector.LOG_PREFIX or "[RuntimeInspector] ") .. msg) end
@@ -35,7 +33,7 @@ end
 
 function RuntimeInspector.matches(name, patt)
     if not patt or patt == "" then return true end
-    if string.find(name, patt, 1, true) then return true end -- plain substring
+    if string.find(name, patt, 1, true) then return true end
     if patt:find("[%^%$%[%]%%().%*%+%-%?]") then
         local ok, res = pcall(string.match, name, patt)
         if ok and res then return true end

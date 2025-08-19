@@ -1,6 +1,3 @@
--- Path.lua
--- Rozwiązywanie ścieżek typu g_x.y[3].z + bezpieczne tostring
-
 RuntimeInspector = RuntimeInspector or {}
 
 function RuntimeInspector.safeToString(v)
@@ -29,7 +26,6 @@ function RuntimeInspector.resolvePath(path)
     if type(path) ~= "string" or path == "" then
         return nil, "Path must be non-empty string"
     end
-
     local parts = split(path, "%.")
     local root  = table.remove(parts, 1)
     local cur   = _G[root]

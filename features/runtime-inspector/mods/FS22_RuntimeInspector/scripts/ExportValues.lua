@@ -1,22 +1,18 @@
--- Export.lua
--- Eksport do XML: dumpXML (po ścieżce), dumpAll, dumpAllByPattern
-
+-- ExportValues.lua
+-- Zrzut wartości: dumpXML / dumpAll / dumpAllByPattern
 RuntimeInspector = RuntimeInspector or {}
 
-local logi, logw, loge = RuntimeInspector.logi, RuntimeInspector.logw, RuntimeInspector.loge
-
 local function sortedPairs(t)
-    -- używamy wspólnego utila, ale fallback dla bezpieczeństwa
     local it = RuntimeInspector.sortedPairs and RuntimeInspector.sortedPairs(t)
     if it then return it end
     local keys = {}
     for k,_ in pairs(t) do keys[#keys+1] = k end
     table.sort(keys, function(a,b) return tostring(a) < tostring(b) end)
-    local i = 0
+    local i=0
     return function() i=i+1; local k=keys[i]; if k~=nil then return k, t[k] end end
 end
 
-function RuntimeInspector.writeTable(xmlId, xmlPath, depth, visited, tbl, counters, state)
+function RuntimeInspector.writeValueTree(xmlId, xmlPath, depth, visited, tbl, counters, state)
     local maxNodes = RuntimeInspector.MAX_NODES or 50000
     if depth <= 0 then setXMLBool(xmlId, xmlPath .. "#maxDepthReached", true); return end
     if state.nodes >= maxNodes then setXMLBool(xmlId, xmlPath .. "#maxNodesReached", true); return end
@@ -46,7 +42,7 @@ function RuntimeInspector.writeTable(xmlId, xmlPath, depth, visited, tbl, counte
             if next(v) == nil then
                 setXMLBool(xmlId, p .. "#empty", true)
             else
-                RuntimeInspector.writeTable(xmlId, p, depth - 1, visited, v, counters, state)
+                RuntimeInspector.writeValueTree(xmlId, p, depth - 1, visited, v, counters, state)
             end
         elseif t == "boolean" then
             setXMLBool (xmlId, p .. "#value", v)
@@ -61,27 +57,25 @@ function RuntimeInspector.writeTable(xmlId, xmlPath, depth, visited, tbl, counte
 end
 
 function RuntimeInspector:dumpXML(globalPath, depthArg, rootTag, fileNameBase)
-    if not globalPath then return loge("Usage: riDumpXML <globalPath> [depth] [rootTag] [fileName]") end
+    if not globalPath then return self.loge("Usage: riDumpXML <globalPath> [depth] [rootTag] [fileName]") end
 
     local depth = tonumber(depthArg) or (self.DEFAULT_DEPTH or 1)
     local maxD  = self.MAX_DEPTH or 12
-    if depth < 1 or depth > maxD then return loge("Depth 1–" .. tostring(maxD)) end
+    if depth < 1 or depth > maxD then return self.loge("Depth 1–" .. tostring(maxD)) end
 
-    -- Rozwiąż path "g_x.y.z"
     local parts = {}
     for token in string.gmatch(globalPath, "[^%.]+") do parts[#parts+1] = token end
     local rootName = table.remove(parts, 1)
     local cur = _G[rootName]
-    if cur == nil then return loge("Global '" .. rootName .. "' not found") end
+    if cur == nil then return self.loge("Global '" .. rootName .. "' not found") end
     for _, key in ipairs(parts) do
-        if type(cur) ~= "table" or cur[key] == nil then return loge("Invalid path at '" .. key .. "'") end
+        if type(cur) ~= "table" or cur[key] == nil then return self.loge("Invalid path at '" .. key .. "'") end
         cur = cur[key]
     end
 
     local dir = self:getOutDir()
     local tag = rootTag or "global"
 
-    -- domyślna nazwa pliku
     local base
     if fileNameBase and fileNameBase ~= "" then
         base = fileNameBase
@@ -91,14 +85,13 @@ function RuntimeInspector:dumpXML(globalPath, depthArg, rootTag, fileNameBase)
         base = table.concat(segs, "_")
     end
 
-    -- jeśli base zawiera podfolder, upewnij się że istnieje
     local subd = base:match("(.+)/[^/]+$")
     if subd then self.ensureDir(dir .. subd .. "/") end
 
     local file  = base .. string.format("_%02d.xml", depth)
     local full  = dir .. file
     local xmlId = createXMLFile("RIDump", full, tag)
-    if xmlId == 0 then return loge("Failed to create XML file: " .. full) end
+    if xmlId == 0 then return self.loge("Failed to create XML file: " .. full) end
 
     setXMLString(xmlId, tag .. "#name", globalPath)
 
@@ -110,14 +103,14 @@ function RuntimeInspector:dumpXML(globalPath, depthArg, rootTag, fileNameBase)
         elseif t == "number" then setXMLFloat(xmlId, tag .. ".field(0)#value", cur)
         else setXMLString(xmlId, tag .. ".field(0)#value", tostring(cur)) end
         saveXMLFile(xmlId); delete(xmlId)
-        return logi("DumpXML: saved scalar to " .. full)
+        return self.logi("DumpXML: saved scalar to " .. full)
     end
 
     local visited, counters, state = {}, {}, { nodes = 0 }
-    RuntimeInspector.writeTable(xmlId, tag, depth, visited, cur, counters, state)
+    RuntimeInspector.writeValueTree(xmlId, tag, depth, visited, cur, counters, state)
     setXMLInt(xmlId, tag .. "#nodeCount", state.nodes)
     saveXMLFile(xmlId); delete(xmlId)
-    logi(string.format("DumpXML: saved %d nodes to %s", state.nodes, full))
+    self.logi(string.format("DumpXML: saved %d nodes to %s", state.nodes, full))
 end
 
 function RuntimeInspector:dumpAll(depthArg, folder, rootTag)
@@ -127,7 +120,7 @@ end
 function RuntimeInspector:dumpAllByPattern(depthArg, pattern, folder, rootTag)
     local depth = tonumber(depthArg) or (self.DEFAULT_DEPTH or 1)
     local maxD  = self.MAX_DEPTH or 12
-    if depth < 1 or depth > maxD then return loge("Depth 1–" .. tostring(maxD)) end
+    if depth < 1 or depth > maxD then return self.loge("Depth 1–" .. tostring(maxD)) end
 
     local pat       = (pattern == "*" and ".*") or pattern or "^g_"
     local subfolder = (folder and folder ~= "") and folder or "byRoot"
@@ -140,7 +133,7 @@ function RuntimeInspector:dumpAllByPattern(depthArg, pattern, folder, rootTag)
     end
     table.sort(keys)
 
-    if #keys == 0 then return logw("dumpAllByPattern: no matches for pattern=" .. tostring(pat)) end
+    if #keys == 0 then return self.logw("dumpAllByPattern: no matches for pattern=" .. tostring(pat)) end
 
     local done = 0
     for _, name in ipairs(keys) do
@@ -148,5 +141,5 @@ function RuntimeInspector:dumpAllByPattern(depthArg, pattern, folder, rootTag)
         self:dumpXML(name, depth, rootTag or "global", fileBase)
         done = done + 1
     end
-    logi(string.format("dumpAllByPattern: wrote %d files to %s", done, baseDir .. subfolder .. "/"))
+    self.logi(string.format("dumpAllByPattern: wrote %d files to %s", done, baseDir .. subfolder .. "/"))
 end
