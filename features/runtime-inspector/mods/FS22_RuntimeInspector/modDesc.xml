@@ -15,9 +15,11 @@
     </description>
 
     <extraSourceFiles>
+        <sourceFile filename="scripts/Util.lua"/>
+        <sourceFile filename="scripts/Path.lua"/>
+        <sourceFile filename="scripts/Inspect.lua"/>
+        <sourceFile filename="scripts/Export.lua"/>
+        <sourceFile filename="scripts/HUD.lua"/>
         <sourceFile filename="scripts/RuntimeInspector.lua"/>
-        <sourceFile filename="scripts/SchemaDumper.lua"/>
-        <sourceFile filename="scripts/XmlDumper.lua"/>
-        <sourceFile filename="scripts/Init.lua"/>
     </extraSourceFiles>
 </modDesc>
