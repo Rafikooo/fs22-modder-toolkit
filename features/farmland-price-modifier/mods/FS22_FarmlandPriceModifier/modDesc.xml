@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8" standalone="no" ?>
+<modDesc descVersion="80">
+    <author>Rafikooo</author>
+
+    <version>0.0.1.0</version>
+
+    <multiplayer supported="true"/>
+
+    <title>
+        <en>Farmland Price Modifier</en>
+        <pl>Modyfikator Ceny Farmlandu</pl>
+    </title>
+
+    <description>
+        <en>Adds console commands to set per-farmland price multiplier.</en>
+        <pl>Dodaje komendy konsoli zmieniające cenę farmlandu przez mnożnik.</pl>
+    </description>
+
+    <extraSourceFiles>
+        <sourceFile filename="scripts/farmlandPriceModifier.lua"/>
+    </extraSourceFiles>
+</modDesc>
