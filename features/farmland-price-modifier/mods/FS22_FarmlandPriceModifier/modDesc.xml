@@ -18,5 +18,6 @@
 
     <extraSourceFiles>
         <sourceFile filename="scripts/farmlandPriceModifier.lua"/>
+        <sourceFile filename="scripts/farmlandCropInfo.lua"/>
     </extraSourceFiles>
 </modDesc>
