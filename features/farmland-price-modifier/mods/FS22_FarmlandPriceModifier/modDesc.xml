@@ -17,7 +17,10 @@
     </description>
 
     <extraSourceFiles>
+        <sourceFile filename="scripts/utils.lua"/>
         <sourceFile filename="scripts/farmlandPriceModifier.lua"/>
-        <sourceFile filename="scripts/farmlandCropInfo.lua"/>
+        <sourceFile filename="scripts/market.lua"/>
+        <sourceFile filename="scripts/cropSurvey.lua"/>
+        <sourceFile filename="scripts/valuation.lua"/>
     </extraSourceFiles>
 </modDesc>
