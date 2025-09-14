@@ -1,10 +1,7 @@
--- scripts/cropSurvey.lua
-CropSurvey = CropSurvey or {}
+FarmlandCropProvider = FarmlandCropProvider or {}
 local L = FPM and FPM.log or { info=print, warn=print, err=print }
 
--- Zwraca: fruitIdx (lub nil), dominantAreaHa, totalAreaHa
-function CropSurvey:scanFarmlandCrops(farmlandId)
-  FpmUtils.assertf("CropSurvey", g_fieldManager ~= nil, "g_fieldManager nil")
+function FarmlandCropProvider:scanFarmlandCrops(farmlandId)
   local fields = g_fieldManager:getFields() or {}
 
   local areaByFruit, totalArea = {}, 0
@@ -17,7 +14,6 @@ function CropSurvey:scanFarmlandCrops(farmlandId)
 
       local fruit = field and field.fruitType
       if fruit == nil and g_fieldManager.findFieldFruit ~= nil then
-        -- odśwież bieżącą uprawę pola (po gsFieldSetFruit)
         pcall(function() g_fieldManager:findFieldFruit(field) end)
         fruit = field and field.fruitType
       end
@@ -36,13 +32,9 @@ function CropSurvey:scanFarmlandCrops(farmlandId)
   return bestFruit, bestArea, totalArea
 end
 
--- Console
-function CropSurvey:consoleGetFarmlandCrop(farmlandIdStr)
+function FarmlandCropProvider:consoleGetFarmlandCrop(farmlandIdStr)
   local id = tonumber(farmlandIdStr or "")
   if id == nil then return "Usage: fpmGetFarmlandCrop <farmlandId>" end
-
-  FpmUtils.assertf("CropSurvey", g_farmlandManager ~= nil, "g_farmlandManager nil")
-  FpmUtils.assertf("CropSurvey", g_farmlandManager:getIsValidFarmlandId(id), "Invalid farmlandId")
 
   local fruitIdx, cropAreaHa, totalAreaHa = self:scanFarmlandCrops(id)
   if fruitIdx == nil then
@@ -61,19 +53,19 @@ function CropSurvey:consoleGetFarmlandCrop(farmlandIdStr)
   )
 end
 
-function CropSurvey:loadMap()
+function FarmlandCropProvider:loadMap()
   addConsoleCommand(
     "fpmGetFarmlandCrop",
     "Shows dominant crop and its area: fpmGetFarmlandCrop <id>",
     "consoleGetFarmlandCrop",
     self
   )
-  L.info("CropSurvey ready")
+  L.info("FarmlandCropProvider ready")
 end
 
-function CropSurvey:deleteMap()
+function FarmlandCropProvider:deleteMap()
   removeConsoleCommand("fpmGetFarmlandCrop")
-  L.info("CropSurvey unloaded")
+  L.info("FarmlandCropProvider unloaded")
 end
 
-addModEventListener(CropSurvey)
+addModEventListener(FarmlandCropProvider)
