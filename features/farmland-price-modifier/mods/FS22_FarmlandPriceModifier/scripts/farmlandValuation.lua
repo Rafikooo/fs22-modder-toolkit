@@ -58,10 +58,7 @@ local function fruitToFillTypeIndex(fruitIdx)
 end
 
 local function computeCropValueEuro(farmlandId)
-  FpmUtils.assertf("FarmlandValuation", Market and Market.getMedianPrice, "Market module missing")
-  FpmUtils.assertf("FarmlandValuation", CropSurvey and CropSurvey.scanFarmlandCrops, "CropSurvey module missing")
-
-  local fruitIdx, areaHa = CropSurvey:scanFarmlandCrops(farmlandId)
+  local fruitIdx, areaHa = FarmlandCropProvider:scanFarmlandCrops(farmlandId)
   if fruitIdx == nil or (areaHa or 0) <= 0 then
     return 0, nil
   end
@@ -72,7 +69,7 @@ local function computeCropValueEuro(farmlandId)
   FpmUtils.assertf("FarmlandValuation", type(lps)=="number" and lps>=0, "literPerSqm missing for fruit "..tostring(fruitIdx))
 
   local liters = areaHa * 10000 * lps
-  local pricePerLiter = Market.getMedianPrice(fillTypeIndex)
+  local pricePerLiter = CropPricesResolver.getMedianPrice(fillTypeIndex)
 
   local value = liters * pricePerLiter
   return FpmUtils.round(value), fruitDesc
