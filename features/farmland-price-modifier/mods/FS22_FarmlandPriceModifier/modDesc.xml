@@ -21,6 +21,6 @@
         <sourceFile filename="scripts/farmlandPriceModifier.lua"/>
         <sourceFile filename="scripts/market.lua"/>
         <sourceFile filename="scripts/farmlandCropProvider.lua"/>
-        <sourceFile filename="scripts/valuation.lua"/>
+        <sourceFile filename="scripts/farmlandValuation.lua"/>
     </extraSourceFiles>
 </modDesc>

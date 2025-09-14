@@ -1,5 +1,4 @@
--- scripts/valuation.lua
-Valuation = Valuation or {}
+FarmlandValuation = FarmlandValuation or {}
 local L = FPM and FPM.log or { info=print, warn=print, err=print }
 
 -- stan przywracania (po fpmReprice)
@@ -8,10 +7,10 @@ local _snapshots = {}  -- [farmlandId] = { fixedPrice=?, priceFactor=? }
 -- --- lokalne helpery domenowe ----------------------------------------------
 
 local function getFarmlandChecked(id)
-  FpmUtils.assertf("Valuation", g_farmlandManager ~= nil, "g_farmlandManager nil")
-  FpmUtils.assertf("Valuation", g_farmlandManager:getIsValidFarmlandId(id), "invalid farmlandId")
+  FpmUtils.assertf("FarmlandValuation", g_farmlandManager ~= nil, "g_farmlandManager nil")
+  FpmUtils.assertf("FarmlandValuation", g_farmlandManager:getIsValidFarmlandId(id), "invalid farmlandId")
   local f = g_farmlandManager:getFarmlandById(id)
-  FpmUtils.assertf("Valuation", f ~= nil, "farmland not found: "..tostring(id))
+  FpmUtils.assertf("FarmlandValuation", f ~= nil, "farmland not found: "..tostring(id))
   return f
 end
 
@@ -24,10 +23,10 @@ local function getBasePriceAndMeta(id)
   if type(price) ~= "number" then
     -- brak wyliczonej ceny – policz z PPH * ha * factor (jawna formuła)
     local pph = g_farmlandManager:getPricePerHa()
-    FpmUtils.assertf("Valuation", type(pph)=="number" and pph>0, "pricePerHa unavailable")
+    FpmUtils.assertf("FarmlandValuation", type(pph)=="number" and pph>0, "pricePerHa unavailable")
 
     local ha = f.areaInHa
-    FpmUtils.assertf("Valuation", type(ha)=="number" and ha>0, "farmland area missing")
+    FpmUtils.assertf("FarmlandValuation", type(ha)=="number" and ha>0, "farmland area missing")
 
     local factor = f.priceFactor or 1
     price = pph * ha * factor
@@ -45,22 +44,22 @@ local function getBasePriceAndMeta(id)
 end
 
 local function fruitToFillTypeIndex(fruitIdx)
-  FpmUtils.assertf("Valuation", g_fruitTypeManager ~= nil, "g_fruitTypeManager nil")
+  FpmUtils.assertf("FarmlandValuation", g_fruitTypeManager ~= nil, "g_fruitTypeManager nil")
   local desc = g_fruitTypeManager:getFruitTypeByIndex(fruitIdx)
-  FpmUtils.assertf("Valuation", desc ~= nil, "unknown fruit idx "..tostring(fruitIdx))
+  FpmUtils.assertf("FarmlandValuation", desc ~= nil, "unknown fruit idx "..tostring(fruitIdx))
 
   local ft = desc.fillTypeIndex
   if type(ft) ~= "number" then
-    FpmUtils.assertf("Valuation", g_fillTypeManager ~= nil, "g_fillTypeManager nil")
+    FpmUtils.assertf("FarmlandValuation", g_fillTypeManager ~= nil, "g_fillTypeManager nil")
     ft = g_fillTypeManager:getFillTypeIndexByName(desc.name)
   end
-  FpmUtils.assertf("Valuation", type(ft)=="number", "fillTypeIndex missing on fruit "..tostring(fruitIdx))
+  FpmUtils.assertf("FarmlandValuation", type(ft)=="number", "fillTypeIndex missing on fruit "..tostring(fruitIdx))
   return ft, desc
 end
 
 local function computeCropValueEuro(farmlandId)
-  FpmUtils.assertf("Valuation", Market and Market.getMedianPrice, "Market module missing")
-  FpmUtils.assertf("Valuation", CropSurvey and CropSurvey.scanFarmlandCrops, "CropSurvey module missing")
+  FpmUtils.assertf("FarmlandValuation", Market and Market.getMedianPrice, "Market module missing")
+  FpmUtils.assertf("FarmlandValuation", CropSurvey and CropSurvey.scanFarmlandCrops, "CropSurvey module missing")
 
   local fruitIdx, areaHa = CropSurvey:scanFarmlandCrops(farmlandId)
   if fruitIdx == nil or (areaHa or 0) <= 0 then
@@ -70,7 +69,7 @@ local function computeCropValueEuro(farmlandId)
   local fillTypeIndex, fruitDesc = fruitToFillTypeIndex(fruitIdx)
 
   local lps = fruitDesc.literPerSqm or fruitDesc.litersPerSqm
-  FpmUtils.assertf("Valuation", type(lps)=="number" and lps>=0, "literPerSqm missing for fruit "..tostring(fruitIdx))
+  FpmUtils.assertf("FarmlandValuation", type(lps)=="number" and lps>=0, "literPerSqm missing for fruit "..tostring(fruitIdx))
 
   local liters = areaHa * 10000 * lps
   local pricePerLiter = Market.getMedianPrice(fillTypeIndex)
@@ -80,14 +79,19 @@ local function computeCropValueEuro(farmlandId)
 end
 
 local function applyFixedPrice(farmland, newPrice)
-  FpmUtils.assertf("Valuation", type(newPrice)=="number" and newPrice>=0, "applyFixedPrice bad value")
-  farmland.fixedPrice = newPrice
+  FpmUtils.assertf("FarmlandValuation", type(newPrice)=="number" and newPrice>=0, "applyFixedPrice bad value")
+  if self.fixedPrice ~= nil then
+    farmland.fixedPrice = newPrice
+  else
+    farmland.price = newPrice
+  end
+
   if farmland.updatePrice ~= nil then farmland:updatePrice() end
 end
 
 -- --- Console: fpmGetFarmlandPrice ------------------------------------------
 
-function Valuation:consoleGetFarmlandPrice(farmlandIdStr)
+function FarmlandValuation:consoleGetFarmlandPrice(farmlandIdStr)
   local id = tonumber(farmlandIdStr or "")
   if id == nil then return "Usage: fpmGetFarmlandPrice <farmlandId>" end
 
@@ -103,7 +107,7 @@ end
 
 -- --- Console: fpmValue (base + crop) ---------------------------------------
 
-function Valuation:consoleValue(farmlandIdStr)
+function FarmlandValuation:consoleValue(farmlandIdStr)
   local id = tonumber(farmlandIdStr or "")
   if id == nil then return "Usage: fpmValue <farmlandId>" end
 
@@ -119,7 +123,7 @@ end
 
 -- --- Console: fpmReprice (ustaw cenę = base + crop) ------------------------
 
-function Valuation:consoleReprice(farmlandIdStr)
+function FarmlandValuation:consoleReprice(farmlandIdStr)
   local id = tonumber(farmlandIdStr or "")
   if id == nil then return "Usage: fpmReprice <farmlandId>" end
 
@@ -132,7 +136,7 @@ function Valuation:consoleReprice(farmlandIdStr)
     _snapshots[id] = { fixedPrice = farmland.fixedPrice, priceFactor = farmland.priceFactor }
   end
 
-  applyFixedPrice(farmland, newPrice)
+  farmland.price = newPrice
 
   print(string.format("[FarmlandReprice] id=%d base=%d crop=%d new=%d", id, FpmUtils.round(base), FpmUtils.round(crop), FpmUtils.round(newPrice)))
   print(string.format("base=%d, crop=%d, new=%d", FpmUtils.round(base), FpmUtils.round(crop), FpmUtils.round(newPrice)))
@@ -144,7 +148,7 @@ end
 
 local function restoreOne(id)
   local snap = _snapshots[id]
-  FpmUtils.assertf("Valuation", snap ~= nil, "no state to restore")
+  FpmUtils.assertf("FarmlandValuation", snap ~= nil, "no state to restore")
 
   local f = getFarmlandChecked(id)
   f.fixedPrice  = snap.fixedPrice
@@ -154,40 +158,58 @@ local function restoreOne(id)
   _snapshots[id] = nil
 end
 
-function Valuation:consoleClear(arg)
-  if arg == nil or arg == "" then return "Usage: fpmClear <farmlandId|all>" end
+function FarmlandValuation.consoleClear(arg)
+  -- fpmClear all
   if arg == "all" then
-    local hadAny = false
-    for id, _ in pairs(_snapshots) do
-      hadAny = true
-      restoreOne(id)
+    local restored = 0
+    for id, snap in pairs(FarmlandValuation._snapshots) do
+      FpmUtils.restorePricing(id, snap)
+      FarmlandValuation._snapshots[id] = nil
+      restored = restored + 1
     end
-    FpmUtils.assertf("Valuation", hadAny, "no state to restore")
-    return "Restored all"
+    if restored == 0 then
+      return "Nothing to restore: no farmlands were repriced in this session."
+    end
+    return ("Restored pricing for %d farmland(s)."):format(restored)
   end
 
-  local id = tonumber(arg or "")
-  if id == nil then return "Usage: fpmClear <farmlandId|all>" end
-  restoreOne(id)
-  return string.format("Restored %d", id)
+  -- fpmClear <id>
+  local id = tonumber(arg)
+  if not id then
+    return "Usage: fpmClear <farmlandId|all>"
+  end
+
+  -- Walidacja ID bez wywalania metod (żeby nie polecieć na asercjach)
+  if not (g_farmlandManager and g_farmlandManager:getIsValidFarmlandId(id)) then
+    return ("Invalid farmlandId: %s"):format(tostring(arg))
+  end
+
+  local snap = FarmlandValuation._snapshots[id]
+  if not snap then
+    return ("Nothing to restore for farmland %d (run fpmReprice %d first)."):format(id, id)
+  end
+
+  FpmUtils.restorePricing(id, snap)
+  FarmlandValuation._snapshots[id] = nil
+  return ("Restored pricing for farmland %d."):format(id)
 end
 
 -- --- lifecycle -------------------------------------------------------------
 
-function Valuation:loadMap()
+function FarmlandValuation:loadMap()
   addConsoleCommand("fpmGetFarmlandPrice", "Shows base farmland price", "consoleGetFarmlandPrice", self)
   addConsoleCommand("fpmValue",            "Shows base + crop value",   "consoleValue",            self)
   addConsoleCommand("fpmReprice",          "Sets fixed price = base+crop", "consoleReprice",       self)
   addConsoleCommand("fpmClear",            "Restores former pricing",   "consoleClear",            self)
-  L.info("Valuation ready")
+  L.info("FarmlandValuation ready")
 end
 
-function Valuation:deleteMap()
+function FarmlandValuation:deleteMap()
   removeConsoleCommand("fpmGetFarmlandPrice")
   removeConsoleCommand("fpmValue")
   removeConsoleCommand("fpmReprice")
   removeConsoleCommand("fpmClear")
-  L.info("Valuation unloaded")
+  L.info("FarmlandValuation unloaded")
 end
 
-addModEventListener(Valuation)
+addModEventListener(FarmlandValuation)
