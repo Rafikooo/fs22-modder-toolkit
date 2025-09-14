@@ -1,5 +1,4 @@
--- scripts/market.lua
-Market = Market or {}
+CropPricesResolver = CropPricesResolver or {}
 local L = FPM and FPM.log or { info=print, warn=print, err=print }
 
 -- --- lokalne helpery domenowe ----------------------------------------------
@@ -8,10 +7,10 @@ local function resolveFillTypeIndex(userInput)
   if userInput == nil or userInput == "" then return nil end
   local idx = tonumber(userInput)
   if idx ~= nil then return idx end
-  FpmUtils.assertf("Market", g_fillTypeManager ~= nil, "g_fillTypeManager nil")
+  FpmUtils.assertf("CropPricesResolver", g_fillTypeManager ~= nil, "g_fillTypeManager nil")
   local upper = string.upper(tostring(userInput))
   local ft = g_fillTypeManager:getFillTypeIndexByName(upper)
-  FpmUtils.assertf("Market", ft ~= nil, "Unknown fillType name: "..tostring(userInput))
+  FpmUtils.assertf("CropPricesResolver", ft ~= nil, "Unknown fillType name: "..tostring(userInput))
   return ft
 end
 
@@ -43,8 +42,8 @@ end
 
 -- --- API: median price ------------------------------------------------------
 
-function Market.getMedianPrice(fillTypeIndex)
-  FpmUtils.assertf("Market", type(fillTypeIndex)=="number", "getMedianPrice: bad fillTypeIndex")
+function CropPricesResolver.getMedianPrice(fillTypeIndex)
+  FpmUtils.assertf("CropPricesResolver", type(fillTypeIndex)=="number", "getMedianPrice: bad fillTypeIndex")
   local unloadingStations =
     (g_currentMission and g_currentMission.storageSystem and g_currentMission.storageSystem.unloadingStations)
     or {}
@@ -56,13 +55,13 @@ function Market.getMedianPrice(fillTypeIndex)
       if type(ppl) == "number" then table.insert(prices, ppl) end
     end
   end
-  FpmUtils.assertf("Market", #prices > 0, "No selling stations for fillType "..tostring(fillTypeIndex))
+  FpmUtils.assertf("CropPricesResolver", #prices > 0, "No selling stations for fillType "..tostring(fillTypeIndex))
   return FpmUtils.median(prices) -- per liter
 end
 
 -- --- Console: fpmPrices -----------------------------------------------------
 
-function Market:listPrices(userFillType)
+function CropPricesResolver:listPrices(userFillType)
   local fillTypeIndex = tonumber(userFillType) or resolveFillTypeIndex(userFillType)
   if not fillTypeIndex then
     return "Usage: fpmPrices <FILLTYPE_NAME|INDEX>"
@@ -99,14 +98,14 @@ function Market:listPrices(userFillType)
   return string.format("Stations: %d, median=%d /1000L", #rows, FpmUtils.round(med * 1000))
 end
 
-function Market:loadMap()
+function CropPricesResolver:loadMap()
   addConsoleCommand("fpmPrices", "List station prices + median: fpmPrices <FILLTYPE>", "listPrices", self)
-  L.info("Market ready")
+  L.info("CropPricesResolver ready")
 end
 
-function Market:deleteMap()
+function CropPricesResolver:deleteMap()
   removeConsoleCommand("fpmPrices")
-  L.info("Market unloaded")
+  L.info("CropPricesResolver unloaded")
 end
 
-addModEventListener(Market)
+addModEventListener(CropPricesResolver)

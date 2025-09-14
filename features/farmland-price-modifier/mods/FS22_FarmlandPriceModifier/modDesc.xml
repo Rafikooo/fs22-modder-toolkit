@@ -19,7 +19,7 @@
     <extraSourceFiles>
         <sourceFile filename="scripts/utils.lua"/>
         <sourceFile filename="scripts/farmlandPriceModifier.lua"/>
-        <sourceFile filename="scripts/market.lua"/>
+        <sourceFile filename="scripts/cropPricesResolver.lua"/>
         <sourceFile filename="scripts/farmlandCropProvider.lua"/>
         <sourceFile filename="scripts/farmlandValuation.lua"/>
     </extraSourceFiles>
