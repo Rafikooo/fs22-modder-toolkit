@@ -1,0 +1,330 @@
+---
+title: g_currentMission
+description: Global g_currentMission - Runtime introspected API
+---
+
+# g_currentMission
+
+Runtime-introspected API for `g_currentMission`.
+
+**Source**: session_2025_11_10_11 (depth 3)  
+**Fields**: 227 top-level fields
+
+## Overview
+
+The `g_currentMission` global contains the following structure:
+
+## Fields
+
+- **accessHandler**: `table`
+- **achievementManager**: `global-ref` → [`g_achievementManager`](../globals/g_achievementManager.md)
+- **activatableObjectsSystem**: `table`
+  - **actionEventId**: `string`
+  - **currentActivatableObject**: `table`
+    - **activateText**: `string`
+    - **placeable**: `Placeable`
+  - **inputContext**: `string`
+  - **isActive**: `boolean`
+  - **mission**: `table`
+  - **objects**: `reverse-hash-map`
+  - **posX**: `number`
+  - **posY**: `number`
+  - **posZ**: `number`
+- **aiJobTypeManager**: `table`
+  - **classObjectToIndex**: `reverse-hash-map`
+  - **isServer**: `boolean`
+  - **jobTypes**: `table[]` (length: 10)
+  - **nameToIndex**: `table`
+    - **BALE_FINDER_CP**: `number`
+    - **BUNKER_SILO_CP**: `number`
+    - **COMBINE_UNLOADER_CP**: `number`
+    - **CONVEYOR**: `number`
+    - **DELIVER**: `number`
+    - **FIELDWORK**: `number`
+    - **FIELDWORK_CP**: `number`
+    - **GOTO**: `number`
+    - **LOAD_AND_DELIVER**: `number`
+    - **SILO_LOADER_CP**: `number`
+- **aiMessageManager**: `table`
+  - **classObjectToIndex**: `reverse-hash-map`
+  - **messages**: `table[]` (length: 30)
+  - **nameToIndex**: `table`
+    - **CP_ERROR**: `number`
+    - **CP_ERROR_AUTOMATIC_CUTTER_ATTACH_NOT_ACTIVE**: `number`
+    - **CP_ERROR_CUTTER_NOT_SUPPORTED**: `number`
+    - **CP_ERROR_FULL**: `number`
+    - **CP_ERROR_GROUND_UNLOAD_NOT_SUPPORTED**: `number`
+    - **CP_ERROR_NO_PATH_FOUND**: `number`
+    - **CP_ERROR_WRONG_MISSION_FRUIT_TYPE**: `number`
+    - **CP_ERROR_WRONG_WRAP_TYPE**: `number`
+    - **ERROR_BLOCKED_BY_OBJECT**: `number`
+    - **ERROR_COULD_NOT_PREPARE**: `number`
+    - *...and 20 more fields*
+- **aiSystem**: `table`
+  - **activeJobVehicles**: `table`
+  - **activeJobs**: `table`
+  - **aiDrivableCollisionMask**: `number`
+  - **cellSizeMeters**: `number`
+  - **debug**: `table`
+    - **colors**: `table`
+    - **isCostRenderingActive**: `boolean`
+    - **marker**: `number`
+  - **debugEnabled**: `boolean`
+  - **defaultVehicleMaxTurningRadius**: `number`
+  - **defaultVehicleMaxWidth**: `number`
+  - **delayedRoadSplines**: `table`
+  - **filename**: `string`
+  - *...and 12 more fields*
+- **ambientSoundSystem**: `table`
+  - **baseDirectory**: `string`
+  - **isDebugViewActive**: `boolean`
+  - **isDeleted**: `boolean`
+  - **mission**: `table`
+  - **modifiers**: `table[]` (length: 25)
+  - **movingSounds**: `table[]` (length: 3)
+  - **samples**: `table[]` (length: 35)
+  - **setIsIndoorModifier**: `function`
+  - **sound3DRootNode**: `number`
+  - **soundPlayerId**: `number`
+  - *...and 2 more fields*
+- **animalFoodSystem**: `table`
+  - **animalFood**: `table[]` (length: 5)
+  - **animalMixtures**: `map`
+  - **animalTypeIndexToFood**: `table[]` (length: 5)
+  - **indexToAnimalFood**: `table[]` (length: 5)
+  - **mission**: `table`
+  - **mixtureFillTypeIndexToMixture**: `map`
+  - **mixtures**: `table[]` (length: 1)
+  - **recipeFillTypeIndexToRecipe**: `map`
+  - **recipes**: `table[]` (length: 1)
+- **animalNameSystem**: `table`
+  - **mission**: `table`
+  - **names**: `string[]` (length: 254)
+- **animalSystem**: `table`
+  - **fillTypeIndexToSubType**: `map`
+  - **isServer**: `boolean`
+  - **mission**: `table`
+  - **nameToSubType**: `table`
+    - **CHICKEN**: `table`
+    - **CHICKEN_ROOSTER**: `table`
+    - **COW_ANGUS**: `table`
+    - **COW_HOLSTEIN**: `table`
+    - **COW_LIMOUSIN**: `table`
+    - **COW_SWISS_BROWN**: `table`
+    - **HORSE_BAY**: `table`
+    - **HORSE_BLACK**: `table`
+    - **HORSE_CHESTNUT**: `table`
+    - **HORSE_DUN**: `table`
+    - *...and 11 more fields*
+  - **nameToSubTypeIndex**: `table`
+    - **CHICKEN**: `number`
+    - **CHICKEN_ROOSTER**: `number`
+    - **COW_ANGUS**: `number`
+    - **COW_HOLSTEIN**: `number`
+    - **COW_LIMOUSIN**: `number`
+    - **COW_SWISS_BROWN**: `number`
+    - **HORSE_BAY**: `number`
+    - **HORSE_BLACK**: `number`
+    - **HORSE_CHESTNUT**: `number`
+    - **HORSE_DUN**: `number`
+    - *...and 11 more fields*
+  - **nameToType**: `table`
+    - **CHICKEN**: `table`
+    - **COW**: `table`
+    - **HORSE**: `table`
+    - **PIG**: `table`
+    - **SHEEP**: `table`
+  - **nameToTypeIndex**: `table`
+    - **CHICKEN**: `number`
+    - **COW**: `number`
+    - **HORSE**: `number`
+    - **PIG**: `number`
+    - **SHEEP**: `number`
+  - **subTypeIndexToAnimalData**: `table`
+  - **subTypes**: `table[]` (length: 21)
+  - **typeIndexToName**: `string[]` (length: 5)
+  - *...and 1 more fields*
+- **areaCompressionParams**: `table`
+  - **numBits**: `number`
+  - **scale**: `number`
+  - **worldOffset**: `number`
+  - **worldSize**: `number`
+- **areaRelativeCompressionParams**: `table`
+  - **numBits**: `number`
+  - **scale**: `number`
+  - **worldOffset**: `number`
+  - **worldSize**: `number`
+- **attachables**: `table[]` (length: 20)
+- **baseDirectory**: `string`
+- **beehiveSystem**: `table`
+  - **beehivePalletSpawners**: `table`
+  - **beehives**: `table`
+  - **beehivesSortedRadius**: `table`
+  - **currentSpawnerUpdateIndex**: `number`
+  - **isFxActive**: `boolean`
+  - **isProductionActive**: `boolean`
+  - **lastTimeNoSpawnerWarningDisplayed**: `number`
+  - **mission**: `table`
+  - **updateCooldown**: `number`
+- **benchmark**: `table`
+  - **hasFinished**: `boolean`
+  - **isRunning**: `boolean`
+- **blockedIps**: `table`
+- **cameraPathIsPlaying**: `boolean`
+- **cameraPaths**: `table`
+- **cancelLoading**: `boolean`
+- **checkRecordingDeviceTimer**: `number`
+- **client**: `global-ref` → [`g_client`](../globals/g_client.md)
+- **collectiblesSystem**: `table`
+  - **achievementName**: `string`
+  - **collected**: `boolean[]` (length: 12)
+  - **collectibleIndexToName**: `string[]` (length: 12)
+  - **collectibles**: `table`
+    - **cheese0**: `table`
+    - **cheese1**: `table`
+    - **cheese10**: `table`
+    - **cheese11**: `table`
+    - **cheese2**: `table`
+    - **cheese3**: `table`
+    - **cheese4**: `table`
+    - **cheese5**: `table`
+    - **cheese6**: `table`
+    - **cheese7**: `table`
+    - *...and 2 more fields*
+  - **groups**: `table`
+    - **default**: `table`
+  - **hotspotThreshold**: `number`
+  - **isActive**: `boolean`
+  - **isComplete**: `boolean`
+  - **isServer**: `boolean`
+  - **target**: `table`
+    - **node**: `number`
+- **connectedToDedicatedServer**: `boolean`
+- **connectionWasAccepted**: `boolean`
+- **connectionWasClosed**: `boolean`
+- **connectionsToPlayer**: `reverse-hash-map`
+- **controlPlayer**: `boolean`
+- **controlledVehicles**: `table`
+- **cullingWorldMaxY**: `number`
+- **cullingWorldMinY**: `number`
+- **cullingWorldXZOffset**: `number`
+- **currentDeviceHasNoSpace**: `boolean`
+- **cuttingSounds**: `table`
+  - **tree**: `table`
+    - **addedBaseFileToRandomizations**: `boolean`
+    - **audioGroup**: `number`
+    - **current**: `table`
+    - **debug**: `boolean`
+    - **duration**: `number`
+    - **fade**: `number`
+    - **fadeIn**: `number`
+    - **fadeOut**: `number`
+    - **filename**: `string`
+    - **indoorAttributes**: `table`
+    - *...and 26 more fields*
+- **dediEmptyPaused**: `boolean`
+- **densityMapPercentageFraction**: `number`
+- **doSaveGameBlocking**: `boolean`
+- **doSaveGameState**: `number`
+- **doghouses**: `table`
+- **drawables**: `table`
+- **dynamicFoliageLayers**: `table`
+- **dynamicallyLoadedObjects**: `number[]` (length: 24)
+- **economyManager**: `table`
+  - **greatDemands**: `table[]` (length: 3)
+  - **minuteTimer**: `number`
+  - **minuteUpdateInterval**: `number`
+  - **numberOfConcurrentDemands**: `number`
+  - **sellingStationUpdateIndex**: `number`
+  - **sellingStations**: `table[]` (length: 11)
+  - **showMoneyChangeNextMinute**: `boolean`
+- **enterables**: `table[]` (length: 7)
+- **environment**: `table`
+  - **ambientSoundModifiers**: `table`
+    - **setInVehicle**: `function`
+    - **setIsAfternoon**: `function`
+    - **setIsAutumn**: `function`
+    - **setIsMorning**: `function`
+    - **setIsNight**: `function`
+    - **setIsNoon**: `function`
+    - **setIsPostNoon**: `function`
+    - **setIsPostSunrise**: `function`
+    - **setIsPostSunset**: `function`
+    - **setIsPreNoon**: `function`
+    - *...and 8 more fields*
+  - **baseLighting**: `table`
+    - **albedoGroundColors**: `map`
+    - **asymmetryFactorCurve**: `table`
+    - **asymmetryFactorCurveData**: `table[]` (length: 4)
+    - **attr10**: `boolean`
+    - **autoExposureCurve**: `table`
+    - **autoExposureCurveData**: `table[]` (length: 6)
+    - **bloomMagnitude**: `number`
+    - **bloomThreshold**: `number`
+    - **cloudEnvMapBlendAlpha**: `number`
+    - **cloudEnvMapIndex1**: `number`
+    - *...and 43 more fields*
+  - **currentDay**: `number`
+  - **currentDayInPeriod**: `number`
+  - **currentDayInSeason**: `number`
+  - **currentHour**: `number`
+  - **currentMinute**: `number`
+  - **currentMonotonicDay**: `number`
+  - **currentPeriod**: `number`
+  - **currentSeason**: `number`
+  - *...and 31 more fields*
+- **environmentAreaSystem**: `table`
+  - **areaTypeWeights**: `number[]` (length: 5)
+  - **currentAreaType**: `number`
+  - **currentCell**: `table`
+    - **areaTypeWeights**: `number[]` (length: 5)
+    - **hasTopHit**: `boolean`
+    - **hitDataXZ**: `table`
+    - **isDone**: `boolean`
+    - **isNearWater**: `boolean`
+    - **isValid**: `boolean`
+    - **raycastIndexXZ**: `number`
+    - **treeCount**: `number`
+  - **dataGrid**: `table`
+    - **grid**: `table[]` (length: 16)
+    - **lastIndices**: `table`
+    - **lastPosition**: `table`
+    - **numRows**: `number`
+    - **size**: `number`
+    - **tileSize**: `number`
+    - **yOffset**: `number`
+  - **isDebugViewActive**: `boolean`
+  - **lastAreaTypeWeights**: `number[]` (length: 5)
+  - **lastDoneCell**: `table`
+  - **lastPosition**: `table`
+    - **x**: `number`
+    - **y**: `number`
+    - **z**: `number`
+  - **maxNumForestThreshold**: `number`
+  - **maxTopCollisionDistanceThreshold**: `number`
+  - *...and 17 more fields*
+- **eventRadioToggle**: `string`
+- **fieldCropsQuery**: `userdata`
+- **fieldGroundSystem**: `table`
+  - **angleFirstChannel**: `number`
+  - **angleMaxValue**: `number`
+  - **angleNumChannels**: `number`
+  - **baseDirectory**: `string`
+  - **densityMaps**: `table[]` (length: 8)
+  - **fieldChopperTypeTyreTrackColor**: `map`
+  - **fieldChopperTypeValue**: `number[]` (length: 2)
+  - **fieldGroundTypeTyreTrackColor**: `table[]` (length: 14)
+  - **fieldGroundTypeValue**: `number[]` (length: 14)
+  - **fieldSprayTypeTyreTrackColor**: `table[]` (length: 4)
+  - *...and 11 more fields*
+- **fillTypeManager**: `global-ref` → [`g_fillTypeManager`](../globals/g_fillTypeManager.md)
+
+*...and 177 more top-level fields*
+
+## Usage Example
+
+```lua
+-- Access g_currentMission fields
+local obj = g_currentMission.accessHandler
+local obj = g_currentMission.activatableObjectsSystem
+```
