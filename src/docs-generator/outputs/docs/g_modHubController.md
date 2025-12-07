@@ -3,7 +3,7 @@ title: g_modHubController
 description: Global g_modHubController - Runtime introspected API
 fieldTypes:
   function: 90
-  global-ref: 2
+  "global-ref": 2
   object: 17
   primitive: 4267
 ---
@@ -19,7 +19,7 @@ Runtime-introspected API for `g_modHubController`.
 
 <TypeFilter fieldTypes={{
   function: 90,
-  global-ref: 2,
+  "global-ref": 2,
   object: 17,
   primitive: 4267,
 }} />

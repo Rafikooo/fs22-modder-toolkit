@@ -5,7 +5,7 @@ fieldTypes:
   array: 176
   class: 39
   function: 3111
-  global-ref: 35
+  "global-ref": 35
   object: 587
   other: 146
   primitive: 1526
@@ -24,7 +24,7 @@ Runtime-introspected API for `g_fieldManager`.
   array: 176,
   class: 39,
   function: 3111,
-  global-ref: 35,
+  "global-ref": 35,
   object: 587,
   other: 146,
   primitive: 1526,

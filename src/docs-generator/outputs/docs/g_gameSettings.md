@@ -4,7 +4,7 @@ description: Global g_gameSettings - Runtime introspected API
 fieldTypes:
   array: 17
   function: 75
-  global-ref: 1
+  "global-ref": 1
   object: 23
   other: 36
   primitive: 133
@@ -22,7 +22,7 @@ Runtime-introspected API for `g_gameSettings`.
 <TypeFilter fieldTypes={{
   array: 17,
   function: 75,
-  global-ref: 1,
+  "global-ref": 1,
   object: 23,
   other: 36,
   primitive: 133,

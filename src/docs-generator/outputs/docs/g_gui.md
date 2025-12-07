@@ -5,7 +5,7 @@ fieldTypes:
   array: 71
   class: 18
   function: 2183
-  global-ref: 4
+  "global-ref": 4
   object: 8038
   other: 201
   primitive: 6032
@@ -24,7 +24,7 @@ Runtime-introspected API for `g_gui`.
   array: 71,
   class: 18,
   function: 2183,
-  global-ref: 4,
+  "global-ref": 4,
   object: 8038,
   other: 201,
   primitive: 6032,
