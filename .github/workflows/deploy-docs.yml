@@ -5,10 +5,10 @@ on:
     branches:
       - main
     paths:
-      - 'dist/docs/docs/**'
-      - 'dist/docs/docusaurus.config.js'
-      - 'dist/docs/sidebars.js'
-      - 'dist/docs/package.json'
+      - 'src/docs-generator/outputs/docs/**'
+      - 'src/docs-generator/outputs/docusaurus.config.js'
+      - 'src/docs-generator/outputs/sidebars.js'
+      - 'src/docs-generator/outputs/package.json'
       - '.github/workflows/deploy-docs.yml'
   workflow_dispatch:
 
@@ -37,18 +37,18 @@ jobs:
 
       - name: Install dependencies
         run: |
-          cd dist/docs
+          cd src/docs-generator/outputs
           npm ci
 
       - name: Build static site
         run: |
-          cd dist/docs
+          cd src/docs-generator/outputs
           npm run build
 
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
         with:
-          path: 'dist/docs/build'
+          path: 'src/docs-generator/outputs/build'
 
   deploy:
     name: Deploy to GitHub Pages
