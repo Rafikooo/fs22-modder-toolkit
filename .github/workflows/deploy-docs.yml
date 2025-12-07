@@ -1,13 +1,16 @@
-name: Deploy Documentation to GitHub Pages
+name: Deploy Documentation
 
 on:
   push:
-    branches: [main]
+    branches:
+      - main
     paths:
-      - 'features/schema-docs/**'
-      - 'features/schema-json/outputs/**'
+      - 'dist/docs/docs/**'
+      - 'dist/docs/docusaurus.config.js'
+      - 'dist/docs/sidebars.js'
+      - 'dist/docs/package.json'
       - '.github/workflows/deploy-docs.yml'
-  workflow_dispatch:  # Allow manual trigger
+  workflow_dispatch:
 
 permissions:
   contents: read
@@ -20,7 +23,9 @@ concurrency:
 
 jobs:
   build:
+    name: Build Documentation Site
     runs-on: ubuntu-latest
+
     steps:
       - name: Checkout repository
         uses: actions/checkout@v4
@@ -29,28 +34,29 @@ jobs:
         uses: actions/setup-node@v4
         with:
           node-version: '18'
-          cache: 'npm'
-          cache-dependency-path: features/schema-docs/outputs/package-lock.json
 
       - name: Install dependencies
-        working-directory: features/schema-docs/outputs
-        run: npm ci
+        run: |
+          cd dist/docs
+          npm ci
 
-      - name: Build Docusaurus site
-        working-directory: features/schema-docs/outputs
-        run: npm run build
+      - name: Build static site
+        run: |
+          cd dist/docs
+          npm run build
 
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
         with:
-          path: features/schema-docs/outputs/build
+          path: 'dist/docs/build'
 
   deploy:
-    needs: build
-    runs-on: ubuntu-latest
+    name: Deploy to GitHub Pages
     environment:
       name: github-pages
-      url: ${{ steps.deployment.outputs.page_url }}
+    runs-on: ubuntu-latest
+    needs: build
+
     steps:
       - name: Deploy to GitHub Pages
         id: deployment
