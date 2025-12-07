@@ -1,14 +1,83 @@
-# FS22 data (provided by the user)
-fs22-data-source/
+# FS22 Modder Toolkit - Git Ignore Configuration
+#
+# Strategy:
+# - COMMIT: Markdown docs (dist/docs/docs/*.md) for GitHub Actions
+# - IGNORE: XML/JSON/Stubs (generated locally from game runtime)
+# - IGNORE: node_modules, build artifacts
 
-# Duże embeddingi / indexy
+# ============================================================================
+# Python
+# ============================================================================
+__pycache__/
+*.py[cod]
+*$py.class
+
+# Virtual environments
+venv/
+env/
+ENV/
+
+# ============================================================================
+# System Files
+# ============================================================================
+.DS_Store
+Thumbs.db
+
+# ============================================================================
+# FS22 Game Data (User-specific, large)
+# ============================================================================
+fs22-data-source/
+fs22-data-source-chunks/
+.fs22-game-data/
+
+# ============================================================================
+# Local Configuration
+# ============================================================================
+.env.local
+
+# ============================================================================
+# Generated Data (LOCAL ONLY - don't commit)
+# ============================================================================
+
+# Runtime exports from FS22 game (XML schemas)
+data/schemas/
+
+# Intermediate conversions (JSON, Stubs, Engine signatures)
+data/json/
+data/stubs/
+data/engine-signatures/
+
+# Large binary files
 *.bin
 *.npy
 */full_index.sqlite
 
-# Python cache
-__pycache__/
-*.py[cod]
+# ============================================================================
+# Docusaurus Build Artifacts (DON'T COMMIT)
+# ============================================================================
 
-# System files
-.DS_Store
+# Dependencies (npm install on CI)
+dist/docs/node_modules/
+dist/docs/package-lock.json
+
+# Build output (generated on CI)
+dist/docs/build/
+dist/docs/.docusaurus/
+dist/docs/.cache-loader/
+
+# ============================================================================
+# IMPORTANT: These ARE committed (needed for GitHub Actions)
+# ============================================================================
+# ✓ dist/docs/docs/*.md           (generated markdown docs)
+# ✓ dist/docs/package.json        (npm dependencies)
+# ✓ dist/docs/docusaurus.config.js (Docusaurus config)
+# ✓ dist/docs/sidebars.js         (sidebar structure)
+# ✓ dist/docs/src/                (custom components)
+# ✓ dist/docs/static/             (static assets)
+
+# ============================================================================
+# Legacy / Obsolete
+# ============================================================================
+/obsolete
+
+src/docs-generator/outputs/node_modules
