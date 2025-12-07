@@ -5,7 +5,7 @@ fieldTypes:
   array: 53
   class: 18
   function: 847
-  global-ref: 4
+  "global-ref": 4
   object: 1577
   other: 35
   primitive: 2009
@@ -24,7 +24,7 @@ Runtime-introspected API for `g_inputDisplayManager`.
   array: 53,
   class: 18,
   function: 847,
-  global-ref: 4,
+  "global-ref": 4,
   object: 1577,
   other: 35,
   primitive: 2009,

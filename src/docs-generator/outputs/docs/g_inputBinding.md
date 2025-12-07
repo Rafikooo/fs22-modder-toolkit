@@ -5,7 +5,7 @@ fieldTypes:
   array: 1147
   class: 57
   function: 3317
-  global-ref: 36
+  "global-ref": 36
   object: 2255
   other: 319
   primitive: 16850
@@ -24,7 +24,7 @@ Runtime-introspected API for `g_inputBinding`.
   array: 1147,
   class: 57,
   function: 3317,
-  global-ref: 36,
+  "global-ref": 36,
   object: 2255,
   other: 319,
   primitive: 16850,

@@ -1,0 +1,64 @@
+MIT License
+
+Copyright (c) 2024 Rafik
+
+Permission is hereby granted, free of charge, to any person obtaining a copy
+of this software and associated documentation files (the "Software"), to deal
+in the Software without restriction, including without limitation the rights
+to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+copies of the Software, and to permit persons to whom the Software is
+furnished to do so, subject to the following conditions:
+
+The above copyright notice and this permission notice shall be included in all
+copies or substantial portions of the Software.
+
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+SOFTWARE.
+
+---
+
+## Third-Party Data Notice
+
+This repository contains tools that process data from Farming Simulator 22,
+which is copyrighted by GIANTS Software GmbH.
+
+### Engine Signatures (features/engine-signatures/)
+
+The file `fs22-engine-functions-signatures.lua` is generated from
+`scriptBinding.xml`, which is part of the Farming Simulator 22 SDK.
+
+**Source:** GIANTS Software GmbH
+**Original Format:** XML (scriptBinding.xml)
+**Generated Format:** Lua with EmmyLua annotations
+**Purpose:** Educational and development tooling for FS22 modding community
+
+This generated file is provided under fair use/educational use principles:
+- Transformative work (XML ’ Lua stubs with IDE annotations)
+- Non-commercial educational purpose (Master's thesis)
+- Does not compete with or harm the original product
+- Benefits the FS22 modding ecosystem
+
+**Location in FS22 Installation:**
+- macOS: `~/Library/Application Support/FarmingSimulator2022/API/FS22_API/scriptBinding.xml`
+- Windows: `%APPDATA%\FarmingSimulator2022\API\FS22_API\scriptBinding.xml`
+
+Users of this toolkit should own a legitimate copy of Farming Simulator 22.
+
+If GIANTS Software has concerns about this usage, please contact the repository
+maintainer for immediate resolution.
+
+### SDK Lua Scripts (fs22-data-source/)
+
+The `fs22-data-source/` directory is gitignored and should be populated by users
+from their own FS22 installation. This repository does not distribute GIANTS'
+Lua scripts directly.
+
+---
+
+Farming Simulator is a trademark of GIANTS Software GmbH.
+This project is not affiliated with, endorsed by, or sponsored by GIANTS Software.

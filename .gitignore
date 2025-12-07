@@ -59,11 +59,16 @@ data/engine-signatures/
 # Dependencies (npm install on CI)
 dist/docs/node_modules/
 dist/docs/package-lock.json
+src/docs-generator/outputs/node_modules/
+src/docs-generator/outputs/package-lock.json
 
 # Build output (generated on CI)
 dist/docs/build/
 dist/docs/.docusaurus/
 dist/docs/.cache-loader/
+src/docs-generator/outputs/build/
+src/docs-generator/outputs/.docusaurus/
+src/docs-generator/outputs/.cache-loader/
 
 # ============================================================================
 # IMPORTANT: These ARE committed (needed for GitHub Actions)
@@ -79,5 +84,3 @@ dist/docs/.cache-loader/
 # Legacy / Obsolete
 # ============================================================================
 /obsolete
-
-src/docs-generator/outputs/node_modules

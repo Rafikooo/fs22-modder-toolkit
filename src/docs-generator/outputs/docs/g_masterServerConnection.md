@@ -5,7 +5,7 @@ fieldTypes:
   array: 173
   class: 39
   function: 3095
-  global-ref: 35
+  "global-ref": 35
   object: 576
   other: 132
   primitive: 1502
@@ -24,7 +24,7 @@ Runtime-introspected API for `g_masterServerConnection`.
   array: 173,
   class: 39,
   function: 3095,
-  global-ref: 35,
+  "global-ref": 35,
   object: 576,
   other: 132,
   primitive: 1502,
