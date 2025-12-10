@@ -1,0 +1,435 @@
+#!/usr/bin/env bash
+set -euo pipefail
+
+# FS22 Modder Toolkit - Full Pipeline Orchestrator
+# Runs: XML → JSON → Lua stubs → Docusaurus docs
+
+SCRIPT_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
+cd "$SCRIPT_DIR"
+
+# Colors for output
+RED='\033[0;31m'
+GREEN='\033[0;32m'
+YELLOW='\033[1;33m'
+BLUE='\033[0;34m'
+NC='\033[0m' # No Color
+
+# Load configuration (.env.local has priority over .env.example)
+if [[ -f ".env.local" ]]; then
+    CONFIG_FILE=".env.local"
+elif [[ -f ".env.example" ]]; then
+    CONFIG_FILE=".env.example"
+    echo -e "${YELLOW}⚠ Using .env.example (create .env.local for custom config)${NC}"
+else
+    echo -e "${RED}✗ Config file not found: .env.example${NC}"
+    echo "  Run: cp .env.example .env.local"
+    exit 1
+fi
+
+# Save command-line/Makefile overrides BEFORE sourcing config
+# These take priority over .env.local values
+_CLI_EXPORT_GLOBAL="${EXPORT_GLOBAL:-}"
+_CLI_EXPORT_DEPTH="${EXPORT_DEPTH:-}"
+_CLI_EXPORT_SESSION="${EXPORT_SESSION:-}"
+_CLI_RUN_JSON="${RUN_JSON_CONVERSION:-}"
+_CLI_RUN_STUBS="${RUN_LUA_STUBS:-}"
+_CLI_RUN_DOCS="${RUN_DOCS_GENERATION:-}"
+
+source "$CONFIG_FILE"
+
+# Restore command-line overrides (they take priority over config file)
+[[ -n "$_CLI_EXPORT_GLOBAL" ]] && EXPORT_GLOBAL="$_CLI_EXPORT_GLOBAL"
+[[ -n "$_CLI_EXPORT_DEPTH" ]] && EXPORT_DEPTH="$_CLI_EXPORT_DEPTH"
+[[ -n "$_CLI_EXPORT_SESSION" ]] && EXPORT_SESSION="$_CLI_EXPORT_SESSION"
+[[ -n "$_CLI_RUN_JSON" ]] && RUN_JSON_CONVERSION="$_CLI_RUN_JSON"
+[[ -n "$_CLI_RUN_STUBS" ]] && RUN_LUA_STUBS="$_CLI_RUN_STUBS"
+[[ -n "$_CLI_RUN_DOCS" ]] && RUN_DOCS_GENERATION="$_CLI_RUN_DOCS"
+
+# Helper functions
+log_step() {
+    echo -e "\n${BLUE}▶ $1${NC}"
+}
+
+log_success() {
+    echo -e "${GREEN}✓ $1${NC}"
+}
+
+log_warning() {
+    echo -e "${YELLOW}⚠ $1${NC}"
+}
+
+log_error() {
+    echo -e "${RED}✗ $1${NC}"
+}
+
+log_verbose() {
+    if [[ "$VERBOSE" == "true" ]]; then
+        echo "  $1"
+    fi
+}
+
+# Check prerequisites
+check_prerequisites() {
+    log_step "Checking prerequisites..."
+
+    local missing_deps=()
+
+    if ! command -v python3 &> /dev/null; then
+        missing_deps+=("python3")
+    fi
+
+    if [[ "$INSTALL_DOCS_DEPS" == "true" ]] || [[ "$BUILD_DOCS_SITE" == "true" ]]; then
+        if ! command -v node &> /dev/null; then
+            missing_deps+=("node")
+        fi
+    fi
+
+    if [[ ${#missing_deps[@]} -gt 0 ]]; then
+        log_error "Missing dependencies: ${missing_deps[*]}"
+        echo "  Install with: brew install ${missing_deps[*]}"
+        exit 1
+    fi
+
+    log_success "All prerequisites met"
+}
+
+# Discover all XML exports in data/schemas/
+discover_exports() {
+    log_step "Discovering XML exports to process..."
+
+    if [[ ! -d "$RUNTIME_SCHEMAS_DIR" ]]; then
+        log_error "Schemas directory not found: $RUNTIME_SCHEMAS_DIR"
+        echo ""
+        echo "Please run in FS22 console:"
+        echo "  riExportAll"
+        exit 1
+    fi
+
+    EXPORT_LIST=()
+
+    # Determine which globals to process
+    if [[ -n "$EXPORT_GLOBAL" ]]; then
+        # Single global specified
+        GLOBALS_TO_PROCESS="$EXPORT_GLOBAL"
+        log_verbose "Processing single global: $EXPORT_GLOBAL"
+    else
+        # Discover all globals from XML files (no depth suffix anymore)
+        GLOBALS_TO_PROCESS=$(ls "$RUNTIME_SCHEMAS_DIR"/*.xml 2>/dev/null | xargs -n1 basename | sed 's/\.xml$//' | sort -u)
+        if [[ -z "$GLOBALS_TO_PROCESS" ]]; then
+            log_error "No XML exports found in $RUNTIME_SCHEMAS_DIR"
+            exit 1
+        fi
+        log_verbose "Auto-discovered $(echo "$GLOBALS_TO_PROCESS" | wc -l | tr -d ' ') globals"
+    fi
+
+    # Build export list (just global names, depth is in XML attribute)
+    for global in $GLOBALS_TO_PROCESS; do
+        local xml_file="$RUNTIME_SCHEMAS_DIR/${global}.xml"
+        if [[ -f "$xml_file" ]]; then
+            EXPORT_LIST+=("$global")
+        else
+            log_verbose "Skipping missing: ${global}.xml"
+        fi
+    done
+
+    if [[ ${#EXPORT_LIST[@]} -eq 0 ]]; then
+        log_error "No valid exports found matching criteria"
+        exit 1
+    fi
+
+    log_success "Found ${#EXPORT_LIST[@]} exports to process"
+}
+
+# Validate XML structure
+validate_xml() {
+    local input_xml="$1"
+
+    # Check if file is readable
+    if [[ ! -r "$input_xml" ]]; then
+        log_error "Cannot read XML file: $input_xml"
+        return 1
+    fi
+
+    # Check if file is valid XML (basic check)
+    if ! head -1 "$input_xml" | grep -q '<?xml'; then
+        log_error "Invalid XML file (missing XML declaration): $input_xml"
+        return 1
+    fi
+
+    # Check for expected root element (schema v1 or export v2)
+    if ! grep -qE '<(schema|export)' "$input_xml"; then
+        log_error "Invalid RuntimeInspector XML (missing <schema> or <export> root element)"
+        return 1
+    fi
+
+    return 0
+}
+
+# Step 1: XML → JSON conversion
+convert_to_json() {
+    local global_name="$1"
+    local depth="$2"
+    local input_xml="$3"
+
+    if [[ "$RUN_JSON_CONVERSION" != "true" ]]; then
+        return
+    fi
+
+    local converter="src/converters/convert_to_json.py"
+    local output="$JSON_OUTPUT_DIR/${global_name}_depth${depth}.json"
+
+    mkdir -p "$JSON_OUTPUT_DIR"
+
+    if ! python3 "$converter" "$input_xml" "$output" 2>&1 | grep -q "^✓"; then
+        log_warning "JSON conversion failed for ${global_name}_depth${depth}"
+        return 1
+    fi
+
+    if [[ ! -f "$output" ]]; then
+        log_warning "JSON output not created: ${global_name}_depth${depth}"
+        return 1
+    fi
+
+    return 0
+}
+
+# Step 2: XML → Lua stubs conversion
+convert_to_lua_stubs() {
+    local global_name="$1"
+    local depth="$2"
+    local input_xml="$3"
+
+    if [[ "$RUN_LUA_STUBS" != "true" ]]; then
+        return
+    fi
+
+    local converter="src/converters/convert_to_stubs.py"
+    local output="$STUBS_OUTPUT_DIR/${global_name}_depth${depth}.lua"
+
+    mkdir -p "$STUBS_OUTPUT_DIR"
+
+    if ! python3 "$converter" "$input_xml" "$output" 2>&1 | grep -q "^✓"; then
+        log_warning "Lua stubs generation failed for ${global_name}_depth${depth}"
+        return 1
+    fi
+
+    if [[ ! -f "$output" ]]; then
+        log_warning "Lua stubs output not created: ${global_name}_depth${depth}"
+        return 1
+    fi
+
+    return 0
+}
+
+# Step 3: JSON → Docusaurus docs
+generate_docs() {
+    local global_name="$1"
+    local depth="$2"
+
+    if [[ "$RUN_DOCS_GENERATION" != "true" ]]; then
+        return
+    fi
+
+    local generator="src/docs-generator/generate_docs.py"
+    local input_json="$JSON_OUTPUT_DIR/${global_name}_depth${depth}.json"
+
+    if [[ ! -f "$input_json" ]]; then
+        log_verbose "Skipping docs for ${global_name}_depth${depth} (no JSON)"
+        return 1
+    fi
+
+    if ! python3 "$generator" "$input_json" "$DOCS_OUTPUT_DIR" 2>&1 | grep -q "^✓"; then
+        log_warning "Documentation generation failed for ${global_name}_depth${depth}"
+        return 1
+    fi
+
+    return 0
+}
+
+# Step 4: Install Docusaurus dependencies
+install_docs_deps() {
+    if [[ "$INSTALL_DOCS_DEPS" != "true" ]]; then
+        log_warning "Skipping npm install (disabled in config)"
+        return
+    fi
+
+    log_step "Installing Docusaurus dependencies..."
+
+    cd "$DOCS_OUTPUT_DIR"
+
+    if [[ -f "package-lock.json" ]]; then
+        npm ci --silent
+    else
+        npm install --silent
+    fi
+
+    cd "$SCRIPT_DIR"
+
+    log_success "Dependencies installed"
+}
+
+# Step 5: Build Docusaurus site
+build_docs_site() {
+    if [[ "$BUILD_DOCS_SITE" != "true" ]]; then
+        log_warning "Skipping docs build (disabled in config)"
+        return
+    fi
+
+    log_step "Building Docusaurus site..."
+
+    cd "$DOCS_OUTPUT_DIR"
+    npm run build --silent
+    cd "$SCRIPT_DIR"
+
+    local build_size=$(du -sh "$DOCS_OUTPUT_DIR/build" | cut -f1)
+    log_success "Site built: $DOCS_OUTPUT_DIR/build/ ($build_size)"
+}
+
+# Step 6: Serve docs locally
+serve_docs() {
+    if [[ "$SERVE_DOCS_LOCALLY" != "true" ]]; then
+        return
+    fi
+
+    log_step "Starting local development server..."
+
+    echo ""
+    echo "Docusaurus will open at: http://localhost:3000"
+    echo "Press Ctrl+C to stop"
+    echo ""
+
+    cd "$DOCS_OUTPUT_DIR"
+    npm start
+}
+
+# Optional: Generate engine signatures
+generate_engine_signatures() {
+    if [[ "$RUN_ENGINE_SIGNATURES" != "true" ]]; then
+        return
+    fi
+
+    log_step "Generating engine signatures..."
+
+    if [[ ! -f "$ENGINE_SIGS_INPUT" ]]; then
+        log_warning "scriptBinding.xml not found: $ENGINE_SIGS_INPUT"
+        log_verbose "Skipping engine signatures generation"
+        return
+    fi
+
+    local generator="features/engine-signatures/generate-signatures.py"
+    mkdir -p "$(dirname "$ENGINE_SIGS_OUTPUT")"
+
+    python3 "$generator" "$ENGINE_SIGS_INPUT" "$ENGINE_SIGS_OUTPUT"
+
+    log_success "Engine signatures generated: $ENGINE_SIGS_OUTPUT"
+}
+
+# Print summary
+print_summary() {
+    local json_count="$1"
+    local stubs_count="$2"
+    local docs_count="$3"
+    local failed_count="$4"
+
+    echo ""
+    echo -e "${GREEN}━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━${NC}"
+    echo -e "${GREEN}Pipeline completed!${NC}"
+    echo -e "${GREEN}━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━${NC}"
+    echo ""
+    echo "Processing summary:"
+    echo "  • JSON files:   $json_count generated"
+    echo "  • Lua stubs:    $stubs_count generated"
+    echo "  • Docs:         $docs_count generated"
+    if [[ $failed_count -gt 0 ]]; then
+        echo "  • Failed:       $failed_count exports"
+    fi
+
+    echo ""
+    echo "Output directories:"
+    [[ $json_count -gt 0 ]] && echo "  • JSON: $JSON_OUTPUT_DIR/"
+    [[ $stubs_count -gt 0 ]] && echo "  • Lua stubs: $STUBS_OUTPUT_DIR/"
+    [[ $docs_count -gt 0 ]] && echo "  • Docs: $DOCS_OUTPUT_DIR/docs/"
+
+    if [[ "$BUILD_DOCS_SITE" == "true" ]]; then
+        echo "  • Static site: $DOCS_OUTPUT_DIR/build/"
+    fi
+
+    if [[ "$RUN_ENGINE_SIGNATURES" == "true" ]] && [[ -f "$ENGINE_SIGS_OUTPUT" ]]; then
+        echo "  • Engine sigs: $ENGINE_SIGS_OUTPUT"
+    fi
+
+    echo ""
+    echo "Next steps:"
+
+    if [[ "$BUILD_DOCS_SITE" == "true" ]]; then
+        echo "  • Deploy to GitHub Pages: git push (workflow will auto-deploy)"
+        echo "  • View at: https://${GITHUB_USER}.github.io/${GITHUB_REPO}/"
+    elif [[ $docs_count -gt 0 ]]; then
+        echo "  • Build site: npm run build (in $DOCS_OUTPUT_DIR)"
+        echo "  • Or run: ./run_pipeline.sh with BUILD_DOCS_SITE=true"
+    fi
+
+    if [[ $stubs_count -gt 0 ]]; then
+        echo "  • Use stubs: Copy to your mod's libs/ or .vscode/lua-libs/"
+    fi
+    echo ""
+}
+
+# Main execution
+main() {
+    echo -e "${BLUE}━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━${NC}"
+    echo -e "${BLUE}FS22 Modder Toolkit - Pipeline Runner${NC}"
+    echo -e "${BLUE}━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━${NC}"
+
+    check_prerequisites
+    discover_exports
+
+    # Counters for summary
+    local total_exports=${#EXPORT_LIST[@]}
+    local successful_json=0
+    local successful_stubs=0
+    local successful_docs=0
+    local failed=0
+
+    log_step "Processing ${total_exports} exports..."
+
+    # Process each export
+    for export_pair in "${EXPORT_LIST[@]}"; do
+        local global_name=$(echo "$export_pair" | cut -d: -f1)
+        local depth=$(echo "$export_pair" | cut -d: -f2)
+        local input_xml="$RUNTIME_SCHEMAS_DIR/${global_name}_depth${depth}.xml"
+
+        log_verbose "Processing: ${global_name}_depth${depth}"
+
+        # Validate XML
+        if ! validate_xml "$input_xml"; then
+            log_warning "Skipping invalid XML: ${global_name}_depth${depth}"
+            ((failed++))
+            continue
+        fi
+
+        # Core pipeline (continue on individual failures)
+        convert_to_json "$global_name" "$depth" "$input_xml" && ((successful_json++))
+        convert_to_lua_stubs "$global_name" "$depth" "$input_xml" && ((successful_stubs++))
+        generate_docs "$global_name" "$depth" && ((successful_docs++))
+    done
+
+    log_success "Processing complete: $successful_json JSON, $successful_stubs stubs, $successful_docs docs"
+
+    # Optional steps
+    generate_engine_signatures
+
+    # Docusaurus build steps (only if docs were generated)
+    if [[ $successful_docs -gt 0 ]]; then
+        install_docs_deps
+        build_docs_site
+    fi
+
+    print_summary "$successful_json" "$successful_stubs" "$successful_docs" "$failed"
+
+    # Must be last (blocking)
+    serve_docs
+}
+
+# Run main
+main "$@"

@@ -1,43 +1,87 @@
 -- RuntimeInspector.lua (MAIN)
-RuntimeInspector = RuntimeInspector or {}
+-- Entry point - registers console commands and initializes processors
+-- NOTE: RuntimeInspector namespace is initialized in Init.lua (loaded first)
 
-RuntimeInspector.LOG_PREFIX          = RuntimeInspector.LOG_PREFIX          or "[RuntimeInspector] "
-RuntimeInspector.DEFAULT_DEPTH       = RuntimeInspector.DEFAULT_DEPTH       or 1
-RuntimeInspector.MAX_DEPTH           = RuntimeInspector.MAX_DEPTH           or 12
-RuntimeInspector.MAX_NODES           = RuntimeInspector.MAX_NODES           or 50000
-RuntimeInspector.WATCH_LIMIT         = RuntimeInspector.WATCH_LIMIT         or 12
-RuntimeInspector.MOD_SETTINGS_FOLDER = RuntimeInspector.MOD_SETTINGS_FOLDER or "FS22_RuntimeInspector"
-
+-- Delegate command handlers to CommandRegistry
 function RuntimeInspector:outDir()
-    if not self.getOutDir then return self.loge("getOutDir not available (check modDesc order)") end
-    self.logi("Output dir: " .. self:getOutDir())
+    return CommandRegistry.outDir(self)
 end
 
 function RuntimeInspector:help()
-    self.logi("riInspect <g_name> [depth]                         - inspect a table/value")
-    self.logi("riShow <path>                                      - show value (e.g. g_fieldManager.fields[1].fruitType)")
-    self.logi("riDumpXML <globalPath> [depth] [tag] [file]        - export subtree values to XML")
-    self.logi("riDumpAll [depth] [folder] [tag]                   - export all ^g_ roots (values)")
-    self.logi("riDumpAllByPattern [depth] <pattern> [folder] [tag]- export matched roots (values)")
-    self.logi("riDumpSignature <globalPath> [depth] [file]        - export runtime schema (array-aware)")
-    self.logi("riWatch <path> / riUnwatch <path>                  - on-screen watch")
-    self.logi("riOutDir                                           - show output dir")
+    return CommandRegistry.help(self)
+end
+
+function RuntimeInspector:exportByName(name, depthStr)
+    return CommandRegistry.exportByName(self, name, depthStr)
+end
+
+function RuntimeInspector:exportAll(depthStr)
+    return CommandRegistry.exportAll(self, depthStr)
+end
+
+function RuntimeInspector:probeFunction(funcPath, ...)
+    return CommandRegistry.probeFunction(self, funcPath, ...)
+end
+
+function RuntimeInspector:evalCode(code, ...)
+    return CommandRegistry.evalCode(self, code, ...)
+end
+
+function RuntimeInspector:initializeProcessors()
+    if not self.Export then
+        self.logi("Export module not loaded, skipping processor initialization")
+        return
+    end
+
+    local Export = self.Export
+
+    Export:registerProcessor(CycleProcessor)
+    Export:registerProcessor(LimitProcessor)
+    Export:registerProcessor(NilProcessor)
+    Export:registerProcessor(PrimitiveProcessor)
+    Export:registerProcessor(UserdataProcessor)
+    Export:registerProcessor(GlobalReferenceProcessor)
+    Export:registerProcessor(EventListenerProcessor)
+    Export:registerProcessor(FunctionDeduplicationProcessor)
+    Export:registerProcessor(FunctionProcessor)
+    Export:registerProcessor(MemoryAddressKeyFilterProcessor)
+    Export:registerProcessor(ArrayProcessor)
+    Export:registerProcessor(MapProcessor)
+    Export:registerProcessor(ObjectProcessor)
+    Export:registerProcessor(MetatableProcessor)
+    Export:registerProcessor(MethodExportProcessor)  -- DISABLED: Creates large dumps from listeners
+    Export:registerProcessor(TableProcessor)
+
+    Export:sortProcessors()
+
+    self.logi("Initialized " .. #Export.processors .. " processors (sorted by priority)")
 end
 
 function RuntimeInspector:register()
-    addConsoleCommand("riInspect",          "Inspect a g_* (table/value)",            "inspect",          self)
-    addConsoleCommand("riShow",             "Show value by path",                      "showValue",        self)
-    addConsoleCommand("riDumpXML",          "Dump nested path to XML (values)",        "dumpXML",          self)
-    addConsoleCommand("riDumpAll",          "Dump all ^g_ roots into files (values)", "dumpAll",          self)
-    addConsoleCommand("riDumpAllByPattern", "Dump matched roots into files (values)",  "dumpAllByPattern", self)
-    addConsoleCommand("riDumpSignature",    "Dump runtime schema (array-aware)",       "dumpSignature",    self)
-    addConsoleCommand("riWatch",            "Watch path on HUD",                       "addWatch",         self)
-    addConsoleCommand("riUnwatch",          "Stop watching path",                      "removeWatch",      self)
-    addConsoleCommand("riOutDir",           "Show output dir",                         "outDir",           self)
-    addConsoleCommand("riHelp",             "Show help",                               "help",             self)
+    DebugCapabilities.reportCapabilities()
+
+    self:initializeProcessors()
+
+    CommandRegistry:registerAll(self)
+
     addModEventListener(self)
-    self.logi("RuntimeInspector registered")
+    self.logi("RuntimeInspector registered with " .. self:countCommands() .. " commands")
 end
+
+function RuntimeInspector:countCommands()
+    local count = 0
+    for cmd in pairs({
+        riInspect=1, riShow=1, riWatch=1, riUnwatch=1, riEval=1, riProbe=1,
+        riExport=1, riExportAll=1,
+        riDumpXML=1, riDumpAll=1, riDumpSignature=1,
+        riDiscoverGlobals=1, riTestAccess=1,
+        riOutDir=1, riHelp=1
+    }) do
+        count = count + 1
+    end
+    return count
+end
+
 
 g_runtimeInspector = RuntimeInspector
 g_runtimeInspector:register()

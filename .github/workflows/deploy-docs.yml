@@ -5,10 +5,10 @@ on:
     branches:
       - main
     paths:
-      - 'src/docs-generator/outputs/docs/**'
-      - 'src/docs-generator/outputs/docusaurus.config.js'
-      - 'src/docs-generator/outputs/sidebars.js'
-      - 'src/docs-generator/outputs/package.json'
+      - '../../features/docs-generator/outputs/docs/**'
+      - '../../features/docs-generator/outputs/docusaurus.config.js'
+      - '../../features/docs-generator/outputs/sidebars.js'
+      - '../../features/docs-generator/outputs/package.json'
       - '.github/workflows/deploy-docs.yml'
   workflow_dispatch:
 

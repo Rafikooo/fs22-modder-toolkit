@@ -1,0 +1,199 @@
+# FS22 Modder Toolkit
+
+Complete toolkit for Farming Simulator 22 mod development: runtime introspection, type definitions, and interactive documentation.
+
+## Features
+
+- **Runtime Inspector** - Export Lua runtime state from FS22 to XML
+- **Type Definitions** - Generate EmmyLua stubs for IDE autocomplete
+- **Interactive Docs** - Browse runtime API + engine functions in Docusaurus
+- **Engine Functions** - 400+ C++ engine functions documented from `scriptBinding.xml`
+
+## Quick Start
+
+### 1. Generate Runtime Exports
+
+In Farming Simulator 22:
+
+```lua
+-- Open console (~) and run:
+riExportAll 3
+
+-- This exports ~240 globals to:
+-- data/schemas/g_currentMission.xml
+-- data/schemas/g_achievementManager.xml
+-- ... and many more
+```
+
+### 2. Build Everything
+
+```bash
+# See available commands
+make
+
+# Build everything: XML → JSON → Stubs → Docs
+make build
+```
+
+The build process:
+1. ✓ Checks environment (node, npm, python3)
+2. ✓ Installs npm dependencies if needed
+3. ✓ Runs full pipeline (XML → JSON → Stubs → Docs)
+4. ✓ Shows summary of generated files
+
+### 3. View Documentation
+
+```bash
+# Start development server with live reload
+make serve
+
+# Opens at: http://localhost:3000
+```
+
+## Project Structure
+
+```
+fs22-modder-toolkit/
+├── data/
+│   ├── schemas/          # Runtime XML exports from FS22
+│   ├── json/             # Converted JSON (intermediate)
+│   ├── stubs/            # Lua type stubs (EmmyLua)
+│   └── engine-signatures/ # Engine function stubs
+│
+├── dist/
+│   └── docs/             # Docusaurus documentation site
+│
+├── src/
+│   ├── runtime-inspector/    # FS22 mod (symlinked to game)
+│   ├── converters/           # XML → JSON, XML → Lua
+│   ├── docs-generator/       # JSON → Markdown
+│   └── engine-signatures/    # scriptBinding.xml → stubs
+│
+└── run_pipeline.sh       # Main orchestrator
+```
+
+## Available Commands
+
+```bash
+make              # Build everything (default) - XML → JSON → Stubs → Docs
+make check        # Verify environment dependencies
+make serve        # Start documentation dev server (http://localhost:3000)
+make site         # Build static documentation site
+make clean        # Clean all generated files
+
+# Advanced development workflows (see Makefile.dev)
+```
+
+**For thesis demonstration**, these 5 commands are sufficient:
+- `make` - builds everything
+- `make check` - verifies dependencies
+- `make serve` - shows live preview
+- `make site` - production build
+- `make clean` - cleanup
+
+## Configuration
+
+Edit `.env.local` to customize:
+
+```bash
+# Filter exports (empty = all)
+EXPORT_GLOBAL=""      # Specific global or empty for all
+
+# Feature toggles
+RUN_JSON_CONVERSION=true
+RUN_LUA_STUBS=true
+RUN_DOCS_GENERATION=true
+RUN_ENGINE_SIGNATURES=true
+
+# Output paths
+RUNTIME_SCHEMAS_DIR="data/schemas"
+JSON_OUTPUT_DIR="data/json"
+STUBS_OUTPUT_DIR="data/stubs"
+DOCS_OUTPUT_DIR="dist/docs"
+```
+
+## Runtime Inspector Mod
+
+The `RuntimeInspector` mod is symlinked to your FS22 mods directory.
+
+**Console Commands:**
+
+```lua
+-- Export all globals at depth 3
+riExportAll 3
+
+-- Export single global
+riExport g_currentMission 3
+
+-- Export to specific depth
+riExport g_storeManager 5
+```
+
+## CI/CD and GitHub Actions
+
+### Automated Deployment
+
+The toolkit includes GitHub Actions workflow for automatic documentation deployment:
+
+**Local Workflow (Developer):**
+```
+FS22 Game → riExportAll 3 → XML schemas
+                                ↓
+                    make build → JSON + Stubs + Markdown docs
+                                ↓
+                         git commit + push
+```
+
+**CI/CD Workflow (GitHub Actions):**
+```
+Clone repo (with markdown docs) → npm install → npm run build → GitHub Pages
+```
+
+### What Gets Committed
+
+✅ **Committed** (needed for CI):
+- `dist/docs/docs/*.md` - Generated markdown documentation (297 files, ~5MB)
+- `dist/docs/package.json` - npm dependencies
+- `dist/docs/docusaurus.config.js` - Docusaurus configuration
+- `dist/docs/sidebars.js` - Sidebar structure
+
+❌ **Not committed** (generated on CI or locally):
+- `data/schemas/` - XML runtime exports (generated from game)
+- `data/json/` - Intermediate JSON files
+- `data/stubs/` - Lua type stubs
+- `dist/docs/node_modules/` - npm packages (installed on CI)
+- `dist/docs/build/` - Static site (built on CI)
+
+### Deployment
+
+1. **Locally**: Run `make` to generate markdown docs from XML exports
+2. **Commit**: `git add dist/docs/docs/ && git commit && git push`
+3. **CI**: GitHub Actions automatically builds and deploys to GitHub Pages
+4. **Result**: Documentation live at `https://username.github.io/fs22-modder-toolkit/`
+
+## Troubleshooting
+
+### "No XML exports found"
+
+Run in FS22 console: `riExportAll 3`
+
+### Pipeline fails
+
+Clean old data first:
+
+```bash
+make clean
+# Then re-export in FS22: riExportAll 3
+```
+
+### Docusaurus errors
+
+```bash
+cd dist/docs
+rm -rf node_modules .docusaurus
+npm install
+```
+
+## License
+
+Educational and development purposes. Farming Simulator is a trademark of GIANTS Software GmbH.
