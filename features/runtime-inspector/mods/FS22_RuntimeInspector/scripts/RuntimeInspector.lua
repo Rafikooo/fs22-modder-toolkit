@@ -31,8 +31,6 @@ function RuntimeInspector:initializeProcessors()
     local Export = self.Export
 
     Export:registerProcessor(CycleProcessor)
-    Export:registerProcessor(LimitProcessor)
-    Export:registerProcessor(NilProcessor)
     Export:registerProcessor(PrimitiveProcessor)
     Export:registerProcessor(UserdataProcessor)
     Export:registerProcessor(GlobalReferenceProcessor)

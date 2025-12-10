@@ -15,15 +15,36 @@
     <extraSourceFiles>
         <sourceFile filename="scripts/Init.lua"/>
 
-        <sourceFile filename="scripts/utils/DebugCapabilities.lua"/>
         <sourceFile filename="scripts/utils/FileSystem.lua"/>
         <sourceFile filename="scripts/utils/TableHelpers.lua"/>
         <sourceFile filename="scripts/utils/GlobalDiscovery.lua"/>
         <sourceFile filename="scripts/utils/FunctionIntrospection.lua"/>
         <sourceFile filename="scripts/utils/FunctionProber.lua"/>
 
-        <sourceFile filename="scripts/processors/LimitProcessor.lua"/>
-        <sourceFile filename="scripts/processors/NilProcessor.lua"/>
+        <sourceFile filename="scripts/stats/StatsCollector.lua"/>
+        <sourceFile filename="scripts/stats/trackers/TypeTracker.lua"/>
+        <sourceFile filename="scripts/stats/trackers/DepthTracker.lua"/>
+        <sourceFile filename="scripts/stats/trackers/GlobalRefTracker.lua"/>
+        <sourceFile filename="scripts/stats/trackers/CycleTracker.lua"/>
+        <sourceFile filename="scripts/stats/trackers/EventListenerTracker.lua"/>
+        <sourceFile filename="scripts/stats/trackers/FunctionDeduplicationTracker.lua"/>
+        <sourceFile filename="scripts/stats/trackers/ReverseHashMapTracker.lua"/>
+        <sourceFile filename="scripts/stats/trackers/ArrayTracker.lua"/>
+        <sourceFile filename="scripts/stats/trackers/MapTracker.lua"/>
+        <sourceFile filename="scripts/stats/trackers/ClassInstanceTracker.lua"/>
+        <sourceFile filename="scripts/stats/trackers/ClassFirstInstanceTracker.lua"/>
+        <sourceFile filename="scripts/stats/trackers/MethodsExportedTracker.lua"/>
+        <sourceFile filename="scripts/stats/trackers/ProcessorTracker.lua"/>
+
+        <sourceFile filename="scripts/export/ExportContext.lua"/>
+        <sourceFile filename="scripts/export/ExportMetadata.lua"/>
+        <sourceFile filename="scripts/export/ExportStatistics.lua"/>
+        <sourceFile filename="scripts/export/ExportOrchestrator.lua"/>
+        <sourceFile filename="scripts/export/ExportSingle.lua"/>
+        <sourceFile filename="scripts/export/ExportBatch.lua"/>
+
+        <sourceFile filename="scripts/Export.lua"/>
+
         <sourceFile filename="scripts/processors/PrimitiveProcessor.lua"/>
         <sourceFile filename="scripts/processors/UserdataProcessor.lua"/>
         <sourceFile filename="scripts/processors/CycleProcessor.lua"/>
