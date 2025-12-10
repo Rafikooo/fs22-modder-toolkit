@@ -10,6 +10,7 @@ local function resolveFillTypeIndex(userInput)
   FpmUtils.assertf("CropPricesResolver", g_fillTypeManager ~= nil, "g_fillTypeManager nil")
   local upper = string.upper(tostring(userInput))
   local ft = g_fillTypeManager:getFillTypeIndexByName(upper)
+  g_cu
   FpmUtils.assertf("CropPricesResolver", ft ~= nil, "Unknown fillType name: "..tostring(userInput))
   return ft
 end
