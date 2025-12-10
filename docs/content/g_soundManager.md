@@ -1,0 +1,691 @@
+---
+title: g_soundManager
+description: Global g_soundManager - Runtime introspected API
+fieldTypes:
+  array: 4
+  function: 62
+  object: 6
+  other: 1
+  primitive: 552
+---
+
+# g_soundManager
+
+Runtime-introspected API for `g_soundManager`.
+
+**Source**: schemas (depth 2)  
+**Fields**: 79 top-level fields
+
+## Field Statistics
+
+Total fields: **79**
+
+- **Function**: 62
+- **Object**: 6
+- **Array**: 4
+- **Primitive**: 6
+- **Other**: 1
+
+## Fields by Type
+
+<details>
+<summary><strong>Functions (62)</strong></summary>
+
+- **`getRandomSample()`**
+- **`loadSampleFromXML()`**
+- **`registerModifierXMLPaths()`**
+- **`update()`**
+- **`new()`**
+- **`loadSampleAttributesFromXML()`**
+- **`loadSampleAttributesFromTemplate()`**
+- **`isa()`**
+- **`copy()`**
+- **`class()`**
+- **`getIsInsideBuilding()`**
+- **`setSamplesLoopSynthesisParameters()`**
+- **`setSampleLowpassGainOffset()`**
+- **`setSamplePitchOffset()`**
+- **`setSampleVolume()`**
+- **`stopSamples()`**
+- **`playSamples()`**
+- **`deleteSamples()`**
+- **`createAudio2d()`**
+- **`loadSamplesFromXML()`**
+- **`delete()`**
+- **`cloneSample()`**
+- **`registerModifierType()`**
+- **`setIsInsideBuilding()`**
+- **`draw()`**
+- **`setIsIndoor()`**
+- **`initDataStructures()`**
+- **`reloadSoundTemplates()`**
+- **`getIsIndoor()`**
+- **`addIndoorStateChangedListener()`**
+- **`deleteSample()`**
+- **`updateSampleAttributes()`**
+- **`updateSampleModifiers()`**
+- **`updateSampleFade()`**
+- **`getIsSamplePlaying()`**
+- **`consoleCommandToggleDebug()`**
+- **`removeIndoorStateChangedListener()`**
+- **`getCurrentSampleLowpassGain()`**
+- **`getCurrentSamplePitch()`**
+- **`getCurrentSampleVolume()`**
+- **`getModifierFactor()`**
+- **`setCurrentSampleAttributes()`**
+- **`updateSampleRandomizations()`**
+- **`validateSampleDefinition()`**
+- **`setSampleLoopSynthesisParameters()`**
+- **`createAudioSource()`**
+- **`getCurrentFadeFactor()`**
+- **`getCurrentRandomizationValue()`**
+- **`loadSample2DFromXML()`**
+- **`registerSampleXMLPaths()`**
+- **`cloneSample2D()`**
+- **`loadSoundTemplates()`**
+- **`superClass()`**
+- **`loadModifiersFromXML()`**
+- **`loadRandomizationsFromXML()`**
+- **`setSampleVolumeOffset()`**
+- **`onCreateAudio2d()`**
+- **`onCreateAudioSource()`**
+- **`playSample()`**
+- **`stopSample()`**
+- **`getSampleModifierValue()`**
+- **`setSamplePitch()`**
+
+</details>
+
+<details open>
+<summary><strong>Objects/Tables (6)</strong></summary>
+
+- **`modifierTypeNameToIndex`** : `table`
+  - **`ACCELERATE`** : `number`
+  - **`BLOW_OFF_VALVE_STATE`** : `number`
+  - **`BRAKE_TIME`** : `number`
+  - **`COMBINE_LOAD`** : `number`
+  - **`CRUISECONTROL`** : `number`
+  - **`DECELERATE`** : `number`
+  - **`DIFFERENTIAL_SPEED`** : `number`
+  - **`DRIVING_DIRECTION`** : `number`
+  - **`HIGH_PRESSURE_WASHER_LOAD`** : `number`
+  - **`MOTOR_LOAD`** : `number`
+  - **`MOTOR_RPM`** : `number`
+  - **`MOTOR_RPM_REAL`** : `number`
+  - **`MOWER_LOAD`** : `number`
+  - **`SPEED`** : `number`
+  - **`SUSPENSION`** : `number`
+  - **`TURNED_ON_SPEED`** : `number`
+  - **`WIND_TURBINE_LOAD`** : `number`
+- **`activeSamplesSet`** : `table`
+- **`soundTemplates`** : `table`
+  - **`ATTACH_01`** : `string`
+  - **`ATTACH_BigBag`** : `string`
+  - **`BALER_DROP_IN_TRAILER`** : `string`
+  - **`BALER_EJECT`** : `string`
+  - **`BALER_GRAB_01`** : `string`
+  - **`BALER_GRAB_02`** : `string`
+  - **`BALER_GRAB_03`** : `string`
+  - **`BALER_GRAB_04`** : `string`
+  - **`BALER_KNOT_CLEANING`** : `string`
+  - **`BALER_UNLOAD`** : `string`
+  - **`BALER_WRAPPING_START`** : `string`
+  - **`BALE_SLIDE`** : `string`
+  - **`BALE_WRAPPING_01`** : `string`
+  - **`BALE_WRAPPING_02`** : `string`
+  - **`BALE_WRAPPING_START`** : `string`
+  - **`BALE_WRAPPING_STOP`** : `string`
+  - **`BALE_WRAPPING_STOP_02`** : `string`
+  - **`BRAKE_BIG`** : `string`
+  - **`BRAKE_BIZON`** : `string`
+  - **`BRAKE_REGULATOR_VALVE`** : `string`
+  - **`BRAKE_SMALL`** : `string`
+  - **`CAR_MOTOR_IDLE`** : `string`
+  - **`CAR_MOTOR_OFFLOAD_RUN`** : `string`
+  - **`CAR_MOTOR_ONLOAD_RUN`** : `string`
+  - **`CAR_MOTOR_START`** : `string`
+  - **`CAR_MOTOR_STOP`** : `string`
+  - **`COTTON_LOADER`** : `string`
+  - **`DEFAULT_BLOW_OFF_VALVE`** : `string`
+  - **`DEFAULT_CLUTCH_CRACKING`** : `string`
+  - **`DEFAULT_COMPRESSOR_AIR_BLOWER`** : `string`
+  - **`DEFAULT_COMPRESSOR_AIR_BLOWER_START`** : `string`
+  - **`DEFAULT_COMPRESSOR_AIR_BLOWER_STOP`** : `string`
+  - **`DEFAULT_CULTIVATOR_HYDRAULICS`** : `string`
+  - **`DEFAULT_CULTIVATOR_WORK`** : `string`
+  - **`DEFAULT_FOOTSTEP_ASPHALT`** : `string`
+  - **`DEFAULT_FOOTSTEP_DIRT`** : `string`
+  - **`DEFAULT_FOOTSTEP_FIELD`** : `string`
+  - **`DEFAULT_FOOTSTEP_GRASS`** : `string`
+  - **`DEFAULT_FOOTSTEP_GRAVEL`** : `string`
+  - **`DEFAULT_FOOTSTEP_LEAVES`** : `string`
+  - **`DEFAULT_FOOTSTEP_SAND`** : `string`
+  - **`DEFAULT_FOOTSTEP_SNOW`** : `string`
+  - **`DEFAULT_FOOTSTEP_SOUND`** : `string`
+  - **`DEFAULT_FOOTSTEP_WATER_MEDIUM`** : `string`
+  - **`DEFAULT_FOOTSTEP_WATER_SHALLOW`** : `string`
+  - **`DEFAULT_HOOFSTEP_ASPHALT`** : `string`
+  - **`DEFAULT_HOOFSTEP_DIRT`** : `string`
+  - **`DEFAULT_HOOFSTEP_FIELD`** : `string`
+  - **`DEFAULT_HOOFSTEP_GRASS`** : `string`
+  - **`DEFAULT_HOOFSTEP_GRAVEL`** : `string`
+  - **`DEFAULT_HOOFSTEP_LEAVES`** : `string`
+  - **`DEFAULT_HOOFSTEP_SAND`** : `string`
+  - **`DEFAULT_HOOFSTEP_SNOW`** : `string`
+  - **`DEFAULT_HOOFSTEP_SOUND`** : `string`
+  - **`DEFAULT_HOOFSTEP_WATER_MEDIUM`** : `string`
+  - **`DEFAULT_HOOFSTEP_WATER_SHALLOW`** : `string`
+  - **`DEFAULT_HYDRAULIC_SAW_CUT`** : `string`
+  - **`DEFAULT_HYDRAULIC_SAW_IDLE`** : `string`
+  - **`DEFAULT_HYDRAULIC_SAW_START`** : `string`
+  - **`DEFAULT_HYDRAULIC_SAW_STOP`** : `string`
+  - **`DEFAULT_MANURE_FILL`** : `string`
+  - **`DEFAULT_MANURE_SPREADER_01`** : `string`
+  - **`DEFAULT_MANURE_SPREADER_02`** : `string`
+  - **`DEFAULT_MOTOR`** : `string`
+  - **`DEFAULT_MOTOR_IDLE`** : `string`
+  - **`DEFAULT_MOTOR_IDLE_TO_MID`** : `string`
+  - **`DEFAULT_MOTOR_MID`** : `string`
+  - **`DEFAULT_MOTOR_MID_TO_RUN`** : `string`
+  - **`DEFAULT_MOTOR_OFFLOAD_MID`** : `string`
+  - **`DEFAULT_MOTOR_OFFLOAD_MID_TO_RUN`** : `string`
+  - **`DEFAULT_MOTOR_OFFLOAD_RUN`** : `string`
+  - **`DEFAULT_MOTOR_ONLOAD_MID`** : `string`
+  - **`DEFAULT_MOTOR_ONLOAD_MID_TO_RUN`** : `string`
+  - **`DEFAULT_MOTOR_ONLOAD_RUN`** : `string`
+  - **`DEFAULT_MOTOR_RUN`** : `string`
+  - **`DEFAULT_MOTOR_START`** : `string`
+  - **`DEFAULT_MOTOR_STOP`** : `string`
+  - **`DEFAULT_MOWER_START`** : `string`
+  - **`DEFAULT_MOWER_START_SHORT`** : `string`
+  - **`DEFAULT_MOWER_STOP`** : `string`
+  - **`DEFAULT_MOWER_WORK`** : `string`
+  - **`DEFAULT_PLOW_TURN`** : `string`
+  - **`DEFAULT_PLOW_WORK`** : `string`
+  - **`DEFAULT_REFUEL_SOUND`** : `string`
+  - **`DEFAULT_RETARDER`** : `string`
+  - **`DEFAULT_SILO_FILL`** : `string`
+  - **`DEFAULT_SOWING_AIR_BLOWER`** : `string`
+  - **`DEFAULT_SOWING_WORK`** : `string`
+  - **`DEFAULT_SPRAYER`** : `string`
+  - **`DEFAULT_SPREADER`** : `string`
+  - **`DEFAULT_SURFACE_ASPHALT`** : `string`
+  - **`DEFAULT_SURFACE_DIRT`** : `string`
+  - **`DEFAULT_SURFACE_FIELD`** : `string`
+  - **`DEFAULT_SURFACE_GRASS`** : `string`
+  - **`DEFAULT_SURFACE_GRAVEL`** : `string`
+  - **`DEFAULT_SURFACE_RAILROAD`** : `string`
+  - **`DEFAULT_SURFACE_SAND`** : `string`
+  - **`DEFAULT_SURFACE_SNOW`** : `string`
+  - **`DEFAULT_SURFACE_SOUND`** : `string`
+  - **`DEFAULT_SURFACE_WATER_MEDIUM`** : `string`
+  - **`DEFAULT_SURFACE_WATER_SHALLOW`** : `string`
+  - **`DEFAULT_TEDDER`** : `string`
+  - **`DEFAULT_TEDDER_UNPOWERED`** : `string`
+  - **`DEFAULT_TREE_CUT`** : `string`
+  - **`DEFAULT_TREE_DELIMB`** : `string`
+  - **`DEFOLIATOR_01`** : `string`
+  - **`ELECTRIC_CHARGING_STATION`** : `string`
+  - **`FENDT900_MOTOR_OFFLOAD_RUN`** : `string`
+  - **`FENDT900_MOTOR_ONLOAD_RUN`** : `string`
+  - **`FORAGE_HARVESTER_KRONE_TOOL_START`** : `string`
+  - **`FORAGE_HARVESTER_KRONE_TOOL_STOP`** : `string`
+  - **`FORAGE_HARVESTER_KRONE_TOOL_WORK`** : `string`
+  - **`FORAGE_HARVESTER_NH_TOOL_START`** : `string`
+  - **`FORAGE_HARVESTER_NH_TOOL_STOP`** : `string`
+  - **`FORAGE_HARVESTER_NH_TOOL_WORK`** : `string`
+  - **`FORAGE_HARVESTER_RSM_TOOL_START`** : `string`
+  - **`FORAGE_HARVESTER_RSM_TOOL_STOP`** : `string`
+  - **`FORAGE_HARVESTER_RSM_TOOL_WORK`** : `string`
+  - **`FORAGE_WAGON_01`** : `string`
+  - **`GATOR_MOTOR_IDLE`** : `string`
+  - **`GATOR_MOTOR_OFFLOAD_RUN`** : `string`
+  - **`GATOR_MOTOR_ONLOAD_RUN`** : `string`
+  - **`GATOR_MOTOR_START`** : `string`
+  - **`GATOR_MOTOR_STOP`** : `string`
+  - **`HARVESTER_MOTOR_IDLE`** : `string`
+  - **`HARVESTER_MOTOR_OFFLOAD_RUN`** : `string`
+  - **`HARVESTER_MOTOR_ONLOAD_RUN`** : `string`
+  - **`HARVESTER_MOTOR_START`** : `string`
+  - **`HARVESTER_MOTOR_STOP`** : `string`
+  - **`HARVESTER_TOOL_GRIMME_START`** : `string`
+  - **`HARVESTER_TOOL_GRIMME_STOP`** : `string`
+  - **`HARVESTER_TOOL_GRIMME_WORK`** : `string`
+  - **`HARVESTER_TOOL_ROPA_START`** : `string`
+  - **`HARVESTER_TOOL_ROPA_STOP`** : `string`
+  - **`HARVESTER_TOOL_ROPA_WORK`** : `string`
+  - **`HARVESTER_TOOL_START`** : `string`
+  - **`HARVESTER_TOOL_STOP`** : `string`
+  - **`HARVESTER_TOOL_WORK`** : `string`
+  - **`HEADER_ATTACH_01`** : `string`
+  - **`HOLMER_REVERSE_BEEP`** : `string`
+  - **`HONK_AntonioCarraroSuperTigre`** : `string`
+  - **`HONK_CASEIH_MAXXUM`** : `string`
+  - **`HONK_CASEIH_TRACTOR`** : `string`
+  - **`HONK_CLAAS_JAGUAR`** : `string`
+  - **`HONK_CLAAS_XERION`** : `string`
+  - **`HONK_FENDT511C`** : `string`
+  - **`HONK_GRIMME`** : `string`
+  - **`HONK_HOLMER`** : `string`
+  - **`HONK_IDEAL9T`** : `string`
+  - **`HONK_JD6145M`** : `string`
+  - **`HONK_JD6250R`** : `string`
+  - **`HONK_JD8400R`** : `string`
+  - **`HONK_JD_GATOR`** : `string`
+  - **`HONK_JD_HARVESTER`** : `string`
+  - **`HONK_KOMATSU`** : `string`
+  - **`HONK_KRAMER`** : `string`
+  - **`HONK_KRONE_BIGM`** : `string`
+  - **`HONK_LIZARD_TRUCK`** : `string`
+  - **`HONK_MANITOU`** : `string`
+  - **`HONK_MF_BIG_TRACTOR`** : `string`
+  - **`HONK_MF_HARVESTER`** : `string`
+  - **`HONK_MF_SMALL_TRACTOR`** : `string`
+  - **`HONK_NEW_HOLLAND_HARVESTER`** : `string`
+  - **`HONK_NEW_HOLLAND_TRACTOR`** : `string`
+  - **`HONK_NH_TX32`** : `string`
+  - **`HONK_NH_W190`** : `string`
+  - **`HONK_PICKUP`** : `string`
+  - **`HONK_PICKUP_2014`** : `string`
+  - **`HONK_ROPA`** : `string`
+  - **`HONK_STEYR`** : `string`
+  - **`HONK_TRAIN`** : `string`
+  - **`HONK_TRUCK`** : `string`
+  - **`HONK_VALTRA`** : `string`
+  - **`KOMATSU_REVERSE_BEEP`** : `string`
+  - **`LARGE_TRACTOR_MOTOR_IDLE`** : `string`
+  - **`LARGE_TRACTOR_MOTOR_OFFLOAD_RUN`** : `string`
+  - **`LARGE_TRACTOR_MOTOR_ONLOAD_RUN`** : `string`
+  - **`LARGE_TRACTOR_MOTOR_START`** : `string`
+  - **`LARGE_TRACTOR_MOTOR_STOP`** : `string`
+  - **`MEADOW_ROLLER_WORK`** : `string`
+  - **`MEDIUM_TRACTOR_MOTOR_IDLE`** : `string`
+  - **`MEDIUM_TRACTOR_MOTOR_OFFLOAD_RUN`** : `string`
+  - **`MEDIUM_TRACTOR_MOTOR_ONLOAD_RUN`** : `string`
+  - **`MEDIUM_TRACTOR_MOTOR_START`** : `string`
+  - **`MEDIUM_TRACTOR_MOTOR_STOP`** : `string`
+  - **`MEX5_FORAGE_START`** : `string`
+  - **`MEX5_FORAGE_STOP`** : `string`
+  - **`MEX5_FORAGE_WORK`** : `string`
+  - **`MOVING_PART_SOUND`** : `string`
+  - **`PICKUP_TRUNK`** : `string`
+  - **`PRESSURE_WASHER_RUN_01`** : `string`
+  - **`PRESSURE_WASHER_SWITCH_01`** : `string`
+  - **`PRESSURE_WASHER_WASHING_01`** : `string`
+  - **`REVERSE_BEEP_01`** : `string`
+  - **`REVERSE_BEEP_03`** : `string`
+  - **`ROCKS_UNLOAD`** : `string`
+  - **`ROLLBELT_ALARM`** : `string`
+  - **`ROLLBELT_DOOR`** : `string`
+  - **`ROLLBELT_EJECT`** : `string`
+  - **`ROLLBELT_LOOP`** : `string`
+  - **`ROLLBELT_WORK_START`** : `string`
+  - **`ROLLBELT_WORK_STOP`** : `string`
+  - **`SILAGE_MIX_LOOP_01`** : `string`
+  - **`SILAGE_MIX_START_01`** : `string`
+  - **`SILAGE_MIX_STOP_01`** : `string`
+  - **`SLURRY_01`** : `string`
+  - **`SLURRY_02`** : `string`
+  - **`SLURRY_03`** : `string`
+  - **`SMALL_TRACTOR_MOTOR_IDLE`** : `string`
+  - **`SMALL_TRACTOR_MOTOR_OFFLOAD_RUN`** : `string`
+  - **`SMALL_TRACTOR_MOTOR_ONLOAD_RUN`** : `string`
+  - **`SMALL_TRACTOR_MOTOR_START`** : `string`
+  - **`SMALL_TRACTOR_MOTOR_STOP`** : `string`
+  - **`SPRAYER_MOTOR_IDLE`** : `string`
+  - **`SPRAYER_MOTOR_OFFLOAD_RUN`** : `string`
+  - **`SPRAYER_MOTOR_ONLOAD_RUN`** : `string`
+  - **`SPRAYER_MOTOR_START`** : `string`
+  - **`SPRAYER_MOTOR_STOP`** : `string`
+  - **`STRAWBLOWER_ANDERSON_START`** : `string`
+  - **`STRAWBLOWER_ANDERSON_STOP`** : `string`
+  - **`STRAWBLOWER_ANDERSON_WORK`** : `string`
+  - **`STRAWBLOWER_START`** : `string`
+  - **`STRAWBLOWER_STOP`** : `string`
+  - **`STRAWBLOWER_WORK`** : `string`
+  - **`STUMP_CUTTER_IDLE`** : `string`
+  - **`STUMP_CUTTER_START`** : `string`
+  - **`STUMP_CUTTER_STOP`** : `string`
+  - **`STUMP_CUTTER_WORK`** : `string`
+  - **`SWITCH_01`** : `string`
+  - **`SWITCH_TURNLIGHT`** : `string`
+  - **`SWITCH_TURNLIGHT_HOLMER`** : `string`
+  - **`SWITCH_TURNLIGHT_JD`** : `string`
+  - **`SWITCH_TURNLIGHT_OPENCABIN`** : `string`
+  - **`TRAILER_PUNCH_END_NEG`** : `string`
+  - **`TRAILER_PUNCH_END_NEG_01`** : `string`
+  - **`TRAILER_PUNCH_END_NEG_02`** : `string`
+  - **`TRAILER_PUNCH_END_NEG_03`** : `string`
+  - **`TRAILER_PUNCH_END_NEG_04`** : `string`
+  - **`TRAILER_PUNCH_END_NEG_05`** : `string`
+  - **`TRAILER_PUNCH_END_NEG_06`** : `string`
+  - **`TRAIN_CROSSING_BELL_01`** : `string`
+  - **`TRUCK_ATTACH_01`** : `string`
+  - **`TRUCK_ATTACH_02`** : `string`
+  - **`TRUCK_ATTACH_03`** : `string`
+  - **`TRUCK_BRAKE`** : `string`
+  - **`TRUCK_BRAKE_COMPRESSOR_START`** : `string`
+  - **`TRUCK_BRAKE_COMPRESSOR_STOP`** : `string`
+  - **`TRUCK_BRAKE_REGULATOR_VALVE`** : `string`
+  - **`TRUCK_MOTOR_IDLE`** : `string`
+  - **`TRUCK_MOTOR_OFFLOAD_RUN`** : `string`
+  - **`TRUCK_MOTOR_ONLOAD_RUN`** : `string`
+  - **`TRUCK_MOTOR_START`** : `string`
+  - **`TRUCK_MOTOR_STOP`** : `string`
+  - **`UTV_MOTOR_IDLE`** : `string`
+  - **`UTV_MOTOR_OFFLOAD_RUN`** : `string`
+  - **`UTV_MOTOR_ONLOAD_RUN`** : `string`
+  - **`UTV_MOTOR_START`** : `string`
+  - **`UTV_MOTOR_STOP`** : `string`
+  - **`WATER_SPLASH_01`** : `string`
+  - **`WEEDER_01`** : `string`
+  - **`WOOD_CHIPPER_IDLE`** : `string`
+  - **`WOOD_CHIPPER_START`** : `string`
+  - **`WOOD_CHIPPER_STOP`** : `string`
+  - **`WOOD_CHIPPER_WORK`** : `string`
+  - **`attachAirBrake`** : `string`
+  - **`attacherClanks`** : `string`
+  - **`augerBelt`** : `string`
+  - **`augerLoop`** : `string`
+  - **`bakeryIdle`** : `string`
+  - **`bakeryWork`** : `string`
+  - **`baleWrappingLeft`** : `string`
+  - **`baleWrappingRight`** : `string`
+  - **`baleWrappingStop`** : `string`
+  - **`beeHives`** : `string`
+  - **`beeLayer`** : `string`
+  - **`beetrotFill`** : `string`
+  - **`beltClose`** : `string`
+  - **`beltOpen`** : `string`
+  - **`biogasPlantTemplate`** : `string`
+  - **`brakeCompressorDefault`** : `string`
+  - **`brakeCompressorLarge`** : `string`
+  - **`brakeCompressorMedium`** : `string`
+  - **`brakeCompressorSmall`** : `string`
+  - **`carpenterIdle`** : `string`
+  - **`carpenterWork`** : `string`
+  - **`carrotFill`** : `string`
+  - **`cerealFactoryIdle`** : `string`
+  - **`cerealFactoryWork`** : `string`
+  - **`chickenLayer`** : `string`
+  - **`chopStrawDischarge`** : `string`
+  - **`clackVar1`** : `string`
+  - **`clackVar2`** : `string`
+  - **`clackVar2Small`** : `string`
+  - **`clackVar3`** : `string`
+  - **`clackVar4`** : `string`
+  - **`clackVar5`** : `string`
+  - **`clackVar6`** : `string`
+  - **`clickLong`** : `string`
+  - **`clickShort`** : `string`
+  - **`compressedAir`** : `string`
+  - **`coverMetalOpen`** : `string`
+  - **`cowLayer`** : `string`
+  - **`cropCutting`** : `string`
+  - **`cropCuttingForage`** : `string`
+  - **`crushingStubbles`** : `string`
+  - **`cutterClose`** : `string`
+  - **`cutterOpen`** : `string`
+  - **`cylinderPunch`** : `string`
+  - **`dairyIdle`** : `string`
+  - **`dairyWork`** : `string`
+  - **`debrisCrusherIdle`** : `string`
+  - **`debrisCrusherWork`** : `string`
+  - **`defaultGearShift`** : `string`
+  - **`defaultGearShiftNoCabin`** : `string`
+  - **`defaultHydraulicHarvesters`** : `string`
+  - **`defaultHydraulicSmall`** : `string`
+  - **`defaultHydraulicSound`** : `string`
+  - **`destroyFence`** : `string`
+  - **`detachAirBrake`** : `string`
+  - **`dischargeForageHarvester`** : `string`
+  - **`dischargeLoop`** : `string`
+  - **`dischargeSnowBlower`** : `string`
+  - **`dischargeStart`** : `string`
+  - **`dischargeStop`** : `string`
+  - **`dogLayer`** : `string`
+  - **`doorsAll`** : `string`
+  - **`dropStrawDischarge`** : `string`
+  - **`dustFill`** : `string`
+  - **`engineDefault`** : `string`
+  - **`engineLarge`** : `string`
+  - **`engineMedium`** : `string`
+  - **`engineMediumVintage`** : `string`
+  - **`engineSmall`** : `string`
+  - **`engineSmallVintage`** : `string`
+  - **`fabricCover1`** : `string`
+  - **`fabricCover2`** : `string`
+  - **`fanLoop`** : `string`
+  - **`fanLoop2`** : `string`
+  - **`fanLoop3`** : `string`
+  - **`farmersMarket`** : `string`
+  - **`fastFoodRestaurantTemplate`** : `string`
+  - **`feedingRobotLoop`** : `string`
+  - **`fenceClose`** : `string`
+  - **`fenceLoop`** : `string`
+  - **`fenceMetalClose`** : `string`
+  - **`fenceMetalImp`** : `string`
+  - **`fenceMetalLoop`** : `string`
+  - **`fenceMetalOpen`** : `string`
+  - **`fenceOpen`** : `string`
+  - **`fenceWoodImp`** : `string`
+  - **`filterLoop`** : `string`
+  - **`foldStartMed01`** : `string`
+  - **`foldStartMed02`** : `string`
+  - **`foldStartSm01`** : `string`
+  - **`foldStartSm02`** : `string`
+  - **`foldStopMed01`** : `string`
+  - **`foldStopMed02`** : `string`
+  - **`foldStopSm01`** : `string`
+  - **`foldStopSm02`** : `string`
+  - **`foliageBig`** : `string`
+  - **`forageHarvesterStart`** : `string`
+  - **`forageHarvesterStop`** : `string`
+  - **`forageHarvesterWork`** : `string`
+  - **`forestryTreeCut`** : `string`
+  - **`forestryTreeDelimb`** : `string`
+  - **`gameCartridge`** : `string`
+  - **`gearDisengaged`** : `string`
+  - **`gearDisengagedNoCabin`** : `string`
+  - **`gearEngaged`** : `string`
+  - **`gearEngagedNoCabin`** : `string`
+  - **`generator05`** : `string`
+  - **`glassDoorLoop`** : `string`
+  - **`grabImp`** : `string`
+  - **`grainLargeFill`** : `string`
+  - **`grainMediumFill`** : `string`
+  - **`grainMillIdle`** : `string`
+  - **`grainMillWork`** : `string`
+  - **`grainSmallFill`** : `string`
+  - **`grainTankFill`** : `string`
+  - **`grapeFill`** : `string`
+  - **`grapeHarvesterStart`** : `string`
+  - **`grapeHarvesterStop`** : `string`
+  - **`grapeHarvesterWork`** : `string`
+  - **`grassCut`** : `string`
+  - **`grassFill`** : `string`
+  - **`gravelFill`** : `string`
+  - **`harvesterChopper`** : `string`
+  - **`harvesterHeaderRotateSpeed`** : `string`
+  - **`hayloftPump`** : `string`
+  - **`hingeMedium`** : `string`
+  - **`hingeSmall`** : `string`
+  - **`hornDefault`** : `string`
+  - **`hornJcb`** : `string`
+  - **`hornLandini`** : `string`
+  - **`hornLindner`** : `string`
+  - **`hornRigitracSke50`** : `string`
+  - **`hornRigitracSkh75`** : `string`
+  - **`horseLayer`** : `string`
+  - **`hydraulicLayerTone`** : `string`
+  - **`hydraulicLayerTone2`** : `string`
+  - **`hydraulicLayerTone3`** : `string`
+  - **`hydraulicPiston01`** : `string`
+  - **`hydraulicPiston02`** : `string`
+  - **`indoorCabinOldVehicle`** : `string`
+  - **`indoorCabinRumble`** : `string`
+  - **`ladderIn`** : `string`
+  - **`ladderOut`** : `string`
+  - **`largeImp`** : `string`
+  - **`latchSmall`** : `string`
+  - **`lizardFloodLight`** : `string`
+  - **`loopLayer1`** : `string`
+  - **`loopLayer1Small`** : `string`
+  - **`loopLayer2`** : `string`
+  - **`loopLayer3`** : `string`
+  - **`loopLayer4`** : `string`
+  - **`loopLayer5`** : `string`
+  - **`lowGroundMed01`** : `string`
+  - **`lowGroundMed02`** : `string`
+  - **`lowStartGroundMed01`** : `string`
+  - **`manureFill`** : `string`
+  - **`manureSpreaderDischarge`** : `string`
+  - **`medImp`** : `string`
+  - **`metalClose`** : `string`
+  - **`metalDoorsClose`** : `string`
+  - **`metalDoorsLoop`** : `string`
+  - **`metalDoorsOpen`** : `string`
+  - **`metalHigh01`** : `string`
+  - **`metalImpHigh01`** : `string`
+  - **`metalImpHigh02`** : `string`
+  - **`metalImpHigh03`** : `string`
+  - **`metalImpLow`** : `string`
+  - **`metalImpMechanic`** : `string`
+  - **`metalLowVar2`** : `string`
+  - **`metalLowVar3`** : `string`
+  - **`metalOpen`** : `string`
+  - **`metalScrape`** : `string`
+  - **`methaneFill`** : `string`
+  - **`mixerHeaderLoop`** : `string`
+  - **`mixerHeaderStart`** : `string`
+  - **`mixerHeaderStop`** : `string`
+  - **`mixerLoop`** : `string`
+  - **`mulcherLoop`** : `string`
+  - **`mulcherStart`** : `string`
+  - **`mulcherStop`** : `string`
+  - **`oilPlantIdle`** : `string`
+  - **`oilPlantWork`** : `string`
+  - **`oliveFill`** : `string`
+  - **`palletsFillBag`** : `string`
+  - **`palletsFillCereal`** : `string`
+  - **`palletsFillFabric`** : `string`
+  - **`palletsFillJuice`** : `string`
+  - **`palletsFillOil`** : `string`
+  - **`palletsFillPaper`** : `string`
+  - **`palletsFillPlastic`** : `string`
+  - **`palletsFillSugar`** : `string`
+  - **`palletsFillWood`** : `string`
+  - **`pigLayer`** : `string`
+  - **`pizzeria`** : `string`
+  - **`plasitcVentilationGateLoop`** : `string`
+  - **`plasticDoorClose`** : `string`
+  - **`plasticDoorOpen`** : `string`
+  - **`potatoFill`** : `string`
+  - **`raiseEndMed01`** : `string`
+  - **`raiseGroundMed01`** : `string`
+  - **`raisinIdle`** : `string`
+  - **`raisinWork`** : `string`
+  - **`rattleHard`** : `string`
+  - **`rattleMed01`** : `string`
+  - **`rattleSoft`** : `string`
+  - **`restaurantTemplate`** : `string`
+  - **`rollingGarageDoor`** : `string`
+  - **`rotationLoop`** : `string`
+  - **`sheepLayer`** : `string`
+  - **`sheetImp01`** : `string`
+  - **`sheetImp02`** : `string`
+  - **`sheetImp03`** : `string`
+  - **`sheetImp04`** : `string`
+  - **`sheetImp05`** : `string`
+  - **`sheetImp06`** : `string`
+  - **`siloImp`** : `string`
+  - **`slideClose`** : `string`
+  - **`slideOpen`** : `string`
+  - **`slidingGateMetalClose`** : `string`
+  - **`slidingGateMetalLoop`** : `string`
+  - **`slidingGateMetalOpen`** : `string`
+  - **`slidingGateWoodLoop`** : `string`
+  - **`smallImp`** : `string`
+  - **`snowFill`** : `string`
+  - **`spinneryIdle`** : `string`
+  - **`spinneryWork`** : `string`
+  - **`stonePickerWorkLoop`** : `string`
+  - **`stonePickupLoop`** : `string`
+  - **`storeTemplate`** : `string`
+  - **`strawFill`** : `string`
+  - **`sugarMillIdle`** : `string`
+  - **`sugarMillWork`** : `string`
+  - **`sugarcaneFill`** : `string`
+  - **`switch`** : `string`
+  - **`tailorShopIdle`** : `string`
+  - **`tailorShopWork`** : `string`
+  - **`thudVar1`** : `string`
+  - **`thudVar2`** : `string`
+  - **`tractorPTO`** : `string`
+  - **`transmissionDefault`** : `string`
+  - **`transmissionForageHarvesterWork`** : `string`
+  - **`transmissionForageHarvesterWork2`** : `string`
+  - **`transmissionForestry`** : `string`
+  - **`transmissionHarvester`** : `string`
+  - **`transmissionHarvesterDefault`** : `string`
+  - **`transmissionHarvesterWorkDefault`** : `string`
+  - **`transmissionLarge`** : `string`
+  - **`transmissionMedium`** : `string`
+  - **`transmissionMediumVintage`** : `string`
+  - **`transmissionSmall`** : `string`
+  - **`transmissionSmallVintage`** : `string`
+  - **`traxSurfaceLoop`** : `string`
+  - **`truckAttach`** : `string`
+  - **`truckAttachDelay`** : `string`
+  - **`truckDetach`** : `string`
+  - **`vectorLoop`** : `string`
+  - **`vehicleToneHigh`** : `string`
+  - **`weatherStationLoop`** : `string`
+  - **`wiper1`** : `string`
+  - **`wiper2`** : `string`
+  - **`wiperMotor`** : `string`
+  - **`woodBigDoorLoop`** : `string`
+  - **`woodDoorClose`** : `string`
+  - **`woodDoorOpen`** : `string`
+  - **`woodchipFill`** : `string`
+- **`debugSamplesLinkNodes`** : `table`
+- **`debugSamples`** : `table`
+- **`debugSamplesFlagged`** : `table`
+
+</details>
+
+<details>
+<summary><strong>Arrays (4)</strong></summary>
+
+- **`indoorStateChangedListeners`** : `table[]` (length: 3)
+- **`modifierTypeIndexToDesc`** : `table[]` (length: 17)
+- **`activeSamples`** : `table[]` (length: 18)
+- **`orderedSamples`** : `table[]` (length: 814)
+
+</details>
+
+<details>
+<summary><strong>Primitives (6)</strong></summary>
+
+- **`isIndoor`** : `boolean`
+- **`loadedMapData`** : `boolean`
+- **`soundTemplateXMLFile`** : `number`
+- **`oldRandomizationIndex`** : `number`
+- **`currentSampleIndex`** : `number`
+- **`isInsideBuilding`** : `boolean`
+
+</details>
+
+<details>
+<summary><strong>Other (1)</strong></summary>
+
+- **`samples`** : `reverse-hash-map`
+
+</details>
+
+
+## Usage Example
+
+```lua
+-- Access g_soundManager fields
+```

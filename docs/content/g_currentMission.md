@@ -1,0 +1,4381 @@
+---
+title: g_currentMission
+description: Global g_currentMission - Runtime introspected API
+fieldTypes:
+  array: 92
+  class: 4
+  function: 1562
+  global-ref: 22
+  object: 257
+  other: 1834
+  primitive: 625
+---
+
+# g_currentMission
+
+Runtime-introspected API for `g_currentMission`.
+
+**Source**: schemas (depth 2)  
+**Fields**: 263 top-level fields
+
+## Field Statistics
+
+Total fields: **263**
+
+- **Function**: 39
+- **Class**: 2
+- **Object**: 84
+- **Array**: 18
+- **Global-ref**: 8
+- **Primitive**: 99
+- **Other**: 13
+
+## Fields by Type
+
+<details>
+<summary><strong>Functions (39)</strong></summary>
+
+- **`draw()`**
+- **`loadVehiclesFinished()`**
+- **`loadVehiclesFinish()`**
+- **`loadPlaceablesFinished()`**
+- **`setMissionInfo()`**
+- **`loadVehicles()`**
+- **`loadItemsFinished()`**
+- **`onStartMission()`**
+- **`onMaterialsLoaded()`**
+- **`update()`**
+- **`load()`**
+- **`getIsTourSupported()`**
+- **`removeLoadFinishedListener()`**
+- **`addLoadFinishedListener()`**
+- **`onCreateStartPoint()`**
+- **`unregisterObjectToCallOnMissionStart()`**
+- **`loadEnvironment()`**
+- **`loadAdditionalFilesFinished()`**
+- **`new()`**
+- **`loadAdditionalFiles()`**
+- **`loadHotspots()`**
+- **`copy()`**
+- **`class()`**
+- **`doUnpauseGame()`**
+- **`canUnpauseGame()`**
+- **`loadEconomy()`**
+- **`loadItems()`**
+- **`delete()`**
+- **`loadCompetitiveMultiplayer()`**
+- **`scrollChatMessages()`**
+- **`addChatMessage()`**
+- **`onLoadedMapI3DFiles()`**
+- **`registerObjectToCallOnMissionStart()`**
+- **`loadMission00Finished()`**
+- **`superClass()`**
+- **`isa()`**
+- **`doPauseGame()`**
+- **`loadPlaceables()`**
+- **`removeMapHotspot()`**
+
+</details>
+
+<details>
+<summary><strong>Classes (2)</strong></summary>
+
+- **`trafficSystem`** : `TrafficSystem`
+  - **`isClient`** : `boolean`
+  - **`lastServerId`** : `number`
+  - **`deleteListeners`** : `table`
+  - **`dirtyMask`** : `number`
+  - **`nextDirtyFlag`** : `number`
+  - **`recieveUpdates`** : `boolean`
+  - **`isServer`** : `boolean`
+  - **`isRegistered`** : `boolean`
+  - **`debugIsEnabled`** : `boolean`
+  - **`trafficSystemDirtyFlag`** : `number`
+  - **`ownerFarmId`** : `number`
+  - **`id`** : `number`
+  - **`isManuallyReplicated`** : `boolean`
+  - **`isEnabled`** : `boolean`
+  - **`trafficSystemId`** : `number`
+  - **`rootNodeId`** : `number`
+- **`player`** : `Player`
+  - **`copy`** : `function-ref`
+  - **`debugFlightModeWalkingSpeed`** : `number`
+  - **`time`** : `number`
+  - **`cameraNode`** : `number`
+  - **`userId`** : `number`
+  - **`camZ`** : `number`
+  - **`camX`** : `number`
+  - **`isClient`** : `boolean`
+  - **`hudUpdater`** : `table`
+    - **`new`** : `None`
+    - **`superClass`** : `None`
+    - **`copy`** : `None`
+    - **`class`** : `None`
+    - **`setCurrentRaycastTarget`** : `None`
+    - **`showFieldInfo`** : `None`
+    - **`updateFieldInfo`** : `None`
+    - **`showVehicleInfo`** : `None`
+    - **`onFieldDataUpdateFinished`** : `None`
+    - **`fieldAddFarmland`** : `None`
+    - **`fieldAddRolling`** : `None`
+    - **`fieldAddPlowing`** : `None`
+    - **`fieldAddLime`** : `None`
+    - **`fieldAddWeed`** : `None`
+    - **`fieldAddFertilization`** : `None`
+    - **`fieldAddFruit`** : `None`
+    - **`showAnimalInfo`** : `None`
+    - **`showSplitShapeInfo`** : `None`
+    - **`showPalletInfo`** : `None`
+    - **`update`** : `None`
+    - **`updateRaycastObject`** : `None`
+    - **`isa`** : `None`
+    - **`showBaleInfo`** : `None`
+    - **`delete`** : `None`
+    - **`convertFarmToName`** : `None`
+    - **`isAnimal`** : `None`
+    - **`isSplitShape`** : `None`
+    - **`isVehicle`** : `None`
+    - **`isBale`** : `None`
+    - **`requestedFieldData`** : `None`
+    - **`isPallet`** : `None`
+    - **`fieldInfoNeedsRebuild`** : `None`
+    - **`objectBox`** : `None`
+    - **`fieldBox`** : `None`
+  - **`playerStateMachine`** : `table`
+    - **`update`** : `None`
+    - **`new`** : `None`
+    - **`delete`** : `None`
+    - **`isa`** : `None`
+    - **`isActive`** : `None`
+    - **`getState`** : `None`
+    - **`copy`** : `None`
+    - **`class`** : `None`
+    - **`load`** : `None`
+    - **`debugDraw`** : `None`
+    - **`isAvailable`** : `None`
+    - **`updateTick`** : `None`
+    - **`consoleCommandDebugFinalStateMachine`** : `None`
+    - **`superClass`** : `None`
+    - **`deactivateState`** : `None`
+    - **`activateState`** : `None`
+    - **`stateList`** : `None`
+    - **`playerStateCycleHandtool`** : `None`
+    - **`playerStateUseLight`** : `None`
+    - **`playerStateThrow`** : `None`
+    - **`playerStateDrop`** : `None`
+    - **`playerStatePickup`** : `None`
+    - **`playerStateAnimalPet`** : `None`
+    - **`playerStateAnimalRide`** : `None`
+    - **`playerStateAnimalInteract`** : `None`
+    - **`playerStateCrouch`** : `None`
+    - **`playerStateFall`** : `None`
+    - **`playerStateSwim`** : `None`
+    - **`playerStateJump`** : `None`
+    - **`playerStateRun`** : `None`
+    - **`player`** : `None`
+    - **`playerStateIdle`** : `None`
+    - **`debugMode`** : `None`
+    - **`fsmTable`** : `None`
+    - **`playerStateWalk`** : `None`
+  - **`requestedFieldData`** : `boolean`
+  - **`debugFlightCoolDown`** : `number`
+  - **`debugFlightMode`** : `boolean`
+  - **`animUpdateTime`** : `number`
+  - **`walkDistance`** : `number`
+  - **`lastAnimPosZ`** : `number`
+  - **`lastAnimPosY`** : `number`
+  - **`lastAnimPosX`** : `number`
+  - **`thirdPersonViewActive`** : `boolean`
+  - **`targetGraphicsRotY`** : `number`
+  - **`graphicsRotY`** : `number`
+  - **`estimatedYawVelocity`** : `number`
+  - **`newYaw`** : `number`
+  - **`oldYaw`** : `number`
+  - **`foliageBendingNode`** : `number`
+  - **`dirtyMask`** : `number`
+  - **`thirdPersonLookfromNode`** : `number`
+  - **`thirdPersonLookatNode`** : `number`
+  - **`isServer`** : `boolean`
+  - **`isRegistered`** : `boolean`
+  - **`rotY`** : `number`
+  - **`isControlled`** : `boolean`
+  - **`clipDistance`** : `number`
+  - **`controllerIndex`** : `number`
+  - **`wasDropping`** : `boolean`
+  - **`baseInformation`** : `table`
+  - **`isEntered`** : `boolean`
+  - **`rootNode`** : `number`
+  - **`rotX`** : `number`
+  - **`isCarryingObject`** : `boolean`
+  - **`isManuallyReplicated`** : `boolean`
+  - **`waterY`** : `number`
+  - **`id`** : `number`
+  - **`lastEstimatedForwardVelocity`** : `number`
+  - **`graphicsRootNode`** : `number`
+  - **`lastServerId`** : `number`
+  - **`wasJumping`** : `boolean`
+  - **`owner`** : `table`
+  - **`camY`** : `number`
+  - **`foliageBendingId`** : `number`
+  - **`lockedInput`** : `boolean`
+  - **`petOverlay`** : `table`
+  - **`brushOverlay`** : `table`
+  - **`aimOverlay`** : `table`
+  - **`maxPickableMass`** : `number`
+  - **`pickedUpObjectOverlay`** : `table`
+  - **`isObjectInRange`** : `boolean`
+  - **`playerHotspot`** : `table`
+    - **`getCategory`** : `None`
+    - **`new`** : `None`
+    - **`isa`** : `None`
+    - **`copy`** : `None`
+    - **`class`** : `None`
+    - **`getCanBlink`** : `None`
+    - **`getColor`** : `None`
+    - **`getWorldRotation`** : `None`
+    - **`getVehicle`** : `None`
+    - **`delete`** : `None`
+    - **`getPlayer`** : `None`
+    - **`getWorldPosition`** : `None`
+    - **`superClass`** : `None`
+    - **`getRenderLast`** : `None`
+    - **`setPlayer`** : `None`
+    - **`setVehicle`** : `None`
+    - **`worldZ`** : `None`
+    - **`worldX`** : `None`
+    - **`isPersistent`** : `None`
+    - **`isBlinking`** : `None`
+    - **`icon`** : `None`
+    - **`lastScreenRotation`** : `None`
+    - **`height`** : `None`
+    - **`width`** : `None`
+    - **`clickArea`** : `None`
+    - **`color`** : `None`
+    - **`player`** : `None`
+    - **`scale`** : `None`
+    - **`forceNoRotation`** : `None`
+    - **`ownerFarmId`** : `None`
+    - **`lastScreenLayout`** : `None`
+    - **`isVisible`** : `None`
+    - **`lastScreenPositionY`** : `None`
+    - **`lastScreenPositionX`** : `None`
+    - **`worldRotation`** : `None`
+  - **`cameraBobbingEnabled`** : `boolean`
+  - **`inputInformation`** : `table`
+  - **`allowPlayerPickUp`** : `boolean`
+  - **`networkInformation`** : `table`
+  - **`motionInformation`** : `table`
+  - **`recieveUpdates`** : `boolean`
+  - **`canRideAnimal`** : `boolean`
+  - **`fovY`** : `number`
+  - **`isOwner`** : `boolean`
+  - **`camera`** : `number`
+  - **`walkingIsLocked`** : `boolean`
+  - **`isTorchActive`** : `boolean`
+  - **`cameraRotY`** : `number`
+  - **`farmId`** : `number`
+  - **`model`** : `table`
+    - **`getFirstPersonCameraTargetNode`** : `None`
+    - **`linkKinematicHelperToCamera`** : `None`
+    - **`getKinematicHelpers`** : `None`
+    - **`loadSounds`** : `None`
+    - **`getLastForwardVelocity`** : `None`
+    - **`applyCustomWorkStyle`** : `None`
+    - **`readStream`** : `None`
+    - **`linkTorchToCamera`** : `None`
+    - **`enableTorch`** : `None`
+    - **`getIKChains`** : `None`
+    - **`setIKDirty`** : `None`
+    - **`getCapsuleSize`** : `None`
+    - **`loadEmpty`** : `None`
+    - **`setAnimationParameters`** : `None`
+    - **`load`** : `None`
+    - **`new`** : `None`
+    - **`isa`** : `None`
+    - **`copy`** : `None`
+    - **`class`** : `None`
+    - **`loadFileFinished`** : `None`
+    - **`getRootNode`** : `None`
+    - **`getStyle`** : `None`
+    - **`updateFX`** : `None`
+    - **`setSkeletonRotation`** : `None`
+    - **`writeStream`** : `None`
+    - **`tryFinish`** : `None`
+    - **`onModelPartLoaded`** : `None`
+    - **`linkRightHandToCamera`** : `None`
+    - **`delete`** : `None`
+    - **`setVisibility`** : `None`
+    - **`setStyleFinish`** : `None`
+    - **`updateAnimations`** : `None`
+    - **`setStyle`** : `None`
+    - **`superClass`** : `None`
+    - **`groundRaycastCallback`** : `None`
+    - **`getHasTorch`** : `None`
+    - **`getCurrentSurfaceSound`** : `None`
+    - **`loadIKChains`** : `None`
+    - **`setSoundParameters`** : `None`
+    - **`pickUpKinematicHelperNodeChild`** : `None`
+    - **`thirdPersonHeadNode`** : `None`
+    - **`baseDirectory`** : `None`
+    - **`thirdPersonLeftHandNode`** : `None`
+    - **`thirdPersonRightHandNode`** : `None`
+    - **`thirdPersonSuspensionNode`** : `None`
+    - **`mesh`** : `None`
+    - **`skeleton`** : `None`
+    - **`isLoaded`** : `None`
+    - **`animationInformation`** : `None`
+    - **`animRootThirdPerson`** : `None`
+    - **`particleSystemsInformation`** : `None`
+    - **`ikChains`** : `None`
+    - **`capsuleRadius`** : `None`
+    - **`capsuleHeight`** : `None`
+    - **`modelParts`** : `None`
+    - **`lightNode`** : `None`
+    - **`xmlFilename`** : `None`
+    - **`thirdPersonSpineNode`** : `None`
+    - **`sharedLoadRequestId`** : `None`
+    - **`rightArmToolNode`** : `None`
+    - **`leftArmToolNode`** : `None`
+    - **`pickUpKinematicHelperNode`** : `None`
+    - **`filename`** : `None`
+    - **`asyncLoadCallbackFunction`** : `None`
+    - **`baseStyle`** : `None`
+    - **`rootNode`** : `None`
+    - **`filesToLoad`** : `None`
+    - **`sharedLoadRequestIds`** : `None`
+    - **`style`** : `None`
+    - **`isRealPlayer`** : `None`
+    - **`skeletonRootNode`** : `None`
+    - **`firstPersonCameraTarget`** : `None`
+    - **`soundInformation`** : `None`
+    - **`capsuleTotalHeight`** : `None`
+  - **`nextDirtyFlag`** : `number`
+  - **`deleteListeners`** : `table`
+  - **`ownerFarmId`** : `number`
+  - **`cctMovementCollisionMask`** : `number`
+  - **`debugFlightModeRunningFactor`** : `number`
+
+</details>
+
+<details open>
+<summary><strong>Objects/Tables (84)</strong></summary>
+
+- **`storageSystem`** : `table`
+  - **Methods**: 33 available
+    - `addStorageToUnloadingStation()`
+    - `getExtendableUnloadingStationsInRange()`
+    - `removeStorageFromUnloadingStations()`
+    - `addStorageToUnloadingStations()`
+    - `getIsUnloadingStationAvailable()`
+    - `getExtendableLoadingStationsInRange()`
+    - `removeStorageFromLoadingStations()`
+    - `addStorageToLoadingStations()`
+    - `getIsLoadingStationAvailable()`
+    - `getPlaceableUnloadingStationIndex()`
+    - `hasStorage()`
+    - `getPlaceableUnloadingStation()`
+    - `addStorage()`
+    - `removeLoadingStation()`
+    - `addLoadingStation()`
+    - `removeUnloadingStation()`
+    - `addUnloadingStation()`
+    - `getIsStationCompatible()`
+    - `consoleCommandToggleDebug()`
+    - `addStorageToLoadingStation()`
+    - `new()`
+    - `isa()`
+    - `copy()`
+    - `class()`
+    - `getStorages()`
+    - `getLoadingStations()`
+    - `delete()`
+    - `getPlaceableLoadingStationIndex()`
+    - `getUnloadingStations()`
+    - `getPlaceableLoadingStation()`
+    - `superClass()`
+    - `removeStorage()`
+    - `getStorageExtensionsInRange()`
+  - **`storageExtensions`** : `reverse-hash-map`
+  - **`storages`** : `reverse-hash-map`
+  - **`loadingStations`** : `reverse-hash-map`
+  - **`unloadingStations`** : `reverse-hash-map`
+  - **`extendableLoadingStations`** : `reverse-hash-map`
+  - **`placeableLoadingStations`** : `reverse-hash-map`
+  - **`placeableUnloadingStations`** : `reverse-hash-map`
+  - **`extendableUnloadingStations`** : `reverse-hash-map`
+  - **`accessHandler`** : `table`
+- **`foliageBendingSystem`** : `table`
+  - **Methods**: 9 available
+    - `new()`
+    - `delete()`
+    - `setTerrainTransformGroup()`
+    - `class()`
+    - `destroyObject()`
+    - `createRectangle()`
+    - `copy()`
+    - `superClass()`
+    - `isa()`
+  - **`systemId`** : `number`
+- **`snowSystem`** : `table`
+  - **Methods**: 33 available
+    - `getMaxUpdateTime()`
+    - `getHeight()`
+    - `startApplication()`
+    - `loadMapData()`
+    - `saveState()`
+    - `loadFromXMLFile()`
+    - `removeSnow()`
+    - `applySnow()`
+    - `update()`
+    - `saveToXMLFile()`
+    - `saltArea()`
+    - `getSnowShaderValue()`
+    - `setSnowHeightAtArea()`
+    - `new()`
+    - `isa()`
+    - `copy()`
+    - `class()`
+    - `consoleCommandResetSnow()`
+    - `consoleCommandSetSnow()`
+    - `consoleCommandAddSnow()`
+    - `updateSnowShader()`
+    - `setSnowHeight()`
+    - `onSleepChanged()`
+    - `delete()`
+    - `consoleCommandSalt()`
+    - `consoleCommandSetSnowShader()`
+    - `removeAll()`
+    - `onHeightChanged()`
+    - `removeSnowUnderObjects()`
+    - `superClass()`
+    - `onApplicationFinished()`
+    - `getSnowHeightAtArea()`
+    - `onTerrainLoad()`
+  - **`isServer`** : `boolean`
+  - **`environment`** : `table`
+  - **`snowHeightTypeIndex`** : `number`
+  - **`indoorMask`** : `table`
+  - **`updateQueue`** : `table`
+  - **`updater`** : `number`
+  - **`mission`** : `table`
+  - **`height`** : `number`
+  - **`itemWakeUpTimer`** : `number`
+  - **`itemWakeUpDelay`** : `number`
+  - **`itemWakeUpIndex`** : `number`
+  - **`vehicleWakeUpTimer`** : `number`
+  - **`vehicleWakeUpDelay`** : `number`
+  - **`vehicleWakeUpIndex`** : `number`
+  - **`snowShaderValue`** : `number`
+  - **`exactHeight`** : `number`
+  - **`missionInfo`** : `table`
+  - **`layerHeight`** : `number`
+  - **`modifiers`** : `table`
+- **`slotSystem`** : `table`
+  - **Methods**: 19 available
+    - `copy()`
+    - `class()`
+    - `setSlotLimit()`
+    - `isa()`
+    - `removeLimitedObject()`
+    - `loadMapData()`
+    - `new()`
+    - `getCanConnect()`
+    - `getStoreItemSlotUsage()`
+    - `hasEnoughSlots()`
+    - `delete()`
+    - `superClass()`
+    - `getCanAddLimitedObjects()`
+    - `saveToXMLFile()`
+    - `addLimitedObject()`
+    - `updateSlotLimit()`
+    - `getAreSlotsVisible()`
+    - `updateSlotUsage()`
+    - `getIsCountableObject()`
+  - **`slotLimit`** : `number`
+  - **`slotUsage`** : `number`
+  - **`mission`** : `table`
+  - **`isServer`** : `boolean`
+  - **`objectLimits`** : `table[]` (length: 2)
+- **`mapPerformanceTestUtil`** : `table`
+  - **Methods**: 9 available
+    - `runMapPerformanceTest()`
+    - `new()`
+    - `delete()`
+    - `copy()`
+    - `update()`
+    - `writeTestDataToFile()`
+    - `class()`
+    - `superClass()`
+    - `isa()`
+  - **`isRunning`** : `boolean`
+  - **`isPrepared`** : `boolean`
+- **`environment`** : `table`
+  - **Methods**: 47 available
+    - `onPlayerLeft()`
+    - `onPlayerEntered()`
+    - `getDayInPeriodFromDay()`
+    - `getPeriodFromDay()`
+    - `getDirtColors()`
+    - `getPeriodAndAlphaIntoPeriod()`
+    - `getSeasonFromString()`
+    - `getEnvironmentTime()`
+    - `getVisualSeasonAtDay()`
+    - `getDaysPerSeason()`
+    - `setSunVisibility()`
+    - `setCustomLighting()`
+    - `onWeatherChanged()`
+    - `onCreateWater()`
+    - `loadFromXMLFile()`
+    - `update()`
+    - `getJulianDay()`
+    - `saveToXMLFile()`
+    - `addTimeRange()`
+    - `updateAmbientSoundModifiers()`
+    - `consoleCommandSeasonalShaderDebug()`
+    - `consoleCommandSetSeasonalShader()`
+    - `setPlannedDaysPerPeriod()`
+    - `consoleCommandSetFixedVisuals()`
+    - `new()`
+    - `getDayAndDayTime()`
+    - `isa()`
+    - `copy()`
+    - `resetSceneParameters()`
+    - `consoleCommandToggleAutoExposure()`
+    - `consoleCommandSetDayTime()`
+    - `consoleCommandSetFixedExposureSettings()`
+    - `updateJulianDay()`
+    - `consoleCommandTakeEnvProbes()`
+    - `setEnvironmentTime()`
+    - `getSeasonAtDay()`
+    - `consoleCommandReloadEnvironment()`
+    - `superClass()`
+    - `getSeasonShaderValue()`
+    - `delete()`
+    - `class()`
+    - `load()`
+    - `updateSceneParameters()`
+    - `onCreateSunLight()`
+    - `setFixedPeriod()`
+    - `updateTimeValues()`
+    - `setCustomLighting()`
+  - **`skyNode`** : `number`
+  - **`lighting`** : `table`
+    - **`new`** : `None`
+    - **`isa`** : `None`
+    - **`copy`** : `None`
+    - **`class`** : `None`
+    - **`fileInterpolator`** : `None`
+    - **`getEnvMapBaseFilename`** : `None`
+    - **`updateCurves`** : `None`
+    - **`setFixedExposureSettings`** : `None`
+    - **`setDaylightTimes`** : `None`
+    - **`getColorGradingFileCurve`** : `None`
+    - **`getHardcodedFromTime`** : `None`
+    - **`loadCurveDataFromXML`** : `None`
+    - **`setEnvironment`** : `None`
+    - **`createCurve`** : `None`
+    - **`updateExposureSettings`** : `None`
+    - **`updateSunHeight`** : `None`
+    - **`delete`** : `None`
+    - **`superClass`** : `None`
+    - **`update`** : `None`
+    - **`load`** : `None`
+    - **`getTimeFromHardcoded`** : `None`
+    - **`updateAtmosphere`** : `None`
+    - **`updateEnvAlbedo`** : `None`
+    - **`updateEnvMap`** : `None`
+    - **`updateSunLocation`** : `None`
+    - **`setCloudEnvMapInfo`** : `None`
+    - **`reset`** : `None`
+    - **`secondaryExtraterrestrialColorCurveData`** : `None`
+    - **`primaryExtraterrestrialColorCurveData`** : `None`
+    - **`asymmetryFactorCurveData`** : `None`
+    - **`envMapRenderingMode`** : `None`
+    - **`sunSizeScaleCurveData`** : `None`
+    - **`environment`** : `None`
+    - **`sunBrightnessScaleCurveData`** : `None`
+    - **`sunIsPrimaryCurveData`** : `None`
+    - **`moonSizeScaleCurveData`** : `None`
+    - **`moonBrightnessScaleCurveData`** : `None`
+    - **`sunRotationCurveData`** : `None`
+    - **`heightAngleLimitRotationEnd`** : `None`
+    - **`nightStart`** : `None`
+    - **`nightEnd`** : `None`
+    - **`dayEnd`** : `None`
+    - **`dayStart`** : `None`
+    - **`sunRotCurve`** : `None`
+    - **`colorGradingFileCurve`** : `None`
+    - **`sunHeightAngle`** : `None`
+    - **`sunHeightLimitEnd`** : `None`
+    - **`sunHeightLimitStart`** : `None`
+    - **`sunHeightLimit`** : `None`
+    - **`cloudEnvMapBlendAlpha`** : `None`
+    - **`cloudEnvMapIndex2`** : `None`
+    - **`cloudEnvMapIndex1`** : `None`
+    - **`lastUpdateDayTime`** : `None`
+    - **`primaryDynamicLightingScale`** : `None`
+    - **`primaryExtraterrestrialColor`** : `None`
+    - **`sunBrightnessScaleCurve`** : `None`
+    - **`moonBrightnessScaleCurve`** : `None`
+    - **`sunIsPrimaryCurve`** : `None`
+    - **`moonSizeScaleCurve`** : `None`
+    - **`sunSizeScaleCurve`** : `None`
+    - **`albedoGroundColors`** : `None`
+    - **`secondaryExtraterrestrialColor`** : `None`
+    - **`lightScatteringRotCurve`** : `None`
+    - **`autoExposureCurve`** : `None`
+    - **`bloomThreshold`** : `None`
+    - **`envMapTimes`** : `None`
+    - **`envMapBasePath`** : `None`
+    - **`colorGradingNight`** : `None`
+    - **`attr10`** : `None`
+    - **`colorGradingDay`** : `None`
+    - **`asymmetryFactorCurve`** : `None`
+    - **`sunLightId`** : `None`
+    - **`sunColor`** : `None`
+    - **`heightAngleLimitRotationStart`** : `None`
+    - **`autoExposureCurveData`** : `None`
+    - **`heightAngleLimitRotation`** : `None`
+    - **`lightScatteringRotationCurveData`** : `None`
+    - **`updateInterval`** : `None`
+    - **`primaryDynamicLightingScaleCurveData`** : `None`
+    - **`bloomMagnitude`** : `None`
+  - **`dirtColorSnow`** : `number[]` (length: 3)
+  - **`dirtColorDefault`** : `number[]` (length: 3)
+  - **`dayNightCycle`** : `boolean`
+  - **`dayTimeScale`** : `number`
+  - **`timeAdjustment`** : `number`
+  - **`currentSeason`** : `number`
+  - **`currentPeriod`** : `number`
+  - **`plannedDaysPerPeriod`** : `number`
+  - **`dayTime`** : `number`
+  - **`realHourTimer`** : `number`
+  - **`realHourLength`** : `number`
+  - **`dayLength`** : `number`
+  - **`weather`** : `table`
+    - **`getRainFallScale`** : `None`
+    - **`draw`** : `None`
+    - **`loadCloudPresets`** : `None`
+    - **`consoleCommandWeatherSet`** : `None`
+    - **`consoleCommandWeatherReloadData`** : `None`
+    - **`consoleCommandWeatherToggleDebug`** : `None`
+    - **`fillWeatherForecast`** : `None`
+    - **`addStartWeather`** : `None`
+    - **`getRandomWeatherObjectVariation`** : `None`
+    - **`consoleCommandWeatherSetFog`** : `None`
+    - **`consoleCommandWeatherAdd`** : `None`
+    - **`getForecastInstanceVariation`** : `None`
+    - **`superClass`** : `None`
+    - **`onWeatherChanged`** : `None`
+    - **`onHourChanged`** : `None`
+    - **`loadFromXMLFile`** : `None`
+    - **`getNextWeatherType`** : `None`
+    - **`setIsRainAllowed`** : `None`
+    - **`getCurrentWeatherType`** : `None`
+    - **`getCurrentMinMaxTemperatures`** : `None`
+    - **`update`** : `None`
+    - **`load`** : `None`
+    - **`getCurrentTemperature`** : `None`
+    - **`saveToXMLFile`** : `None`
+    - **`loadWeatherObjects`** : `None`
+    - **`getCurrentTemperatureTrend`** : `None`
+    - **`getTimeUntilRain`** : `None`
+    - **`sendInitialState`** : `None`
+    - **`getIsRaining`** : `None`
+    - **`new`** : `None`
+    - **`getWeatherObjectByIndex`** : `None`
+    - **`getGroundWetness`** : `None`
+    - **`getTimeSinceLastRain`** : `None`
+    - **`isa`** : `None`
+    - **`copy`** : `None`
+    - **`class`** : `None`
+    - **`getWeatherTypeAtTime`** : `None`
+    - **`addWeatherForecast`** : `None`
+    - **`rebuild`** : `None`
+    - **`setInitialState`** : `None`
+    - **`toggleFog`** : `None`
+    - **`delete`** : `None`
+    - **`consoleCommandWeatherToggleRandomWindWaving`** : `None`
+    - **`getForecast`** : `None`
+    - **`init`** : `None`
+    - **`consoleCommandWeatherSetClouds`** : `None`
+    - **`getIsReady`** : `None`
+    - **`createRandomWeatherInstance`** : `None`
+    - **`consoleCommandWeatherSetDebugWind`** : `None`
+    - **`getCloudEnvMapInfo`** : `None`
+    - **`onPeriodLengthChanged`** : `None`
+    - **`onTimeScaleChanged`** : `None`
+    - **`envMapCloudProbes`** : `None`
+    - **`cloudUpdater`** : `None`
+    - **`owner`** : `None`
+    - **`temperatureDebugOverlayCurrent`** : `None`
+    - **`temperatureDebugGraph`** : `None`
+    - **`snowHeight`** : `None`
+    - **`ambientSoundModifiers`** : `None`
+    - **`temperatureUpdater`** : `None`
+    - **`timeSinceLastRain`** : `None`
+    - **`weightedWeatherObjects`** : `None`
+    - **`forecast`** : `None`
+    - **`fog`** : `None`
+    - **`isRainAllowed`** : `None`
+    - **`windUpdater`** : `None`
+    - **`fogUpdater`** : `None`
+    - **`firstWeatherType`** : `None`
+    - **`forecastItems`** : `None`
+    - **`typeToWeatherObject`** : `None`
+    - **`weatherObjects`** : `None`
+  - **`currentVisualPeriod`** : `number`
+  - **`currentVisualSeason`** : `number`
+  - **`currentMonotonicDay`** : `number`
+  - **`currentVisualDayInSeason`** : `number`
+  - **`currentDayInSeason`** : `number`
+  - **`currentYear`** : `number`
+  - **`depthOfField`** : `boolean`
+  - **`nightTimeScale`** : `number`
+  - **`currentMinute`** : `number`
+  - **`currentHour`** : `number`
+  - **`currentDayInPeriod`** : `number`
+  - **`daysPerPeriod`** : `number`
+  - **`timeRanges`** : `table`
+  - **`timeUpdateInterval`** : `number`
+  - **`xmlFilename`** : `string`
+  - **`baseLighting`** : `table`
+  - **`daylight`** : `table`
+    - **`new`** : `None`
+    - **`setEnvironment`** : `None`
+    - **`copy`** : `None`
+    - **`class`** : `None`
+    - **`setJulianDay`** : `None`
+    - **`loadFromXMLFile`** : `None`
+    - **`delete`** : `None`
+    - **`isa`** : `None`
+    - **`superClass`** : `None`
+    - **`load`** : `None`
+    - **`saveToXMLFile`** : `None`
+    - **`calculateStartEndOfDay`** : `None`
+    - **`getDaylightTimes`** : `None`
+    - **`calculateSunDeclination`** : `None`
+    - **`calculateTime`** : `None`
+    - **`getSunHeightAngle`** : `None`
+    - **`getLogicalNightTime`** : `None`
+    - **`logicalNightEndMinutes`** : `None`
+    - **`logicalNightStartMinutes`** : `None`
+    - **`logicalNightStart`** : `None`
+    - **`nightStart`** : `None`
+    - **`nightEnd`** : `None`
+    - **`dayEnd`** : `None`
+    - **`dayStart`** : `None`
+    - **`latitudeInRadians`** : `None`
+    - **`latitude`** : `None`
+    - **`julianDay`** : `None`
+    - **`environment`** : `None`
+    - **`logicalNightEnd`** : `None`
+  - **`debugSeasonalShaderParameter`** : `boolean`
+  - **`isSunOn`** : `boolean`
+  - **`timeUpdateTime`** : `number`
+  - **`ambientSoundModifiers`** : `table`
+  - **`mission`** : `table`
+  - **`environmentMaskSystem`** : `table`
+    - **`new`** : `None`
+    - **`draw`** : `None`
+    - **`registerWeatherMaskModifier`** : `None`
+    - **`registerViewerSpatialityMaskModifier`** : `None`
+    - **`copy`** : `None`
+    - **`class`** : `None`
+    - **`getViewerSpatialityModifierUpdateFuncFromFlagName`** : `None`
+    - **`setIsSunOn`** : `None`
+    - **`setDayOfYear`** : `None`
+    - **`getWeatherMaskFromFlagNames`** : `None`
+    - **`delete`** : `None`
+    - **`update`** : `None`
+    - **`getWeatherModifierUpdateFuncFromFlagName`** : `None`
+    - **`consoleCommandToggleDebugView`** : `None`
+    - **`superClass`** : `None`
+    - **`isa`** : `None`
+    - **`setWeather`** : `None`
+    - **`setDayTime`** : `None`
+    - **`setIsInVehicle`** : `None`
+    - **`minuteOfDay`** : `None`
+    - **`viewerSpatialityFlagNameToModifier`** : `None`
+    - **`viewerSpatialityMaskModifiers`** : `None`
+    - **`weatherFlagNameToModifier`** : `None`
+    - **`weatherMaskModifiers`** : `None`
+    - **`setIsSummer`** : `None`
+    - **`setIsSpring`** : `None`
+    - **`setIsExterior`** : `None`
+    - **`isDebugViewActive`** : `None`
+    - **`setIsInterior`** : `None`
+    - **`setOutVehicle`** : `None`
+    - **`setIsDay`** : `None`
+    - **`setWeatherCloudy`** : `None`
+    - **`setWeatherSnow`** : `None`
+    - **`setInVehicle`** : `None`
+    - **`setWeatherHail`** : `None`
+    - **`setWeatherRain`** : `None`
+    - **`setIsWinter`** : `None`
+    - **`setWeatherSun`** : `None`
+    - **`setIsAutumn`** : `None`
+    - **`setIsNight`** : `None`
+    - **`mission`** : `None`
+    - **`viewerSpatialityMask`** : `None`
+    - **`weatherMask`** : `None`
+    - **`dayOfYear`** : `None`
+  - **`visualPeriodLocked`** : `boolean`
+  - **`currentDay`** : `number`
+- **`loadingConnection`** : `table`
+  - **Methods**: 23 available
+    - `readUpdateAck()`
+    - `onPacketLost()`
+    - `onPacketSent()`
+    - `dropObjectEventQueue()`
+    - `getLatency()`
+    - `getObjectSyncState()`
+    - `writeUpdateAck()`
+    - `getIsServer()`
+    - `getIsClient()`
+    - `setIsReadyForEvents()`
+    - `setIsReadyForObjects()`
+    - `new()`
+    - `isa()`
+    - `copy()`
+    - `class()`
+    - `notifyObjectDeleted()`
+    - `sendObjectEventQueue()`
+    - `updateSendStats()`
+    - `queueSendEvent()`
+    - `sendEvent()`
+    - `getIsLocal()`
+    - `getIsWindowFull()`
+    - `superClass()`
+  - **`highestAckedSeq`** : `number`
+  - **`lastSeqSent`** : `number`
+  - **`isServer`** : `boolean`
+  - **`pendingDeleteObjectPacketIds`** : `table`
+  - **`pendingDeleteObjects`** : `table`
+  - **`streamId`** : `number`
+  - **`isReadyForObjects`** : `boolean`
+  - **`ackPingPacketSent`** : `boolean`
+  - **`objectsInfo`** : `table`
+  - **`isConnected`** : `boolean`
+  - **`localConnection`** : `table`
+  - **`hasPacketsToAck`** : `boolean`
+  - **`ackMask`** : `number`
+  - **`lastSeqReceived`** : `number`
+  - **`compressionRatio`** : `number`
+  - **`isReadyForEvents`** : `boolean`
+  - **`sendStatsTime`** : `number`
+- **`vehicleChangeListeners`** : `table`
+- **`tireTrackSystem`** : `table`
+  - **Methods**: 15 available
+    - `new()`
+    - `consoleCommandTireTrackDebug()`
+    - `consoleCommandRemoveAllTireTracks()`
+    - `onCreateTireTrackSystem()`
+    - `class()`
+    - `superClass()`
+    - `delete()`
+    - `load()`
+    - `createTrack()`
+    - `destroyTrack()`
+    - `addTrackPoint()`
+    - `cutTrack()`
+    - `eraseParallelogram()`
+    - `copy()`
+    - `isa()`
+  - **`systemId`** : `number`
+- **`vehicleYPosHighPrecisionCompressionParams`** : `table`
+  - **`numBits`** : `number`
+  - **`scale`** : `number`
+  - **`worldOffset`** : `number`
+  - **`worldSize`** : `number`
+- **`vehicleXZPosHighPrecisionCompressionParams`** : `table`
+  - **`numBits`** : `number`
+  - **`scale`** : `number`
+  - **`worldOffset`** : `number`
+  - **`worldSize`** : `number`
+- **`vehicleYPosCompressionParams`** : `table`
+  - **`numBits`** : `number`
+  - **`scale`** : `number`
+  - **`worldOffset`** : `number`
+  - **`worldSize`** : `number`
+- **`vehicleXZPosCompressionParams`** : `table`
+  - **`numBits`** : `number`
+  - **`scale`** : `number`
+  - **`worldOffset`** : `number`
+  - **`worldSize`** : `number`
+- **`leasedVehicles`** : `table`
+- **`areaRelativeCompressionParams`** : `table`
+  - **`numBits`** : `number`
+  - **`scale`** : `number`
+  - **`worldOffset`** : `number`
+  - **`worldSize`** : `number`
+- **`areaCompressionParams`** : `table`
+  - **`numBits`** : `number`
+  - **`scale`** : `number`
+  - **`worldOffset`** : `number`
+  - **`worldSize`** : `number`
+- **`economyManager`** : `table`
+  - **Methods**: 36 available
+    - `getPricePerLiter()`
+    - `periodChanged()`
+    - `dayChanged()`
+    - `updateGreatDemandsPDASpots()`
+    - `stopGreatDemand()`
+    - `getCostMultiplier()`
+    - `addSellingStation()`
+    - `getFillTypeHistoricPrice()`
+    - `loadFromXMLFile()`
+    - `vehicleOperatingHourChanged()`
+    - `update()`
+    - `updateSellingStations()`
+    - `saveToXMLFile()`
+    - `manageGreatDemands()`
+    - `sendPeriodFillTypeHistory()`
+    - `finalizeGreatDemandLoading()`
+    - `startGreatDemand()`
+    - `new()`
+    - `removeSellingStation()`
+    - `isa()`
+    - `copy()`
+    - `class()`
+    - `getPriceMultiplier()`
+    - `minuteChanged()`
+    - `updateFillTypeHistory()`
+    - `getFillTypeSeasonalFactor()`
+    - `getInitialLeasingPrice()`
+    - `getSellPrice()`
+    - `getCostPerLiter()`
+    - `getGreatDemandById()`
+    - `delete()`
+    - `restartGreatDemands()`
+    - `init()`
+    - `superClass()`
+    - `hourChanged()`
+    - `getBuyPrice()`
+  - **`minuteUpdateInterval`** : `number`
+  - **`sellingStationUpdateIndex`** : `number`
+  - **`sellingStations`** : `table[]` (length: 11)
+  - **`showMoneyChangeNextMinute`** : `boolean`
+  - **`numberOfConcurrentDemands`** : `number`
+  - **`greatDemands`** : `table[]` (length: 3)
+  - **`minuteTimer`** : `number`
+- **`fieldGroundSystem`** : `table`
+  - **Methods**: 29 available
+    - `loadChopperIdFromXML()`
+    - `new()`
+    - `initTerrain()`
+    - `superClass()`
+    - `copy()`
+    - `loadSprayIdFromXML()`
+    - `loadDensityMapFromXML()`
+    - `getFieldGroundValueByName()`
+    - `initDataStructures()`
+    - `getFieldSprayValue()`
+    - `getSize()`
+    - `loadMapData()`
+    - `getChopperTypeValue()`
+    - `getDensityMapData()`
+    - `getMaxValue()`
+    - `getChopperTypeIndexByName()`
+    - `getSowingRange()`
+    - `getSowableRange()`
+    - `addDensityMapSyncer()`
+    - `getGroundAngleMaxValue()`
+    - `getFieldGroundValue()`
+    - `getDensityMaps()`
+    - `getFieldSprayValueByName()`
+    - `loadGroundIdFromXML()`
+    - `getFieldGroundTyreTrackColor()`
+    - `isa()`
+    - `delete()`
+    - `class()`
+    - `loadGroundTypes()`
+  - **`angleFirstChannel`** : `number`
+  - **`groundTypesMaxValue`** : `number`
+  - **`lastSowingValue`** : `number`
+  - **`firstSowingValue`** : `number`
+  - **`baseDirectory`** : `string`
+  - **`firstSowableValue`** : `number`
+  - **`lastSowableValue`** : `number`
+  - **`fieldSprayTypeValue`** : `number[]` (length: 4)
+  - **`groundTypesFirstChannel`** : `number`
+  - **`densityMaps`** : `table[]` (length: 8)
+  - **`fieldChopperTypeTyreTrackColor`** : `map`
+  - **`fieldChopperTypeValue`** : `number[]` (length: 2)
+  - **`fieldSprayTypeTyreTrackColor`** : `table[]` (length: 4)
+  - **`fieldGroundTypeTyreTrackColor`** : `table[]` (length: 14)
+  - **`fieldGroundTypeValue`** : `number[]` (length: 14)
+  - **`groundTypesNumChannels`** : `number`
+  - **`sprayTypesMaxValue`** : `number`
+  - **`sprayTypesNumChannels`** : `number`
+  - **`sprayTypesFirstChannel`** : `number`
+  - **`angleMaxValue`** : `number`
+  - **`angleNumChannels`** : `number`
+- **`beehiveSystem`** : `table`
+  - **Methods**: 21 available
+    - `new()`
+    - `superClass()`
+    - `copy()`
+    - `class()`
+    - `updateBeehivesState()`
+    - `updateState()`
+    - `updateBeehivesOutput()`
+    - `getFarmBeehivePalletSpawner()`
+    - `getBeehiveInfluenceFactorAt()`
+    - `onHourChanged()`
+    - `getFarmHasBeehive()`
+    - `delete()`
+    - `getBeehives()`
+    - `update()`
+    - `addBeehive()`
+    - `addBeehivePalletSpawner()`
+    - `showNoSpawnerWarning()`
+    - `removeBeehivePalletSpawner()`
+    - `consoleCommandBeehiveDebug()`
+    - `isa()`
+    - `removeBeehive()`
+  - **`isProductionActive`** : `boolean`
+  - **`isFxActive`** : `boolean`
+  - **`beehivePalletSpawners`** : `table`
+  - **`beehivesSortedRadius`** : `table`
+  - **`beehives`** : `table`
+  - **`currentSpawnerUpdateIndex`** : `number`
+  - **`updateCooldown`** : `number`
+  - **`lastTimeNoSpawnerWarningDisplayed`** : `number`
+  - **`mission`** : `table`
+- **`accessHandler`** : `table`
+  - **Methods**: 10 available
+    - `new()`
+    - `delete()`
+    - `copy()`
+    - `class()`
+    - `canFarmAccessOtherId()`
+    - `canFarmAccessLand()`
+    - `canFarmAccess()`
+    - `canPlayerAccess()`
+    - `superClass()`
+    - `isa()`
+- **`missionInfo`** : `table`
+  - **Methods**: 30 available
+    - `getIsTerrainTextureValid()`
+    - `getIsPlacementCollisionValid()`
+    - `loadDefaults()`
+    - `getIsTipCollisionValid()`
+    - `saveToXMLFile()`
+    - `setSavegameDirectory()`
+    - `new()`
+    - `getIsLoadedFromSavegame()`
+    - `loadFromMission()`
+    - `getSavegameDirectory()`
+    - `copy()`
+    - `class()`
+    - `loadFromXML()`
+    - `getIsDensityMapValid()`
+    - `isa()`
+    - `setMapId()`
+    - `getStateI18NKey()`
+    - `getSavegameAutoBackupLatestFilename()`
+    - `getSavegameAutoBackupBasePath()`
+    - `delete()`
+    - `getSavegameAutoBackupDirectoryBase()`
+    - `getAreSplitShapesValid()`
+    - `setScenarioId()`
+    - `setDifficulty()`
+    - `getSellPriceMultiplier()`
+    - `getBuyPriceMultiplier()`
+    - `getIsTerrainLodTextureValid()`
+    - `updateDifficultyProperties()`
+    - `getIsNavigationCollisionValid()`
+    - `superClass()`
+  - **`hasInitiallyOwnedFarmlands`** : `boolean`
+  - **`fruitDestruction`** : `boolean`
+  - **`stopAndGoBraking`** : `boolean`
+  - **`trailerFillLimit`** : `boolean`
+  - **`itemsXMLLoad`** : `string`
+  - **`helperBuyFuel`** : `boolean`
+  - **`helperBuySeeds`** : `boolean`
+  - **`helperBuyFertilizer`** : `boolean`
+  - **`helperSlurrySource`** : `number`
+  - **`helperManureSource`** : `number`
+  - **`windTurbineCount`** : `number`
+  - **`onCreateObjectsXMLLoad`** : `string`
+  - **`treeTypesCut`** : `string`
+  - **`woodTonsSold`** : `number`
+  - **`plantedTreeCount`** : `number`
+  - **`economyXML`** : `string`
+  - **`missionFrequency`** : `number`
+  - **`creationDate`** : `string`
+  - **`revenue`** : `number`
+  - **`harvestedOlives`** : `number`
+  - **`harvestedGrapes`** : `number`
+  - **`threshedHectares`** : `number`
+  - **`sprayedHectares`** : `number`
+  - **`sownHectares`** : `number`
+  - **`playTime`** : `number`
+  - **`workedHectares`** : `number`
+  - **`traveledDistance`** : `number`
+  - **`sprayUsage`** : `number`
+  - **`seedUsage`** : `number`
+  - **`sellPriceMultiplier`** : `number`
+  - **`navigationCollisionRevision`** : `number`
+  - **`placementCollisionRevision`** : `number`
+  - **`tipCollisionRevision`** : `number`
+  - **`splitShapesRevision`** : `number`
+  - **`terrainLodTextureRevision`** : `number`
+  - **`steeringSensitivity`** : `number`
+  - **`steeringBackSpeed`** : `number`
+  - **`transportMissionCount`** : `number`
+  - **`fieldJobMissionByNPC`** : `number`
+  - **`fieldJobMissionCount`** : `number`
+  - **`supportsSaving`** : `boolean`
+  - **`foundHelpIcons`** : `string`
+  - **`isNewSPCareer`** : `boolean`
+  - **`slotUsage`** : `number`
+  - **`saveDateFormatted`** : `string`
+  - **`id`** : `string`
+  - **`guidedTourStep`** : `number`
+  - **`tipTypeMappings`** : `table`
+  - **`mods`** : `table[]` (length: 5)
+  - **`autoSaveInterval`** : `number`
+  - **`savegameIndex`** : `number`
+  - **`guidedTourState`** : `string`
+  - **`plannedDaysPerPeriod`** : `number`
+  - **`difficulty`** : `number`
+  - **`weedsEnabled`** : `boolean`
+  - **`economicDifficulty`** : `number`
+  - **`fuelUsage`** : `number`
+  - **`growthMode`** : `number`
+  - **`isSnowEnabled`** : `boolean`
+  - **`dirtInterval`** : `number`
+  - **`guidedTourActive`** : `boolean`
+  - **`mapXMLFilename`** : `string`
+  - **`mapTitle`** : `string`
+  - **`densityMapHeightXML`** : `string`
+  - **`mapId`** : `string`
+  - **`baseDirectory`** : `string`
+  - **`displayName`** : `string`
+  - **`scriptClass`** : `string`
+  - **`scriptFilename`** : `string`
+  - **`timeScale`** : `number`
+  - **`dayTime`** : `number`
+  - **`cutTreeCount`** : `number`
+  - **`xmlKey`** : `string`
+  - **`trafficEnabled`** : `boolean`
+  - **`money`** : `number`
+  - **`mapSoundXmlFilename`** : `string`
+  - **`treePlantXMLLoad`** : `string`
+  - **`densityMapHeightXMLLoad`** : `string`
+  - **`cultivatedHectares`** : `number`
+  - **`mapsSplitShapeFileIds`** : `number[]` (length: 1)
+  - **`treePlantXML`** : `string`
+  - **`plowingRequiredEnabled`** : `boolean`
+  - **`missionsXMLLoad`** : `string`
+  - **`aiSystemXML`** : `string`
+  - **`missionsXML`** : `string`
+  - **`isInvalidUser`** : `boolean`
+  - **`expenses`** : `number`
+  - **`uploadState`** : `number`
+  - **`conflictedMetadata`** : `string`
+  - **`isSoftConflict`** : `boolean`
+  - **`hasConflict`** : `boolean`
+  - **`fieldsXML`** : `string`
+  - **`terrainTextureRevision`** : `number`
+  - **`vehiclesXMLLoad`** : `string`
+  - **`loadDefaultFarm`** : `boolean`
+  - **`savegameDirectory`** : `string`
+  - **`saveDate`** : `string`
+  - **`automaticMotorStartEnabled`** : `boolean`
+  - **`mapTerrainTextureRevision`** : `number`
+  - **`isValid`** : `boolean`
+  - **`environmentXML`** : `string`
+  - **`foliageTypes`** : `table`
+  - **`playersXML`** : `string`
+  - **`farmsXML`** : `string`
+  - **`farmlandXML`** : `string`
+  - **`onCreateObjectsXML`** : `string`
+  - **`itemsXML`** : `string`
+  - **`placeablesXML`** : `string`
+  - **`vehiclesXML`** : `string`
+  - **`isCorruptFile`** : `boolean`
+  - **`defaultItemsXMLFilename`** : `string`
+  - **`defaultVehiclesXMLFilename`** : `string`
+  - **`densityMapRevision`** : `number`
+  - **`environmentXMLLoad`** : `string`
+  - **`defaultPlaceablesXMLFilename`** : `string`
+  - **`placeablesXMLLoad`** : `string`
+  - **`mapSplitShapesRevision`** : `number`
+  - **`limeRequired`** : `boolean`
+  - **`buyPriceMultiplier`** : `number`
+  - **`map`** : `table`
+  - **`economyXMLLoad`** : `string`
+  - **`farmsXMLLoad`** : `string`
+  - **`farmlandXMLLoad`** : `string`
+  - **`npcXMLLoad`** : `string`
+  - **`vehicleSaleXML`** : `string`
+  - **`playersXMLLoad`** : `string`
+  - **`fieldsXMLLoad`** : `string`
+  - **`mapNavigationCollisionRevision`** : `number`
+  - **`mapPlacementCollisionRevision`** : `number`
+  - **`mapTipCollisionRevision`** : `number`
+  - **`npcXML`** : `string`
+  - **`mapTerrainLodTextureRevision`** : `number`
+  - **`savegameName`** : `string`
+  - **`mapDensityMapRevision`** : `number`
+  - **`resetVehicles`** : `boolean`
+  - **`timeScaleMultiplier`** : `number`
+  - **`stonesEnabled`** : `boolean`
+  - **`initialMoney`** : `number`
+  - **`initialLoan`** : `number`
+- **`vehicleSaleSystem`** : `table`
+  - **Methods**: 21 available
+    - `removeSale()`
+    - `getFreeId()`
+    - `copy()`
+    - `class()`
+    - `onHourChanged()`
+    - `removeSaleWithId()`
+    - `superClass()`
+    - `isa()`
+    - `loadFromXMLFile()`
+    - `onVehicleBought()`
+    - `onVehicleWillSell()`
+    - `delete()`
+    - `getSaleById()`
+    - `setVehicleState()`
+    - `generateInitialSales()`
+    - `getItems()`
+    - `saveToXMLFile()`
+    - `sendAllToClient()`
+    - `new()`
+    - `addSale()`
+    - `generateRandomVehicle()`
+  - **`numGeneratedItems`** : `number`
+  - **`items`** : `table[]` (length: 4)
+  - **`mission`** : `table`
+  - **`freeIds`** : `table`
+  - **`nextFreeId`** : `number`
+  - **`numMultiplayerItems`** : `number`
+- **`userManager`** : `table`
+  - **Methods**: 32 available
+    - `update()`
+    - `new()`
+    - `getUserByNickname()`
+    - `setUserBlockDataDirty()`
+    - `getUniqueUserIdByUserId()`
+    - `removeUserByConnection()`
+    - `copy()`
+    - `class()`
+    - `getUniqueUserIdByConnection()`
+    - `getAllPlatformSessionIds()`
+    - `getUsers()`
+    - `getUserIdByConnection()`
+    - `getIsUserIdMasterUser()`
+    - `addMasterUserByConnection()`
+    - `addUser()`
+    - `getUserByUserId()`
+    - `removeUserById()`
+    - `addMasterUser()`
+    - `stoppedPlayWithUser()`
+    - `removeUser()`
+    - `removeMasterUser()`
+    - `delete()`
+    - `getIsConnectionMasterUser()`
+    - `getNextUserId()`
+    - `getMasterUsers()`
+    - `getNumberOfMasterUsers()`
+    - `getUserByConnection()`
+    - `isa()`
+    - `superClass()`
+    - `getUserByUniqueId()`
+    - `startPlayWithUser()`
+    - `getNumberOfUsers()`
+  - **`idCounter`** : `number`
+  - **`masterUserIdToConnection`** : `table[]` (length: 1)
+  - **`masterUsers`** : `table[]` (length: 1)
+  - **`users`** : `table[]` (length: 1)
+  - **`isServer`** : `boolean`
+  - **`blockedUserUpdateTimer`** : `number`
+- **`pedestrianSystem`** : `table`
+  - **Methods**: 18 available
+    - `new()`
+    - `setNightTimeRange()`
+    - `isa()`
+    - `copy()`
+    - `class()`
+    - `getSplineByIndex()`
+    - `onCreate()`
+    - `createFromXmlAndNode()`
+    - `delete()`
+    - `update()`
+    - `consoleCommandPedestrianSystemReload()`
+    - `onIndoorStateChanged()`
+    - `load()`
+    - `consoleCommandPedestrianSystemToggle()`
+    - `superClass()`
+    - `setEnabled()`
+    - `onDaylightChanged()`
+    - `updateNightTimeRange()`
+  - **`transformId`** : `number`
+  - **`isEnabled`** : `boolean`
+  - **`xmlFilename`** : `string`
+  - **`pedestrianSystemId`** : `number`
+- **`missionDynamicInfo`** : `table`
+  - **`autoSave`** : `boolean`
+  - **`isMultiplayer`** : `boolean`
+  - **`mods`** : `table[]` (length: 5)
+- **`benchmark`** : `table`
+  - **Methods**: 14 available
+    - `consoleCommandBenchmark()`
+    - `new()`
+    - `setupVehicles()`
+    - `setupFields()`
+    - `delete()`
+    - `copy()`
+    - `class()`
+    - `load()`
+    - `update()`
+    - `finishBenchmark()`
+    - `loadingVehiclesFinished()`
+    - `superClass()`
+    - `isa()`
+    - `startBenchmark()`
+  - **`hasFinished`** : `boolean`
+  - **`isRunning`** : `boolean`
+- **`masterUsers`** : `table`
+- **`inputManager`** : `table`
+  - **Methods**: 163 available
+    - `checkEventCollision()`
+    - `validateActionEventParameters()`
+    - `createContext()`
+    - `notifyEventChanges()`
+    - `storeDisplayActionEvents()`
+    - `storeEventBindings()`
+    - `neutralizeEventBindingInput()`
+    - `removeEventInternal()`
+    - `iterateEvents()`
+    - `setEventActive()`
+    - `superClass()`
+    - `class()`
+    - `notifyInputModeChange()`
+    - `assignLastInputHelpMode()`
+    - `reloadModActions()`
+    - `addBinding()`
+    - `touchEvent()`
+    - `captureGamepadInput()`
+    - `captureMouseInput()`
+    - `captureKeyboardInput()`
+    - `loadActionsFromXMLPath()`
+    - `clearAllContexts()`
+    - `setPreviousContext()`
+    - `setContext()`
+    - `resetActiveActionBindings()`
+    - `assignActionPrimaryBindings()`
+    - `mouseEvent()`
+    - `keyEvent()`
+    - `upgradeBindingVersion()`
+    - `getDeviceCategory()`
+    - `debugPrintInputContext()`
+    - `printAll()`
+    - `isAxisZero()`
+    - `getIsDPadInput()`
+    - `shadowLinkedBindings()`
+    - `getIsMouseWheelInput()`
+    - `getActionByName()`
+    - `getAllDeviceIdsWithoutBindings()`
+    - `deleteBinding()`
+    - `applyGamepadDeadzones()`
+    - `loadDeviceSettingsFromXML()`
+    - `enumerateGamepadDevices()`
+    - `createDefaultDevices()`
+    - `resetDeviceInformation()`
+    - `getIsHalfAxis()`
+    - `resolveBindingDefaultDevice()`
+    - `setActionEventTextVisibility()`
+    - `loadModBindingDefaults()`
+    - `assignComboMasks()`
+    - `registerActionEvent()`
+    - `getBindingForceFeedbackInfo()`
+    - `checkDefaultInputExclusiveActionBindings()`
+    - `loadActionBindingsFromXMLPath()`
+    - `checkSettingsIntegrity()`
+    - `notifyBindingChanges()`
+    - `loadBindingsFromXML()`
+    - `loadActionBindingsFromXML()`
+    - `getMouseMotionScale()`
+    - `validateAndRepairComboActionBindings()`
+    - `getFirstActiveEventForActionName()`
+    - `getActionBindings()`
+    - `consoleCommandShowRegisteredActions()`
+    - `getBindingComboMask()`
+    - `consoleCommandShowInputContext()`
+    - `copy()`
+    - `consoleCommandPrintInputContext()`
+    - `deleteContext()`
+    - `consoleCommandEnableInputDebug()`
+    - `disableAlternateBindingsForAction()`
+    - `assignPlatformBindingPaths()`
+    - `getIsMouseInput()`
+    - `getActionList()`
+    - `saveDeviceSettings()`
+    - `saveToXMLFile()`
+    - `resolveBindingDevice()`
+    - `updateDebugDisplay()`
+    - `resetContinuousEventBindings()`
+    - `storeComboInputMappings()`
+    - `getKeyboardMouseInputActiveAndValue()`
+    - `checkBindings()`
+    - `getIsGamepadInput()`
+    - `getIsKeyboardInput()`
+    - `clearActiveBindingBuffer()`
+    - `getGamepadInputActiveAndValue()`
+    - `getIsAnalogInput()`
+    - `updateBinding()`
+    - `validateBinding()`
+    - `migrateDevicesCategory()`
+    - `adjustBindingSlotIndex()`
+    - `resolveBindingDevices()`
+    - `draw()`
+    - `getGamepadAxisOrButtonValue()`
+    - `update()`
+    - `getGamepadAxisValue()`
+    - `finalizeMouseInput()`
+    - `updateInput()`
+    - `updateMouseInput()`
+    - `checkGamepadActive()`
+    - `checkGamepadsCategoryChanged()`
+    - `checkGamepadsChanged()`
+    - `debugRenderRegisteredActions()`
+    - `debugRenderInputContext()`
+    - `new()`
+    - `isa()`
+    - `getIsPhysicalFullAxis()`
+    - `setContextEventsActive()`
+    - `updateBindingInput()`
+    - `setEventChangeCallback()`
+    - `setMouseMotionScale()`
+    - `updateComboBindings()`
+    - `getEventsForActionName()`
+    - `getActionBindingsCopy()`
+    - `getContextName()`
+    - `revertContext()`
+    - `hasBindingForPressedMouseComboMask()`
+    - `refreshEventCollections()`
+    - `updateEventBindings()`
+    - `restoreInputContexts()`
+    - `storeLinkedBindings()`
+    - `getComboCommandPressedMask()`
+    - `getGamepadDevices()`
+    - `restoreDefaultBindings()`
+    - `stopInputGathering()`
+    - `startInputCapture()`
+    - `rollbackBindingChanges()`
+    - `commitBindingChanges()`
+    - `startBindingChanges()`
+    - `getMouseButtonState()`
+    - `initializeGamepadMapping()`
+    - `getHasMissingDevices()`
+    - `getMissingDeviceById()`
+    - `getDeviceByInternalId()`
+    - `getInternalIdByDeviceId()`
+    - `getComboActionNameForAxisSet()`
+    - `setActionEventsActiveByTarget()`
+    - `setActionEventActive()`
+    - `loadActions()`
+    - `setActionEventIcon()`
+    - `setActionEventText()`
+    - `getDisplayActionEvents()`
+    - `clearState()`
+    - `removeActionEventsByTarget()`
+    - `removeActionEventsByActionName()`
+    - `removeActionEvent()`
+    - `endActionEventsModification()`
+    - `beginActionEventsModification()`
+    - `getLastInputMode()`
+    - `getInputHelpMode()`
+    - `getBindingCategorySet()`
+    - `getAllDevicesWithBindings()`
+    - `getDeviceById()`
+    - `getAllDeviceIdsWithBindings()`
+    - `load()`
+    - `getShowMouseCursor()`
+    - `getDeviceHasAnyBindings()`
+    - `setShowMouseCursor()`
+    - `overwriteSettingsWithDefault()`
+    - `getActionEventsHasBinding()`
+    - `setActionEventTextPriority()`
+    - `loadModActions()`
+    - `loadDefaultBindings()`
+    - `getMousePosition()`
+    - `eventChangeCallback()`
+  - **`isInputCapturing`** : `boolean`
+  - **`devicesToMigrateCategory`** : `table`
+  - **`mouseMotionScaleY`** : `number`
+  - **`mouseMotionScaleX`** : `number`
+  - **`saveCursorY`** : `number`
+  - **`saveCursorX`** : `number`
+  - **`wrapMousePositionEnabled`** : `boolean`
+  - **`needUpdateAbort`** : `boolean`
+  - **`pressedGamepadComboMask`** : `number`
+  - **`pressedMouseComboMask`** : `number`
+  - **`comboInputBindings`** : `table`
+  - **`comboInputActions`** : `reverse-hash-map`
+  - **`comboInputAxisMasks`** : `reverse-hash-map`
+  - **`inputMouseYAxisValue`** : `number`
+  - **`registrationContext`** : `table`
+  - **`inputMouseXAxisValue`** : `number`
+  - **`contexts`** : `table`
+  - **`numGamepads`** : `number`
+  - **`currentContextName`** : `string`
+  - **`linkedBindings`** : `reverse-hash-map`
+  - **`eventBindings`** : `reverse-hash-map`
+  - **`activeBindings`** : `reverse-hash-map`
+  - **`loadedBindings`** : `table`
+  - **`eventOrder`** : `table[]` (length: 25)
+  - **`events`** : `table`
+  - **`displayActionEvents`** : `table[]` (length: 3)
+  - **`actionEvents`** : `reverse-hash-map`
+  - **`accumMouseMovementY`** : `number`
+  - **`accumMouseMovementX`** : `number`
+  - **`mouseMovementY`** : `number`
+  - **`mouseMovementX`** : `number`
+  - **`activeDeviceBindingsBuffer`** : `map`
+  - **`version`** : `number`
+  - **`nameActions`** : `table`
+  - **`actions`** : `table[]` (length: 285)
+  - **`missingDevices`** : `table`
+  - **`newlyConnectedDevices`** : `table`
+  - **`internalIdToEngineDeviceId`** : `table`
+  - **`engineDeviceIdCounts`** : `table`
+  - **`internalToDeviceId`** : `table`
+  - **`deviceIdToInternal`** : `table`
+  - **`devicesByCategory`** : `map`
+  - **`devicesByInternalId`** : `map`
+  - **`isConsoleVersion`** : `boolean`
+  - **`debugRegisteredActions`** : `boolean`
+  - **`debugContextEnabled`** : `boolean`
+  - **`mousePosYLast`** : `number`
+  - **`mousePosXLast`** : `number`
+  - **`inputBindingPathTemplate`** : `string`
+  - **`debugEnabled`** : `boolean`
+  - **`modManager`** : `global-ref` → [`g_modManager`](./g_modManager.md)
+  - **`isGamepadEnabled`** : `boolean`
+  - **`inputHelpModeSetting`** : `number`
+  - **`settingsPath`** : `string`
+  - **`lastInputMode`** : `number`
+  - **`lastInputHelpMode`** : `number`
+  - **`messageCenter`** : `global-ref` → [`g_messageCenter`](./g_messageCenter.md)
+  - **`timeSinceLastInputHelpModeChange`** : `number`
+  - **`gamepadInputState`** : `table`
+- **`placeholdersObject`** : `table`
+  - **Methods**: 7 available
+    - `new()`
+    - `delete()`
+    - `onCreate()`
+    - `isa()`
+    - `superClass()`
+    - `copy()`
+    - `class()`
+- **`objectsToCallOnMissionStarted`** : `table`
+- **`moneyChanges`** : `table`
+- **`reverbSystem`** : `table`
+  - **Methods**: 13 available
+    - `new()`
+    - `draw()`
+    - `isa()`
+    - `copy()`
+    - `getName()`
+    - `loadSettings()`
+    - `consoleCommandReloadSettings()`
+    - `consoleCommandToggleDebugView()`
+    - `update()`
+    - `delete()`
+    - `class()`
+    - `loadMapData()`
+    - `superClass()`
+  - **`reverbType1`** : `number`
+  - **`blendFactor`** : `number`
+  - **`xmlFilename`** : `string`
+  - **`mission`** : `table`
+  - **`reverbType2`** : `number`
+  - **`isDebugViewActive`** : `boolean`
+  - **`targetReverbTypes`** : `table[]` (length: 2)
+  - **`AREA_TYPE_TO_REVERB_TYPE`** : `number[]` (length: 4)
+- **`environmentAreaSystem`** : `table`
+  - **Methods**: 27 available
+    - `new()`
+    - `setupCell()`
+    - `updateWeights()`
+    - `updateCellType()`
+    - `copy()`
+    - `class()`
+    - `handleRaycast()`
+    - `getAreaWeights()`
+    - `onWaterRaycastCallback()`
+    - `onWaterRaycastCallbackAsync()`
+    - `consoleCommandToggleDebugView()`
+    - `setReferenceNode()`
+    - `draw()`
+    - `getWaterYAtWorldPosition()`
+    - `delete()`
+    - `isa()`
+    - `getName()`
+    - `onCellWaterCallback()`
+    - `getWaterYAtWorldPositionAsync()`
+    - `forestCheckCallback()`
+    - `superClass()`
+    - `raycastYCallback()`
+    - `update()`
+    - `raycastXZCallback2()`
+    - `raycastXZCallback1()`
+    - `setIsNearWater()`
+    - `setIsInForest()`
+  - **`lastDoneCell`** : `table`
+  - **`lastPosition`** : `table`
+  - **`tileSize`** : `number`
+  - **`raycastCollisionMask`** : `number`
+  - **`maxWallCollisionDistanceThreshold`** : `number`
+  - **`minWallCollisionDistanceThreshold`** : `number`
+  - **`maxTopCollisionDistanceThreshold`** : `number`
+  - **`minTopCollisionDistanceThreshold`** : `number`
+  - **`minNumForestThreshold`** : `number`
+  - **`maxNumForestThreshold`** : `number`
+  - **`treeCheckRadius`** : `number`
+  - **`dataGrid`** : `table`
+    - **`new`** : `None`
+    - **`delete`** : `None`
+    - **`copy`** : `None`
+    - **`class`** : `None`
+    - **`setWorldPosition`** : `None`
+    - **`getCellAtWorldPosition`** : `None`
+    - **`getCellData`** : `None`
+    - **`drawDebug`** : `None`
+    - **`getIndicesByWorldPosition`** : `None`
+    - **`superClass`** : `None`
+    - **`isa`** : `None`
+    - **`yOffset`** : `None`
+    - **`size`** : `None`
+    - **`numRows`** : `None`
+    - **`grid`** : `None`
+    - **`tileSize`** : `None`
+    - **`lastIndices`** : `None`
+    - **`lastPosition`** : `None`
+  - **`lastAreaTypeWeights`** : `number[]` (length: 5)
+  - **`areaTypeWeights`** : `number[]` (length: 5)
+  - **`raycastsY`** : `table[]` (length: 10)
+  - **`raycastsXZ`** : `table[]` (length: 8)
+  - **`mission`** : `table`
+  - **`raycastsXZMaxDistance`** : `number`
+  - **`waterCheckPosition`** : `number[]` (length: 3)
+  - **`waterYRequests`** : `table[]` (length: 4)
+  - **`currentAreaType`** : `number`
+  - **`referenceNode`** : `number`
+  - **`isDebugViewActive`** : `boolean`
+  - **`currentCell`** : `table`
+  - **`raycastsYMaxDistance`** : `number`
+- **`guidedTour`** : `table`
+  - **Methods**: 39 available
+    - `loadHotspot()`
+    - `runBackgroundChecks()`
+    - `addVehicle()`
+    - `getBlocksTimeChange()`
+    - `getCanAbort()`
+    - `getIsRunning()`
+    - `abort()`
+    - `runStep()`
+    - `performCheck()`
+    - `setTargetIndicator()`
+    - `setHotspot()`
+    - `loadMapData()`
+    - `findFirstPlaceable()`
+    - `updateMissionState()`
+    - `onMessageClosed()`
+    - `deleteHotspot()`
+    - `deleteIcon()`
+    - `onIconLoaded()`
+    - `update()`
+    - `onIconTrigger()`
+    - `showDialog()`
+    - `new()`
+    - `removeVehicle()`
+    - `isa()`
+    - `copy()`
+    - `class()`
+    - `performAttributeCheckOnObject()`
+    - `performComparison()`
+    - `delete()`
+    - `getPassedSteps()`
+    - `findFirstVehicle()`
+    - `loadStepContentsFromXML()`
+    - `superClass()`
+    - `onFinished()`
+    - `onStarted()`
+    - `setIcon()`
+    - `onReactToDialog()`
+    - `loadIcon()`
+    - `loadChecksFromXML()`
+  - **`backgroundChecks`** : `table`
+  - **`isLoaded`** : `boolean`
+  - **`mission`** : `table`
+  - **`allowTimeChange`** : `boolean`
+  - **`isRunning`** : `boolean`
+  - **`abortText`** : `string`
+  - **`canAbort`** : `boolean`
+  - **`abortTitle`** : `string`
+  - **`redirectText`** : `string`
+  - **`startText`** : `string`
+  - **`steps`** : `table`
+  - **`testBackgroundChecks`** : `boolean`
+  - **`missionInfo`** : `table`
+  - **`finishedBackgroundChecks`** : `table`
+  - **`vehicles`** : `table`
+- **`ambientSoundSystem`** : `table`
+  - **Methods**: 21 available
+    - `new()`
+    - `draw()`
+    - `loadFlagFromXML()`
+    - `superClass()`
+    - `copy()`
+    - `class()`
+    - `registerModifier()`
+    - `setIsEnabled()`
+    - `removeMovingSound()`
+    - `addMovingSound()`
+    - `loadMapData()`
+    - `unloadAmbientSounds()`
+    - `loadFromConfigFile()`
+    - `delete()`
+    - `update()`
+    - `consoleCommandToggleDebugView()`
+    - `consoleCommandReload()`
+    - `setIsIndoor()`
+    - `isa()`
+    - `sound3DFileLoaded()`
+    - `setIsIndoorModifier()`
+  - **`soundPlayerId`** : `number`
+  - **`mission`** : `table`
+  - **`baseDirectory`** : `string`
+  - **`sound3DRootNode`** : `number`
+  - **`xmlFilename`** : `string`
+  - **`isDebugViewActive`** : `boolean`
+  - **`samples`** : `table[]` (length: 35)
+  - **`movingSounds`** : `table[]` (length: 3)
+  - **`isDeleted`** : `boolean`
+  - **`worldMask`** : `number`
+  - **`modifiers`** : `table[]` (length: 25)
+- **`objectsToClassName`** : `table`
+- **`hud`** : `table`
+  - **Methods**: 79 available
+    - `setMoneyUnit()`
+    - `drawGamePaused()`
+    - `drawCommunicationDisplay()`
+    - `drawBaseHUD()`
+    - `drawOverlayAtPosition()`
+    - `drawOverlayAtPositionWithDimensions()`
+    - `drawFading()`
+    - `drawBlinkingWarning()`
+    - `drawTopNotification()`
+    - `drawInputHelp()`
+    - `drawControlledEntityHUD()`
+    - `update()`
+    - `new()`
+    - `superClass()`
+    - `copy()`
+    - `class()`
+    - `scrollChatMessages()`
+    - `updateMap()`
+    - `addChatMessage()`
+    - `setChatMessagesReference()`
+    - `setChatWindowVisible()`
+    - `delete()`
+    - `isInGameMessageActive()`
+    - `getIngameMap()`
+    - `setIngameMapSize()`
+    - `loadIngameMap()`
+    - `fadeScreen()`
+    - `updateBlinkingWarning()`
+    - `updateMessageAndIcon()`
+    - `setConnectedUsers()`
+    - `showAchievementMessage()`
+    - `drawSideNotification()`
+    - `getIsFading()`
+    - `setTutorialProgress()`
+    - `mouseEvent()`
+    - `addSideNotification()`
+    - `getIsVisible()`
+    - `updateVehicleName()`
+    - `setMissionInfo()`
+    - `registerInput()`
+    - `setInGameIconOnPickup()`
+    - `setMissionStats()`
+    - `addMapHotspot()`
+    - `setEnvironment()`
+    - `removeMapHotspot()`
+    - `setPlayer()`
+    - `showFillDogBowlContext()`
+    - `showFuelContext()`
+    - `showTipContext()`
+    - `showAttachContext()`
+    - `setIsControllingPlayer()`
+    - `setControlledVehicle()`
+    - `clearCustomInputHelpEntries()`
+    - `addCustomInputHelpEntry()`
+    - `setInfoVisible()`
+    - `onPauseGameChange()`
+    - `onMapVisibilityChange()`
+    - `setGameInfoPartVisibility()`
+    - `hideTopNotification()`
+    - `addTopNotification()`
+    - `subscribeMessages()`
+    - `createDisplayComponents()`
+    - `showMoneyChange()`
+    - `addMoneyChange()`
+    - `showBlinkingWarning()`
+    - `isInGameMessageVisible()`
+    - `drawMissionFailed()`
+    - `drawMissionCompleted()`
+    - `drawInGameMessageAndIcon()`
+    - `setIsVisible()`
+    - `setInputHelpVisible()`
+    - `showInGameMessage()`
+    - `isa()`
+    - `addExtraPrintText()`
+    - `showVehicleName()`
+    - `drawVehicleName()`
+    - `consoleCommandToggleVisibility()`
+    - `onMenuVisibilityChange()`
+    - `setScale()`
+  - **`fillLevelsDisplay`** : `table`
+    - **`createFillTypeFrame`** : `None`
+    - **`new`** : `None`
+    - **`draw`** : `None`
+    - **`createFillTypeBar`** : `None`
+    - **`createFillTypeIcon`** : `None`
+    - **`isa`** : `None`
+    - **`copy`** : `None`
+    - **`class`** : `None`
+    - **`createBackground`** : `None`
+    - **`getBackgroundPosition`** : `None`
+    - **`storeScaledValues`** : `None`
+    - **`addFillLevel`** : `None`
+    - **`setScale`** : `None`
+    - **`updateFillLevelFrames`** : `None`
+    - **`updateFillLevelBuffers`** : `None`
+    - **`update`** : `None`
+    - **`refreshFillTypes`** : `None`
+    - **`superClass`** : `None`
+    - **`setVehicle`** : `None`
+    - **`createFillTypeFrames`** : `None`
+    - **`fillLevelTextOffsetY`** : `None`
+    - **`fillLevelTextOffsetX`** : `None`
+    - **`fillLevelTextSize`** : `None`
+    - **`weightFrames`** : `None`
+    - **`fillTypeLevelBars`** : `None`
+    - **`fillTypeFrames`** : `None`
+    - **`fillTypeTextBuffer`** : `None`
+    - **`defaultPivotY`** : `None`
+    - **`defaultPivotX`** : `None`
+    - **`pivotY`** : `None`
+    - **`pivotX`** : `None`
+    - **`frameHeight`** : `None`
+    - **`uiScale`** : `None`
+    - **`frameOffsetY`** : `None`
+    - **`fillLevelBuffer`** : `None`
+    - **`firstFillTypeOffset`** : `None`
+    - **`overlay`** : `None`
+    - **`fillLevelTextBuffer`** : `None`
+    - **`children`** : `None`
+    - **`animationState`** : `None`
+    - **`origY`** : `None`
+    - **`origX`** : `None`
+    - **`hudAtlasPath`** : `None`
+    - **`fillTypeTextOffsetY`** : `None`
+    - **`fillTypeTextOffsetX`** : `None`
+    - **`animation`** : `None`
+  - **`speedMeter`** : `table`
+    - **`updateOperatingTime`** : `None`
+    - **`updateCruiseControl`** : `None`
+    - **`updateFuelGauge`** : `None`
+    - **`updateDamageGauge`** : `None`
+    - **`updateSpeedGauge`** : `None`
+    - **`createComponents`** : `None`
+    - **`storeGaugeCenterPosition`** : `None`
+    - **`createBackground`** : `None`
+    - **`storeScaledValues`** : `None`
+    - **`draw`** : `None`
+    - **`setupSpeedGauge`** : `None`
+    - **`setGearGroupVisible`** : `None`
+    - **`getBasePosition`** : `None`
+    - **`update`** : `None`
+    - **`updateGaugeIndicator`** : `None`
+    - **`setVehicle`** : `None`
+    - **`onAnimateVisibilityFinished`** : `None`
+    - **`new`** : `None`
+    - **`createFuelBar`** : `None`
+    - **`isa`** : `None`
+    - **`createCruiseControlElement`** : `None`
+    - **`superClass`** : `None`
+    - **`copy`** : `None`
+    - **`class`** : `None`
+    - **`createOperatingTimeElement`** : `None`
+    - **`createSpeedGaugeIndicator`** : `None`
+    - **`createGearIndicator`** : `None`
+    - **`createGaugeBackground`** : `None`
+    - **`getBackgroundPosition`** : `None`
+    - **`onHudSpeedGaugeUseMilesChanged`** : `None`
+    - **`createDamageBar`** : `None`
+    - **`createGaugeIconElements`** : `None`
+    - **`drawCruiseControlText`** : `None`
+    - **`drawOperatingTimeText`** : `None`
+    - **`setScale`** : `None`
+    - **`fadeFuelGauge`** : `None`
+    - **`fadeDamageGauge`** : `None`
+    - **`animateDamageGaugeToggle`** : `None`
+    - **`drawGearText`** : `None`
+    - **`animateFuelGaugeToggle`** : `None`
+    - **`onHudSpeedGaugeModeChanged`** : `None`
+    - **`drawSpeedText`** : `None`
+    - **`getVehicleFuelType`** : `None`
+    - **`getVehicleFuelLevelAndCapacity`** : `None`
+    - **`updateGearDisplay`** : `None`
+    - **`fuelGaugeUVsElectric`** : `None`
+    - **`fuelGaugeUVsDiesel`** : `None`
+    - **`fuelGaugeActive`** : `None`
+    - **`fuelGaugeRadiusY`** : `None`
+    - **`fuelGaugeRadiusX`** : `None`
+    - **`fuelIndicatorRadiusY`** : `None`
+    - **`fuelIndicatorRadiusX`** : `None`
+    - **`fuelGaugeIconElement`** : `None`
+    - **`uiScale`** : `None`
+    - **`damageGaugeRadiusY`** : `None`
+    - **`damageGaugeRadiusX`** : `None`
+    - **`damageGaugeIconElement`** : `None`
+    - **`speedGaugeElements`** : `None`
+    - **`lastGaugeValue`** : `None`
+    - **`rpmUnitText`** : `None`
+    - **`rpmUnitTextSize`** : `None`
+    - **`rpmUnitTextOffsetY`** : `None`
+    - **`speedGaugeUseMiles`** : `None`
+    - **`speedGaugeMode`** : `None`
+    - **`speedKmh`** : `None`
+    - **`speedUnitTextSize`** : `None`
+    - **`speedTextSize`** : `None`
+    - **`speedUnitTextOffsetY`** : `None`
+    - **`animation`** : `None`
+    - **`speedIndicatorRadiusY`** : `None`
+    - **`speedIndicatorRadiusX`** : `None`
+    - **`speedIndicatorElement`** : `None`
+    - **`isVehicleDrawSafe`** : `None`
+    - **`defaultPivotY`** : `None`
+    - **`defaultPivotX`** : `None`
+    - **`pivotY`** : `None`
+    - **`pivotX`** : `None`
+    - **`fuelBarElementBlinkTimer`** : `None`
+    - **`fuelBarElement`** : `None`
+    - **`damageBarElement`** : `None`
+    - **`gaugeBackgroundElement`** : `None`
+    - **`gearBg`** : `None`
+    - **`gearIcon`** : `None`
+    - **`gearIconBg`** : `None`
+    - **`gearGroupBg`** : `None`
+    - **`children`** : `None`
+    - **`animationState`** : `None`
+    - **`origY`** : `None`
+    - **`origX`** : `None`
+    - **`gearSelectorIcon`** : `None`
+    - **`gaugeCenterY`** : `None`
+    - **`gaugeCenterX`** : `None`
+    - **`speedTextOffsetY`** : `None`
+    - **`operatingTimeElement`** : `None`
+    - **`gearElement`** : `None`
+    - **`gearSelectorPositions`** : `None`
+    - **`cruiseControlTextSize`** : `None`
+    - **`cruiseControlTextOffsetX`** : `None`
+    - **`hudAtlasPath`** : `None`
+    - **`fadeDamageGaugeAnimation`** : `None`
+    - **`fadeFuelGaugeAnimation`** : `None`
+    - **`gearWarningTime`** : `None`
+    - **`gearIsChanging`** : `None`
+    - **`gearHasGroup`** : `None`
+    - **`gearSelectedIndex`** : `None`
+    - **`gearGroupText`** : `None`
+    - **`gearTexts`** : `None`
+    - **`gearTextSize`** : `None`
+    - **`gearGroupTextPositionY`** : `None`
+    - **`gearTextPositionY`** : `None`
+    - **`operatingTimeTextDrawPositionY`** : `None`
+    - **`operatingTimeTextDrawPositionX`** : `None`
+    - **`operatingTimeTextOffsetY`** : `None`
+    - **`operatingTimeTextOffsetX`** : `None`
+    - **`operatingTimeTextSize`** : `None`
+    - **`operatingTimeText`** : `None`
+    - **`gearIconBgY`** : `None`
+    - **`cruiseControlTextOffsetY`** : `None`
+    - **`gearGroupBgY`** : `None`
+    - **`overlay`** : `None`
+    - **`cruiseControlSpeed`** : `None`
+    - **`cruiseControlElement`** : `None`
+    - **`damageGaugeActive`** : `None`
+    - **`fuelGaugeUVsMethane`** : `None`
+  - **`inputHelp`** : `table`
+    - **`onMenuVisibilityChange`** : `None`
+    - **`createBackground`** : `None`
+    - **`updateSizeAndPositions`** : `None`
+    - **`storeScaledValues`** : `None`
+    - **`addCustomEntry`** : `None`
+    - **`clearCustomEntries`** : `None`
+    - **`update`** : `None`
+    - **`updateHUDExtensions`** : `None`
+    - **`updateInputContext`** : `None`
+    - **`getTopLeftPosition`** : `None`
+    - **`setVehicle`** : `None`
+    - **`refreshHUDExtensions`** : `None`
+    - **`createFrame`** : `None`
+    - **`getCurrentVehicleTypeHash`** : `None`
+    - **`superClass`** : `None`
+    - **`copy`** : `None`
+    - **`class`** : `None`
+    - **`getAvailableHeight`** : `None`
+    - **`getBackgroundPosition`** : `None`
+    - **`getIsHelpElementAllowed`** : `None`
+    - **`setAnimationOffset`** : `None`
+    - **`setAnimationAvailableHeight`** : `None`
+    - **`drawControlsLabel`** : `None`
+    - **`drawVehicleHUDExtensions`** : `None`
+    - **`drawHelpInfos`** : `None`
+    - **`delete`** : `None`
+    - **`getHidingTranslation`** : `None`
+    - **`animateHide`** : `None`
+    - **`animateShow`** : `None`
+    - **`draw`** : `None`
+    - **`createControllerComboHeader`** : `None`
+    - **`createMouseComboHeader`** : `None`
+    - **`createComponents`** : `None`
+    - **`setDimension`** : `None`
+    - **`createComboInputGlyph`** : `None`
+    - **`createComboHeader`** : `None`
+    - **`addHelpText`** : `None`
+    - **`createEntry`** : `None`
+    - **`createHorizontalSeparator`** : `None`
+    - **`removeExtraExtensionVehicleNodeId`** : `None`
+    - **`addExtraExtensionVehicleNodeId`** : `None`
+    - **`createVerticalSeparator`** : `None`
+    - **`subscribeMessages`** : `None`
+    - **`updateComboHeaders`** : `None`
+    - **`setScale`** : `None`
+    - **`updateEntries`** : `None`
+    - **`getInputHelpElements`** : `None`
+    - **`updateComboInputGlyphs`** : `None`
+    - **`isa`** : `None`
+    - **`onAnimateVisibilityFinished`** : `None`
+    - **`new`** : `None`
+    - **`onInputDevicesChanged`** : `None`
+    - **`getMaxEntryCount`** : `None`
+    - **`createEntries`** : `None`
+    - **`controlsLabelOffsetX`** : `None`
+    - **`controlsLabelTextSize`** : `None`
+    - **`entryHeight`** : `None`
+    - **`entryWidth`** : `None`
+    - **`headerHeight`** : `None`
+    - **`customHelpElements`** : `None`
+    - **`gamepadComboHeader`** : `None`
+    - **`mouseComboHeader`** : `None`
+    - **`entriesFrame`** : `None`
+    - **`horizontalSeparators`** : `None`
+    - **`inputGlyphs`** : `None`
+    - **`entryGlyphWidths`** : `None`
+    - **`entries`** : `None`
+    - **`comboInputGlyphs`** : `None`
+    - **`currentAvailableHeight`** : `None`
+    - **`extraExtensionVehicleNodeIds`** : `None`
+    - **`extraHelpTexts`** : `None`
+    - **`vehicleHudExtensions`** : `None`
+    - **`ingameMap`** : `None`
+    - **`controlsLabelText`** : `None`
+    - **`isOverlayMenuVisible`** : `None`
+    - **`ingameMessage`** : `None`
+    - **`communicationDisplay`** : `None`
+    - **`sizeAndPositionDirty`** : `None`
+    - **`animation`** : `None`
+    - **`lastExtraExtensionVehiclesCount`** : `None`
+    - **`minimumMapSpacingY`** : `None`
+    - **`defaultPivotY`** : `None`
+    - **`inputDisplayManager`** : `None`
+    - **`inputManager`** : `None`
+    - **`pivotX`** : `None`
+    - **`messageCenter`** : `None`
+    - **`isConsoleVersion`** : `None`
+    - **`entryOffsetY`** : `None`
+    - **`entryOffsetX`** : `None`
+    - **`animationState`** : `None`
+    - **`origY`** : `None`
+    - **`origX`** : `None`
+    - **`frameOffsetY`** : `None`
+    - **`frame`** : `None`
+    - **`defaultPivotX`** : `None`
+    - **`overlay`** : `None`
+    - **`pivotY`** : `None`
+    - **`children`** : `None`
+    - **`extensionBg`** : `None`
+    - **`animationOffsetY`** : `None`
+    - **`animationOffsetX`** : `None`
+    - **`animationAvailableHeight`** : `None`
+    - **`comboIterator`** : `None`
+    - **`extensionsStartY`** : `None`
+    - **`extensionsHeight`** : `None`
+    - **`numUsedEntries`** : `None`
+    - **`requireHudExtensionsRefresh`** : `None`
+    - **`currentHelpElementCount`** : `None`
+    - **`visibleHelpElements`** : `None`
+    - **`hasComboCommands`** : `None`
+    - **`frameBarOffsetY`** : `None`
+    - **`frameOffsetX`** : `None`
+    - **`axisIconHeight`** : `None`
+    - **`axisIconWidth`** : `None`
+    - **`axisIconOffsetX`** : `None`
+    - **`extraTextOffsetY`** : `None`
+    - **`extraTextOffsetX`** : `None`
+    - **`helpTextOffsetY`** : `None`
+    - **`helpTextOffsetX`** : `None`
+    - **`helpTextSize`** : `None`
+    - **`controlsLabelOffsetY`** : `None`
+  - **`vehicleSchema`** : `table`
+    - **`new`** : `None`
+    - **`draw`** : `None`
+    - **`setDocked`** : `None`
+    - **`superClass`** : `None`
+    - **`animateDocking`** : `None`
+    - **`class`** : `None`
+    - **`lateSetDocked`** : `None`
+    - **`collectVehicleSchemaDisplayOverlays`** : `None`
+    - **`createBackground`** : `None`
+    - **`storeScaledValues`** : `None`
+    - **`loadVehicleSchemaOverlays`** : `None`
+    - **`isa`** : `None`
+    - **`getSchemaOverlayForState`** : `None`
+    - **`delete`** : `None`
+    - **`getBackgroundPosition`** : `None`
+    - **`setScale`** : `None`
+    - **`drawVehicleSchemaOverlays`** : `None`
+    - **`copy`** : `None`
+    - **`createBackgroundBar`** : `None`
+    - **`updateBarComponents`** : `None`
+    - **`getSchemaDelimiters`** : `None`
+    - **`getVehicleSchemaOverlays`** : `None`
+    - **`setVehicle`** : `None`
+    - **`loadVehicleSchemaOverlaysFromXML`** : `None`
+    - **`overlayFront`** : `None`
+    - **`modManager`** : `None`
+    - **`defaultPivotX`** : `None`
+    - **`pivotY`** : `None`
+    - **`pivotX`** : `None`
+    - **`uiScale`** : `None`
+    - **`maxSchemaWidth`** : `None`
+    - **`origX`** : `None`
+    - **`defaultPivotY`** : `None`
+    - **`iconSizeY`** : `None`
+    - **`iconSizeX`** : `None`
+    - **`vehicleSchemaOverlays`** : `None`
+    - **`isDocked`** : `None`
+    - **`origY`** : `None`
+    - **`overlayBack`** : `None`
+    - **`overlayMiddle`** : `None`
+    - **`children`** : `None`
+    - **`overlay`** : `None`
+    - **`animation`** : `None`
+  - **`gameInfoDisplay`** : `table`
+    - **`setMoneyUnit`** : `None`
+    - **`setTimeVisible`** : `None`
+    - **`setMoneyVisible`** : `None`
+    - **`createComponents`** : `None`
+    - **`getWeatherUVs`** : `None`
+    - **`setWeatherVisible`** : `None`
+    - **`setMissionInfo`** : `None`
+    - **`createBackground`** : `None`
+    - **`updateSizeAndPositions`** : `None`
+    - **`storeScaledValues`** : `None`
+    - **`updateBackground`** : `None`
+    - **`updateWeather`** : `None`
+    - **`updateTemperature`** : `None`
+    - **`updateTime`** : `None`
+    - **`createTutorialBox`** : `None`
+    - **`createWeatherBox`** : `None`
+    - **`getVisibleWidth`** : `None`
+    - **`createDateBox`** : `None`
+    - **`update`** : `None`
+    - **`createTimeBox`** : `None`
+    - **`createMoneyBox`** : `None`
+    - **`createBackgroundOverlay`** : `None`
+    - **`setTemperatureVisible`** : `None`
+    - **`createTimeScaleArrow`** : `None`
+    - **`createClockHand`** : `None`
+    - **`addInactiveWeatherAnimation`** : `None`
+    - **`new`** : `None`
+    - **`createVerticalSeparator`** : `None`
+    - **`createTemperatureIcon`** : `None`
+    - **`createWeatherIcon`** : `None`
+    - **`animateWeatherChange`** : `None`
+    - **`setMissionStats`** : `None`
+    - **`class`** : `None`
+    - **`getWeatherStates`** : `None`
+    - **`createTemperatureBox`** : `None`
+    - **`setTutorialProgress`** : `None`
+    - **`getBackgroundPosition`** : `None`
+    - **`drawTutorialText`** : `None`
+    - **`drawTemperatureText`** : `None`
+    - **`drawDateText`** : `None`
+    - **`drawTimeText`** : `None`
+    - **`drawMoneyText`** : `None`
+    - **`draw`** : `None`
+    - **`setScale`** : `None`
+    - **`isa`** : `None`
+    - **`copy`** : `None`
+    - **`superClass`** : `None`
+    - **`setEnvironment`** : `None`
+    - **`setDateVisible`** : `None`
+    - **`addWeatherPositionAnimation`** : `None`
+    - **`addBecomeCurrentWeatherAnimation`** : `None`
+    - **`setTutorialVisible`** : `None`
+    - **`addActiveWeatherAnimation`** : `None`
+    - **`temperatureLowTextPositionX`** : `None`
+    - **`temperatureHighTextPositionY`** : `None`
+    - **`temperatureHighTextPositionX`** : `None`
+    - **`dateTextPositionY`** : `None`
+    - **`dateTextPositionX`** : `None`
+    - **`infoBoxes`** : `None`
+    - **`showTutorialProgress`** : `None`
+    - **`showDate`** : `None`
+    - **`showTemperature`** : `None`
+    - **`showWeather`** : `None`
+    - **`showMoney`** : `None`
+    - **`timeScaleTextPositionY`** : `None`
+    - **`timeScaleTextPositionX`** : `None`
+    - **`timeTextSize`** : `None`
+    - **`timeTextPositionY`** : `None`
+    - **`timeTextPositionX`** : `None`
+    - **`monthText`** : `None`
+    - **`moneyTextPositionY`** : `None`
+    - **`moneyTextPositionX`** : `None`
+    - **`backgroundBaseX`** : `None`
+    - **`backgroundOverlay`** : `None`
+    - **`seasonOverlayUVs`** : `None`
+    - **`seasonOverlay`** : `None`
+    - **`timeScaleText`** : `None`
+    - **`animation`** : `None`
+    - **`moneyUnit`** : `None`
+    - **`defaultPivotY`** : `None`
+    - **`overlay`** : `None`
+    - **`pivotY`** : `None`
+    - **`pivotX`** : `None`
+    - **`drawTimeText`** : `None`
+    - **`moneyCurrencyPositionY`** : `None`
+    - **`moneyCurrencyPositionX`** : `None`
+    - **`children`** : `None`
+    - **`monthTextPositionY`** : `None`
+    - **`origY`** : `None`
+    - **`origX`** : `None`
+    - **`environment`** : `None`
+    - **`updateTime`** : `None`
+    - **`clockElement`** : `None`
+    - **`tutorialTextPositionY`** : `None`
+    - **`monthTextPositionX`** : `None`
+    - **`monthTextSize`** : `None`
+    - **`clockHandLargePivotY`** : `None`
+    - **`clockHandLargePivotX`** : `None`
+    - **`clockHandSmallPivotY`** : `None`
+    - **`weatherBoxRight`** : `None`
+    - **`clockHandSmallPivotX`** : `None`
+    - **`moneyBoxWidth`** : `None`
+    - **`moneyTextSize`** : `None`
+    - **`defaultPivotX`** : `None`
+    - **`showTime`** : `None`
+    - **`dateBox`** : `None`
+    - **`timeScaleArrowFast`** : `None`
+    - **`timeScaleArrow`** : `None`
+    - **`clockHandLarge`** : `None`
+    - **`clockHandSmall`** : `None`
+    - **`missionInfo`** : `None`
+    - **`timeBox`** : `None`
+    - **`moneyCurrencyText`** : `None`
+    - **`moneyIconOverlay`** : `None`
+    - **`moneyBox`** : `None`
+    - **`l10n`** : `None`
+    - **`timeScaleTextSize`** : `None`
+    - **`lastTutorialProgress`** : `None`
+    - **`temperatureAnimation`** : `None`
+    - **`nextWeather`** : `None`
+    - **`currentWeather`** : `None`
+    - **`weatherAnimation`** : `None`
+    - **`timeText`** : `None`
+    - **`tutorialText`** : `None`
+    - **`tutorialTextSize`** : `None`
+    - **`tutorialTextPositionX`** : `None`
+    - **`tutorialBarHeight`** : `None`
+    - **`tutorialBarWidth`** : `None`
+    - **`boxMarginHeight`** : `None`
+    - **`boxMarginWidth`** : `None`
+    - **`boxHeight`** : `None`
+    - **`tutorialProgressBar`** : `None`
+    - **`tutorialBox`** : `None`
+    - **`weatherTypeIcons`** : `None`
+    - **`weatherBox`** : `None`
+    - **`temperatureIconDropping`** : `None`
+    - **`temperatureIconRising`** : `None`
+    - **`temperatureIconStable`** : `None`
+    - **`temperatureBox`** : `None`
+    - **`monthMaxSize`** : `None`
+    - **`seasonElement`** : `None`
+    - **`temperatureNightText`** : `None`
+    - **`temperatureDayText`** : `None`
+    - **`temperatureTextSize`** : `None`
+    - **`temperatureLowTextPositionY`** : `None`
+  - **`inGameIcon`** : `table`
+    - **`setPosition`** : `None`
+    - **`new`** : `None`
+    - **`draw`** : `None`
+    - **`isa`** : `None`
+    - **`copy`** : `None`
+    - **`class`** : `None`
+    - **`hideIcon`** : `None`
+    - **`mouseEvent`** : `None`
+    - **`setText`** : `None`
+    - **`showIcon`** : `None`
+    - **`setIcon`** : `None`
+    - **`update`** : `None`
+    - **`superClass`** : `None`
+    - **`delete`** : `None`
+    - **`time`** : `None`
+    - **`height`** : `None`
+    - **`width`** : `None`
+    - **`fileName`** : `None`
+    - **`visibleTime`** : `None`
+    - **`fadeTime`** : `None`
+    - **`textPosY`** : `None`
+    - **`textPosX`** : `None`
+    - **`alpha`** : `None`
+    - **`posY`** : `None`
+    - **`posX`** : `None`
+    - **`text`** : `None`
+    - **`iconOverlay`** : `None`
+    - **`visible`** : `None`
+  - **`popupMessage`** : `table`
+    - **`draw`** : `None`
+    - **`createComponents`** : `None`
+    - **`onMenuVisibilityChange`** : `None`
+    - **`showMessage`** : `None`
+    - **`setPaused`** : `None`
+    - **`createBackground`** : `None`
+    - **`getVisible`** : `None`
+    - **`updateButtonGlyphs`** : `None`
+    - **`update`** : `None`
+    - **`getInputRowsHeight`** : `None`
+    - **`getTitleHeight`** : `None`
+    - **`finishMessage`** : `None`
+    - **`assignCurrentMessage`** : `None`
+    - **`updateCurrentMessage`** : `None`
+    - **`new`** : `None`
+    - **`startMessage`** : `None`
+    - **`isa`** : `None`
+    - **`class`** : `None`
+    - **`setVisible`** : `None`
+    - **`getBackgroundPosition`** : `None`
+    - **`setDimension`** : `None`
+    - **`setScale`** : `None`
+    - **`delete`** : `None`
+    - **`createInputRow`** : `None`
+    - **`storeScaledValues`** : `None`
+    - **`getTextHeight`** : `None`
+    - **`setInputActive`** : `None`
+    - **`superClass`** : `None`
+    - **`copy`** : `None`
+    - **`animateHide`** : `None`
+    - **`onConfirmMessage`** : `None`
+    - **`time`** : `None`
+    - **`isGamePaused`** : `None`
+    - **`inputGlyphs`** : `None`
+    - **`inputRows`** : `None`
+    - **`isCustomInputActive`** : `None`
+    - **`l10n`** : `None`
+    - **`getIsVisible`** : `None`
+    - **`isMenuVisible`** : `None`
+    - **`ingameMap`** : `None`
+    - **`minHeight`** : `None`
+    - **`skipButtonHeight`** : `None`
+    - **`inputRowsOffsetY`** : `None`
+    - **`borderPaddingY`** : `None`
+    - **`borderPaddingX`** : `None`
+    - **`inputRowHeight`** : `None`
+    - **`animation`** : `None`
+    - **`textSize`** : `None`
+    - **`guiSoundPlayer`** : `None`
+    - **`inputRowTextY`** : `None`
+    - **`defaultPivotY`** : `None`
+    - **`defaultPivotX`** : `None`
+    - **`pivotY`** : `None`
+    - **`pivotX`** : `None`
+    - **`skipGlyph`** : `None`
+    - **`inputRowWidth`** : `None`
+    - **`skipButtonWidth`** : `None`
+    - **`skipTextSize`** : `None`
+    - **`skipButtonOffsetY`** : `None`
+    - **`skipButtonOffsetX`** : `None`
+    - **`titleTextSize`** : `None`
+    - **`inputRowsOffsetX`** : `None`
+    - **`minWidth`** : `None`
+    - **`inputRowTextX`** : `None`
+    - **`inputManager`** : `None`
+    - **`pendingMessages`** : `None`
+    - **`children`** : `None`
+    - **`overlay`** : `None`
+    - **`origY`** : `None`
+    - **`lastInputMode`** : `None`
+    - **`origX`** : `None`
+    - **`inputDisplayManager`** : `None`
+    - **`textOffsetX`** : `None`
+    - **`textOffsetY`** : `None`
+  - **`fadeScreenElement`** : `table`
+    - **`draw`** : `None`
+    - **`setAlignment`** : `None`
+    - **`setDimension`** : `None`
+    - **`setImage`** : `None`
+    - **`getVisible`** : `None`
+    - **`resetDimensions`** : `None`
+    - **`getPosition`** : `None`
+    - **`setUVs`** : `None`
+    - **`getAlpha`** : `None`
+    - **`update`** : `None`
+    - **`setAlpha`** : `None`
+    - **`new`** : `None`
+    - **`isa`** : `None`
+    - **`copy`** : `None`
+    - **`addChild`** : `None`
+    - **`setRotation`** : `None`
+    - **`removeChild`** : `None`
+    - **`scalePixelToScreenHeight`** : `None`
+    - **`scalePixelToScreenWidth`** : `None`
+    - **`setVisible`** : `None`
+    - **`setPosition`** : `None`
+    - **`normalizeUVPivot`** : `None`
+    - **`superClass`** : `None`
+    - **`setScale`** : `None`
+    - **`scalePixelToScreenVector`** : `None`
+    - **`getRotationPivot`** : `None`
+    - **`setRotationPivot`** : `None`
+    - **`delete`** : `None`
+    - **`getColor`** : `None`
+    - **`getWidth`** : `None`
+    - **`getScale`** : `None`
+    - **`setColor`** : `None`
+    - **`class`** : `None`
+    - **`getHeight`** : `None`
+    - **`children`** : `None`
+    - **`overlay`** : `None`
+    - **`pivotY`** : `None`
+    - **`pivotX`** : `None`
+    - **`defaultPivotX`** : `None`
+    - **`defaultPivotY`** : `None`
+    - **`animation`** : `None`
+  - **`blinkingWarningDisplay`** : `table`
+    - **`new`** : `None`
+    - **`setAnimation`** : `None`
+    - **`setScale`** : `None`
+    - **`isa`** : `None`
+    - **`copy`** : `None`
+    - **`class`** : `None`
+    - **`draw`** : `None`
+    - **`update`** : `None`
+    - **`setText`** : `None`
+    - **`setVisible`** : `None`
+    - **`setTextShadow`** : `None`
+    - **`superClass`** : `None`
+    - **`setAlpha`** : `None`
+    - **`setTextColorChannels`** : `None`
+    - **`textSize`** : `None`
+    - **`textBold`** : `None`
+    - **`defaultPivotY`** : `None`
+    - **`defaultPivotX`** : `None`
+    - **`pivotY`** : `None`
+    - **`pivotX`** : `None`
+    - **`textColor`** : `None`
+    - **`textAlignment`** : `None`
+    - **`shadowColor`** : `None`
+    - **`overlay`** : `None`
+    - **`initialPosX`** : `None`
+    - **`children`** : `None`
+    - **`text`** : `None`
+    - **`origY`** : `None`
+    - **`origX`** : `None`
+    - **`hasShadow`** : `None`
+    - **`screenTextSize`** : `None`
+    - **`initialPosY`** : `None`
+    - **`animation`** : `None`
+  - **`vehicleNameDisplay`** : `table`
+  - **`gamePausedDisplay`** : `table`
+    - **`new`** : `None`
+    - **`isa`** : `None`
+    - **`copy`** : `None`
+    - **`onMenuVisibilityChange`** : `None`
+    - **`setPauseText`** : `None`
+    - **`storeScaledValues`** : `None`
+    - **`setScale`** : `None`
+    - **`superClass`** : `None`
+    - **`class`** : `None`
+    - **`createComponents`** : `None`
+    - **`createBackground`** : `None`
+    - **`draw`** : `None`
+    - **`textOffsetY`** : `None`
+    - **`textSize`** : `None`
+    - **`animationState`** : `None`
+    - **`textOffsetX`** : `None`
+    - **`isMenuVisible`** : `None`
+    - **`syncBackgroundElement`** : `None`
+    - **`pauseText`** : `None`
+    - **`origX`** : `None`
+    - **`children`** : `None`
+    - **`overlay`** : `None`
+    - **`pivotY`** : `None`
+    - **`pivotX`** : `None`
+    - **`origY`** : `None`
+    - **`defaultPivotY`** : `None`
+    - **`defaultPivotX`** : `None`
+    - **`animation`** : `None`
+  - **`showVehicleInfo`** : `boolean`
+  - **`allowHelpText`** : `boolean`
+  - **`l10n`** : `table`
+    - **`setMoneyUnit`** : `None`
+    - **`getCurrencySymbol`** : `None`
+    - **`loadEntriesFromXML`** : `None`
+    - **`saveUsedKeysToXML`** : `None`
+    - **`formatNumMonth`** : `None`
+    - **`formatDayInPeriod`** : `None`
+    - **`superClass`** : `None`
+    - **`load`** : `None`
+    - **`formatMinutes`** : `None`
+    - **`consoleCommandVerifyAll`** : `None`
+    - **`getDistance`** : `None`
+    - **`convertText`** : `None`
+    - **`hasText`** : `None`
+    - **`formatPeriod`** : `None`
+    - **`getTemperature`** : `None`
+    - **`addModI18N`** : `None`
+    - **`new`** : `None`
+    - **`getText`** : `None`
+    - **`getCurrency`** : `None`
+    - **`formatNumDay`** : `None`
+    - **`isa`** : `None`
+    - **`copy`** : `None`
+    - **`class`** : `None`
+    - **`getCurrentDate`** : `None`
+    - **`formatMoney`** : `None`
+    - **`getPower`** : `None`
+    - **`formatMass`** : `None`
+    - **`formatVolume`** : `None`
+    - **`formatFluid`** : `None`
+    - **`getTemperatureUnit`** : `None`
+    - **`formatArea`** : `None`
+    - **`formatTemperature`** : `None`
+    - **`getSpeed`** : `None`
+    - **`getSpeedMeasuringUnit`** : `None`
+    - **`getMeasuringUnit`** : `None`
+    - **`getAreaUnit`** : `None`
+    - **`getArea`** : `None`
+    - **`setText`** : `None`
+    - **`getFluid`** : `None`
+    - **`formatNumber`** : `None`
+    - **`getCurrencyFactor`** : `None`
+    - **`getVolumeUnit`** : `None`
+    - **`getVolume`** : `None`
+    - **`loadUsedKeysFromXML`** : `None`
+    - **`setUseFahrenheit`** : `None`
+    - **`setUseAcre`** : `None`
+    - **`setUseMiles`** : `None`
+    - **`useAcre`** : `None`
+    - **`useFahrenheit`** : `None`
+    - **`useMiles`** : `None`
+    - **`thousandsGroupingChar`** : `None`
+    - **`powerFactorKW`** : `None`
+    - **`moneyUnit`** : `None`
+    - **`powerFactorHP`** : `None`
+    - **`fluidFactor`** : `None`
+    - **`modEnvironments`** : `None`
+    - **`texts`** : `None`
+    - **`decimalSeparator`** : `None`
+    - **`debugActive`** : `None`
+  - **`displayComponents`** : `table[]` (length: 19)
+  - **`isMenuVisible`** : `boolean`
+  - **`isClient`** : `boolean`
+  - **`farmlandManager`** : `global-ref` → [`g_farmlandManager`](./g_farmlandManager.md)
+  - **`farmManager`** : `global-ref` → [`g_farmManager`](./g_farmManager.md)
+  - **`currentMission`** : `table`
+  - **`infoDisplay`** : `table`
+    - **`new`** : `None`
+    - **`draw`** : `None`
+    - **`getDisplayHeight`** : `None`
+    - **`superClass`** : `None`
+    - **`copy`** : `None`
+    - **`class`** : `None`
+    - **`createBox`** : `None`
+    - **`updateSize`** : `None`
+    - **`createBackground`** : `None`
+    - **`getBackgroundPosition`** : `None`
+    - **`storeScaledValues`** : `None`
+    - **`setEnabled`** : `None`
+    - **`setScale`** : `None`
+    - **`delete`** : `None`
+    - **`update`** : `None`
+    - **`isa`** : `None`
+    - **`destroyBox`** : `None`
+    - **`animationState`** : `None`
+    - **`defaultPivotY`** : `None`
+    - **`boxes`** : `None`
+    - **`boxMarginY`** : `None`
+    - **`isEnabled`** : `None`
+    - **`totalHeight`** : `None`
+    - **`origX`** : `None`
+    - **`children`** : `None`
+    - **`overlay`** : `None`
+    - **`pivotY`** : `None`
+    - **`pivotX`** : `None`
+    - **`origY`** : `None`
+    - **`uiScale`** : `None`
+    - **`defaultPivotX`** : `None`
+    - **`animation`** : `None`
+  - **`plusOverlay`** : `table`
+    - **`new`** : `None`
+    - **`draw`** : `None`
+    - **`setVisible`** : `None`
+    - **`getVisible`** : `None`
+    - **`isa`** : `None`
+    - **`copy`** : `None`
+    - **`class`** : `None`
+    - **`setImage`** : `None`
+    - **`setColor`** : `None`
+    - **`getIsVisible`** : `None`
+    - **`render`** : `None`
+    - **`setPosition`** : `None`
+    - **`resetDimensions`** : `None`
+    - **`getPosition`** : `None`
+    - **`setUVs`** : `None`
+    - **`delete`** : `None`
+    - **`setIsVisible`** : `None`
+    - **`setAlignment`** : `None`
+    - **`getScale`** : `None`
+    - **`setScale`** : `None`
+    - **`setRotation`** : `None`
+    - **`setInvertX`** : `None`
+    - **`setDimension`** : `None`
+    - **`superClass`** : `None`
+    - **`scaleWidth`** : `None`
+    - **`defaultHeight`** : `None`
+    - **`defaultWidth`** : `None`
+    - **`offsetY`** : `None`
+    - **`offsetX`** : `None`
+    - **`uvs`** : `None`
+    - **`g`** : `None`
+    - **`visible`** : `None`
+    - **`a`** : `None`
+    - **`rotation`** : `None`
+    - **`b`** : `None`
+    - **`r`** : `None`
+    - **`height`** : `None`
+    - **`width`** : `None`
+    - **`rotationCenterY`** : `None`
+    - **`debugEnabled`** : `None`
+    - **`overlayId`** : `None`
+    - **`rotationCenterX`** : `None`
+    - **`y`** : `None`
+    - **`x`** : `None`
+    - **`alignmentHorizontal`** : `None`
+    - **`invertX`** : `None`
+    - **`filename`** : `None`
+    - **`alignmentVertical`** : `None`
+    - **`scaleHeight`** : `None`
+  - **`player`** : `Player`
+  - **`missionInfo`** : `table`
+  - **`environment`** : `table`
+  - **`topNotification`** : `table`
+    - **`new`** : `None`
+    - **`draw`** : `None`
+    - **`createIconOverlays`** : `None`
+    - **`isa`** : `None`
+    - **`copy`** : `None`
+    - **`createBackground`** : `None`
+    - **`getBackgroundPosition`** : `None`
+    - **`storeScaledValues`** : `None`
+    - **`createComponents`** : `None`
+    - **`setScale`** : `None`
+    - **`delete`** : `None`
+    - **`update`** : `None`
+    - **`createCustomIcon`** : `None`
+    - **`class`** : `None`
+    - **`superClass`** : `None`
+    - **`setNotification`** : `None`
+    - **`getHidingTranslation`** : `None`
+    - **`notificationStartDuration`** : `None`
+    - **`iconOffsetY`** : `None`
+    - **`iconOffsetX`** : `None`
+    - **`defaultPivotY`** : `None`
+    - **`defaultPivotX`** : `None`
+    - **`pivotY`** : `None`
+    - **`pivotX`** : `None`
+    - **`titleOffsetY`** : `None`
+    - **`titleOffsetX`** : `None`
+    - **`titleTextSize`** : `None`
+    - **`infoTextSize`** : `None`
+    - **`descTextSize`** : `None`
+    - **`icons`** : `None`
+    - **`currentNotification`** : `None`
+    - **`descOffsetX`** : `None`
+    - **`infoOffsetX`** : `None`
+    - **`infoOffsetY`** : `None`
+    - **`children`** : `None`
+    - **`animationState`** : `None`
+    - **`origY`** : `None`
+    - **`origX`** : `None`
+    - **`descOffsetY`** : `None`
+    - **`maxTextWidth`** : `None`
+    - **`overlay`** : `None`
+    - **`animation`** : `None`
+  - **`inputManager`** : `table`
+  - **`fruitTypeManager`** : `global-ref` → [`g_fruitTypeManager`](./g_fruitTypeManager.md)
+  - **`isConsoleVersion`** : `boolean`
+  - **`guiSoundPlayer`** : `table`
+  - **`showTime`** : `boolean`
+  - **`contextIconOverlays`** : `table`
+  - **`isServer`** : `boolean`
+  - **`fillTypeManager`** : `global-ref` → [`g_fillTypeManager`](./g_fillTypeManager.md)
+  - **`modManager`** : `global-ref` → [`g_modManager`](./g_modManager.md)
+  - **`inputDisplayManager`** : `global-ref` → [`g_inputDisplayManager`](./g_inputDisplayManager.md)
+  - **`controlPlayer`** : `boolean`
+  - **`ingameMap`** : `table`
+    - **`drawLatencyToServer`** : `None`
+    - **`drawPlayersCoordinates`** : `None`
+    - **`drawPersistentPointsOfInterest`** : `None`
+    - **`drawPointsOfInterest`** : `None`
+    - **`drawFields`** : `None`
+    - **`createBackground`** : `None`
+    - **`storeScaledValues`** : `None`
+    - **`drawHotspot`** : `None`
+    - **`drawHotspots`** : `None`
+    - **`update`** : `None`
+    - **`cycleVisibleHotspot`** : `None`
+    - **`setAllowToggle`** : `None`
+    - **`getIsLarge`** : `None`
+    - **`getRequiredHeight`** : `None`
+    - **`updateHotspotFilters`** : `None`
+    - **`toggleSize`** : `None`
+    - **`turnSmall`** : `None`
+    - **`copy`** : `None`
+    - **`getBackgroundPosition`** : `None`
+    - **`drawHotspotsOnly`** : `None`
+    - **`drawMapOnly`** : `None`
+    - **`setFullscreen`** : `None`
+    - **`draw`** : `None`
+    - **`createComponents`** : `None`
+    - **`getHeight`** : `None`
+    - **`setWorldSize`** : `None`
+    - **`setSelectedHotspot`** : `None`
+    - **`addMapHotspot`** : `None`
+    - **`onToggleMapSize`** : `None`
+    - **`createToggleMapSizeGlyph`** : `None`
+    - **`superClass`** : `None`
+    - **`registerInput`** : `None`
+    - **`setTopDownCamera`** : `None`
+    - **`getHotspotIndex`** : `None`
+    - **`setHotspotFilter`** : `None`
+    - **`isa`** : `None`
+    - **`resetSettings`** : `None`
+    - **`removeMapHotspot`** : `None`
+    - **`loadMap`** : `None`
+    - **`delete`** : `None`
+    - **`setScale`** : `None`
+    - **`setIsVisible`** : `None`
+    - **`setHasUnreadMessages`** : `None`
+    - **`updatePlayerPosition`** : `None`
+    - **`updateBlinkingHotspotAlpha`** : `None`
+    - **`updateHotspotSorting`** : `None`
+    - **`updateInputGlyphs`** : `None`
+    - **`class`** : `None`
+    - **`new`** : `None`
+    - **`determineVehiclePosition`** : `None`
+    - **`determinePlayerPosition`** : `None`
+    - **`filter`** : `None`
+    - **`drawFields`** : `None`
+    - **`allowToggle`** : `None`
+    - **`mapExtensionScaleFactor`** : `None`
+    - **`mapExtensionOffsetZ`** : `None`
+    - **`mapExtensionOffsetX`** : `None`
+    - **`mapElement`** : `None`
+    - **`mapOverlay`** : `None`
+    - **`layout`** : `None`
+    - **`state`** : `None`
+    - **`layouts`** : `None`
+    - **`mapOverlayGenerator`** : `None`
+    - **`toggleMapSizeEventId`** : `None`
+    - **`animation`** : `None`
+    - **`worldCenterOffsetZ`** : `None`
+    - **`hudAtlasPath`** : `None`
+    - **`worldSizeZ`** : `None`
+    - **`worldSizeX`** : `None`
+    - **`inputDisplayManager`** : `None`
+    - **`fullScreenLayout`** : `None`
+    - **`pivotX`** : `None`
+    - **`fieldRefreshTimer`** : `None`
+    - **`normalizedPlayerPosX`** : `None`
+    - **`fieldStateOverlayIsReady`** : `None`
+    - **`fieldStateOverlay`** : `None`
+    - **`defaultPivotY`** : `None`
+    - **`hotspotsSorted`** : `None`
+    - **`playerRotation`** : `None`
+    - **`normalizedPlayerPosZ`** : `None`
+    - **`drawHotspotsOnly`** : `None`
+    - **`pivotY`** : `None`
+    - **`hud`** : `None`
+    - **`children`** : `None`
+    - **`defaultPivotX`** : `None`
+    - **`worldCenterOffsetX`** : `None`
+    - **`hotspots`** : `None`
+    - **`isVisible`** : `None`
+    - **`toggleMapSizeGlyph`** : `None`
+    - **`uiScale`** : `None`
+    - **`overlay`** : `None`
+  - **`messageCenter`** : `global-ref` → [`g_messageCenter`](./g_messageCenter.md)
+  - **`chatMessagesShowOffset`** : `number`
+  - **`chatMessagesShowNum`** : `number`
+  - **`showVehicleSchema`** : `boolean`
+  - **`showHudMissionBase`** : `boolean`
+  - **`showWeatherForecast`** : `boolean`
+  - **`warningsNumLines`** : `table`
+  - **`extraTexts`** : `table`
+  - **`moneyChanges`** : `table`
+  - **`ingameNotificationTime`** : `number`
+  - **`fadeFollowDelay`** : `number`
+  - **`fadeAnimation`** : `table`
+    - **`new`** : `None`
+    - **`superClass`** : `None`
+    - **`stop`** : `None`
+    - **`class`** : `None`
+    - **`getDuration`** : `None`
+    - **`start`** : `None`
+    - **`copy`** : `None`
+    - **`updateCallbacks`** : `None`
+    - **`update`** : `None`
+    - **`insertTween`** : `None`
+    - **`insertInterval`** : `None`
+    - **`insertCallback`** : `None`
+    - **`setTarget`** : `None`
+    - **`updateTweens`** : `None`
+    - **`setLooping`** : `None`
+    - **`addCallback`** : `None`
+    - **`addInterval`** : `None`
+    - **`addTween`** : `None`
+    - **`isa`** : `None`
+    - **`reset`** : `None`
+    - **`callbackInstants`** : `None`
+    - **`tweenUpdateRanges`** : `None`
+    - **`callbacksCalled`** : `None`
+    - **`callbackStates`** : `None`
+    - **`functionTarget`** : `None`
+    - **`isFinished`** : `None`
+    - **`elapsedTime`** : `None`
+    - **`curveFunc`** : `None`
+    - **`totalDuration`** : `None`
+    - **`isLooping`** : `None`
+  - **`menuBackgroundOverlay`** : `table`
+  - **`speakerDisplay`** : `table`
+    - **`new`** : `None`
+    - **`draw`** : `None`
+    - **`updateVisibility`** : `None`
+    - **`isa`** : `None`
+    - **`copy`** : `None`
+    - **`class`** : `None`
+    - **`createBackground`** : `None`
+    - **`getBackgroundPosition`** : `None`
+    - **`storeScaledValues`** : `None`
+    - **`onDetailViewVisibilityChange`** : `None`
+    - **`setScale`** : `None`
+    - **`delete`** : `None`
+    - **`update`** : `None`
+    - **`createComponents`** : `None`
+    - **`getHeight`** : `None`
+    - **`superClass`** : `None`
+    - **`onMenuVisibilityChange`** : `None`
+    - **`setUsers`** : `None`
+    - **`updateSpeakingState`** : `None`
+    - **`shadowOffset`** : `None`
+    - **`isMenuVisible`** : `None`
+    - **`textLineOffsetY`** : `None`
+    - **`textLineOffsetX`** : `None`
+    - **`lineHeight`** : `None`
+    - **`lineWidth`** : `None`
+    - **`lastVoiceState`** : `None`
+    - **`currentSpeakers`** : `None`
+    - **`userVisibility`** : `None`
+    - **`mapOffsetX`** : `None`
+    - **`userAway`** : `None`
+    - **`userSpeaking`** : `None`
+    - **`isSpeedometerVisible`** : `None`
+    - **`isInfoWindowVisible`** : `None`
+    - **`users`** : `None`
+    - **`maxNumPlayers`** : `None`
+    - **`speakerIconOverlayAway`** : `None`
+    - **`textSize`** : `None`
+    - **`speakerIconOverlay`** : `None`
+    - **`lineSpacing`** : `None`
+    - **`defaultPivotY`** : `None`
+    - **`overlay`** : `None`
+    - **`pivotY`** : `None`
+    - **`pivotX`** : `None`
+    - **`linePadding`** : `None`
+    - **`animation`** : `None`
+    - **`speakerIconOverlayMuted`** : `None`
+    - **`textOffsetY`** : `None`
+    - **`textOffsetX`** : `None`
+    - **`iconWidth`** : `None`
+    - **`positionYMenu`** : `None`
+    - **`positionXMenu`** : `None`
+    - **`positionYHUD`** : `None`
+    - **`positionXHUD`** : `None`
+    - **`iconHeight`** : `None`
+    - **`children`** : `None`
+    - **`animationState`** : `None`
+    - **`origY`** : `None`
+    - **`origX`** : `None`
+    - **`userTiming`** : `None`
+    - **`ingameMap`** : `None`
+    - **`defaultPivotX`** : `None`
+    - **`mapOffsetY`** : `None`
+  - **`chatWindow`** : `table`
+    - **`new`** : `None`
+    - **`draw`** : `None`
+    - **`isa`** : `None`
+    - **`copy`** : `None`
+    - **`class`** : `None`
+    - **`getBackgroundPosition`** : `None`
+    - **`storeScaledValues`** : `None`
+    - **`setScale`** : `None`
+    - **`update`** : `None`
+    - **`createBackground`** : `None`
+    - **`superClass`** : `None`
+    - **`setVisible`** : `None`
+    - **`scrollChatMessages`** : `None`
+    - **`addMessage`** : `None`
+    - **`onMenuVisibilityChange`** : `None`
+    - **`getHasNewMessages`** : `None`
+    - **`textSize`** : `None`
+    - **`newMessageDuringMenu`** : `None`
+    - **`shadowOffset`** : `None`
+    - **`messageOffsetY`** : `None`
+    - **`messageOffsetX`** : `None`
+    - **`hideTime`** : `None`
+    - **`scrollOffset`** : `None`
+    - **`historyNum`** : `None`
+    - **`overlay`** : `None`
+    - **`maxLines`** : `None`
+    - **`pivotX`** : `None`
+    - **`isMenuVisible`** : `None`
+    - **`textOffsetY`** : `None`
+    - **`defaultPivotX`** : `None`
+    - **`lineOffset`** : `None`
+    - **`children`** : `None`
+    - **`messages`** : `None`
+    - **`animationState`** : `None`
+    - **`speakerDisplay`** : `None`
+    - **`origX`** : `None`
+    - **`defaultPivotY`** : `None`
+    - **`origY`** : `None`
+    - **`pivotY`** : `None`
+    - **`animation`** : `None`
+  - **`isVisible`** : `boolean`
+  - **`sideNotifications`** : `table`
+    - **`new`** : `None`
+    - **`draw`** : `None`
+    - **`createComponents`** : `None`
+    - **`copy`** : `None`
+    - **`class`** : `None`
+    - **`createBackground`** : `None`
+    - **`updateSizeAndPositions`** : `None`
+    - **`storeScaledValues`** : `None`
+    - **`setScale`** : `None`
+    - **`update`** : `None`
+    - **`isa`** : `None`
+    - **`superClass`** : `None`
+    - **`addNotification`** : `None`
+    - **`getBackgroundPosition`** : `None`
+    - **`textOffsetY`** : `None`
+    - **`textSize`** : `None`
+    - **`notificationMarginX`** : `None`
+    - **`notificationMarginY`** : `None`
+    - **`lineOffset`** : `None`
+    - **`origX`** : `None`
+    - **`overlay`** : `None`
+    - **`animationState`** : `None`
+    - **`children`** : `None`
+    - **`defaultPivotX`** : `None`
+    - **`pivotY`** : `None`
+    - **`pivotX`** : `None`
+    - **`notificationQueue`** : `None`
+    - **`defaultPivotY`** : `None`
+    - **`origY`** : `None`
+    - **`animation`** : `None`
+  - **`achievementMessage`** : `table`
+    - **`onAnimateVisibilityFinished`** : `None`
+    - **`new`** : `None`
+    - **`draw`** : `None`
+    - **`isa`** : `None`
+    - **`copy`** : `None`
+    - **`onMenuVisibilityChange`** : `None`
+    - **`showMessage`** : `None`
+    - **`createBackground`** : `None`
+    - **`getBackgroundPosition`** : `None`
+    - **`storeScaledValues`** : `None`
+    - **`createIcon`** : `None`
+    - **`setScale`** : `None`
+    - **`update`** : `None`
+    - **`nextMessage`** : `None`
+    - **`createComponents`** : `None`
+    - **`hideMessage`** : `None`
+    - **`superClass`** : `None`
+    - **`beginShowMessage`** : `None`
+    - **`getAllowDisplay`** : `None`
+    - **`class`** : `None`
+    - **`time`** : `None`
+    - **`guiSoundPlayer`** : `None`
+    - **`isMenuVisible`** : `None`
+    - **`messageTextWidth`** : `None`
+    - **`contextActionDisplay`** : `None`
+    - **`iconElement`** : `None`
+    - **`defaultPivotY`** : `None`
+    - **`defaultPivotX`** : `None`
+    - **`inputManager`** : `None`
+    - **`pivotX`** : `None`
+    - **`messageTextOffsetY`** : `None`
+    - **`messageTextOffsetX`** : `None`
+    - **`titleTextSize`** : `None`
+    - **`titleTextOffsetY`** : `None`
+    - **`titleTextOffsetX`** : `None`
+    - **`labelTextSize`** : `None`
+    - **`labelTextOffsetY`** : `None`
+    - **`labelTextOffsetX`** : `None`
+    - **`playedSample`** : `None`
+    - **`queueShow`** : `None`
+    - **`message`** : `None`
+    - **`messageTextSize`** : `None`
+    - **`messages`** : `None`
+    - **`animationState`** : `None`
+    - **`origY`** : `None`
+    - **`origX`** : `None`
+    - **`children`** : `None`
+    - **`pivotY`** : `None`
+    - **`overlay`** : `None`
+    - **`animation`** : `None`
+  - **`contextActionDisplay`** : `table`
+    - **`createActionIcons`** : `None`
+    - **`new`** : `None`
+    - **`draw`** : `None`
+    - **`superClass`** : `None`
+    - **`copy`** : `None`
+    - **`class`** : `None`
+    - **`createBackground`** : `None`
+    - **`getBackgroundPosition`** : `None`
+    - **`storeScaledValues`** : `None`
+    - **`setContext`** : `None`
+    - **`isa`** : `None`
+    - **`setScale`** : `None`
+    - **`update`** : `None`
+    - **`getWidth`** : `None`
+    - **`resetContext`** : `None`
+    - **`createFrame`** : `None`
+    - **`createInputGlyph`** : `None`
+    - **`createComponents`** : `None`
+    - **`getHidingTranslation`** : `None`
+    - **`createFadeBackground`** : `None`
+    - **`displayTime`** : `None`
+    - **`borderOffsetX`** : `None`
+    - **`targetTextSize`** : `None`
+    - **`targetTextOffsetY`** : `None`
+    - **`targetTextOffsetX`** : `None`
+    - **`actionTextOffsetY`** : `None`
+    - **`actionTextOffsetX`** : `None`
+    - **`contextIconSizeX`** : `None`
+    - **`contextIconOffsetY`** : `None`
+    - **`contextIconOffsetX`** : `None`
+    - **`contextIconElementRightX`** : `None`
+    - **`contextPriority`** : `None`
+    - **`targetText`** : `None`
+    - **`contextIconName`** : `None`
+    - **`contextAction`** : `None`
+    - **`contextIconElements`** : `None`
+    - **`inputGlyphElement`** : `None`
+    - **`inputIconOffsetX`** : `None`
+    - **`fadeBackgroundElement`** : `None`
+    - **`animation`** : `None`
+    - **`defaultPivotY`** : `None`
+    - **`defaultPivotX`** : `None`
+    - **`pivotY`** : `None`
+    - **`pivotX`** : `None`
+    - **`overlay`** : `None`
+    - **`children`** : `None`
+    - **`animationState`** : `None`
+    - **`origY`** : `None`
+    - **`origX`** : `None`
+    - **`inputDisplayManager`** : `None`
+    - **`uiScale`** : `None`
+    - **`actionText`** : `None`
+    - **`actionTextSize`** : `None`
+- **`placeablesToDelete`** : `table`
+- **`doghouses`** : `table`
+- **`dynamicFoliageLayers`** : `table`
+- **`cameraPaths`** : `table`
+- **`stoneSystem`** : `table`
+  - **Methods**: 23 available
+    - `new()`
+    - `initTerrain()`
+    - `superClass()`
+    - `copy()`
+    - `class()`
+    - `getColors()`
+    - `getMinMaxValues()`
+    - `getWearMultiplierByType()`
+    - `getLitersPerSqm()`
+    - `consoleCommandSetState()`
+    - `loadMapData()`
+    - `consoleCommandAddDelta()`
+    - `getMaskValue()`
+    - `delete()`
+    - `getMapHasStones()`
+    - `isa()`
+    - `getGrowthMapping()`
+    - `loadStones()`
+    - `getTitle()`
+    - `getPickedValue()`
+    - `getDensityMapData()`
+    - `consoleCommandToggleDebug()`
+    - `addDensityMapSyncer()`
+  - **`name`** : `string`
+  - **`baseDirectory`** : `string`
+  - **`minValue`** : `number`
+  - **`stoneFilter`** : `userdata`
+  - **`stoneModifier`** : `userdata`
+  - **`numChannels`** : `number`
+  - **`litersPerSqm`** : `number`
+  - **`mapColorBlind`** : `table[]` (length: 3)
+  - **`mapColor`** : `table[]` (length: 3)
+  - **`pickedValue`** : `number`
+  - **`growthMapping`** : `table[]` (length: 2)
+  - **`debugArea`** : `table`
+    - **`new`** : `None`
+    - **`draw`** : `None`
+    - **`delete`** : `None`
+    - **`copy`** : `None`
+    - **`update`** : `None`
+    - **`class`** : `None`
+    - **`superClass`** : `None`
+    - **`drawDebugAreaRectangleFilled`** : `None`
+    - **`setCenter`** : `None`
+    - **`isa`** : `None`
+    - **`colors`** : `None`
+    - **`numChannels`** : `None`
+    - **`firsChannel`** : `None`
+    - **`filter`** : `None`
+    - **`modifier`** : `None`
+    - **`yOffset`** : `None`
+    - **`resolution`** : `None`
+    - **`radius`** : `None`
+  - **`maskValue`** : `number`
+  - **`densityMap`** : `number`
+  - **`wearByType`** : `table`
+  - **`title`** : `string`
+  - **`maxValue`** : `number`
+  - **`firstChannel`** : `number`
+- **`placeables`** : `table`
+- **`placeableSystem`** : `table`
+  - **Methods**: 32 available
+    - `addBunkerSilo()`
+    - `new()`
+    - `addWeatherStation()`
+    - `addPlaceable()`
+    - `consoleCommandPlaceableTestAreas()`
+    - `isa()`
+    - `copy()`
+    - `class()`
+    - `consoleCommandLoadAllPlaceables()`
+    - `saveToXML()`
+    - `consoleCommandReloadAllPlaceables()`
+    - `loadFinished()`
+    - `savePlaceableToXML()`
+    - `consoleCommandDeleteAllPlaceables()`
+    - `loadPlaceableFromXML()`
+    - `loadNextPlaceableFromXML()`
+    - `superClass()`
+    - `removeFarmhouse()`
+    - `loadNextPlaceableFromXMLFinished()`
+    - `deleteAll()`
+    - `save()`
+    - `delete()`
+    - `removeWeatherStation()`
+    - `removePlaceable()`
+    - `load()`
+    - `setSaveIds()`
+    - `getHasWeatherStation()`
+    - `getFarmhouse()`
+    - `getPlaceableBySavegameId()`
+    - `addFarmhouse()`
+    - `getBunkerSilos()`
+    - `removeBunkerSilo()`
+  - **`farmhouses`** : `table[]` (length: 1)
+  - **`weatherStations`** : `table`
+  - **`savegameIdToPlaceable`** : `table[]` (length: 36)
+  - **`mission`** : `table`
+  - **`placeables`** : `table[]` (length: 36)
+  - **`isReloadRunning`** : `boolean`
+  - **`version`** : `number`
+  - **`bunkerSilos`** : `table[]` (length: 3)
+- **`cuttingSounds`** : `table`
+  - **`tree`** : `table`
+- **`activatableObjectsSystem`** : `table`
+  - **Methods**: 16 available
+    - `setPosition()`
+    - `new()`
+    - `addActivatable()`
+    - `getActivatable()`
+    - `isa()`
+    - `activate()`
+    - `copy()`
+    - `class()`
+    - `removeInput()`
+    - `removeActivatable()`
+    - `registerInput()`
+    - `updateObjects()`
+    - `update()`
+    - `superClass()`
+    - `onActivateObjectInput()`
+    - `deactivate()`
+  - **`objects`** : `reverse-hash-map`
+  - **`mission`** : `table`
+  - **`isActive`** : `boolean`
+  - **`inputContext`** : `string`
+  - **`currentActivatableObject`** : `table`
+    - **`new`** : `None`
+    - **`run`** : `None`
+    - **`isa`** : `None`
+    - **`getIsActivatable`** : `None`
+    - **`superClass`** : `None`
+    - **`copy`** : `None`
+    - **`class`** : `None`
+    - **`activateText`** : `None`
+    - **`placeable`** : `None`
+  - **`posZ`** : `number`
+  - **`posY`** : `number`
+  - **`posX`** : `number`
+  - **`actionEventId`** : `string`
+- **`shopController`** : `table`
+  - **Methods**: 87 available
+    - `getItemsByDLC()`
+    - `getItemsByPack()`
+    - `getStorePacks()`
+    - `getDLCCategories()`
+    - `getLeasedCategories()`
+    - `setPlayerFarm()`
+    - `getItemsByCategoryOwnedOrLeased()`
+    - `getItemsByCategory()`
+    - `getItemsByBrand()`
+    - `getPlaceableCategories()`
+    - `getObjectCategories()`
+    - `getToolCategories()`
+    - `getVehicleCategories()`
+    - `getBrands()`
+    - `getLeasedFarmItems()`
+    - `getOwnedFarmItems()`
+    - `getLeasedVehicles()`
+    - `getOwnedItems()`
+    - `updateDisplayItems()`
+    - `setSwitchToConfigurationCallback()`
+    - `onHandToolSellFailed()`
+    - `update()`
+    - `onVehicleSellFailed()`
+    - `setSaleItemBoughtCallback()`
+    - `setUpdateAllItemsCallback()`
+    - `setUpdateShopItemsCallback()`
+    - `onHandToolSold()`
+    - `onSoldCallback()`
+    - `new()`
+    - `isa()`
+    - `copy()`
+    - `class()`
+    - `onBoughtCallback()`
+    - `setCurrentMission()`
+    - `setClient()`
+    - `onVehicleBought()`
+    - `onObjectBought()`
+    - `onHandToolBuyFailed()`
+    - `onHandToolBought()`
+    - `onVehicleSold()`
+    - `onPlaceableSellFailed()`
+    - `onPlaceableSold()`
+    - `setLeasedFarmItems()`
+    - `onSellCallback()`
+    - `getCoinItems()`
+    - `displayItemSortFunction()`
+    - `load()`
+    - `brandSortFunction()`
+    - `addCategoryForDisplay()`
+    - `addBrandForDisplay()`
+    - `filterOwnedItemsByFarmId()`
+    - `subscribeEvents()`
+    - `reset()`
+    - `categorySortFunction()`
+    - `onPlaceableSellEvent()`
+    - `onVehicleSellEvent()`
+    - `onHandToolBuyEvent()`
+    - `onObjectBuyFailed()`
+    - `onObjectBuyEvent()`
+    - `onVehicleBuyFailed()`
+    - `onVehicleBuyEvent()`
+    - `getSaleItems()`
+    - `setOwnedFarmItems()`
+    - `sellHandTool()`
+    - `onSellItem()`
+    - `superClass()`
+    - `getOwnedCategories()`
+    - `getItemsWithFilenames()`
+    - `finalizeBuy()`
+    - `canBeBought()`
+    - `sellVehicle()`
+    - `buyVehicle()`
+    - `onYesNoBuyObject()`
+    - `buyObject()`
+    - `onYesNoBuyHandtool()`
+    - `buyHandTool()`
+    - `sell()`
+    - `sellPlaceableWarningInfoClickOk()`
+    - `makeDisplayItem()`
+    - `setConfigurations()`
+    - `onHandToolSellEvent()`
+    - `buy()`
+    - `getItemsFromCombinations()`
+    - `switchToConfigurationCallback()`
+    - `updateAllItemsCallback()`
+    - `updateShopItemsCallback()`
+    - `saleItemBoughtCallback()`
+  - **`buyItemIsLeasing`** : `boolean`
+  - **`playerFarm`** : `Farm`
+    - **`canBeDestroyed`** : `None`
+    - **`merge`** : `None`
+    - **`getNumActivePlayers`** : `None`
+    - **`addUser`** : `None`
+    - **`getUserPermissions`** : `None`
+    - **`loadFromXMLFile`** : `None`
+    - **`saveToXMLFile`** : `None`
+    - **`new`** : `None`
+    - **`getIsContractingFor`** : `None`
+    - **`superClass`** : `None`
+    - **`copy`** : `None`
+    - **`class`** : `None`
+    - **`isUserFarmManager`** : `None`
+    - **`delete`** : `None`
+    - **`getIconUVs`** : `None`
+    - **`setUserPermission`** : `None`
+    - **`addHandTool`** : `None`
+    - **`getNumPlayers`** : `None`
+    - **`resetToSingleplayer`** : `None`
+    - **`demoteUser`** : `None`
+    - **`promoteUser`** : `None`
+    - **`writeUpdateStream`** : `None`
+    - **`readUpdateStream`** : `None`
+    - **`writeStream`** : `None`
+    - **`readStream`** : `None`
+    - **`setIsContractingFor`** : `None`
+    - **`getColor`** : `None`
+    - **`farmPropertyChanged`** : `None`
+    - **`calculateDailyLoanInterest`** : `None`
+    - **`updateMaxLoan`** : `None`
+    - **`hasHandtool`** : `None`
+    - **`updateLastNickname`** : `None`
+    - **`onUserQuitGame`** : `None`
+    - **`periodChanged`** : `None`
+    - **`getLoan`** : `None`
+    - **`getEquity`** : `None`
+    - **`changeBalance`** : `None`
+    - **`isa`** : `None`
+    - **`addPurchasedCoins`** : `None`
+    - **`getFarmhouse`** : `None`
+    - **`removeUser`** : `None`
+    - **`onUserJoinGame`** : `None`
+    - **`removeHandTool`** : `None`
+    - **`getSpawnPoint`** : `None`
+    - **`getActiveUsers`** : `None`
+    - **`getSleepCamera`** : `None`
+    - **`getHandTools`** : `None`
+    - **`setInitialEconomy`** : `None`
+    - **`getBalance`** : `None`
+    - **`name`** : `None`
+    - **`deleteListeners`** : `None`
+    - **`dirtyMask`** : `None`
+    - **`nextDirtyFlag`** : `None`
+    - **`recieveUpdates`** : `None`
+    - **`isServer`** : `None`
+    - **`isRegistered`** : `None`
+    - **`isSpectator`** : `None`
+    - **`loanMax`** : `None`
+    - **`handTools`** : `None`
+    - **`isClient`** : `None`
+    - **`money`** : `None`
+    - **`stats`** : `None`
+    - **`players`** : `None`
+    - **`lastMoneySent`** : `None`
+    - **`farmMoneyDirtyFlag`** : `None`
+    - **`color`** : `None`
+    - **`contractingFor`** : `None`
+    - **`activeUsers`** : `None`
+    - **`uniqueUserIdToPlayer`** : `None`
+    - **`ownerFarmId`** : `None`
+    - **`loan`** : `None`
+    - **`userIdToPlayer`** : `None`
+    - **`farmId`** : `None`
+    - **`id`** : `None`
+  - **`buyItemIsOutsideBuy`** : `boolean`
+  - **`fillTypeManager`** : `global-ref` → [`g_fillTypeManager`](./g_fillTypeManager.md)
+  - **`currentMission`** : `table`
+  - **`client`** : `global-ref` → [`g_client`](./g_client.md)
+  - **`leasedFarmItems`** : `table`
+  - **`ownedFarmItems`** : `reverse-hash-map`
+  - **`l10n`** : `table`
+  - **`displayPacks`** : `table[]` (length: 17)
+  - **`displayPlaceableCategories`** : `table[]` (length: 18)
+  - **`displayObjectCategories`** : `table[]` (length: 4)
+  - **`displayToolCategories`** : `table[]` (length: 52)
+  - **`displayVehicleCategories`** : `table[]` (length: 24)
+  - **`displayBrands`** : `table[]` (length: 144)
+  - **`buyHandToolNow`** : `number`
+  - **`buyObjectNow`** : `number`
+  - **`buyVehicleNow`** : `number`
+  - **`isSelling`** : `boolean`
+  - **`isBuying`** : `boolean`
+  - **`playerFarmId`** : `number`
+  - **`inAppPurchaseController`** : `table`
+    - **`new`** : `None`
+    - **`onPendingPurchasesChanged`** : `None`
+    - **`isa`** : `None`
+    - **`checkPendingPurchasesChanged`** : `None`
+    - **`class`** : `None`
+    - **`tryPerformPendingPurchase`** : `None`
+    - **`setPendingPurchaseCallback`** : `None`
+    - **`getHasAnyPendingPurchases`** : `None`
+    - **`getHasPendingPurchase`** : `None`
+    - **`purchase`** : `None`
+    - **`getProducts`** : `None`
+    - **`getIsAvailable`** : `None`
+    - **`update`** : `None`
+    - **`load`** : `None`
+    - **`addPurchasedCoins`** : `None`
+    - **`onPurchaseEnd`** : `None`
+    - **`superClass`** : `None`
+    - **`loadProductsFromXML`** : `None`
+    - **`setMission`** : `None`
+    - **`copy`** : `None`
+    - **`products`** : `None`
+    - **`isLoaded`** : `None`
+    - **`callbacks`** : `None`
+    - **`gameSettings`** : `None`
+    - **`mission`** : `None`
+    - **`xmlPath`** : `None`
+    - **`lastNumOfPendingItems`** : `None`
+    - **`productIdToProduct`** : `None`
+    - **`pendingTimer`** : `None`
+    - **`messageCenter`** : `None`
+    - **`l10n`** : `None`
+    - **`isInitialized`** : `None`
+  - **`brandManager`** : `global-ref` → [`g_brandManager`](./g_brandManager.md)
+  - **`storeManager`** : `global-ref` → [`g_storeManager`](./g_storeManager.md)
+  - **`buyItemPrice`** : `number`
+  - **`displayDLCs`** : `table`
+  - **`isInitialized`** : `boolean`
+- **`vehiclesToSpawn`** : `table`
+- **`usedLoadPlaces`** : `table`
+- **`restrictedZones`** : `table`
+- **`loadSpawnPlaces`** : `table`
+- **`vehiclesToDelete`** : `table`
+- **`controlledVehicles`** : `table`
+- **`manureLoadingStations`** : `table`
+- **`weedSystem`** : `table`
+  - **Methods**: 29 available
+    - `new()`
+    - `initTerrain()`
+    - `getWeederReplacements()`
+    - `loadReplacements()`
+    - `isa()`
+    - `copy()`
+    - `class()`
+    - `getColors()`
+    - `getGrowthMapping()`
+    - `getDensityMapData()`
+    - `getDenseStartState()`
+    - `consoleCommandSetState()`
+    - `loadMapData()`
+    - `consoleCommandAddDelta()`
+    - `getInfoLayer()`
+    - `getInfoLayerData()`
+    - `getBlockingStateData()`
+    - `loadInfoLayer()`
+    - `getMulcherReplacements()`
+    - `getFieldInfoStates()`
+    - `getHerbicideReplacements()`
+    - `getMapHasWeed()`
+    - `getFactors()`
+    - `getSparseStartState()`
+    - `getTitle()`
+    - `loadWeed()`
+    - `superClass()`
+    - `delete()`
+    - `addDensityMapSyncer()`
+  - **`name`** : `string`
+  - **`weedFilter`** : `userdata`
+  - **`maxValue`** : `number`
+  - **`minValue`** : `number`
+  - **`denseStartState`** : `number`
+  - **`numChannels`** : `number`
+  - **`weedModifier`** : `userdata`
+  - **`densityMap`** : `number`
+  - **`sparseStartState`** : `number`
+  - **`baseDirectory`** : `string`
+  - **`mapColorBlind`** : `table[]` (length: 5)
+  - **`mapColor`** : `table[]` (length: 5)
+  - **`infoLayer`** : `table`
+  - **`growthMapping`** : `number[]` (length: 4)
+  - **`factors`** : `map`
+  - **`mulcherReplacements`** : `table`
+  - **`weederHoeReplacements`** : `table`
+  - **`weederReplacements`** : `table`
+  - **`herbicideReplacements`** : `table`
+  - **`title`** : `string`
+  - **`fieldInfoStates`** : `string[]` (length: 6)
+  - **`firstChannel`** : `number`
+- **`onCreateObjectSystem`** : `table`
+  - **Methods**: 12 available
+    - `new()`
+    - `add()`
+    - `delete()`
+    - `copy()`
+    - `save()`
+    - `load()`
+    - `getNumObjects()`
+    - `get()`
+    - `class()`
+    - `remove()`
+    - `superClass()`
+    - `isa()`
+  - **`objectsToSave`** : `table`
+  - **`objects`** : `table[]` (length: 1)
+  - **`numObjectsToSave`** : `number`
+  - **`mission`** : `table`
+- **`itemSystem`** : `table`
+  - **Methods**: 17 available
+    - `new()`
+    - `loadItemsFromSavegameStepFinished()`
+    - `superClass()`
+    - `copy()`
+    - `class()`
+    - `addItemToSave()`
+    - `saveToXML()`
+    - `removeItemToSave()`
+    - `getItemBySaveId()`
+    - `loadItems()`
+    - `deleteAll()`
+    - `delete()`
+    - `loadItemsFromXML()`
+    - `loadItemsFromSavegameFinished()`
+    - `loadNextItemsFromSavegame()`
+    - `isa()`
+    - `save()`
+  - **`mission`** : `table`
+  - **`loadItemsById`** : `table`
+  - **`sortedItemsToSave`** : `table`
+  - **`itemsToSave`** : `table`
+- **`blockedIps`** : `table`
+- **`placementManager`** : `table`
+  - **Methods**: 10 available
+    - `new()`
+    - `superClass()`
+    - `copy()`
+    - `class()`
+    - `consoleCommandTogglePlacementDebug()`
+    - `overlapBoxCallbackFuncFindPlace()`
+    - `update()`
+    - `delete()`
+    - `getPlaceAsync()`
+    - `isa()`
+  - **`noMoreSpaces`** : `boolean`
+  - **`currentPos`** : `table`
+  - **`getPlaceQueue`** : `table`
+  - **`spaceIsFree`** : `boolean`
+- **`indoorMask`** : `table`
+  - **Methods**: 17 available
+    - `new()`
+    - `draw()`
+    - `consoleCommandToggleMask()`
+    - `isa()`
+    - `copy()`
+    - `getDensityMapData()`
+    - `visualize()`
+    - `onTerrainLoad()`
+    - `getValueAtPosition()`
+    - `getFilter()`
+    - `delete()`
+    - `setParallelogramUVCoords()`
+    - `setPlaceableAreaInSnowMask()`
+    - `loadMapData()`
+    - `hasMask()`
+    - `superClass()`
+    - `class()`
+  - **`filter`** : `userdata`
+  - **`mission`** : `table`
+  - **`layerName`** : `string`
+  - **`visualizeMask`** : `boolean`
+  - **`worldToDensityMap`** : `number`
+  - **`modifierValue`** : `userdata`
+  - **`maskSize`** : `number`
+  - **`terrainSize`** : `number`
+  - **`handle`** : `number`
+  - **`densityToWorldMap`** : `number`
+  - **`isServer`** : `boolean`
+  - **`terrainSizeHalf`** : `number`
+- **`usedStorePlaces`** : `table`
+- **`collectiblesSystem`** : `table`
+  - **Methods**: 25 available
+    - `new()`
+    - `superClass()`
+    - `copy()`
+    - `class()`
+    - `addCollectibleTarget()`
+    - `removeCollectibleTarget()`
+    - `onClientJoined()`
+    - `onTriggerEvent()`
+    - `updateHotspotState()`
+    - `updateTargetState()`
+    - `updateCollectiblesState()`
+    - `isCompleted()`
+    - `loadFromXMLFile()`
+    - `getTotalCollected()`
+    - `delete()`
+    - `onStateEvent()`
+    - `getTotalCollectable()`
+    - `isa()`
+    - `addCollectible()`
+    - `saveToXMLFile()`
+    - `onTriggerCollectible()`
+    - `getIsActive()`
+    - `loadMapData()`
+    - `consoleCommandShowAll()`
+    - `removeCollectible()`
+  - **`collectibles`** : `table`
+  - **`isComplete`** : `boolean`
+  - **`isActive`** : `boolean`
+  - **`isServer`** : `boolean`
+  - **`achievementName`** : `string`
+  - **`hotspotThreshold`** : `number`
+  - **`target`** : `table`
+    - **`setState`** : `None`
+    - **`new`** : `None`
+    - **`delete`** : `None`
+    - **`onCreate`** : `None`
+    - **`isa`** : `None`
+    - **`superClass`** : `None`
+    - **`copy`** : `None`
+    - **`class`** : `None`
+    - **`node`** : `None`
+  - **`groups`** : `table`
+  - **`collectibleIndexToName`** : `string[]` (length: 12)
+  - **`collected`** : `boolean[]` (length: 12)
+- **`loadFinishedListeners`** : `table`
+- **`vineSystem`** : `table`
+  - **Methods**: 18 available
+    - `new()`
+    - `initTerrain()`
+    - `superClass()`
+    - `copy()`
+    - `class()`
+    - `consoleCommandSetGrowthState()`
+    - `onFinishedGrowthPeriod()`
+    - `getDensityMapSyncerCellIndexRange()`
+    - `getPlaceable()`
+    - `delete()`
+    - `update()`
+    - `addElement()`
+    - `consoleCommandPrintCellMapping()`
+    - `consoleCommandUpdateVisuals()`
+    - `removeElement()`
+    - `isa()`
+    - `consoleCommandToggleDebug()`
+    - `onDensityMapSyncerUpdate()`
+  - **`nodes`** : `table`
+  - **`isDebugAreaActive`** : `boolean`
+  - **`mission`** : `table`
+  - **`densityMapCellIdToNode`** : `table`
+  - **`debugAreas`** : `table`
+  - **`isServer`** : `boolean`
+  - **`dirtyNodes`** : `table`
+- **`foliageSystem`** : `table`
+  - **Methods**: 19 available
+    - `new()`
+    - `initTerrain()`
+    - `applyDecoFoliage()`
+    - `isa()`
+    - `getFoliagePaintByName()`
+    - `class()`
+    - `unloadMapData()`
+    - `loadMapData()`
+    - `getDecoFoliages()`
+    - `delete()`
+    - `loadModFoliageTypes()`
+    - `getIsDecoLayerDefined()`
+    - `copy()`
+    - `getFoliagePaint()`
+    - `superClass()`
+    - `addDensityMapSyncer()`
+    - `saveToXMLFile()`
+    - `applyAreas()`
+    - `apply()`
+  - **`decoFoliageMappings`** : `table`
+  - **`paintableFoliages`** : `table[]` (length: 4)
+  - **`decoFoliages`** : `table[]` (length: 3)
+  - **`terrainRootNode`** : `number`
+  - **`modFoliageTypesToLoad`** : `table`
+- **`husbandrySystem`** : `table`
+  - **Methods**: 23 available
+    - `new()`
+    - `addPlaceable()`
+    - `superClass()`
+    - `copy()`
+    - `class()`
+    - `getClusterHusbandyById()`
+    - `getNumRideablesPerFarm()`
+    - `getNumOfFreeAnimalSlots()`
+    - `removeLivestockTrailer()`
+    - `addLivestockTrailer()`
+    - `getHusbandryInRideableRange()`
+    - `isa()`
+    - `delete()`
+    - `getPlaceablesByFarm()`
+    - `removePlaceable()`
+    - `getCanAddRideable()`
+    - `removeRideable()`
+    - `addRideable()`
+    - `removeManureHeap()`
+    - `addManureHeap()`
+    - `getLimitReached()`
+    - `removeClusterHusbandry()`
+    - `addClusterHusbandry()`
+  - **`mission`** : `table`
+  - **`isServer`** : `boolean`
+  - **`husbandrys`** : `table`
+  - **`maxNumRidables`** : `number`
+  - **`rideables`** : `table`
+  - **`clusterHusbandries`** : `table[]` (length: 1)
+  - **`manureHeaps`** : `table`
+  - **`placeables`** : `table[]` (length: 1)
+  - **`livestockTrailers`** : `table`
+- **`drawables`** : `table`
+- **`animalNameSystem`** : `table`
+  - **Methods**: 8 available
+    - `getRandomName()`
+    - `new()`
+    - `loadMapData()`
+    - `delete()`
+    - `isa()`
+    - `superClass()`
+    - `copy()`
+    - `class()`
+  - **`names`** : `string[]` (length: 254)
+  - **`mission`** : `table`
+- **`savegameController`** : `table`
+  - **Methods**: 45 available
+    - `onSaveTaskComplete()`
+    - `executeSaveTask()`
+    - `onSaveComplete()`
+    - `addSaveTask()`
+    - `onSavegameDeleted()`
+    - `onSaveStartComplete()`
+    - `isa()`
+    - `copy()`
+    - `class()`
+    - `backupSavegame()`
+    - `isStorageDeviceUnavailable()`
+    - `getMaxNumberOfSavegames()`
+    - `getNumberOfSavegames()`
+    - `getIsWaitingForSavegameInfo()`
+    - `getSavingErrorCode()`
+    - `getIsSaving()`
+    - `getCanDeleteGame()`
+    - `getIsSavegameConflicted()`
+    - `getCanStartGame()`
+    - `deleteSavegame()`
+    - `cancelSavegameUpdate()`
+    - `resetStorageDeviceSelection()`
+    - `onSaveGameUpdateComplete()`
+    - `tryToResolveConflict()`
+    - `loadSavegames()`
+    - `onSaveGameUpdateCompleteCloudError()`
+    - `updateSavegames()`
+    - `saveSavegame()`
+    - `onYesNoConflictKeepRemote()`
+    - `returnToSavegameSelection()`
+    - `executeResolveConflict()`
+    - `savegameConflictResolveKeepBothFailed()`
+    - `getNumValidSavegames()`
+    - `onResolveConflictComplete()`
+    - `backupSortFunction()`
+    - `getSavegame()`
+    - `createBackup()`
+    - `assignBackupDeleteFlags()`
+    - `locateBackups()`
+    - `superClass()`
+    - `new()`
+    - `resolveConflict()`
+    - `onCloudError()`
+    - `onUpdateCompleteCallback()`
+    - `onDeleteCallback()`
+  - **`onUpdateCompleteTarget`** : `map`
+  - **`onSaveCompleteCallbackTarget`** : `table`
+  - **`onDeleteCallbackTarget`** : `table`
+  - **`savingErrorCode`** : `number`
+  - **`waitingForSaveGameInfo`** : `boolean`
+  - **`isSavingGame`** : `boolean`
+  - **`savegames`** : `table[]` (length: 20)
+  - **`onSaveCompleteCallback`** : `function-ref`
+- **`animalFoodSystem`** : `table`
+  - **Methods**: 23 available
+    - `loadRecipes()`
+    - `new()`
+    - `getFillTypesFromXML()`
+    - `superClass()`
+    - `copy()`
+    - `class()`
+    - `consumeFoodParallelly()`
+    - `consumeFoodSerially()`
+    - `consumeFoodGroup()`
+    - `loadMapData()`
+    - `getAnimalFood()`
+    - `getMixtureByFillType()`
+    - `getRecipeByFillTypeIndex()`
+    - `loadMixture()`
+    - `delete()`
+    - `getTotalFillLevelInGroup()`
+    - `consumeFood()`
+    - `getMixturesByAnimalTypeIndex()`
+    - `isa()`
+    - `loadRecipe()`
+    - `loadAnimalFood()`
+    - `loadAnimalFoodData()`
+    - `loadMixtures()`
+  - **`mission`** : `table`
+  - **`animalFood`** : `table[]` (length: 5)
+  - **`mixtureFillTypeIndexToMixture`** : `map`
+  - **`animalMixtures`** : `map`
+  - **`recipeFillTypeIndexToRecipe`** : `map`
+  - **`recipes`** : `table[]` (length: 1)
+  - **`mixtures`** : `table[]` (length: 1)
+  - **`animalTypeIndexToFood`** : `table[]` (length: 5)
+  - **`indexToAnimalFood`** : `table[]` (length: 5)
+- **`animalSystem`** : `table`
+  - **Methods**: 29 available
+    - `new()`
+    - `getTypeIndexBySubTypeIndex()`
+    - `getSubTypeIndexByFillTypeIndex()`
+    - `isa()`
+    - `copy()`
+    - `class()`
+    - `getTypes()`
+    - `loadAnimals()`
+    - `getTypeByIndex()`
+    - `createClusterFromSubTypeIndex()`
+    - `getClusterClassBySubTypeIndex()`
+    - `loadSubTypes()`
+    - `loadAnimalConfig()`
+    - `loadSubType()`
+    - `getSubTypeIndexByName()`
+    - `getSubTypeByName()`
+    - `getVisualAnimalIndexByAge()`
+    - `getAnimalTransportFee()`
+    - `getAnimalBuyPrice()`
+    - `getTypeByName()`
+    - `getSubTypeByFillTypeIndex()`
+    - `getTypeIndexByName()`
+    - `getSubTypeByIndex()`
+    - `loadAnimCurve()`
+    - `loadVisualData()`
+    - `getVisualByAge()`
+    - `loadMapData()`
+    - `superClass()`
+    - `delete()`
+  - **`fillTypeIndexToSubType`** : `map`
+  - **`mission`** : `table`
+  - **`nameToSubType`** : `table`
+  - **`subTypes`** : `table[]` (length: 21)
+  - **`typeIndexToName`** : `string[]` (length: 5)
+  - **`nameToTypeIndex`** : `table`
+  - **`nameToType`** : `table`
+  - **`subTypeIndexToAnimalData`** : `table`
+  - **`nameToSubTypeIndex`** : `table`
+  - **`isServer`** : `boolean`
+  - **`types`** : `table[]` (length: 5)
+- **`wildlifeSpawner`** : `table`
+  - **Methods**: 34 available
+    - `parseSpawnRule()`
+    - `treeCountTestCallback()`
+    - `loadMapData()`
+    - `isInDebugList()`
+    - `consoleCommandRemoveWildlifeAnimalToDebug()`
+    - `debugDraw()`
+    - `consoleCommandAddWildlifeAnimalToDebug()`
+    - `onConnectionClosed()`
+    - `consoleCommandToggleShowWildlifeAnimation()`
+    - `consoleCommandToggleShowWildlifeSteering()`
+    - `new()`
+    - `consoleCommandToggleShowWildlifeId()`
+    - `addAreaOfInterest()`
+    - `consoleCommandToggleShowWildlife()`
+    - `copy()`
+    - `class()`
+    - `consoleCommandToggleEnabled()`
+    - `update()`
+    - `superClass()`
+    - `countAnimalsTobeSpawned()`
+    - `delete()`
+    - `removeFarAwayAnimals()`
+    - `updateSpawner()`
+    - `updateAreaOfInterest()`
+    - `removeAllAnimals()`
+    - `getPlayerCenter()`
+    - `checkAreas()`
+    - `spawnAnimals()`
+    - `checkArea()`
+    - `trySpawnAtArea()`
+    - `getIsInWater()`
+    - `countTrees()`
+    - `animalExists()`
+    - `isa()`
+  - **`areaOfInterestliveTime`** : `number`
+  - **`areas`** : `table[]` (length: 2)
+  - **`maxAreaOfInterest`** : `number`
+  - **`debugShowAnimation`** : `boolean`
+  - **`debugShowSteering`** : `boolean`
+  - **`debugShowId`** : `number`
+  - **`debugShow`** : `boolean`
+  - **`debugAnimalList`** : `table`
+  - **`avoidDistance`** : `number`
+  - **`playerNode`** : `number`
+  - **`totalCost`** : `number`
+  - **`areasOfInterest`** : `table`
+  - **`checkTimeInterval`** : `number`
+  - **`maxCost`** : `number`
+  - **`collisionDetectionMask`** : `number`
+  - **`treeCount`** : `number`
+  - **`nextCheckTime`** : `number`
+  - **`isEnabled`** : `boolean`
+- **`aiMessageManager`** : `table`
+  - **Methods**: 10 available
+    - `new()`
+    - `delete()`
+    - `copy()`
+    - `registerMessage()`
+    - `class()`
+    - `createMessage()`
+    - `getMessageIndex()`
+    - `superClass()`
+    - `loadMapData()`
+    - `isa()`
+  - **`messages`** : `table[]` (length: 30)
+  - **`classObjectToIndex`** : `reverse-hash-map`
+  - **`nameToIndex`** : `table`
+- **`aiSystem`** : `table`
+  - **Methods**: 57 available
+    - `addRoadSpline()`
+    - `draw()`
+    - `registerXMLPaths()`
+    - `splineInterferenceOverlapCallback()`
+    - `save()`
+    - `getAgentStateName()`
+    - `onClientJoined()`
+    - `debugDeleteInterferences()`
+    - `getJobByIndex()`
+    - `stopJob()`
+    - `onAIMarkerLoaded()`
+    - `addJob()`
+    - `consoleCommandAICostmapExport()`
+    - `stopJobInternal()`
+    - `removeJob()`
+    - `consoleCommandAISetAreaDirty()`
+    - `skipCurrentTask()`
+    - `getJobById()`
+    - `update()`
+    - `consoleCommandAIShowObstacles()`
+    - `getNavigationMapFilename()`
+    - `getNavigationMap()`
+    - `setObstacleIsPassable()`
+    - `removeObstacle()`
+    - `addObstacle()`
+    - `getIsPositionReachable()`
+    - `getAILimitedReached()`
+    - `removeJobVehicle()`
+    - `new()`
+    - `stopJobById()`
+    - `startJob()`
+    - `skipCurrentTaskInternal()`
+    - `isa()`
+    - `copy()`
+    - `removeRoadSpline()`
+    - `onCreateAIRoadSpline()`
+    - `setAreaDirty()`
+    - `consoleCommandAISetLastTarget()`
+    - `consoleCommandAIToggleAINodeDebug()`
+    - `consoleCommandAIShowCosts()`
+    - `consoleCommandAICheckSplineInterference()`
+    - `consoleCommandAIStart()`
+    - `consoleCommandAIToggleSplineVisibility()`
+    - `loadMapData()`
+    - `consoleCommandAIEnableDebug()`
+    - `addJobVehicle()`
+    - `consoleCommandAIAgentSetState()`
+    - `delete()`
+    - `superClass()`
+    - `onMissionStarted()`
+    - `class()`
+    - `consoleCommandAISetTarget()`
+    - `loadFromXMLFile()`
+    - `getNumActiveJobs()`
+    - `onTerrainLoad()`
+    - `getActiveJobs()`
+    - `startJobInternal()`
+  - **`infoLayerName`** : `string`
+  - **`maxSlopeAngle`** : `number`
+  - **`cellSizeMeters`** : `number`
+  - **`delayedRoadSplines`** : `table`
+  - **`activeJobVehicles`** : `table`
+  - **`filename`** : `string`
+  - **`filenameGenerated`** : `string`
+  - **`debug`** : `table`
+  - **`roadSplines`** : `number[]` (length: 8)
+  - **`jobsToRemove`** : `table`
+  - **`mission`** : `table`
+  - **`navigationMap`** : `number`
+  - **`debugEnabled`** : `boolean`
+  - **`isServer`** : `boolean`
+  - **`activeJobs`** : `table`
+  - **`isLeftHandTraffic`** : `boolean`
+  - **`defaultVehicleMaxTurningRadius`** : `number`
+  - **`defaultVehicleMaxWidth`** : `number`
+  - **`vehicleMaxHeight`** : `number`
+  - **`obstacleCollisionMask`** : `number`
+  - **`aiDrivableCollisionMask`** : `number`
+  - **`infoLayerChannel`** : `number`
+- **`aiJobTypeManager`** : `table`
+  - **Methods**: 12 available
+    - `getJobTypeByIndex()`
+    - `new()`
+    - `delete()`
+    - `copy()`
+    - `class()`
+    - `registerJobType()`
+    - `createJob()`
+    - `isa()`
+    - `getJobTypeIndex()`
+    - `superClass()`
+    - `loadMapData()`
+    - `getJobTypeIndexByName()`
+  - **`jobTypes`** : `table[]` (length: 10)
+  - **`classObjectToIndex`** : `reverse-hash-map`
+  - **`isServer`** : `boolean`
+  - **`nameToIndex`** : `table`
+- **`playerInfoStorage`** : `table`
+  - **Methods**: 12 available
+    - `addNewPlayer()`
+    - `new()`
+    - `loadFromXMLFile()`
+    - `hasPlayerWithUniqueUserId()`
+    - `delete()`
+    - `copy()`
+    - `class()`
+    - `isa()`
+    - `getPlayerStyle()`
+    - `saveToXMLFile()`
+    - `superClass()`
+    - `setPlayerStyle()`
+  - **`players`** : `table[]` (length: 1)
+  - **`playerByUniqueUserId`** : `table`
+  - **`isServer`** : `boolean`
+  - **`userManager`** : `table`
+- **`playersSynchronizing`** : `table`
+- **`playersLoading`** : `table`
+- **`playersToAccept`** : `table`
+- **`guiSoundPlayer`** : `table`
+  - **Methods**: 8 available
+    - `new()`
+    - `loadSounds()`
+    - `isa()`
+    - `copy()`
+    - `playSample()`
+    - `delete()`
+    - `superClass()`
+    - `class()`
+  - **`soundSamples`** : `table`
+  - **`soundManager`** : `global-ref` → [`g_soundManager`](./g_soundManager.md)
+- **`vehiclesToAttach`** : `table`
+- **`objectsToCallOnMapFinished`** : `table`
+- **`growthSystem`** : `table`
+  - **Methods**: 37 available
+    - `setGrowthEnabled()`
+    - `resetGrowthMask()`
+    - `onEngineStepFinished()`
+    - `setMonthEngineState()`
+    - `onTerrainLoad()`
+    - `saveState()`
+    - `setFruitLayer()`
+    - `loadFromXMLFile()`
+    - `parseRange()`
+    - `update()`
+    - `setIgnoreDensityChanges()`
+    - `saveToXMLFile()`
+    - `setIsGamePaused()`
+    - `new()`
+    - `onPeriodChanged()`
+    - `superClass()`
+    - `copy()`
+    - `class()`
+    - `performScriptBasedGrowth()`
+    - `onEngineGrowthFinished()`
+    - `getRandomInitialState()`
+    - `canFruitBePlanted()`
+    - `onSleepChanged()`
+    - `canFruitBeHarvested()`
+    - `getGrowthMode()`
+    - `onWeedGrowthChanged()`
+    - `delete()`
+    - `getMaxUpdateTime()`
+    - `loadMapData()`
+    - `startEngineGrowth()`
+    - `loadGrowthData()`
+    - `consoleCommandGrowNow()`
+    - `parseStateValue()`
+    - `setGrowthMode()`
+    - `setGrowthMask()`
+    - `triggerGrowth()`
+    - `isa()`
+  - **`nonSeasonalFruitData`** : `map`
+  - **`mission`** : `table`
+  - **`fieldCropsUpdatersCellSize`** : `number`
+  - **`fieldCropsUpdaters`** : `table`
+  - **`isServer`** : `boolean`
+  - **`environment`** : `table`
+  - **`weedUpdater`** : `number`
+  - **`growthEnabled`** : `boolean`
+  - **`stoneUpdater`** : `number`
+  - **`missionInfo`** : `table`
+  - **`seasonalFruitData`** : `table[]` (length: 18)
+  - **`growthQueue`** : `table`
+- **`productionChainManager`** : `table`
+  - **Methods**: 26 available
+    - `getProductionPointsForFarmId()`
+    - `new()`
+    - `addProductionPoint()`
+    - `getProductionPointsFromString()`
+    - `isa()`
+    - `copy()`
+    - `class()`
+    - `commandSetFillLevel()`
+    - `addProductionPointToFarm()`
+    - `commandSetOutputMode()`
+    - `unloadMapData()`
+    - `removeProductionPointFromFarm()`
+    - `initDataStructures()`
+    - `removeProductionPoint()`
+    - `superClass()`
+    - `commandPrintAutoDeliverMapping()`
+    - `distributeGoods()`
+    - `update()`
+    - `commandListProductionPoints()`
+    - `commandSetProductionState()`
+    - `hourChanged()`
+    - `commandSetOwner()`
+    - `consoleCommandToggleProdPointDebug()`
+    - `updateBalance()`
+    - `getHasFreeSlots()`
+    - `getNumOfProductionPoints()`
+  - **`productionPoints`** : `table[]` (length: 6)
+  - **`isServer`** : `boolean`
+  - **`loadedMapData`** : `boolean`
+  - **`hourChangeUpdating`** : `boolean`
+  - **`hourChangedDirty`** : `boolean`
+  - **`currentUpdateIndex`** : `number`
+  - **`farmIds`** : `table`
+  - **`reverseProductionPoint`** : `reverse-hash-map`
+
+</details>
+
+<details>
+<summary><strong>Arrays (18)</strong></summary>
+
+- **`limitedObjects`** : `table[]` (length: 1)
+- **`savegameIdToVehicle`** : `table[]` (length: 27)
+- **`mapFieldColor`** : `number[]` (length: 3)
+- **`radioEvents`** : `string[]` (length: 4)
+- **`vehicles`** : `table[]` (length: 27)
+- **`surfaceSounds`** : `table[]` (length: 34)
+- **`storeSpawnPlaces`** : `table[]` (length: 1)
+- **`attachables`** : `table[]` (length: 20)
+- **`liquidManureLoadingStations`** : `table[]` (length: 2)
+- **`dynamicallyLoadedObjects`** : `number[]` (length: 24)
+- **`helpTriggers`** : `number[]` (length: 6)
+- **`triggerMarkers`** : `number[]` (length: 51)
+- **`mapsSplitShapeFileIds`** : `number[]` (length: 1)
+- **`maps`** : `number[]` (length: 1)
+- **`mapHotspots`** : `table[]` (length: 1)
+- **`mapGrassFieldColor`** : `number[]` (length: 3)
+- **`inputAttacherJoints`** : `table[]` (length: 21)
+- **`enterables`** : `table[]` (length: 7)
+
+</details>
+
+<details>
+<summary><strong>Global References (8)</strong></summary>
+
+- **`server`** : `global-ref` → [`g_server`](./g_server.md)
+- **`achievementManager`** : `global-ref` → [`g_achievementManager`](./g_achievementManager.md)
+- **`inputDisplayManager`** : `global-ref` → [`g_inputDisplayManager`](./g_inputDisplayManager.md)
+- **`modManager`** : `global-ref` → [`g_modManager`](./g_modManager.md)
+- **`messageCenter`** : `global-ref` → [`g_messageCenter`](./g_messageCenter.md)
+- **`client`** : `global-ref` → [`g_client`](./g_client.md)
+- **`fruitTypeManager`** : `global-ref` → [`g_fruitTypeManager`](./g_fruitTypeManager.md)
+- **`fillTypeManager`** : `global-ref` → [`g_fillTypeManager`](./g_fillTypeManager.md)
+
+</details>
+
+<details>
+<summary><strong>Primitives (99)</strong></summary>
+
+- **`missionSuccessSound`** : `number`
+- **`terrainDetailHeightMapSize`** : `number`
+- **`terrainSize`** : `number`
+- **`terrainDetailHeightId`** : `number`
+- **`fruitMapSize`** : `number`
+- **`terrainDetailId`** : `number`
+- **`state`** : `number`
+- **`presenceMode`** : `number`
+- **`placeablesDeleteTestTime`** : `number`
+- **`harvestLimeScaleRatio`** : `number`
+- **`harvestSprayScaleRatio`** : `number`
+- **`wasNetworkError`** : `boolean`
+- **`gameStatsTime`** : `number`
+- **`connectedToDedicatedServer`** : `boolean`
+- **`playerStartY`** : `number`
+- **`numAdditionalFiles`** : `number`
+- **`terrainDetailHeightTGId`** : `number`
+- **`gameStarted`** : `boolean`
+- **`textureMemoryUsage`** : `number`
+- **`indexBufferMemoryUsage`** : `number`
+- **`vertexBufferMemoryUsage`** : `number`
+- **`splitShapesPercentageFraction`** : `number`
+- **`isSaving`** : `boolean`
+- **`isMissionStarted`** : `boolean`
+- **`harvestRollerRatio`** : `number`
+- **`harvestStubbleScaleRatio`** : `number`
+- **`harvestWeedScaleRatio`** : `number`
+- **`harvestPlowScaleRatio`** : `number`
+- **`gameStatsInterval`** : `number`
+- **`mapWidth`** : `number`
+- **`mapImageFilename`** : `string`
+- **`cameraPathIsPlaying`** : `boolean`
+- **`paused`** : `boolean`
+- **`playerNickname`** : `string`
+- **`eventRadioToggle`** : `string`
+- **`playerRotY`** : `number`
+- **`playerRotX`** : `number`
+- **`playerStartZ`** : `number`
+- **`playerStartX`** : `number`
+- **`terrainDetailMapSize`** : `number`
+- **`isMasterUser`** : `boolean`
+- **`checkRecordingDeviceTimer`** : `number`
+- **`restPercentageFraction`** : `number`
+- **`mapHeight`** : `number`
+- **`densityMapPercentageFraction`** : `number`
+- **`time`** : `number`
+- **`cullingWorldMaxY`** : `number`
+- **`cullingWorldMinY`** : `number`
+- **`baseDirectory`** : `string`
+- **`cullingWorldXZOffset`** : `number`
+- **`lastConstructionScreenOpenTime`** : `number`
+- **`lastRecordingDeviceState`** : `boolean`
+- **`connectionWasAccepted`** : `boolean`
+- **`isExitingGame`** : `boolean`
+- **`lastInteractionTime`** : `number`
+- **`isLoaded`** : `boolean`
+- **`loadingMapBaseDirectory`** : `string`
+- **`numLoadingMaps`** : `number`
+- **`isLoadingMap`** : `boolean`
+- **`lastNonPauseGameState`** : `number`
+- **`suspendPaused`** : `boolean`
+- **`manualPaused`** : `boolean`
+- **`pressStartPaused`** : `boolean`
+- **`maxNumHirables`** : `number`
+- **`snapAIDirection`** : `boolean`
+- **`preSimulateTime`** : `number`
+- **`vehiclesToSpawnLoading`** : `boolean`
+- **`controlPlayer`** : `boolean`
+- **`isToggleVehicleAllowed`** : `boolean`
+- **`numLoadingTasks`** : `number`
+- **`isPlayerFrozen`** : `boolean`
+- **`helpTriggersAreVisible`** : `boolean`
+- **`triggerMarkersAreVisible`** : `boolean`
+- **`isInsideBuilding`** : `boolean`
+- **`waterY`** : `number`
+- **`finishedFirstUpdate`** : `boolean`
+- **`waitForCorruptDlcs`** : `boolean`
+- **`waitForDLCVerification`** : `boolean`
+- **`connectionWasClosed`** : `boolean`
+- **`playerUserId`** : `number`
+- **`cancelLoading`** : `boolean`
+- **`vehiclesToSpawnDirty`** : `boolean`
+- **`isRunning`** : `boolean`
+- **`terrainRootNode`** : `number`
+- **`isSynchronizingWithPlayers`** : `boolean`
+- **`userSigninPaused`** : `boolean`
+- **`dediEmptyPaused`** : `boolean`
+- **`currentDeviceHasNoSpace`** : `boolean`
+- **`doSaveGameState`** : `number`
+- **`playerStartIsAbsolute`** : `boolean`
+- **`sendMoneyUserIndex`** : `number`
+- **`showWeatherForecast`** : `boolean`
+- **`mapNavigationCollisionRevision`** : `number`
+- **`mapPlacementCollisionRevision`** : `number`
+- **`mapTipCollisionRevision`** : `number`
+- **`mapSplitShapesRevision`** : `number`
+- **`mapTerrainLodTextureRevision`** : `number`
+- **`mapTerrainTextureRevision`** : `number`
+- **`mapDensityMapRevision`** : `number`
+
+</details>
+
+<details>
+<summary><strong>Other (13)</strong></summary>
+
+- **`fieldCropsQuery`** : `userdata`
+- **`ownedItems`** : `reverse-hash-map`
+- **`players`** : `map`
+- **`loadingScreen`** : `map`
+- **`pauseListeners`** : `reverse-hash-map`
+- **`nodeToObject`** : `map`
+- **`shopMenu`** : `map`
+- **`interactiveVehicles`** : `reverse-hash-map`
+- **`nonUpdateables`** : `reverse-hash-map`
+- **`updateables`** : `reverse-hash-map`
+- **`connectionsToPlayer`** : `reverse-hash-map`
+- **`inGameMenu`** : `map`
+- **`trainSystems`** : `reverse-hash-map`
+
+</details>
+
+
+## Usage Example
+
+```lua
+-- Access g_currentMission fields
+```

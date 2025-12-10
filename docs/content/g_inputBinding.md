@@ -1,0 +1,1190 @@
+---
+title: g_inputBinding
+description: Global g_inputBinding - Runtime introspected API
+fieldTypes:
+  array: 3
+  function: 163
+  global-ref: 2
+  object: 748
+  other: 165
+  primitive: 35
+---
+
+# g_inputBinding
+
+Runtime-introspected API for `g_inputBinding`.
+
+**Source**: schemas (depth 2)  
+**Fields**: 222 top-level fields
+
+## Field Statistics
+
+Total fields: **222**
+
+- **Function**: 163
+- **Object**: 14
+- **Array**: 3
+- **Global-ref**: 2
+- **Primitive**: 31
+- **Other**: 9
+
+## Fields by Type
+
+<details>
+<summary><strong>Functions (163)</strong></summary>
+
+- **`checkEventCollision()`**
+- **`validateActionEventParameters()`**
+- **`createContext()`**
+- **`notifyEventChanges()`**
+- **`storeDisplayActionEvents()`**
+- **`storeEventBindings()`**
+- **`neutralizeEventBindingInput()`**
+- **`removeEventInternal()`**
+- **`iterateEvents()`**
+- **`setEventActive()`**
+- **`superClass()`**
+- **`class()`**
+- **`notifyInputModeChange()`**
+- **`assignLastInputHelpMode()`**
+- **`reloadModActions()`**
+- **`addBinding()`**
+- **`touchEvent()`**
+- **`captureGamepadInput()`**
+- **`captureMouseInput()`**
+- **`captureKeyboardInput()`**
+- **`loadActionsFromXMLPath()`**
+- **`clearAllContexts()`**
+- **`setPreviousContext()`**
+- **`setContext()`**
+- **`resetActiveActionBindings()`**
+- **`assignActionPrimaryBindings()`**
+- **`mouseEvent()`**
+- **`keyEvent()`**
+- **`upgradeBindingVersion()`**
+- **`getDeviceCategory()`**
+- **`debugPrintInputContext()`**
+- **`printAll()`**
+- **`isAxisZero()`**
+- **`getIsDPadInput()`**
+- **`shadowLinkedBindings()`**
+- **`getIsMouseWheelInput()`**
+- **`getActionByName()`**
+- **`getAllDeviceIdsWithoutBindings()`**
+- **`deleteBinding()`**
+- **`applyGamepadDeadzones()`**
+- **`loadDeviceSettingsFromXML()`**
+- **`enumerateGamepadDevices()`**
+- **`createDefaultDevices()`**
+- **`resetDeviceInformation()`**
+- **`getIsHalfAxis()`**
+- **`resolveBindingDefaultDevice()`**
+- **`setActionEventTextVisibility()`**
+- **`loadModBindingDefaults()`**
+- **`assignComboMasks()`**
+- **`registerActionEvent()`**
+- **`getBindingForceFeedbackInfo()`**
+- **`checkDefaultInputExclusiveActionBindings()`**
+- **`loadActionBindingsFromXMLPath()`**
+- **`checkSettingsIntegrity()`**
+- **`notifyBindingChanges()`**
+- **`loadBindingsFromXML()`**
+- **`loadActionBindingsFromXML()`**
+- **`getMouseMotionScale()`**
+- **`validateAndRepairComboActionBindings()`**
+- **`getFirstActiveEventForActionName()`**
+- **`getActionBindings()`**
+- **`consoleCommandShowRegisteredActions()`**
+- **`getBindingComboMask()`**
+- **`consoleCommandShowInputContext()`**
+- **`copy()`**
+- **`consoleCommandPrintInputContext()`**
+- **`deleteContext()`**
+- **`consoleCommandEnableInputDebug()`**
+- **`disableAlternateBindingsForAction()`**
+- **`assignPlatformBindingPaths()`**
+- **`getIsMouseInput()`**
+- **`getActionList()`**
+- **`saveDeviceSettings()`**
+- **`saveToXMLFile()`**
+- **`resolveBindingDevice()`**
+- **`updateDebugDisplay()`**
+- **`resetContinuousEventBindings()`**
+- **`storeComboInputMappings()`**
+- **`getKeyboardMouseInputActiveAndValue()`**
+- **`checkBindings()`**
+- **`getIsGamepadInput()`**
+- **`getIsKeyboardInput()`**
+- **`clearActiveBindingBuffer()`**
+- **`getGamepadInputActiveAndValue()`**
+- **`getIsAnalogInput()`**
+- **`updateBinding()`**
+- **`validateBinding()`**
+- **`migrateDevicesCategory()`**
+- **`adjustBindingSlotIndex()`**
+- **`resolveBindingDevices()`**
+- **`draw()`**
+- **`getGamepadAxisOrButtonValue()`**
+- **`update()`**
+- **`getGamepadAxisValue()`**
+- **`finalizeMouseInput()`**
+- **`updateInput()`**
+- **`updateMouseInput()`**
+- **`checkGamepadActive()`**
+- **`checkGamepadsCategoryChanged()`**
+- **`checkGamepadsChanged()`**
+- **`debugRenderRegisteredActions()`**
+- **`debugRenderInputContext()`**
+- **`new()`**
+- **`isa()`**
+- **`getIsPhysicalFullAxis()`**
+- **`setContextEventsActive()`**
+- **`updateBindingInput()`**
+- **`setEventChangeCallback()`**
+- **`setMouseMotionScale()`**
+- **`updateComboBindings()`**
+- **`getEventsForActionName()`**
+- **`getActionBindingsCopy()`**
+- **`getContextName()`**
+- **`revertContext()`**
+- **`hasBindingForPressedMouseComboMask()`**
+- **`refreshEventCollections()`**
+- **`updateEventBindings()`**
+- **`restoreInputContexts()`**
+- **`storeLinkedBindings()`**
+- **`getComboCommandPressedMask()`**
+- **`getGamepadDevices()`**
+- **`restoreDefaultBindings()`**
+- **`stopInputGathering()`**
+- **`startInputCapture()`**
+- **`rollbackBindingChanges()`**
+- **`commitBindingChanges()`**
+- **`startBindingChanges()`**
+- **`getMouseButtonState()`**
+- **`initializeGamepadMapping()`**
+- **`getHasMissingDevices()`**
+- **`getMissingDeviceById()`**
+- **`getDeviceByInternalId()`**
+- **`getInternalIdByDeviceId()`**
+- **`getComboActionNameForAxisSet()`**
+- **`setActionEventsActiveByTarget()`**
+- **`setActionEventActive()`**
+- **`loadActions()`**
+- **`setActionEventIcon()`**
+- **`setActionEventText()`**
+- **`getDisplayActionEvents()`**
+- **`clearState()`**
+- **`removeActionEventsByTarget()`**
+- **`removeActionEventsByActionName()`**
+- **`removeActionEvent()`**
+- **`endActionEventsModification()`**
+- **`beginActionEventsModification()`**
+- **`getLastInputMode()`**
+- **`getInputHelpMode()`**
+- **`getBindingCategorySet()`**
+- **`getAllDevicesWithBindings()`**
+- **`getDeviceById()`**
+- **`getAllDeviceIdsWithBindings()`**
+- **`load()`**
+- **`getShowMouseCursor()`**
+- **`getDeviceHasAnyBindings()`**
+- **`setShowMouseCursor()`**
+- **`overwriteSettingsWithDefault()`**
+- **`getActionEventsHasBinding()`**
+- **`setActionEventTextPriority()`**
+- **`loadModActions()`**
+- **`loadDefaultBindings()`**
+- **`getMousePosition()`**
+- **`eventChangeCallback()`**
+
+</details>
+
+<details open>
+<summary><strong>Objects/Tables (14)</strong></summary>
+
+- **`devicesToMigrateCategory`** : `table`
+- **`comboInputBindings`** : `table`
+  - **`MOUSE_ALT_COMMAND2_BUTTON`** : `table`
+    - **`clone`** : `None`
+    - **`hasCollisionWith`** : `None`
+    - **`isSameSlot`** : `None`
+    - **`hasEventCollision`** : `None`
+    - **`setIsAnalog`** : `None`
+    - **`createFromXML`** : `None`
+    - **`saveToXMLFile`** : `None`
+    - **`setActive`** : `None`
+    - **`updateData`** : `None`
+    - **`setIndex`** : `None`
+    - **`needJapanesePlaystationButtonSwap`** : `None`
+    - **`new`** : `None`
+    - **`isa`** : `None`
+    - **`copy`** : `None`
+    - **`class`** : `None`
+    - **`setFrameTriggered`** : `None`
+    - **`getComboMask`** : `None`
+    - **`getFrameTriggered`** : `None`
+    - **`copyInputStateFrom`** : `None`
+    - **`makeId`** : `None`
+    - **`setComboMask`** : `None`
+    - **`toString`** : `None`
+    - **`swapJapanesePlaystationButtons`** : `None`
+    - **`updateInput`** : `None`
+    - **`superClass`** : `None`
+    - **`isSameSlotWithParams`** : `None`
+    - **`getOppositeInputComponent`** : `None`
+    - **`getOppositeAxisComponent`** : `None`
+    - **`index`** : `None`
+    - **`deviceId`** : `None`
+    - **`internalDeviceId`** : `None`
+    - **`id`** : `None`
+    - **`isShadowed`** : `None`
+    - **`inputValue`** : `None`
+    - **`isUp`** : `None`
+    - **`hasFrameTriggered`** : `None`
+    - **`isActive`** : `None`
+    - **`unmodifiedAxis`** : `None`
+    - **`isPressed`** : `None`
+    - **`wasDown`** : `None`
+    - **`axisNameSet`** : `None`
+    - **`isMouse`** : `None`
+    - **`modifierAxisSet`** : `None`
+    - **`isGamepad`** : `None`
+    - **`isInputActive`** : `None`
+    - **`comboMask`** : `None`
+    - **`wasUp`** : `None`
+    - **`isDown`** : `None`
+    - **`isAnalog`** : `None`
+    - **`isPrimary`** : `None`
+    - **`isKeyboard`** : `None`
+    - **`inputComponent`** : `None`
+    - **`deviceCategory`** : `None`
+    - **`axisNames`** : `None`
+    - **`neutralInput`** : `None`
+    - **`axisDirection`** : `None`
+    - **`inputDirection`** : `None`
+    - **`axisComponent`** : `None`
+    - **`inputString`** : `None`
+  - **`MOUSE_ALT_COMMAND3_BUTTON`** : `table`
+  - **`MOUSE_ALT_COMMAND4_BUTTON`** : `table`
+  - **`MOUSE_ALT_COMMAND_BUTTON`** : `table`
+- **`registrationContext`** : `table`
+  - **`actionEvents`** : `table`
+  - **`eventOrderCounter`** : `number`
+  - **`name`** : `string`
+  - **`previousContextName`** : `string`
+- **`contexts`** : `table`
+  - **`MENU`** : `table`
+  - **`PAUSE`** : `table`
+  - **`PLAYER`** : `table`
+  - **`ROOT`** : `table`
+  - **`VEHICLE`** : `table`
+- **`loadedBindings`** : `table`
+  - **`0_SPACEMOUSE_CONTROLLER|AXIS_5+|+|0|1`** : `table`
+  - **`0_SPACEMOUSE_CONTROLLER|AXIS_5-|-|0|1`** : `table`
+  - **`0_SPACEMOUSE_CONTROLLER|AXIS_6+|+|0|1`** : `table`
+  - **`0_SPACEMOUSE_CONTROLLER|AXIS_6-|-|0|1`** : `table`
+  - **`0_SPACEMOUSE_CONTROLLER|AXIS_7+|-|0|1`** : `table`
+  - **`0_SPACEMOUSE_CONTROLLER|AXIS_7-|+|0|1`** : `table`
+  - **`0_SPACEMOUSE_CONTROLLER|AXIS_8+|-|0|1`** : `table`
+  - **`0_SPACEMOUSE_CONTROLLER|AXIS_8-|+|0|1`** : `table`
+  - **`0_SPACEMOUSE_CONTROLLER|AXIS_9+|-|0|1`** : `table`
+  - **`0_SPACEMOUSE_CONTROLLER|AXIS_9-|+|0|1`** : `table`
+  - **`0_SPACEMOUSE_CONTROLLER|BUTTON_24|+|0|1`** : `table`
+  - **`0_SPACEMOUSE_CONTROLLER|BUTTON_25|+|0|1`** : `table`
+  - **`0_SPACEMOUSE_CONTROLLER|BUTTON_26|+|0|1`** : `table`
+  - **`0_SPACEMOUSE_CONTROLLER|BUTTON_27|+|0|1`** : `table`
+  - **`0_XINPUT_GAMEPAD|AXIS_1+|+|0|1`** : `table`
+  - **`0_XINPUT_GAMEPAD|AXIS_1-|-|0|1`** : `table`
+  - **`0_XINPUT_GAMEPAD|AXIS_11|+|0|1`** : `table`
+  - **`0_XINPUT_GAMEPAD|AXIS_12|+|0|1`** : `table`
+  - **`0_XINPUT_GAMEPAD|AXIS_12|-|0|1`** : `table`
+  - **`0_XINPUT_GAMEPAD|AXIS_2+|+|0|1`** : `table`
+  - **`0_XINPUT_GAMEPAD|AXIS_2+|-|0|1`** : `table`
+  - **`0_XINPUT_GAMEPAD|AXIS_2-|+|0|1`** : `table`
+  - **`0_XINPUT_GAMEPAD|AXIS_2-|-|0|1`** : `table`
+  - **`0_XINPUT_GAMEPAD|AXIS_3+|+|0|1`** : `table`
+  - **`0_XINPUT_GAMEPAD|AXIS_3-|-|0|1`** : `table`
+  - **`0_XINPUT_GAMEPAD|AXIS_4+|+|0|1`** : `table`
+  - **`0_XINPUT_GAMEPAD|AXIS_4-|-|0|1`** : `table`
+  - **`0_XINPUT_GAMEPAD|BUTTON_10|+|0|1`** : `table`
+  - **`0_XINPUT_GAMEPAD|BUTTON_11|+|0|1`** : `table`
+  - **`0_XINPUT_GAMEPAD|BUTTON_12|+|0|1`** : `table`
+  - **`0_XINPUT_GAMEPAD|BUTTON_17;BUTTON_5;BUTTON_6;BUTTON_2|+|0|1`** : `table`
+  - **`0_XINPUT_GAMEPAD|BUTTON_17;BUTTON_5;BUTTON_6;BUTTON_3|+|0|1`** : `table`
+  - **`0_XINPUT_GAMEPAD|BUTTON_17;BUTTON_5;BUTTON_6;BUTTON_4|+|0|1`** : `table`
+  - **`0_XINPUT_GAMEPAD|BUTTON_17|+|0|1`** : `table`
+  - **`0_XINPUT_GAMEPAD|BUTTON_17|+|0|2`** : `table`
+  - **`0_XINPUT_GAMEPAD|BUTTON_18;BUTTON_5;BUTTON_6;BUTTON_4|+|0|1`** : `table`
+  - **`0_XINPUT_GAMEPAD|BUTTON_18|+|0|1`** : `table`
+  - **`0_XINPUT_GAMEPAD|BUTTON_18|+|0|2`** : `table`
+  - **`0_XINPUT_GAMEPAD|BUTTON_19;BUTTON_5;BUTTON_6;BUTTON_4|+|0|1`** : `table`
+  - **`0_XINPUT_GAMEPAD|BUTTON_19|+|0|1`** : `table`
+  - **`0_XINPUT_GAMEPAD|BUTTON_19|-|0|1`** : `table`
+  - **`0_XINPUT_GAMEPAD|BUTTON_19|-|0|2`** : `table`
+  - **`0_XINPUT_GAMEPAD|BUTTON_1|+|0|1`** : `table`
+  - **`0_XINPUT_GAMEPAD|BUTTON_20|+|0|1`** : `table`
+  - **`0_XINPUT_GAMEPAD|BUTTON_20|-|0|1`** : `table`
+  - **`0_XINPUT_GAMEPAD|BUTTON_20|-|0|2`** : `table`
+  - **`0_XINPUT_GAMEPAD|BUTTON_2|+|0|1`** : `table`
+  - **`0_XINPUT_GAMEPAD|BUTTON_3|+|0|1`** : `table`
+  - **`0_XINPUT_GAMEPAD|BUTTON_4|+|0|1`** : `table`
+  - **`0_XINPUT_GAMEPAD|BUTTON_5;AXIS_3+|+|0|1`** : `table`
+  - **`0_XINPUT_GAMEPAD|BUTTON_5;AXIS_3+|-|0|1`** : `table`
+  - **`0_XINPUT_GAMEPAD|BUTTON_5;AXIS_3-|+|0|1`** : `table`
+  - **`0_XINPUT_GAMEPAD|BUTTON_5;AXIS_3-|-|0|1`** : `table`
+  - **`0_XINPUT_GAMEPAD|BUTTON_5;AXIS_4+|+|0|1`** : `table`
+  - **`0_XINPUT_GAMEPAD|BUTTON_5;AXIS_4-|-|0|1`** : `table`
+  - **`0_XINPUT_GAMEPAD|BUTTON_5;BUTTON_11|+|0|1`** : `table`
+  - **`0_XINPUT_GAMEPAD|BUTTON_5;BUTTON_12|+|0|1`** : `table`
+  - **`0_XINPUT_GAMEPAD|BUTTON_5;BUTTON_17|+|0|1`** : `table`
+  - **`0_XINPUT_GAMEPAD|BUTTON_5;BUTTON_18|+|0|1`** : `table`
+  - **`0_XINPUT_GAMEPAD|BUTTON_5;BUTTON_19|+|0|1`** : `table`
+  - **`0_XINPUT_GAMEPAD|BUTTON_5;BUTTON_1|+|0|1`** : `table`
+  - **`0_XINPUT_GAMEPAD|BUTTON_5;BUTTON_20|+|0|1`** : `table`
+  - **`0_XINPUT_GAMEPAD|BUTTON_5;BUTTON_2|+|0|1`** : `table`
+  - **`0_XINPUT_GAMEPAD|BUTTON_5;BUTTON_3|+|0|1`** : `table`
+  - **`0_XINPUT_GAMEPAD|BUTTON_5;BUTTON_4|+|0|1`** : `table`
+  - **`0_XINPUT_GAMEPAD|BUTTON_5;BUTTON_6;AXIS_1+|+|0|1`** : `table`
+  - **`0_XINPUT_GAMEPAD|BUTTON_5;BUTTON_6;AXIS_1-|-|0|1`** : `table`
+  - **`0_XINPUT_GAMEPAD|BUTTON_5;BUTTON_6;AXIS_2+|-|0|1`** : `table`
+  - **`0_XINPUT_GAMEPAD|BUTTON_5;BUTTON_6;AXIS_2-|+|0|1`** : `table`
+  - **`0_XINPUT_GAMEPAD|BUTTON_5;BUTTON_6;AXIS_3+|+|0|1`** : `table`
+  - **`0_XINPUT_GAMEPAD|BUTTON_5;BUTTON_6;AXIS_3-|-|0|1`** : `table`
+  - **`0_XINPUT_GAMEPAD|BUTTON_5;BUTTON_6;AXIS_4+|-|0|1`** : `table`
+  - **`0_XINPUT_GAMEPAD|BUTTON_5;BUTTON_6;AXIS_4-|+|0|1`** : `table`
+  - **`0_XINPUT_GAMEPAD|BUTTON_5;BUTTON_6;BUTTON_10|+|0|1`** : `table`
+  - **`0_XINPUT_GAMEPAD|BUTTON_5;BUTTON_6;BUTTON_17|+|0|1`** : `table`
+  - **`0_XINPUT_GAMEPAD|BUTTON_5;BUTTON_6;BUTTON_18|+|0|1`** : `table`
+  - **`0_XINPUT_GAMEPAD|BUTTON_5;BUTTON_6;BUTTON_20|+|0|1`** : `table`
+  - **`0_XINPUT_GAMEPAD|BUTTON_5;BUTTON_6;BUTTON_2|+|0|1`** : `table`
+  - **`0_XINPUT_GAMEPAD|BUTTON_5;BUTTON_6;BUTTON_3|+|0|1`** : `table`
+  - **`0_XINPUT_GAMEPAD|BUTTON_5;BUTTON_6;BUTTON_4|+|0|1`** : `table`
+  - **`0_XINPUT_GAMEPAD|BUTTON_5;BUTTON_6|+|0|1`** : `table`
+  - **`0_XINPUT_GAMEPAD|BUTTON_5;BUTTON_9|+|0|1`** : `table`
+  - **`0_XINPUT_GAMEPAD|BUTTON_5|+|0|1`** : `table`
+  - **`0_XINPUT_GAMEPAD|BUTTON_5|-|0|1`** : `table`
+  - **`0_XINPUT_GAMEPAD|BUTTON_6;AXIS_3+|+|0|1`** : `table`
+  - **`0_XINPUT_GAMEPAD|BUTTON_6;AXIS_3-|-|0|1`** : `table`
+  - **`0_XINPUT_GAMEPAD|BUTTON_6;AXIS_4+|+|0|1`** : `table`
+  - **`0_XINPUT_GAMEPAD|BUTTON_6;AXIS_4+|-|0|1`** : `table`
+  - **`0_XINPUT_GAMEPAD|BUTTON_6;AXIS_4-|+|0|1`** : `table`
+  - **`0_XINPUT_GAMEPAD|BUTTON_6;AXIS_4-|-|0|1`** : `table`
+  - **`0_XINPUT_GAMEPAD|BUTTON_6;BUTTON_11|+|0|1`** : `table`
+  - **`0_XINPUT_GAMEPAD|BUTTON_6;BUTTON_12|+|0|1`** : `table`
+  - **`0_XINPUT_GAMEPAD|BUTTON_6;BUTTON_17|+|0|1`** : `table`
+  - **`0_XINPUT_GAMEPAD|BUTTON_6;BUTTON_18|+|0|1`** : `table`
+  - **`0_XINPUT_GAMEPAD|BUTTON_6;BUTTON_19|+|0|1`** : `table`
+  - **`0_XINPUT_GAMEPAD|BUTTON_6;BUTTON_1|+|0|1`** : `table`
+  - **`0_XINPUT_GAMEPAD|BUTTON_6;BUTTON_20|+|0|1`** : `table`
+  - **`0_XINPUT_GAMEPAD|BUTTON_6;BUTTON_2|+|0|1`** : `table`
+  - **`0_XINPUT_GAMEPAD|BUTTON_6;BUTTON_3|+|0|1`** : `table`
+  - **`0_XINPUT_GAMEPAD|BUTTON_6;BUTTON_4|+|0|1`** : `table`
+  - **`0_XINPUT_GAMEPAD|BUTTON_6|+|0|1`** : `table`
+  - **`0_XINPUT_GAMEPAD|BUTTON_6|-|0|1`** : `table`
+  - **`0_XINPUT_GAMEPAD|BUTTON_9|+|0|1`** : `table`
+  - **`0_XINPUT_GAMEPAD|HALF_AXIS_1;BUTTON_11|+|0|1`** : `table`
+  - **`0_XINPUT_GAMEPAD|HALF_AXIS_1;BUTTON_17|+|0|1`** : `table`
+  - **`0_XINPUT_GAMEPAD|HALF_AXIS_1;BUTTON_18|+|0|1`** : `table`
+  - **`0_XINPUT_GAMEPAD|HALF_AXIS_1;BUTTON_19|+|0|1`** : `table`
+  - **`0_XINPUT_GAMEPAD|HALF_AXIS_1;BUTTON_20|+|0|1`** : `table`
+  - **`1_XINPUT_GAMEPAD|AXIS_1+|+|0|2`** : `table`
+  - **`1_XINPUT_GAMEPAD|AXIS_1-|-|0|2`** : `table`
+  - **`1_XINPUT_GAMEPAD|AXIS_11|+|0|2`** : `table`
+  - **`1_XINPUT_GAMEPAD|AXIS_12|+|0|2`** : `table`
+  - **`1_XINPUT_GAMEPAD|AXIS_12|-|0|2`** : `table`
+  - **`1_XINPUT_GAMEPAD|AXIS_2+|+|0|2`** : `table`
+  - **`1_XINPUT_GAMEPAD|AXIS_2-|-|0|2`** : `table`
+  - **`1_XINPUT_GAMEPAD|AXIS_3+|+|0|2`** : `table`
+  - **`1_XINPUT_GAMEPAD|AXIS_3-|-|0|2`** : `table`
+  - **`1_XINPUT_GAMEPAD|AXIS_4+|+|0|2`** : `table`
+  - **`1_XINPUT_GAMEPAD|AXIS_4-|-|0|2`** : `table`
+  - **`1_XINPUT_GAMEPAD|BUTTON_10|+|0|2`** : `table`
+  - **`1_XINPUT_GAMEPAD|BUTTON_11|+|0|2`** : `table`
+  - **`1_XINPUT_GAMEPAD|BUTTON_12|+|0|2`** : `table`
+  - **`1_XINPUT_GAMEPAD|BUTTON_17;BUTTON_5;BUTTON_6;BUTTON_2|+|0|2`** : `table`
+  - **`1_XINPUT_GAMEPAD|BUTTON_17;BUTTON_5;BUTTON_6;BUTTON_3|+|0|2`** : `table`
+  - **`1_XINPUT_GAMEPAD|BUTTON_17;BUTTON_5;BUTTON_6;BUTTON_4|+|0|2`** : `table`
+  - **`1_XINPUT_GAMEPAD|BUTTON_17|+|0|2`** : `table`
+  - **`1_XINPUT_GAMEPAD|BUTTON_18;BUTTON_5;BUTTON_6;BUTTON_4|+|0|2`** : `table`
+  - **`1_XINPUT_GAMEPAD|BUTTON_18|+|0|2`** : `table`
+  - **`1_XINPUT_GAMEPAD|BUTTON_19;BUTTON_5;BUTTON_6;BUTTON_4|+|0|2`** : `table`
+  - **`1_XINPUT_GAMEPAD|BUTTON_19|+|0|2`** : `table`
+  - **`1_XINPUT_GAMEPAD|BUTTON_19|-|0|2`** : `table`
+  - **`1_XINPUT_GAMEPAD|BUTTON_1|+|0|2`** : `table`
+  - **`1_XINPUT_GAMEPAD|BUTTON_20|+|0|2`** : `table`
+  - **`1_XINPUT_GAMEPAD|BUTTON_20|-|0|2`** : `table`
+  - **`1_XINPUT_GAMEPAD|BUTTON_2|+|0|2`** : `table`
+  - **`1_XINPUT_GAMEPAD|BUTTON_3|+|0|2`** : `table`
+  - **`1_XINPUT_GAMEPAD|BUTTON_4|+|0|2`** : `table`
+  - **`1_XINPUT_GAMEPAD|BUTTON_5;AXIS_3+|+|0|2`** : `table`
+  - **`1_XINPUT_GAMEPAD|BUTTON_5;AXIS_3+|-|0|2`** : `table`
+  - **`1_XINPUT_GAMEPAD|BUTTON_5;AXIS_3-|+|0|2`** : `table`
+  - **`1_XINPUT_GAMEPAD|BUTTON_5;AXIS_3-|-|0|2`** : `table`
+  - **`1_XINPUT_GAMEPAD|BUTTON_5;AXIS_4+|+|0|2`** : `table`
+  - **`1_XINPUT_GAMEPAD|BUTTON_5;AXIS_4-|-|0|2`** : `table`
+  - **`1_XINPUT_GAMEPAD|BUTTON_5;BUTTON_11|+|0|2`** : `table`
+  - **`1_XINPUT_GAMEPAD|BUTTON_5;BUTTON_12|+|0|2`** : `table`
+  - **`1_XINPUT_GAMEPAD|BUTTON_5;BUTTON_17|+|0|2`** : `table`
+  - **`1_XINPUT_GAMEPAD|BUTTON_5;BUTTON_18|+|0|2`** : `table`
+  - **`1_XINPUT_GAMEPAD|BUTTON_5;BUTTON_19|+|0|2`** : `table`
+  - **`1_XINPUT_GAMEPAD|BUTTON_5;BUTTON_1|+|0|2`** : `table`
+  - **`1_XINPUT_GAMEPAD|BUTTON_5;BUTTON_20|+|0|2`** : `table`
+  - **`1_XINPUT_GAMEPAD|BUTTON_5;BUTTON_2|+|0|2`** : `table`
+  - **`1_XINPUT_GAMEPAD|BUTTON_5;BUTTON_3|+|0|2`** : `table`
+  - **`1_XINPUT_GAMEPAD|BUTTON_5;BUTTON_4|+|0|2`** : `table`
+  - **`1_XINPUT_GAMEPAD|BUTTON_5;BUTTON_6;AXIS_1+|+|0|2`** : `table`
+  - **`1_XINPUT_GAMEPAD|BUTTON_5;BUTTON_6;AXIS_1-|-|0|2`** : `table`
+  - **`1_XINPUT_GAMEPAD|BUTTON_5;BUTTON_6;AXIS_2+|-|0|2`** : `table`
+  - **`1_XINPUT_GAMEPAD|BUTTON_5;BUTTON_6;AXIS_2-|+|0|2`** : `table`
+  - **`1_XINPUT_GAMEPAD|BUTTON_5;BUTTON_6;AXIS_3+|+|0|2`** : `table`
+  - **`1_XINPUT_GAMEPAD|BUTTON_5;BUTTON_6;AXIS_3-|-|0|2`** : `table`
+  - **`1_XINPUT_GAMEPAD|BUTTON_5;BUTTON_6;AXIS_4+|-|0|2`** : `table`
+  - **`1_XINPUT_GAMEPAD|BUTTON_5;BUTTON_6;AXIS_4-|+|0|2`** : `table`
+  - **`1_XINPUT_GAMEPAD|BUTTON_5;BUTTON_6;BUTTON_10|+|0|2`** : `table`
+  - **`1_XINPUT_GAMEPAD|BUTTON_5;BUTTON_6;BUTTON_17|+|0|2`** : `table`
+  - **`1_XINPUT_GAMEPAD|BUTTON_5;BUTTON_6;BUTTON_18|+|0|2`** : `table`
+  - **`1_XINPUT_GAMEPAD|BUTTON_5;BUTTON_6;BUTTON_20|+|0|2`** : `table`
+  - **`1_XINPUT_GAMEPAD|BUTTON_5;BUTTON_6;BUTTON_2|+|0|2`** : `table`
+  - **`1_XINPUT_GAMEPAD|BUTTON_5;BUTTON_6;BUTTON_3|+|0|2`** : `table`
+  - **`1_XINPUT_GAMEPAD|BUTTON_5;BUTTON_6;BUTTON_4|+|0|2`** : `table`
+  - **`1_XINPUT_GAMEPAD|BUTTON_5;BUTTON_9|+|0|2`** : `table`
+  - **`1_XINPUT_GAMEPAD|BUTTON_5|+|0|2`** : `table`
+  - **`1_XINPUT_GAMEPAD|BUTTON_5|-|0|2`** : `table`
+  - **`1_XINPUT_GAMEPAD|BUTTON_6;AXIS_3+|+|0|2`** : `table`
+  - **`1_XINPUT_GAMEPAD|BUTTON_6;AXIS_3-|-|0|2`** : `table`
+  - **`1_XINPUT_GAMEPAD|BUTTON_6;AXIS_4+|+|0|2`** : `table`
+  - **`1_XINPUT_GAMEPAD|BUTTON_6;AXIS_4+|-|0|2`** : `table`
+  - **`1_XINPUT_GAMEPAD|BUTTON_6;AXIS_4-|+|0|2`** : `table`
+  - **`1_XINPUT_GAMEPAD|BUTTON_6;AXIS_4-|-|0|2`** : `table`
+  - **`1_XINPUT_GAMEPAD|BUTTON_6;BUTTON_11|+|0|2`** : `table`
+  - **`1_XINPUT_GAMEPAD|BUTTON_6;BUTTON_12|+|0|2`** : `table`
+  - **`1_XINPUT_GAMEPAD|BUTTON_6;BUTTON_17|+|0|2`** : `table`
+  - **`1_XINPUT_GAMEPAD|BUTTON_6;BUTTON_18|+|0|2`** : `table`
+  - **`1_XINPUT_GAMEPAD|BUTTON_6;BUTTON_19|+|0|2`** : `table`
+  - **`1_XINPUT_GAMEPAD|BUTTON_6;BUTTON_1|+|0|2`** : `table`
+  - **`1_XINPUT_GAMEPAD|BUTTON_6;BUTTON_20|+|0|2`** : `table`
+  - **`1_XINPUT_GAMEPAD|BUTTON_6;BUTTON_2|+|0|2`** : `table`
+  - **`1_XINPUT_GAMEPAD|BUTTON_6;BUTTON_3|+|0|2`** : `table`
+  - **`1_XINPUT_GAMEPAD|BUTTON_6;BUTTON_4|+|0|2`** : `table`
+  - **`1_XINPUT_GAMEPAD|BUTTON_6|+|0|2`** : `table`
+  - **`1_XINPUT_GAMEPAD|BUTTON_6|-|0|2`** : `table`
+  - **`1_XINPUT_GAMEPAD|BUTTON_9|+|0|2`** : `table`
+  - **`1_XINPUT_GAMEPAD|HALF_AXIS_1;BUTTON_11|+|0|2`** : `table`
+  - **`1_XINPUT_GAMEPAD|HALF_AXIS_1;BUTTON_17|+|0|2`** : `table`
+  - **`1_XINPUT_GAMEPAD|HALF_AXIS_1;BUTTON_18|+|0|2`** : `table`
+  - **`1_XINPUT_GAMEPAD|HALF_AXIS_1;BUTTON_19|+|0|2`** : `table`
+  - **`1_XINPUT_GAMEPAD|HALF_AXIS_1;BUTTON_20|+|0|2`** : `table`
+  - **`KB_MOUSE_DEFAULT|AXIS_X+|+|0|3`** : `table`
+  - **`KB_MOUSE_DEFAULT|AXIS_X-|-|0|3`** : `table`
+  - **`KB_MOUSE_DEFAULT|AXIS_Y+|+|0|3`** : `table`
+  - **`KB_MOUSE_DEFAULT|AXIS_Y-|-|0|3`** : `table`
+  - **`KB_MOUSE_DEFAULT|KEY_0|+|0|1`** : `table`
+  - **`KB_MOUSE_DEFAULT|KEY_1|+|0|1`** : `table`
+  - **`KB_MOUSE_DEFAULT|KEY_1|-|0|1`** : `table`
+  - **`KB_MOUSE_DEFAULT|KEY_2|+|0|1`** : `table`
+  - **`KB_MOUSE_DEFAULT|KEY_3|+|0|1`** : `table`
+  - **`KB_MOUSE_DEFAULT|KEY_4|+|0|1`** : `table`
+  - **`KB_MOUSE_DEFAULT|KEY_5|+|0|1`** : `table`
+  - **`KB_MOUSE_DEFAULT|KEY_6|+|0|1`** : `table`
+  - **`KB_MOUSE_DEFAULT|KEY_7|+|0|1`** : `table`
+  - **`KB_MOUSE_DEFAULT|KEY_8|+|0|1`** : `table`
+  - **`KB_MOUSE_DEFAULT|KEY_9|+|0|1`** : `table`
+  - **`KB_MOUSE_DEFAULT|KEY_KP_1|+|0|1`** : `table`
+  - **`KB_MOUSE_DEFAULT|KEY_KP_2|+|0|1`** : `table`
+  - **`KB_MOUSE_DEFAULT|KEY_KP_3|+|0|1`** : `table`
+  - **`KB_MOUSE_DEFAULT|KEY_KP_5|+|0|1`** : `table`
+  - **`KB_MOUSE_DEFAULT|KEY_KP_6|+|0|1`** : `table`
+  - **`KB_MOUSE_DEFAULT|KEY_KP_7|+|0|1`** : `table`
+  - **`KB_MOUSE_DEFAULT|KEY_KP_9|+|0|1`** : `table`
+  - **`KB_MOUSE_DEFAULT|KEY_KP_minus|+|0|1`** : `table`
+  - **`KB_MOUSE_DEFAULT|KEY_KP_plus|+|0|1`** : `table`
+  - **`KB_MOUSE_DEFAULT|KEY_a|-|0|1`** : `table`
+  - **`KB_MOUSE_DEFAULT|KEY_backspace|+|0|1`** : `table`
+  - **`KB_MOUSE_DEFAULT|KEY_b|+|0|1`** : `table`
+  - **`KB_MOUSE_DEFAULT|KEY_comma|+|0|1`** : `table`
+  - **`KB_MOUSE_DEFAULT|KEY_c|+|0|1`** : `table`
+  - **`KB_MOUSE_DEFAULT|KEY_delete|+|0|1`** : `table`
+  - **`KB_MOUSE_DEFAULT|KEY_down|+|0|1`** : `table`
+  - **`KB_MOUSE_DEFAULT|KEY_down|-|0|1`** : `table`
+  - **`KB_MOUSE_DEFAULT|KEY_d|+|0|1`** : `table`
+  - **`KB_MOUSE_DEFAULT|KEY_end|+|0|1`** : `table`
+  - **`KB_MOUSE_DEFAULT|KEY_end|-|0|1`** : `table`
+  - **`KB_MOUSE_DEFAULT|KEY_esc|+|0|1`** : `table`
+  - **`KB_MOUSE_DEFAULT|KEY_e|+|0|1`** : `table`
+  - **`KB_MOUSE_DEFAULT|KEY_e|-|0|1`** : `table`
+  - **`KB_MOUSE_DEFAULT|KEY_f12|+|0|1`** : `table`
+  - **`KB_MOUSE_DEFAULT|KEY_f1|+|0|1`** : `table`
+  - **`KB_MOUSE_DEFAULT|KEY_f8|+|0|1`** : `table`
+  - **`KB_MOUSE_DEFAULT|KEY_f|+|0|1`** : `table`
+  - **`KB_MOUSE_DEFAULT|KEY_g|+|0|1`** : `table`
+  - **`KB_MOUSE_DEFAULT|KEY_home|+|0|1`** : `table`
+  - **`KB_MOUSE_DEFAULT|KEY_h|+|0|1`** : `table`
+  - **`KB_MOUSE_DEFAULT|KEY_i|+|0|1`** : `table`
+  - **`KB_MOUSE_DEFAULT|KEY_j|+|0|1`** : `table`
+  - **`KB_MOUSE_DEFAULT|KEY_j|-|0|1`** : `table`
+  - **`KB_MOUSE_DEFAULT|KEY_k|+|0|1`** : `table`
+  - **`KB_MOUSE_DEFAULT|KEY_k|-|0|1`** : `table`
+  - **`KB_MOUSE_DEFAULT|KEY_lalt;KEY_n|+|0|1`** : `table`
+  - **`KB_MOUSE_DEFAULT|KEY_lalt;KEY_p|+|0|1`** : `table`
+  - **`KB_MOUSE_DEFAULT|KEY_lalt|+|0|1`** : `table`
+  - **`KB_MOUSE_DEFAULT|KEY_lctrl;KEY_1|+|0|1`** : `table`
+  - **`KB_MOUSE_DEFAULT|KEY_lctrl;KEY_2|+|0|1`** : `table`
+  - **`KB_MOUSE_DEFAULT|KEY_lctrl;KEY_3|+|0|1`** : `table`
+  - **`KB_MOUSE_DEFAULT|KEY_lctrl;KEY_4|+|0|1`** : `table`
+  - **`KB_MOUSE_DEFAULT|KEY_lctrl;KEY_5|+|0|1`** : `table`
+  - **`KB_MOUSE_DEFAULT|KEY_lctrl;KEY_6|+|0|1`** : `table`
+  - **`KB_MOUSE_DEFAULT|KEY_lctrl;KEY_KP_1|+|0|1`** : `table`
+  - **`KB_MOUSE_DEFAULT|KEY_lctrl;KEY_KP_2|+|0|1`** : `table`
+  - **`KB_MOUSE_DEFAULT|KEY_lctrl;KEY_KP_3|+|0|1`** : `table`
+  - **`KB_MOUSE_DEFAULT|KEY_lctrl;KEY_KP_4|+|0|1`** : `table`
+  - **`KB_MOUSE_DEFAULT|KEY_lctrl;KEY_KP_5|+|0|1`** : `table`
+  - **`KB_MOUSE_DEFAULT|KEY_lctrl;KEY_KP_6|+|0|1`** : `table`
+  - **`KB_MOUSE_DEFAULT|KEY_lctrl;KEY_a|-|0|1`** : `table`
+  - **`KB_MOUSE_DEFAULT|KEY_lctrl;KEY_b|+|0|1`** : `table`
+  - **`KB_MOUSE_DEFAULT|KEY_lctrl;KEY_d|+|0|1`** : `table`
+  - **`KB_MOUSE_DEFAULT|KEY_lctrl;KEY_f|+|0|1`** : `table`
+  - **`KB_MOUSE_DEFAULT|KEY_lctrl;KEY_g|+|0|1`** : `table`
+  - **`KB_MOUSE_DEFAULT|KEY_lctrl;KEY_h|+|0|1`** : `table`
+  - **`KB_MOUSE_DEFAULT|KEY_lctrl;KEY_i|+|0|1`** : `table`
+  - **`KB_MOUSE_DEFAULT|KEY_lctrl;KEY_k|+|0|1`** : `table`
+  - **`KB_MOUSE_DEFAULT|KEY_lctrl;KEY_lshift;KEY_1|+|0|1`** : `table`
+  - **`KB_MOUSE_DEFAULT|KEY_lctrl;KEY_lshift;KEY_2|+|0|1`** : `table`
+  - **`KB_MOUSE_DEFAULT|KEY_lctrl;KEY_lshift;KEY_3|+|0|1`** : `table`
+  - **`KB_MOUSE_DEFAULT|KEY_lctrl;KEY_lshift;KEY_4|+|0|1`** : `table`
+  - **`KB_MOUSE_DEFAULT|KEY_lctrl;KEY_lshift;KEY_5|+|0|1`** : `table`
+  - **`KB_MOUSE_DEFAULT|KEY_lctrl;KEY_lshift;KEY_6|+|0|1`** : `table`
+  - **`KB_MOUSE_DEFAULT|KEY_lctrl;KEY_lshift;KEY_r|+|0|1`** : `table`
+  - **`KB_MOUSE_DEFAULT|KEY_lctrl;KEY_m|-|0|1`** : `table`
+  - **`KB_MOUSE_DEFAULT|KEY_lctrl;KEY_q|+|0|1`** : `table`
+  - **`KB_MOUSE_DEFAULT|KEY_lctrl;KEY_r|+|0|1`** : `table`
+  - **`KB_MOUSE_DEFAULT|KEY_lctrl;KEY_s|+|0|1`** : `table`
+  - **`KB_MOUSE_DEFAULT|KEY_lctrl;KEY_tab|+|0|2`** : `table`
+  - **`KB_MOUSE_DEFAULT|KEY_lctrl;KEY_v|+|0|1`** : `table`
+  - **`KB_MOUSE_DEFAULT|KEY_lctrl;KEY_x|+|0|1`** : `table`
+  - **`KB_MOUSE_DEFAULT|KEY_lctrl;KEY_y|+|0|1`** : `table`
+  - **`KB_MOUSE_DEFAULT|KEY_lctrl;KEY_z|+|0|1`** : `table`
+  - **`KB_MOUSE_DEFAULT|KEY_lctrl|+|0|1`** : `table`
+  - **`KB_MOUSE_DEFAULT|KEY_left|-|0|1`** : `table`
+  - **`KB_MOUSE_DEFAULT|KEY_lshift;KEY_1|+|0|1`** : `table`
+  - **`KB_MOUSE_DEFAULT|KEY_lshift;KEY_2|+|0|1`** : `table`
+  - **`KB_MOUSE_DEFAULT|KEY_lshift;KEY_3|+|0|1`** : `table`
+  - **`KB_MOUSE_DEFAULT|KEY_lshift;KEY_4|+|0|1`** : `table`
+  - **`KB_MOUSE_DEFAULT|KEY_lshift;KEY_5|+|0|1`** : `table`
+  - **`KB_MOUSE_DEFAULT|KEY_lshift;KEY_6|+|0|1`** : `table`
+  - **`KB_MOUSE_DEFAULT|KEY_lshift;KEY_7|+|0|1`** : `table`
+  - **`KB_MOUSE_DEFAULT|KEY_lshift;KEY_8|+|0|1`** : `table`
+  - **`KB_MOUSE_DEFAULT|KEY_lshift;KEY_9|+|0|1`** : `table`
+  - **`KB_MOUSE_DEFAULT|KEY_lshift;KEY_b|+|0|1`** : `table`
+  - **`KB_MOUSE_DEFAULT|KEY_lshift;KEY_f|+|0|1`** : `table`
+  - **`KB_MOUSE_DEFAULT|KEY_lshift;KEY_g|+|0|1`** : `table`
+  - **`KB_MOUSE_DEFAULT|KEY_lshift;KEY_i|+|0|1`** : `table`
+  - **`KB_MOUSE_DEFAULT|KEY_lshift;KEY_j|+|0|1`** : `table`
+  - **`KB_MOUSE_DEFAULT|KEY_lshift;KEY_k|+|0|1`** : `table`
+  - **`KB_MOUSE_DEFAULT|KEY_lshift;KEY_lctrl;KEY_j|+|0|1`** : `table`
+  - **`KB_MOUSE_DEFAULT|KEY_lshift;KEY_lctrl;KEY_k|+|0|1`** : `table`
+  - **`KB_MOUSE_DEFAULT|KEY_lshift;KEY_lctrl;KEY_m|-|0|1`** : `table`
+  - **`KB_MOUSE_DEFAULT|KEY_lshift;KEY_lctrl;KEY_n|-|0|1`** : `table`
+  - **`KB_MOUSE_DEFAULT|KEY_lshift;KEY_lctrl;KEY_y|+|0|1`** : `table`
+  - **`KB_MOUSE_DEFAULT|KEY_lshift;KEY_m|-|0|1`** : `table`
+  - **`KB_MOUSE_DEFAULT|KEY_lshift;KEY_n|-|0|1`** : `table`
+  - **`KB_MOUSE_DEFAULT|KEY_lshift;KEY_o|+|0|1`** : `table`
+  - **`KB_MOUSE_DEFAULT|KEY_lshift;KEY_p|+|0|1`** : `table`
+  - **`KB_MOUSE_DEFAULT|KEY_lshift;KEY_tab|+|0|1`** : `table`
+  - **`KB_MOUSE_DEFAULT|KEY_lshift;KEY_u|+|0|1`** : `table`
+  - **`KB_MOUSE_DEFAULT|KEY_lshift;KEY_x|+|0|1`** : `table`
+  - **`KB_MOUSE_DEFAULT|KEY_lshift;KEY_y|+|0|1`** : `table`
+  - **`KB_MOUSE_DEFAULT|KEY_lshift|+|0|1`** : `table`
+  - **`KB_MOUSE_DEFAULT|KEY_l|+|0|1`** : `table`
+  - **`KB_MOUSE_DEFAULT|KEY_m|+|0|1`** : `table`
+  - **`KB_MOUSE_DEFAULT|KEY_m|-|0|1`** : `table`
+  - **`KB_MOUSE_DEFAULT|KEY_n|+|0|1`** : `table`
+  - **`KB_MOUSE_DEFAULT|KEY_n|-|0|1`** : `table`
+  - **`KB_MOUSE_DEFAULT|KEY_o|+|0|1`** : `table`
+  - **`KB_MOUSE_DEFAULT|KEY_pagedown|+|0|1`** : `table`
+  - **`KB_MOUSE_DEFAULT|KEY_pageup|+|0|1`** : `table`
+  - **`KB_MOUSE_DEFAULT|KEY_pause|+|0|1`** : `table`
+  - **`KB_MOUSE_DEFAULT|KEY_period|+|0|1`** : `table`
+  - **`KB_MOUSE_DEFAULT|KEY_print|+|0|1`** : `table`
+  - **`KB_MOUSE_DEFAULT|KEY_p|+|0|1`** : `table`
+  - **`KB_MOUSE_DEFAULT|KEY_q|+|0|1`** : `table`
+  - **`KB_MOUSE_DEFAULT|KEY_return|+|0|1`** : `table`
+  - **`KB_MOUSE_DEFAULT|KEY_right|+|0|1`** : `table`
+  - **`KB_MOUSE_DEFAULT|KEY_r|+|0|1`** : `table`
+  - **`KB_MOUSE_DEFAULT|KEY_scrolllock|+|0|1`** : `table`
+  - **`KB_MOUSE_DEFAULT|KEY_space|+|0|1`** : `table`
+  - **`KB_MOUSE_DEFAULT|KEY_s|+|0|1`** : `table`
+  - **`KB_MOUSE_DEFAULT|KEY_tab|+|0|1`** : `table`
+  - **`KB_MOUSE_DEFAULT|KEY_t|+|0|1`** : `table`
+  - **`KB_MOUSE_DEFAULT|KEY_up|+|0|1`** : `table`
+  - **`KB_MOUSE_DEFAULT|KEY_up|-|0|1`** : `table`
+  - **`KB_MOUSE_DEFAULT|KEY_u|+|0|1`** : `table`
+  - **`KB_MOUSE_DEFAULT|KEY_v|+|0|1`** : `table`
+  - **`KB_MOUSE_DEFAULT|KEY_w|+|0|1`** : `table`
+  - **`KB_MOUSE_DEFAULT|KEY_w|-|0|1`** : `table`
+  - **`KB_MOUSE_DEFAULT|KEY_x|+|0|1`** : `table`
+  - **`KB_MOUSE_DEFAULT|KEY_x|-|0|1`** : `table`
+  - **`KB_MOUSE_DEFAULT|KEY_y|+|0|1`** : `table`
+  - **`KB_MOUSE_DEFAULT|KEY_z|+|0|1`** : `table`
+  - **`KB_MOUSE_DEFAULT|MOUSE_BUTTON_LEFT;AXIS_X+|+|0|3`** : `table`
+  - **`KB_MOUSE_DEFAULT|MOUSE_BUTTON_LEFT;AXIS_X+|-|0|3`** : `table`
+  - **`KB_MOUSE_DEFAULT|MOUSE_BUTTON_LEFT;AXIS_X-|+|0|3`** : `table`
+  - **`KB_MOUSE_DEFAULT|MOUSE_BUTTON_LEFT;AXIS_X-|-|0|3`** : `table`
+  - **`KB_MOUSE_DEFAULT|MOUSE_BUTTON_LEFT;AXIS_Y+|+|0|3`** : `table`
+  - **`KB_MOUSE_DEFAULT|MOUSE_BUTTON_LEFT;AXIS_Y+|-|0|3`** : `table`
+  - **`KB_MOUSE_DEFAULT|MOUSE_BUTTON_LEFT;AXIS_Y-|+|0|3`** : `table`
+  - **`KB_MOUSE_DEFAULT|MOUSE_BUTTON_LEFT;AXIS_Y-|-|0|3`** : `table`
+  - **`KB_MOUSE_DEFAULT|MOUSE_BUTTON_LEFT;MOUSE_BUTTON_RIGHT;AXIS_X+|+|0|3`** : `table`
+  - **`KB_MOUSE_DEFAULT|MOUSE_BUTTON_LEFT;MOUSE_BUTTON_RIGHT;AXIS_X-|-|0|3`** : `table`
+  - **`KB_MOUSE_DEFAULT|MOUSE_BUTTON_LEFT;MOUSE_BUTTON_RIGHT;AXIS_Y+|-|0|3`** : `table`
+  - **`KB_MOUSE_DEFAULT|MOUSE_BUTTON_LEFT;MOUSE_BUTTON_RIGHT;AXIS_Y-|+|0|3`** : `table`
+  - **`KB_MOUSE_DEFAULT|MOUSE_BUTTON_LEFT;MOUSE_BUTTON_RIGHT|+|0|3`** : `table`
+  - **`KB_MOUSE_DEFAULT|MOUSE_BUTTON_LEFT|+|0|3`** : `table`
+  - **`KB_MOUSE_DEFAULT|MOUSE_BUTTON_MIDDLE;AXIS_X+|+|0|3`** : `table`
+  - **`KB_MOUSE_DEFAULT|MOUSE_BUTTON_MIDDLE;AXIS_X-|-|0|3`** : `table`
+  - **`KB_MOUSE_DEFAULT|MOUSE_BUTTON_MIDDLE;AXIS_Y+|+|0|3`** : `table`
+  - **`KB_MOUSE_DEFAULT|MOUSE_BUTTON_MIDDLE;AXIS_Y+|-|0|3`** : `table`
+  - **`KB_MOUSE_DEFAULT|MOUSE_BUTTON_MIDDLE;AXIS_Y-|+|0|3`** : `table`
+  - **`KB_MOUSE_DEFAULT|MOUSE_BUTTON_MIDDLE;AXIS_Y-|-|0|3`** : `table`
+  - **`KB_MOUSE_DEFAULT|MOUSE_BUTTON_MIDDLE|+|0|3`** : `table`
+  - **`KB_MOUSE_DEFAULT|MOUSE_BUTTON_RIGHT;AXIS_X+|+|0|3`** : `table`
+  - **`KB_MOUSE_DEFAULT|MOUSE_BUTTON_RIGHT;AXIS_X-|-|0|3`** : `table`
+  - **`KB_MOUSE_DEFAULT|MOUSE_BUTTON_RIGHT;AXIS_Y+|+|0|3`** : `table`
+  - **`KB_MOUSE_DEFAULT|MOUSE_BUTTON_RIGHT;AXIS_Y+|-|0|3`** : `table`
+  - **`KB_MOUSE_DEFAULT|MOUSE_BUTTON_RIGHT;AXIS_Y-|+|0|3`** : `table`
+  - **`KB_MOUSE_DEFAULT|MOUSE_BUTTON_RIGHT;AXIS_Y-|-|0|3`** : `table`
+  - **`KB_MOUSE_DEFAULT|MOUSE_BUTTON_RIGHT|+|0|3`** : `table`
+  - **`KB_MOUSE_DEFAULT|MOUSE_BUTTON_WHEEL_DOWN|+|0|3`** : `table`
+  - **`KB_MOUSE_DEFAULT|MOUSE_BUTTON_WHEEL_DOWN|-|0|3`** : `table`
+  - **`KB_MOUSE_DEFAULT|MOUSE_BUTTON_WHEEL_UP|+|0|3`** : `table`
+- **`events`** : `table`
+  - **`ACTIVATE_HANDTOOL|table: 0x032db3d5a8|5`** : `table`
+    - **`makeId`** : `None`
+    - **`new`** : `None`
+    - **`toString`** : `None`
+    - **`isa`** : `None`
+    - **`copy`** : `None`
+    - **`class`** : `None`
+    - **`initializeDisplayText`** : `None`
+    - **`superClass`** : `None`
+    - **`getIgnoreComboMask`** : `None`
+    - **`setIgnoreComboMask`** : `None`
+    - **`notifyInput`** : `None`
+    - **`frameReset`** : `None`
+    - **`getTriggerCode`** : `None`
+    - **`actionName`** : `None`
+    - **`contextDisplayText`** : `None`
+    - **`displayPriority`** : `None`
+    - **`id`** : `None`
+    - **`isActive`** : `None`
+    - **`displayIsVisible`** : `None`
+    - **`hasFrameTriggered`** : `None`
+    - **`targetObject`** : `None`
+    - **`triggerUp`** : `None`
+    - **`orderValue`** : `None`
+    - **`triggerDown`** : `None`
+    - **`triggerAlways`** : `None`
+    - **`ignoreComboMask`** : `None`
+    - **`callback`** : `None`
+  - **`ACTIVATE_OBJECT|table: 0x01532a7068|1`** : `table`
+  - **`ANIMAL_PET|table: 0x032db3d5a8|1`** : `table`
+  - **`AXIS_LOOK_LEFTRIGHT_PLAYER|table: 0x032db3d5a8|4`** : `table`
+  - **`AXIS_LOOK_UPDOWN_PLAYER|table: 0x032db3d5a8|4`** : `table`
+  - **`AXIS_MOVE_FORWARD_PLAYER|table: 0x032db3d5a8|4`** : `table`
+  - **`AXIS_MOVE_SIDE_PLAYER|table: 0x032db3d5a8|4`** : `table`
+  - **`AXIS_RUN|table: 0x032db3d5a8|4`** : `table`
+  - **`CP_DBG_CHANNEL_MENU_VISIBILITY|[ xmlSchema: table: 0x014baa0268 channels: table: 0x013e431730 DBG_HUD: 14 DBG_MULTIPLAYER: 15 DBG_FIELDWORK: 1 DBG_TURN: 10 numChannels: 19 eventIds: table: 0x03a6bd0618 DBG_MODE_9: 5 DBG_UNCATEGORIZED: 17 DBG_FIND_BALES: 2 DBG_PPC: 11 disabledColor: table: 0x013e876ab0 activatedColor: table: 0x013e42ece8 DBG_PATHFINDER: 6 isEnabled: true DBG_UNLOAD_COMBINE: 3 DBG_TRAFFIC: 12 menuVisible: false DBG_AI_DRIVER: 18 DBG_SILO: 7 currentIx: 1 DBG_MODE_8: 4 DBG_COURSES: 13 addEvents: function: 0x0129cf4630 DBG_CYCLIC: 19 DBG_TRIGGERS: 8 DBG_IMPLEMENTS: 16 DBG_REVERSE: 9 ]|1`** : `table`
+  - **`CP_DBG_CHANNEL_SELECT_NEXT|[ xmlSchema: table: 0x014baa0268 channels: table: 0x013e431730 DBG_HUD: 14 DBG_MULTIPLAYER: 15 DBG_FIELDWORK: 1 DBG_TURN: 10 numChannels: 19 eventIds: table: 0x03a6bd0618 DBG_MODE_9: 5 DBG_UNCATEGORIZED: 17 DBG_FIND_BALES: 2 DBG_PPC: 11 disabledColor: table: 0x013e876ab0 activatedColor: table: 0x013e42ece8 DBG_PATHFINDER: 6 isEnabled: true DBG_UNLOAD_COMBINE: 3 DBG_TRAFFIC: 12 menuVisible: false DBG_AI_DRIVER: 18 DBG_SILO: 7 currentIx: 1 DBG_MODE_8: 4 DBG_COURSES: 13 addEvents: function: 0x0129cf4630 DBG_CYCLIC: 19 DBG_TRIGGERS: 8 DBG_IMPLEMENTS: 16 DBG_REVERSE: 9 ]|1`** : `table`
+  - **`CP_DBG_CHANNEL_SELECT_PREVIOUS|[ xmlSchema: table: 0x014baa0268 channels: table: 0x013e431730 DBG_HUD: 14 DBG_MULTIPLAYER: 15 DBG_FIELDWORK: 1 DBG_TURN: 10 numChannels: 19 eventIds: table: 0x03a6bd0618 DBG_MODE_9: 5 DBG_UNCATEGORIZED: 17 DBG_FIND_BALES: 2 DBG_PPC: 11 disabledColor: table: 0x013e876ab0 activatedColor: table: 0x013e42ece8 DBG_PATHFINDER: 6 isEnabled: true DBG_UNLOAD_COMBINE: 3 DBG_TRAFFIC: 12 menuVisible: false DBG_AI_DRIVER: 18 DBG_SILO: 7 currentIx: 1 DBG_MODE_8: 4 DBG_COURSES: 13 addEvents: function: 0x0129cf4630 DBG_CYCLIC: 19 DBG_TRIGGERS: 8 DBG_IMPLEMENTS: 16 DBG_REVERSE: 9 ]|1`** : `table`
+  - **`CP_DBG_CHANNEL_TOGGLE_CURRENT|[ xmlSchema: table: 0x014baa0268 channels: table: 0x013e431730 DBG_HUD: 14 DBG_MULTIPLAYER: 15 DBG_FIELDWORK: 1 DBG_TURN: 10 numChannels: 19 eventIds: table: 0x03a6bd0618 DBG_MODE_9: 5 DBG_UNCATEGORIZED: 17 DBG_FIND_BALES: 2 DBG_PPC: 11 disabledColor: table: 0x013e876ab0 activatedColor: table: 0x013e42ece8 DBG_PATHFINDER: 6 isEnabled: true DBG_UNLOAD_COMBINE: 3 DBG_TRAFFIC: 12 menuVisible: false DBG_AI_DRIVER: 18 DBG_SILO: 7 currentIx: 1 DBG_MODE_8: 4 DBG_COURSES: 13 addEvents: function: 0x0129cf4630 DBG_CYCLIC: 19 DBG_TRIGGERS: 8 DBG_IMPLEMENTS: 16 DBG_REVERSE: 9 ]|1`** : `table`
+  - **`CROUCH|table: 0x032db3d5a8|5`** : `table`
+  - **`DEBUG_PLAYER_ENABLE|table: 0x032db3d5a8|1`** : `table`
+  - **`DEBUG_PLAYER_UP_DOWN|table: 0x032db3d5a8|4`** : `table`
+  - **`DECREASE_TIMESCALE|table: 0x01532a6280|1`** : `table`
+  - **`ENTER|table: 0x032db3d5a8|1`** : `table`
+  - **`GE_FRAME|table: 0x014ae3b078|1`** : `table`
+  - **`INCREASE_TIMESCALE|table: 0x01532a6280|1`** : `table`
+  - **`INTERACT|table: 0x032db3d5a8|3`** : `table`
+  - **`JUMP|table: 0x032db3d5a8|1`** : `table`
+  - **`MENU_ACCEPT|table: 0x0138f727d0|1`** : `table`
+  - **`MENU_ACTIVATE|table: 0x0138f727d0|1`** : `table`
+  - **`MENU_AXIS_LEFT_RIGHT|table: 0x0138f727d0|2`** : `table`
+  - **`MENU_AXIS_LEFT_RIGHT|table: 0x0138f727d0|5`** : `table`
+  - **`MENU_AXIS_UP_DOWN|table: 0x0138f727d0|2`** : `table`
+  - **`MENU_AXIS_UP_DOWN|table: 0x0138f727d0|5`** : `table`
+  - **`MENU_BACK|table: 0x0138f727d0|1`** : `table`
+  - **`MENU_CANCEL|table: 0x0138f727d0|1`** : `table`
+  - **`MENU_EXTRA_1|table: 0x0138f727d0|1`** : `table`
+  - **`MENU_EXTRA_2|table: 0x0138f727d0|1`** : `table`
+  - **`MENU_PAGE_NEXT|table: 0x0138f727d0|1`** : `table`
+  - **`MENU_PAGE_NEXT|table: 0x0138f727d0|2`** : `table`
+  - **`MENU_PAGE_PREV|table: 0x0138f727d0|1`** : `table`
+  - **`MENU_PAGE_PREV|table: 0x0138f727d0|2`** : `table`
+  - **`MENU|table: 0x0138f727d0|1`** : `table`
+  - **`MENU|table: 0x01532a6280|1`** : `table`
+  - **`PAUSE|table: 0x01532a6280|1`** : `table`
+  - **`PUSH_TO_TALK|0|3`** : `table`
+  - **`RADIO_NEXT_CHANNEL|table: 0x014eb64610|1`** : `table`
+  - **`RADIO_NEXT_ITEM|table: 0x014eb64610|1`** : `table`
+  - **`RADIO_PREVIOUS_CHANNEL|table: 0x014eb64610|1`** : `table`
+  - **`RADIO_PREVIOUS_ITEM|table: 0x014eb64610|1`** : `table`
+  - **`RADIO_TOGGLE|table: 0x01532a6280|1`** : `table`
+  - **`ROTATE_OBJECT_LEFT_RIGHT|table: 0x032db3d5a8|4`** : `table`
+  - **`ROTATE_OBJECT_UP_DOWN|table: 0x032db3d5a8|4`** : `table`
+  - **`SWITCH_HANDTOOL|table: 0x032db3d5a8|1`** : `table`
+  - **`SWITCH_VEHICLE_BACK|table: 0x01532a6280|1`** : `table`
+  - **`SWITCH_VEHICLE|table: 0x01532a6280|1`** : `table`
+  - **`TAKE_SCREENSHOT|0|1`** : `table`
+  - **`THROW_OBJECT|table: 0x032db3d5a8|1`** : `table`
+  - **`TOGGLE_CHARACTER_CREATION|table: 0x01532a6280|1`** : `table`
+  - **`TOGGLE_CONSTRUCTION|table: 0x01532a6280|1`** : `table`
+  - **`TOGGLE_HELP_TEXT|table: 0x01532a6280|1`** : `table`
+  - **`TOGGLE_LIGHTS_FPS|table: 0x032db3d5a8|1`** : `table`
+  - **`TOGGLE_MAP_SIZE|table: 0x01532b7300|1`** : `table`
+  - **`TOGGLE_MAP|table: 0x0138f727d0|1`** : `table`
+  - **`TOGGLE_MAP|table: 0x01532a6280|1`** : `table`
+  - **`TOGGLE_STORE|table: 0x0138f727d0|1`** : `table`
+  - **`TOGGLE_STORE|table: 0x01532a6280|1`** : `table`
+- **`nameActions`** : `table`
+  - **`ACTIVATE_HANDTOOL`** : `table`
+    - **`toString`** : `None`
+    - **`isFullAxis`** : `None`
+    - **`superClass`** : `None`
+    - **`copy`** : `None`
+    - **`class`** : `None`
+    - **`isa`** : `None`
+    - **`getIsSupportedOnCurrentPlatfrom`** : `None`
+    - **`getIgnoreComboMask`** : `None`
+    - **`enableBinding`** : `None`
+    - **`getNumActiveBindings`** : `None`
+    - **`disableBinding`** : `None`
+    - **`getActiveBindings`** : `None`
+    - **`getBindings`** : `None`
+    - **`resetActiveBindings`** : `None`
+    - **`addBinding`** : `None`
+    - **`clearBindings`** : `None`
+    - **`createFromXML`** : `None`
+    - **`new`** : `None`
+    - **`removeBinding`** : `None`
+    - **`clone`** : `None`
+    - **`setPrimaryKeyboardBinding`** : `None`
+    - **`getBindingAtSlot`** : `None`
+    - **`name`** : `None`
+    - **`axisType`** : `None`
+    - **`displayNameNegative`** : `None`
+    - **`displayNamePositive`** : `None`
+    - **`displayCategory`** : `None`
+    - **`bindingsKnown`** : `None`
+    - **`categories`** : `None`
+    - **`comboMaskGamepad`** : `None`
+    - **`comboMaskMouse`** : `None`
+    - **`isLocked`** : `None`
+    - **`activeBindings`** : `None`
+    - **`primaryKeyboardInput`** : `None`
+    - **`isConsumed`** : `None`
+    - **`isMobileAction`** : `None`
+    - **`isConsoleAction`** : `None`
+    - **`isBaseAction`** : `None`
+    - **`ignoreComboMask`** : `None`
+    - **`bindings`** : `None`
+  - **`ACTIVATE_OBJECT`** : `table`
+  - **`ADD_NOTE`** : `table`
+  - **`ANIMAL_PET`** : `table`
+  - **`ARENA_HELP`** : `table`
+  - **`ARENA_OBSERVER_CAMERA_FAST`** : `table`
+  - **`ARENA_OBSERVER_CAMERA_LOOK_LEFTRIGHT`** : `table`
+  - **`ARENA_OBSERVER_CAMERA_LOOK_UPDOWN`** : `table`
+  - **`ARENA_OBSERVER_CAMERA_MIRROR`** : `table`
+  - **`ARENA_OBSERVER_CAMERA_MODE`** : `table`
+  - **`ARENA_OBSERVER_CAMERA_MOVE_FORWARD`** : `table`
+  - **`ARENA_OBSERVER_CAMERA_MOVE_SIDE`** : `table`
+  - **`ARENA_OBSERVER_CAMERA_MOVE_UPDOWN`** : `table`
+  - **`ARENA_OBSERVER_CAMERA_PLAYER_1_BLUE`** : `table`
+  - **`ARENA_OBSERVER_CAMERA_PLAYER_1_RED`** : `table`
+  - **`ARENA_OBSERVER_CAMERA_PLAYER_2_BLUE`** : `table`
+  - **`ARENA_OBSERVER_CAMERA_PLAYER_2_RED`** : `table`
+  - **`ARENA_OBSERVER_CAMERA_PLAYER_3_BLUE`** : `table`
+  - **`ARENA_OBSERVER_CAMERA_PLAYER_3_RED`** : `table`
+  - **`ARENA_OBSERVER_CAMERA_POI_0`** : `table`
+  - **`ARENA_OBSERVER_CAMERA_POI_1`** : `table`
+  - **`ARENA_OBSERVER_CAMERA_POI_2`** : `table`
+  - **`ARENA_OBSERVER_CAMERA_POI_3`** : `table`
+  - **`ARENA_OBSERVER_CAMERA_POI_4`** : `table`
+  - **`ARENA_OBSERVER_CAMERA_POI_5`** : `table`
+  - **`ARENA_OBSERVER_CAMERA_POI_6`** : `table`
+  - **`ARENA_OBSERVER_CAMERA_POI_7`** : `table`
+  - **`ARENA_OBSERVER_CAMERA_POI_8`** : `table`
+  - **`ARENA_OBSERVER_CAMERA_POI_9`** : `table`
+  - **`ARENA_OBSERVER_CAMERA_SLOW`** : `table`
+  - **`ARENA_OBSERVER_CAMERA_SPLINE_0`** : `table`
+  - **`ARENA_OBSERVER_CAMERA_SPLINE_1`** : `table`
+  - **`ARENA_OBSERVER_TOGGLE_GHOST_MODE`** : `table`
+  - **`ARENA_START_GAME_TEAM_BLUE`** : `table`
+  - **`ARENA_START_GAME_TEAM_RANDOM`** : `table`
+  - **`ARENA_START_GAME_TEAM_RED`** : `table`
+  - **`ATTACH`** : `table`
+  - **`AXIS_ACCELERATE_VEHICLE`** : `table`
+  - **`AXIS_BRAKE_VEHICLE`** : `table`
+  - **`AXIS_CLUTCH_VEHICLE`** : `table`
+  - **`AXIS_CONSTRUCTION_ACTION_PRIMARY`** : `table`
+  - **`AXIS_CONSTRUCTION_ACTION_SECONDARY`** : `table`
+  - **`AXIS_CONSTRUCTION_CAMERA_ROTATE`** : `table`
+  - **`AXIS_CONSTRUCTION_CAMERA_TILT`** : `table`
+  - **`AXIS_CONSTRUCTION_CAMERA_ZOOM`** : `table`
+  - **`AXIS_CONSTRUCTION_CURSOR_ROTATE`** : `table`
+  - **`AXIS_CONSTRUCTION_MENU_LEFT_RIGHT`** : `table`
+  - **`AXIS_CONSTRUCTION_MENU_UP_DOWN`** : `table`
+  - **`AXIS_CRANE_ARM`** : `table`
+  - **`AXIS_CRANE_ARM2`** : `table`
+  - **`AXIS_CRANE_ARM3`** : `table`
+  - **`AXIS_CRANE_ARM4`** : `table`
+  - **`AXIS_CRANE_SUPPORT`** : `table`
+  - **`AXIS_CRANE_TOOL`** : `table`
+  - **`AXIS_CRANE_TOOL2`** : `table`
+  - **`AXIS_CRANE_TOOL3`** : `table`
+  - **`AXIS_CRUISE_CONTROL`** : `table`
+  - **`AXIS_CUTTER_REEL`** : `table`
+  - **`AXIS_CUTTER_REEL2`** : `table`
+  - **`AXIS_DOOR`** : `table`
+  - **`AXIS_DOOR_2`** : `table`
+  - **`AXIS_DOOR_3`** : `table`
+  - **`AXIS_DRAWBAR`** : `table`
+  - **`AXIS_DRAWBAR2`** : `table`
+  - **`AXIS_FRONTLOADER_ARM`** : `table`
+  - **`AXIS_FRONTLOADER_ARM2`** : `table`
+  - **`AXIS_FRONTLOADER_TOOL`** : `table`
+  - **`AXIS_FRONTLOADER_TOOL2`** : `table`
+  - **`AXIS_FRONTLOADER_TOOL3`** : `table`
+  - **`AXIS_FRONTLOADER_TOOL4`** : `table`
+  - **`AXIS_FRONTLOADER_TOOL5`** : `table`
+  - **`AXIS_HYDRAULICATTACHER1`** : `table`
+  - **`AXIS_HYDRAULICATTACHER2`** : `table`
+  - **`AXIS_LOOK_LEFTRIGHT_DRAG`** : `table`
+  - **`AXIS_LOOK_LEFTRIGHT_PLAYER`** : `table`
+  - **`AXIS_LOOK_LEFTRIGHT_VEHICLE`** : `table`
+  - **`AXIS_LOOK_UPDOWN_DRAG`** : `table`
+  - **`AXIS_LOOK_UPDOWN_PLAYER`** : `table`
+  - **`AXIS_LOOK_UPDOWN_VEHICLE`** : `table`
+  - **`AXIS_MAP_SCROLL_LEFT_RIGHT`** : `table`
+  - **`AXIS_MAP_SCROLL_UP_DOWN`** : `table`
+  - **`AXIS_MAP_ZOOM_IN`** : `table`
+  - **`AXIS_MAP_ZOOM_OUT`** : `table`
+  - **`AXIS_MOVE_FORWARD_PLAYER`** : `table`
+  - **`AXIS_MOVE_SIDE_PLAYER`** : `table`
+  - **`AXIS_MOVE_SIDE_VEHICLE`** : `table`
+  - **`AXIS_MTO_SCROLL`** : `table`
+  - **`AXIS_PIPE`** : `table`
+  - **`AXIS_PIPE2`** : `table`
+  - **`AXIS_ROTATE_HANDTOOL`** : `table`
+  - **`AXIS_RUN`** : `table`
+  - **`AXIS_SPRAYER_ARM`** : `table`
+  - **`AXIS_WHEEL_BASE`** : `table`
+  - **`BALESTACKING_CAMERA_1`** : `table`
+  - **`BALESTACKING_CAMERA_1_VEHICLE`** : `table`
+  - **`BALESTACKING_CAMERA_1_VEHICLE_INDOOR`** : `table`
+  - **`BALESTACKING_CAMERA_2`** : `table`
+  - **`BALESTACKING_CAMERA_2_VEHICLE`** : `table`
+  - **`BALESTACKING_CAMERA_2_VEHICLE_INDOOR`** : `table`
+  - **`BALESTACKING_CAMERA_3`** : `table`
+  - **`BALESTACKING_CAMERA_3_VEHICLE`** : `table`
+  - **`BALESTACKING_CAMERA_3_VEHICLE_INDOOR`** : `table`
+  - **`BALESTACKING_CAMERA_4`** : `table`
+  - **`BALESTACKING_CAMERA_4_VEHICLE`** : `table`
+  - **`BALESTACKING_CAMERA_4_VEHICLE_INDOOR`** : `table`
+  - **`BALESTACKING_CAMERA_5`** : `table`
+  - **`BALESTACKING_CAMERA_5_VEHICLE`** : `table`
+  - **`BALESTACKING_CAMERA_5_VEHICLE_INDOOR`** : `table`
+  - **`BALESTACKING_CAMERA_6`** : `table`
+  - **`BALESTACKING_CAMERA_6_VEHICLE`** : `table`
+  - **`BALESTACKING_CAMERA_6_VEHICLE_INDOOR`** : `table`
+  - **`BALESTACKING_FINISH_GAME`** : `table`
+  - **`BALESTACKING_HELP_SHOW`** : `table`
+  - **`BALESTACKING_RESET_GAME`** : `table`
+  - **`BALESTACKING_START_GAME`** : `table`
+  - **`CAMERA_SWITCH`** : `table`
+  - **`CAMERA_ZOOM_IN`** : `table`
+  - **`CAMERA_ZOOM_OUT`** : `table`
+  - **`CHANGE_DRIVING_DIRECTION`** : `table`
+  - **`CHAT`** : `table`
+  - **`CONSOLE_ALT_COMMAND2_BUTTON`** : `table`
+  - **`CONSOLE_ALT_COMMAND3_BUTTON`** : `table`
+  - **`CONSOLE_ALT_COMMAND_BUTTON`** : `table`
+  - **`CONSOLE_DEBUG_FILLUNIT_DEC`** : `table`
+  - **`CONSOLE_DEBUG_FILLUNIT_INC`** : `table`
+  - **`CONSOLE_DEBUG_FILLUNIT_NEXT`** : `table`
+  - **`CONSOLE_DEBUG_TOGGLE_FPS`** : `table`
+  - **`CONSOLE_DEBUG_TOGGLE_STATS`** : `table`
+  - **`CONSTRUCTION_ACTION_FOURTH`** : `table`
+  - **`CONSTRUCTION_ACTION_PRIMARY`** : `table`
+  - **`CONSTRUCTION_ACTION_SECONDARY`** : `table`
+  - **`CONSTRUCTION_ACTION_SNAPPING`** : `table`
+  - **`CONSTRUCTION_ACTION_TERTIARY`** : `table`
+  - **`CONSTRUCTION_DESTRUCT_TOGGLE`** : `table`
+  - **`CP_CHANGE_COURSE_VISIBILITY`** : `table`
+  - **`CP_CHANGE_SELECTED_JOB`** : `table`
+  - **`CP_CHANGE_STARTING_POINT`** : `table`
+  - **`CP_CLEAR_COURSE`** : `table`
+  - **`CP_DBG_CHANNEL_MENU_VISIBILITY`** : `table`
+  - **`CP_DBG_CHANNEL_SELECT_NEXT`** : `table`
+  - **`CP_DBG_CHANNEL_SELECT_PREVIOUS`** : `table`
+  - **`CP_DBG_CHANNEL_TOGGLE_CURRENT`** : `table`
+  - **`CP_OPEN_CLOSE_VEHICLE_SETTING_DISPLAY`** : `table`
+  - **`CP_OPEN_COURSEGENERATOR_SETTINGS`** : `table`
+  - **`CP_OPEN_COURSEMANAGER`** : `table`
+  - **`CP_OPEN_GLOBAL_SETTINGS`** : `table`
+  - **`CP_OPEN_VEHICLE_SETTINGS`** : `table`
+  - **`CP_START_STOP`** : `table`
+  - **`CP_TOGGLE_MOUSE`** : `table`
+  - **`CRABSTEERING_ALLWHEEL`** : `table`
+  - **`CRABSTEERING_CRABLEFT`** : `table`
+  - **`CRABSTEERING_CRABRIGHT`** : `table`
+  - **`CROUCH`** : `table`
+  - **`DEBUG_PLAYER_ENABLE`** : `table`
+  - **`DEBUG_PLAYER_UP_DOWN`** : `table`
+  - **`DEBUG_VEHICLE_1`** : `table`
+  - **`DEBUG_VEHICLE_2`** : `table`
+  - **`DEBUG_VEHICLE_3`** : `table`
+  - **`DEBUG_VEHICLE_4`** : `table`
+  - **`DEBUG_VEHICLE_5`** : `table`
+  - **`DEBUG_VEHICLE_6`** : `table`
+  - **`DEBUG_VEHICLE_7`** : `table`
+  - **`DEBUG_VEHICLE_8`** : `table`
+  - **`DEBUG_VEHICLE_9`** : `table`
+  - **`DECREASE_TIMESCALE`** : `table`
+  - **`DETACH`** : `table`
+  - **`DIRECTION_CHANGE`** : `table`
+  - **`DIRECTION_CHANGE_NEG`** : `table`
+  - **`DIRECTION_CHANGE_POS`** : `table`
+  - **`DOUBLED_SPRAY_AMOUNT`** : `table`
+  - **`EDC_OBJECT_DELETE`** : `table`
+  - **`EDC_PLAYER_RUN_SPEED`** : `table`
+  - **`EDC_SHOW_UI`** : `table`
+  - **`EDC_TOGGLE_HUD`** : `table`
+  - **`ENTER`** : `table`
+  - **`FOLD_ALL_IMPLEMENTS`** : `table`
+  - **`GAMING_STATION_TOGGLE_LANGUAGE`** : `table`
+  - **`GE_FRAME`** : `table`
+  - **`HONK`** : `table`
+  - **`IMPLEMENT_EXTRA`** : `table`
+  - **`IMPLEMENT_EXTRA2`** : `table`
+  - **`IMPLEMENT_EXTRA3`** : `table`
+  - **`IMPLEMENT_EXTRA4`** : `table`
+  - **`INCREASE_TIMESCALE`** : `table`
+  - **`INGAMEMAP_ACCEPT`** : `table`
+  - **`INTERACT`** : `table`
+  - **`JUMP`** : `table`
+  - **`LOWER_ALL_IMPLEMENTS`** : `table`
+  - **`LOWER_IMPLEMENT`** : `table`
+  - **`MENU`** : `table`
+  - **`MENU_ACCEPT`** : `table`
+  - **`MENU_ACTIVATE`** : `table`
+  - **`MENU_AXIS_LEFT_RIGHT`** : `table`
+  - **`MENU_AXIS_UP_DOWN`** : `table`
+  - **`MENU_AXIS_UP_DOWN_SECONDARY`** : `table`
+  - **`MENU_BACK`** : `table`
+  - **`MENU_CANCEL`** : `table`
+  - **`MENU_EXTRA_1`** : `table`
+  - **`MENU_EXTRA_2`** : `table`
+  - **`MENU_PAGE_NEXT`** : `table`
+  - **`MENU_PAGE_PREV`** : `table`
+  - **`MOUSE_ALT_COMMAND2_BUTTON`** : `table`
+  - **`MOUSE_ALT_COMMAND3_BUTTON`** : `table`
+  - **`MOUSE_ALT_COMMAND4_BUTTON`** : `table`
+  - **`MOUSE_ALT_COMMAND_BUTTON`** : `table`
+  - **`PAUSE`** : `table`
+  - **`PUSH_TO_TALK`** : `table`
+  - **`RADIO_NEXT_CHANNEL`** : `table`
+  - **`RADIO_NEXT_ITEM`** : `table`
+  - **`RADIO_PREVIOUS_CHANNEL`** : `table`
+  - **`RADIO_PREVIOUS_ITEM`** : `table`
+  - **`RADIO_TOGGLE`** : `table`
+  - **`RELOAD_GAME`** : `table`
+  - **`RESET_HEAD_TRACKING`** : `table`
+  - **`ROTATE_OBJECT_LEFT_RIGHT`** : `table`
+  - **`ROTATE_OBJECT_UP_DOWN`** : `table`
+  - **`SHIFT_GEAR_DOWN`** : `table`
+  - **`SHIFT_GEAR_SELECT_1`** : `table`
+  - **`SHIFT_GEAR_SELECT_2`** : `table`
+  - **`SHIFT_GEAR_SELECT_3`** : `table`
+  - **`SHIFT_GEAR_SELECT_4`** : `table`
+  - **`SHIFT_GEAR_SELECT_5`** : `table`
+  - **`SHIFT_GEAR_SELECT_6`** : `table`
+  - **`SHIFT_GEAR_SELECT_7`** : `table`
+  - **`SHIFT_GEAR_SELECT_8`** : `table`
+  - **`SHIFT_GEAR_UP`** : `table`
+  - **`SHIFT_GROUP_DOWN`** : `table`
+  - **`SHIFT_GROUP_SELECT_1`** : `table`
+  - **`SHIFT_GROUP_SELECT_2`** : `table`
+  - **`SHIFT_GROUP_SELECT_3`** : `table`
+  - **`SHIFT_GROUP_SELECT_4`** : `table`
+  - **`SHIFT_GROUP_UP`** : `table`
+  - **`SKIP_MESSAGE_BOX`** : `table`
+  - **`SWITCH_HANDTOOL`** : `table`
+  - **`SWITCH_IMPLEMENT`** : `table`
+  - **`SWITCH_IMPLEMENT_BACK`** : `table`
+  - **`SWITCH_VEHICLE`** : `table`
+  - **`SWITCH_VEHICLE_BACK`** : `table`
+  - **`TAKE_SCREENSHOT`** : `table`
+  - **`THROW_OBJECT`** : `table`
+  - **`TOGGLE_AI`** : `table`
+  - **`TOGGLE_BALE_TYPES`** : `table`
+  - **`TOGGLE_BEACON_LIGHTS`** : `table`
+  - **`TOGGLE_CHARACTER_CREATION`** : `table`
+  - **`TOGGLE_CHOPPER`** : `table`
+  - **`TOGGLE_CONSTRUCTION`** : `table`
+  - **`TOGGLE_COVER`** : `table`
+  - **`TOGGLE_CRABSTEERING`** : `table`
+  - **`TOGGLE_CRABSTEERING_BACK`** : `table`
+  - **`TOGGLE_CRUISE_CONTROL`** : `table`
+  - **`TOGGLE_CUT_LENGTH_BACK`** : `table`
+  - **`TOGGLE_HELP_TEXT`** : `table`
+  - **`TOGGLE_HIGH_BEAM_LIGHT`** : `table`
+  - **`TOGGLE_LIGHTS`** : `table`
+  - **`TOGGLE_LIGHTS_BACK`** : `table`
+  - **`TOGGLE_LIGHTS_FPS`** : `table`
+  - **`TOGGLE_LIGHT_FRONT`** : `table`
+  - **`TOGGLE_MAP`** : `table`
+  - **`TOGGLE_MAP_SIZE`** : `table`
+  - **`TOGGLE_MOTOR_STATE`** : `table`
+  - **`TOGGLE_PIPE`** : `table`
+  - **`TOGGLE_SEEDS`** : `table`
+  - **`TOGGLE_SEEDS_BACK`** : `table`
+  - **`TOGGLE_STORE`** : `table`
+  - **`TOGGLE_TENSION_BELTS`** : `table`
+  - **`TOGGLE_TIPSIDE`** : `table`
+  - **`TOGGLE_TIPSTATE`** : `table`
+  - **`TOGGLE_TIPSTATE_GROUND`** : `table`
+  - **`TOGGLE_TURNLIGHT_HAZARD`** : `table`
+  - **`TOGGLE_TURNLIGHT_LEFT`** : `table`
+  - **`TOGGLE_TURNLIGHT_RIGHT`** : `table`
+  - **`TOGGLE_WOOD_HARVESTER_TILT`** : `table`
+  - **`TOGGLE_WORKMODE`** : `table`
+  - **`TOGGLE_WORK_LIGHT_BACK`** : `table`
+  - **`TOGGLE_WORK_LIGHT_FRONT`** : `table`
+  - **`TURN_ON_ALL_IMPLEMENTS`** : `table`
+  - **`UNLOAD`** : `table`
+  - **`VARIABLE_WORK_WIDTH_LEFT`** : `table`
+  - **`VARIABLE_WORK_WIDTH_RIGHT`** : `table`
+  - **`VARIABLE_WORK_WIDTH_TOGGLE`** : `table`
+  - **`VEHICLE_ACTION_CONTROL`** : `table`
+  - **`WOOD_HARVESTER_DROP`** : `table`
+  - **`WORKMODE_LEFT`** : `table`
+  - **`WORKMODE_MIDDLE`** : `table`
+  - **`WORKMODE_RIGHT`** : `table`
+- **`missingDevices`** : `table`
+  - **`0_XINPUT_GAMEPAD`** : `table`
+    - **`new`** : `None`
+    - **`toString`** : `None`
+    - **`superClass`** : `None`
+    - **`copy`** : `None`
+    - **`class`** : `None`
+    - **`loadCategoryFromXML`** : `None`
+    - **`getPrefixedDeviceId`** : `None`
+    - **`getDeviceIdPrefix`** : `None`
+    - **`getIsDeviceSupported`** : `None`
+    - **`isController`** : `None`
+    - **`loadNameFromXML`** : `None`
+    - **`loadSettingsFromXML`** : `None`
+    - **`loadIdFromXML`** : `None`
+    - **`setSensitivity`** : `None`
+    - **`getDeadzone`** : `None`
+    - **`updateForceFeedbackState`** : `None`
+    - **`getIsForceFeedbackSupported`** : `None`
+    - **`setForceFeedback`** : `None`
+    - **`isa`** : `None`
+    - **`setDeadzone`** : `None`
+    - **`saveSettingsToXML`** : `None`
+    - **`getSensitivity`** : `None`
+    - **`deviceName`** : `None`
+    - **`deviceId`** : `None`
+    - **`forceFeedbackState`** : `None`
+    - **`internalId`** : `None`
+    - **`isActive`** : `None`
+    - **`sensitivities`** : `None`
+    - **`deadzones`** : `None`
+    - **`category`** : `None`
+  - **`1_XINPUT_GAMEPAD`** : `table`
+- **`newlyConnectedDevices`** : `table`
+- **`internalIdToEngineDeviceId`** : `table`
+- **`engineDeviceIdCounts`** : `table`
+- **`internalToDeviceId`** : `table`
+- **`deviceIdToInternal`** : `table`
+  - **`KB_MOUSE_DEFAULT`** : `number`
+- **`gamepadInputState`** : `table`
+
+</details>
+
+<details>
+<summary><strong>Arrays (3)</strong></summary>
+
+- **`eventOrder`** : `table[]` (length: 25)
+- **`displayActionEvents`** : `table[]` (length: 3)
+- **`actions`** : `table[]` (length: 285)
+
+</details>
+
+<details>
+<summary><strong>Global References (2)</strong></summary>
+
+- **`modManager`** : `global-ref` → [`g_modManager`](./g_modManager.md)
+- **`messageCenter`** : `global-ref` → [`g_messageCenter`](./g_messageCenter.md)
+
+</details>
+
+<details>
+<summary><strong>Primitives (31)</strong></summary>
+
+- **`isInputCapturing`** : `boolean`
+- **`mouseMotionScaleY`** : `number`
+- **`mouseMotionScaleX`** : `number`
+- **`saveCursorY`** : `number`
+- **`saveCursorX`** : `number`
+- **`wrapMousePositionEnabled`** : `boolean`
+- **`needUpdateAbort`** : `boolean`
+- **`pressedGamepadComboMask`** : `number`
+- **`pressedMouseComboMask`** : `number`
+- **`inputMouseYAxisValue`** : `number`
+- **`inputMouseXAxisValue`** : `number`
+- **`numGamepads`** : `number`
+- **`currentContextName`** : `string`
+- **`accumMouseMovementY`** : `number`
+- **`accumMouseMovementX`** : `number`
+- **`mouseMovementY`** : `number`
+- **`mouseMovementX`** : `number`
+- **`version`** : `number`
+- **`isConsoleVersion`** : `boolean`
+- **`debugRegisteredActions`** : `boolean`
+- **`debugContextEnabled`** : `boolean`
+- **`mousePosYLast`** : `number`
+- **`mousePosXLast`** : `number`
+- **`inputBindingPathTemplate`** : `string`
+- **`debugEnabled`** : `boolean`
+- **`isGamepadEnabled`** : `boolean`
+- **`inputHelpModeSetting`** : `number`
+- **`settingsPath`** : `string`
+- **`lastInputMode`** : `number`
+- **`lastInputHelpMode`** : `number`
+- **`timeSinceLastInputHelpModeChange`** : `number`
+
+</details>
+
+<details>
+<summary><strong>Other (9)</strong></summary>
+
+- **`comboInputActions`** : `reverse-hash-map`
+- **`comboInputAxisMasks`** : `reverse-hash-map`
+- **`linkedBindings`** : `reverse-hash-map`
+- **`eventBindings`** : `reverse-hash-map`
+- **`activeBindings`** : `reverse-hash-map`
+- **`actionEvents`** : `reverse-hash-map`
+- **`activeDeviceBindingsBuffer`** : `map`
+- **`devicesByCategory`** : `map`
+- **`devicesByInternalId`** : `map`
+
+</details>
+
+
+## Usage Example
+
+```lua
+-- Access g_inputBinding fields
+```
