@@ -49,8 +49,6 @@ function RuntimeInspector:initializeProcessors()
 end
 
 function RuntimeInspector:register()
-    DebugCapabilities.reportCapabilities()
-
     self:initializeProcessors()
 
     CommandRegistry:registerAll(self)
