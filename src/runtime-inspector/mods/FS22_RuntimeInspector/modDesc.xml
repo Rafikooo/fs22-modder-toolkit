@@ -49,9 +49,7 @@
         <sourceFile filename="scripts/processors/UserdataProcessor.lua"/>
         <sourceFile filename="scripts/processors/CycleProcessor.lua"/>
         <sourceFile filename="scripts/processors/GlobalReferenceProcessor.lua"/>
-        <sourceFile filename="scripts/processors/EventListenerProcessor.lua"/>
         <sourceFile filename="scripts/processors/FunctionDeduplicationProcessor.lua"/>
-        <sourceFile filename="scripts/processors/FunctionProcessor.lua"/>
         <sourceFile filename="scripts/processors/MemoryAddressKeyFilterProcessor.lua"/>
         <sourceFile filename="scripts/processors/ArrayProcessor.lua"/>
         <sourceFile filename="scripts/processors/MapProcessor.lua"/>

@@ -115,7 +115,7 @@ function MethodExportProcessor:process(xmlId, item, context)
                     depth = item.depth + 1,
                     fieldName = key,
                     readablePath = item.readablePath .. ":" .. key .. "()",  -- Use : for methods
-                    functionSource = nil  -- Will be filled by FunctionProcessor
+                    functionSource = nil
                 })
             end
         end
@@ -148,7 +148,5 @@ function MethodExportProcessor:process(xmlId, item, context)
         })
     end
 
-    -- Return children for processing (methods + instance fields)
-    -- FunctionProcessor will handle the actual function export
     return children
 end

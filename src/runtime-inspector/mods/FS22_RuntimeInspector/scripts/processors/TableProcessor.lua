@@ -58,7 +58,6 @@ function TableProcessor:process(xmlId, item, context)
 
             -- Create child item for queue
             -- NOTE: functionSource is no longer used - function metadata is extracted
-            -- directly in FunctionProcessor using debug.getinfo()
             local childItem = {
                 value = fieldValue,
                 xmlPath = childPath,
