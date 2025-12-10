@@ -1,0 +1,835 @@
+---
+title: g_inputDisplayManager
+description: Global g_inputDisplayManager - Runtime introspected API
+fieldTypes:
+  array: 6
+  function: 237
+  global-ref: 4
+  object: 403
+  other: 15
+  primitive: 93
+---
+
+# g_inputDisplayManager
+
+Runtime-introspected API for `g_inputDisplayManager`.
+
+**Source**: schemas (depth 2)  
+**Fields**: 61 top-level fields
+
+## Field Statistics
+
+Total fields: **61**
+
+- **Function**: 44
+- **Object**: 6
+- **Array**: 1
+- **Global-ref**: 2
+- **Primitive**: 5
+- **Other**: 3
+
+## Fields by Type
+
+<details>
+<summary><strong>Functions (44)</strong></summary>
+
+- **`onActionEventsChanged()`**
+- **`onActionBindingsChanged()`**
+- **`new()`**
+- **`loadModAxisIcons()`**
+- **`loadAxisIcons()`**
+- **`superClass()`**
+- **`copy()`**
+- **`loadControllerSymbolsAndOverlays()`**
+- **`setDevGamepadLabelMapping()`**
+- **`createButtonOverlay()`**
+- **`addContextBindings()`**
+- **`getGamepadInputSymbolName()`**
+- **`resolveAccumulatedSymbolPermutations()`**
+- **`getMouseInputSymbolName()`**
+- **`resolveUnmodifiedSymbols()`**
+- **`resolveModifierSymbols()`**
+- **`makeHelpElement()`**
+- **`getKeyboardBindings()`**
+- **`addRegularSymbols()`**
+- **`requireSymbolAccumulation()`**
+- **`addComboSymbols()`**
+- **`getActionBindingsForContext()`**
+- **`storeComboHelpElements()`**
+- **`storeEventHelpElements()`**
+- **`sortEventHelpElementsGamepad()`**
+- **`sortEventHelpElements()`**
+- **`load()`**
+- **`getFirstBindingAxisAndDeviceForActionName()`**
+- **`getPrefix()`**
+- **`debugRenderControllerSymbols()`**
+- **`getKeyboardInputActionKey()`**
+- **`getGamepadInputActionOverlay()`**
+- **`getKeyboardKeyOverlay()`**
+- **`getOrOverlay()`**
+- **`getPlusOverlay()`**
+- **`getComboHelpElements()`**
+- **`getEventHelpElements()`**
+- **`getEventHelpElementForAction()`**
+- **`getControllerSymbolOverlays()`**
+- **`consoleCommandShowInputControllerSymbols()`**
+- **`class()`**
+- **`delete()`**
+- **`isa()`**
+- **`draw()`**
+
+</details>
+
+<details open>
+<summary><strong>Objects/Tables (6)</strong></summary>
+
+- **`inputManager`** : `table`
+  - **Methods**: 163 available
+    - `checkEventCollision()`
+    - `validateActionEventParameters()`
+    - `createContext()`
+    - `notifyEventChanges()`
+    - `storeDisplayActionEvents()`
+    - `storeEventBindings()`
+    - `neutralizeEventBindingInput()`
+    - `removeEventInternal()`
+    - `iterateEvents()`
+    - `setEventActive()`
+    - `superClass()`
+    - `class()`
+    - `notifyInputModeChange()`
+    - `assignLastInputHelpMode()`
+    - `reloadModActions()`
+    - `addBinding()`
+    - `touchEvent()`
+    - `captureGamepadInput()`
+    - `captureMouseInput()`
+    - `captureKeyboardInput()`
+    - `loadActionsFromXMLPath()`
+    - `clearAllContexts()`
+    - `setPreviousContext()`
+    - `setContext()`
+    - `resetActiveActionBindings()`
+    - `assignActionPrimaryBindings()`
+    - `mouseEvent()`
+    - `keyEvent()`
+    - `upgradeBindingVersion()`
+    - `getDeviceCategory()`
+    - `debugPrintInputContext()`
+    - `printAll()`
+    - `isAxisZero()`
+    - `getIsDPadInput()`
+    - `shadowLinkedBindings()`
+    - `getIsMouseWheelInput()`
+    - `getActionByName()`
+    - `getAllDeviceIdsWithoutBindings()`
+    - `deleteBinding()`
+    - `applyGamepadDeadzones()`
+    - `loadDeviceSettingsFromXML()`
+    - `enumerateGamepadDevices()`
+    - `createDefaultDevices()`
+    - `resetDeviceInformation()`
+    - `getIsHalfAxis()`
+    - `resolveBindingDefaultDevice()`
+    - `setActionEventTextVisibility()`
+    - `loadModBindingDefaults()`
+    - `assignComboMasks()`
+    - `registerActionEvent()`
+    - `getBindingForceFeedbackInfo()`
+    - `checkDefaultInputExclusiveActionBindings()`
+    - `loadActionBindingsFromXMLPath()`
+    - `checkSettingsIntegrity()`
+    - `notifyBindingChanges()`
+    - `loadBindingsFromXML()`
+    - `loadActionBindingsFromXML()`
+    - `getMouseMotionScale()`
+    - `validateAndRepairComboActionBindings()`
+    - `getFirstActiveEventForActionName()`
+    - `getActionBindings()`
+    - `consoleCommandShowRegisteredActions()`
+    - `getBindingComboMask()`
+    - `consoleCommandShowInputContext()`
+    - `copy()`
+    - `consoleCommandPrintInputContext()`
+    - `deleteContext()`
+    - `consoleCommandEnableInputDebug()`
+    - `disableAlternateBindingsForAction()`
+    - `assignPlatformBindingPaths()`
+    - `getIsMouseInput()`
+    - `getActionList()`
+    - `saveDeviceSettings()`
+    - `saveToXMLFile()`
+    - `resolveBindingDevice()`
+    - `updateDebugDisplay()`
+    - `resetContinuousEventBindings()`
+    - `storeComboInputMappings()`
+    - `getKeyboardMouseInputActiveAndValue()`
+    - `checkBindings()`
+    - `getIsGamepadInput()`
+    - `getIsKeyboardInput()`
+    - `clearActiveBindingBuffer()`
+    - `getGamepadInputActiveAndValue()`
+    - `getIsAnalogInput()`
+    - `updateBinding()`
+    - `validateBinding()`
+    - `migrateDevicesCategory()`
+    - `adjustBindingSlotIndex()`
+    - `resolveBindingDevices()`
+    - `draw()`
+    - `getGamepadAxisOrButtonValue()`
+    - `update()`
+    - `getGamepadAxisValue()`
+    - `finalizeMouseInput()`
+    - `updateInput()`
+    - `updateMouseInput()`
+    - `checkGamepadActive()`
+    - `checkGamepadsCategoryChanged()`
+    - `checkGamepadsChanged()`
+    - `debugRenderRegisteredActions()`
+    - `debugRenderInputContext()`
+    - `new()`
+    - `isa()`
+    - `getIsPhysicalFullAxis()`
+    - `setContextEventsActive()`
+    - `updateBindingInput()`
+    - `setEventChangeCallback()`
+    - `setMouseMotionScale()`
+    - `updateComboBindings()`
+    - `getEventsForActionName()`
+    - `getActionBindingsCopy()`
+    - `getContextName()`
+    - `revertContext()`
+    - `hasBindingForPressedMouseComboMask()`
+    - `refreshEventCollections()`
+    - `updateEventBindings()`
+    - `restoreInputContexts()`
+    - `storeLinkedBindings()`
+    - `getComboCommandPressedMask()`
+    - `getGamepadDevices()`
+    - `restoreDefaultBindings()`
+    - `stopInputGathering()`
+    - `startInputCapture()`
+    - `rollbackBindingChanges()`
+    - `commitBindingChanges()`
+    - `startBindingChanges()`
+    - `getMouseButtonState()`
+    - `initializeGamepadMapping()`
+    - `getHasMissingDevices()`
+    - `getMissingDeviceById()`
+    - `getDeviceByInternalId()`
+    - `getInternalIdByDeviceId()`
+    - `getComboActionNameForAxisSet()`
+    - `setActionEventsActiveByTarget()`
+    - `setActionEventActive()`
+    - `loadActions()`
+    - `setActionEventIcon()`
+    - `setActionEventText()`
+    - `getDisplayActionEvents()`
+    - `clearState()`
+    - `removeActionEventsByTarget()`
+    - `removeActionEventsByActionName()`
+    - `removeActionEvent()`
+    - `endActionEventsModification()`
+    - `beginActionEventsModification()`
+    - `getLastInputMode()`
+    - `getInputHelpMode()`
+    - `getBindingCategorySet()`
+    - `getAllDevicesWithBindings()`
+    - `getDeviceById()`
+    - `getAllDeviceIdsWithBindings()`
+    - `load()`
+    - `getShowMouseCursor()`
+    - `getDeviceHasAnyBindings()`
+    - `setShowMouseCursor()`
+    - `overwriteSettingsWithDefault()`
+    - `getActionEventsHasBinding()`
+    - `setActionEventTextPriority()`
+    - `loadModActions()`
+    - `loadDefaultBindings()`
+    - `getMousePosition()`
+    - `eventChangeCallback()`
+  - **`isInputCapturing`** : `boolean`
+  - **`devicesToMigrateCategory`** : `table`
+  - **`mouseMotionScaleY`** : `number`
+  - **`mouseMotionScaleX`** : `number`
+  - **`saveCursorY`** : `number`
+  - **`saveCursorX`** : `number`
+  - **`wrapMousePositionEnabled`** : `boolean`
+  - **`needUpdateAbort`** : `boolean`
+  - **`pressedGamepadComboMask`** : `number`
+  - **`pressedMouseComboMask`** : `number`
+  - **`comboInputBindings`** : `table`
+  - **`comboInputActions`** : `reverse-hash-map`
+  - **`comboInputAxisMasks`** : `reverse-hash-map`
+  - **`inputMouseYAxisValue`** : `number`
+  - **`registrationContext`** : `table`
+  - **`inputMouseXAxisValue`** : `number`
+  - **`contexts`** : `table`
+  - **`numGamepads`** : `number`
+  - **`currentContextName`** : `string`
+  - **`linkedBindings`** : `reverse-hash-map`
+  - **`eventBindings`** : `reverse-hash-map`
+  - **`activeBindings`** : `reverse-hash-map`
+  - **`loadedBindings`** : `table`
+  - **`eventOrder`** : `table[]` (length: 25)
+  - **`events`** : `table`
+  - **`displayActionEvents`** : `table[]` (length: 3)
+  - **`actionEvents`** : `reverse-hash-map`
+  - **`accumMouseMovementY`** : `number`
+  - **`accumMouseMovementX`** : `number`
+  - **`mouseMovementY`** : `number`
+  - **`mouseMovementX`** : `number`
+  - **`activeDeviceBindingsBuffer`** : `map`
+  - **`version`** : `number`
+  - **`nameActions`** : `table`
+  - **`actions`** : `table[]` (length: 285)
+  - **`missingDevices`** : `table`
+  - **`newlyConnectedDevices`** : `table`
+  - **`internalIdToEngineDeviceId`** : `table`
+  - **`engineDeviceIdCounts`** : `table`
+  - **`internalToDeviceId`** : `table`
+  - **`deviceIdToInternal`** : `table`
+  - **`devicesByCategory`** : `map`
+  - **`devicesByInternalId`** : `map`
+  - **`isConsoleVersion`** : `boolean`
+  - **`debugRegisteredActions`** : `boolean`
+  - **`debugContextEnabled`** : `boolean`
+  - **`mousePosYLast`** : `number`
+  - **`mousePosXLast`** : `number`
+  - **`inputBindingPathTemplate`** : `string`
+  - **`debugEnabled`** : `boolean`
+  - **`modManager`** : `global-ref` → [`g_modManager`](./g_modManager.md)
+  - **`isGamepadEnabled`** : `boolean`
+  - **`inputHelpModeSetting`** : `number`
+  - **`settingsPath`** : `string`
+  - **`lastInputMode`** : `number`
+  - **`lastInputHelpMode`** : `number`
+  - **`messageCenter`** : `global-ref` → [`g_messageCenter`](./g_messageCenter.md)
+  - **`timeSinceLastInputHelpModeChange`** : `number`
+  - **`gamepadInputState`** : `table`
+- **`axisIconOverlays`** : `table`
+  - **`BEET_PICKUP_TRANS_X`** : `table`
+  - **`BEET_PICKUP_TRANS_Y`** : `table`
+  - **`CRANE_ARM1_ROTATE_X`** : `table`
+  - **`CRANE_ARM1_ROTATE_Y`** : `table`
+  - **`CRANE_ARM1_TRANSLATE`** : `table`
+  - **`CRANE_ARM2_ROTATE_TOOL`** : `table`
+  - **`CRANE_ARM2_ROTATE_X`** : `table`
+  - **`CRANE_ARM2_TRANSLATE`** : `table`
+  - **`CRANE_EC_TRANSLATE_Y`** : `table`
+  - **`CRANE_EC_TRANSLATE_Z`** : `table`
+  - **`DRAWBAR_ROTATE_X`** : `table`
+  - **`FORKLIFT_ROTATE_X`** : `table`
+  - **`FORKLIFT_TRANSLATE_Y`** : `table`
+  - **`FRONTLOADER_ARM_ROTATE`** : `table`
+  - **`FRONTLOADER_ARM_ROTATE_TOOL`** : `table`
+  - **`GRABBER_OPEN_CLOSE`** : `table`
+  - **`GRABBER_ROTATE_Y`** : `table`
+  - **`IMPLEMENT_ATTACHER_ROTX`** : `table`
+  - **`IMPLEMENT_ATTACHER_TRANS`** : `table`
+  - **`IMPLEMENT_TRANS_X`** : `table`
+  - **`IMPLEMENT_TRANS_Y`** : `table`
+  - **`PIPE_END_ROTATE`** : `table`
+  - **`PIPE_ROTATE_X`** : `table`
+  - **`PIPE_ROTATE_Y`** : `table`
+  - **`REEL_TRANSLATE_X`** : `table`
+  - **`REEL_TRANSLATE_Y`** : `table`
+  - **`SEAT_ROT_Y`** : `table`
+  - **`SNOW_PLOW_ROT_CENTER`** : `table`
+  - **`SNOW_PLOW_ROT_LEFT`** : `table`
+  - **`SNOW_PLOW_ROT_RIGHT`** : `table`
+  - **`SPRAYER_ARM_TRANSLATE_Y`** : `table`
+  - **`SUPPORT_ARM_TRANSLATE_Y`** : `table`
+  - **`TOOL_OPEN_CLOSE`** : `table`
+  - **`TOP_DOOR_ROTATE`** : `table`
+  - **`WHEEL_BASE_TRANSLATE_X`** : `table`
+  - **`WORKING_WIDTH_TRANSLATE_X`** : `table`
+- **`keyboardKeyOverlay`** : `table`
+  - **Methods**: 9 available
+    - `new()`
+    - `delete()`
+    - `copy()`
+    - `class()`
+    - `getButtonWidth()`
+    - `superClass()`
+    - `setColor()`
+    - `renderButton()`
+    - `isa()`
+  - **`debugEnabled`** : `boolean`
+  - **`b`** : `number`
+  - **`buttonRightRatio`** : `number`
+  - **`r`** : `number`
+  - **`buttonLeftRatio`** : `number`
+  - **`buttonLeftOverlay`** : `table`
+  - **`buttonScaleOverlay`** : `table`
+  - **`textYOffsetFactor`** : `number`
+  - **`textSizeFactor`** : `number`
+  - **`g`** : `number`
+  - **`a`** : `number`
+  - **`buttonRightOverlay`** : `table`
+- **`orOverlay`** : `table`
+  - **Methods**: 21 available
+    - `new()`
+    - `draw()`
+    - `setVisible()`
+    - `getVisible()`
+    - `isa()`
+    - `copy()`
+    - `class()`
+    - `setImage()`
+    - `setColor()`
+    - `setPosition()`
+    - `resetDimensions()`
+    - `getPosition()`
+    - `setUVs()`
+    - `delete()`
+    - `setAlignment()`
+    - `getScale()`
+    - `setScale()`
+    - `setRotation()`
+    - `setInvertX()`
+    - `setDimension()`
+    - `superClass()`
+  - **`getIsVisible`** : `function-ref`
+  - **`render`** : `function-ref`
+  - **`setIsVisible`** : `function-ref`
+  - **`scaleWidth`** : `number`
+  - **`defaultHeight`** : `number`
+  - **`defaultWidth`** : `number`
+  - **`offsetY`** : `number`
+  - **`offsetX`** : `number`
+  - **`uvs`** : `number[]` (length: 8)
+  - **`g`** : `number`
+  - **`visible`** : `boolean`
+  - **`a`** : `number`
+  - **`rotation`** : `number`
+  - **`b`** : `number`
+  - **`r`** : `number`
+  - **`height`** : `number`
+  - **`width`** : `number`
+  - **`rotationCenterY`** : `number`
+  - **`debugEnabled`** : `boolean`
+  - **`overlayId`** : `number`
+  - **`rotationCenterX`** : `number`
+  - **`y`** : `number`
+  - **`x`** : `number`
+  - **`alignmentHorizontal`** : `number`
+  - **`invertX`** : `boolean`
+  - **`filename`** : `string`
+  - **`alignmentVertical`** : `number`
+  - **`scaleHeight`** : `number`
+- **`plusOverlay`** : `table`
+  - **`a`** : `number`
+  - **`alignmentHorizontal`** : `number`
+  - **`alignmentVertical`** : `number`
+  - **`b`** : `number`
+  - **`debugEnabled`** : `boolean`
+  - **`defaultHeight`** : `number`
+  - **`defaultWidth`** : `number`
+  - **`filename`** : `string`
+  - **`g`** : `number`
+  - **`height`** : `number`
+  - **`invertX`** : `boolean`
+  - **`offsetX`** : `number`
+  - **`offsetY`** : `number`
+  - **`overlayId`** : `number`
+  - **`r`** : `number`
+  - **`rotation`** : `number`
+  - **`rotationCenterX`** : `number`
+  - **`rotationCenterY`** : `number`
+  - **`scaleHeight`** : `number`
+  - **`scaleWidth`** : `number`
+  - **`uvs`** : `number[]` (length: 8)
+  - **`visible`** : `boolean`
+  - **`width`** : `number`
+  - **`x`** : `number`
+  - **`y`** : `number`
+- **`controllerSymbols`** : `table`
+  - **`1`** : `table`
+  - **`10`** : `table`
+  - **`11`** : `table`
+  - **`12`** : `table`
+  - **`13`** : `table`
+  - **`14`** : `table`
+  - **`15`** : `table`
+  - **`16`** : `table`
+  - **`17`** : `table`
+  - **`18`** : `table`
+  - **`19`** : `table`
+  - **`2`** : `table`
+  - **`20`** : `table`
+  - **`21`** : `table`
+  - **`22`** : `table`
+  - **`23`** : `table`
+  - **`24`** : `table`
+  - **`25`** : `table`
+  - **`26`** : `table`
+  - **`27`** : `table`
+  - **`28`** : `table`
+  - **`29`** : `table`
+  - **`3`** : `table`
+  - **`30`** : `table`
+  - **`31`** : `table`
+  - **`32`** : `table`
+  - **`33`** : `table`
+  - **`34`** : `table`
+  - **`35`** : `table`
+  - **`36`** : `table`
+  - **`37`** : `table`
+  - **`38`** : `table`
+  - **`39`** : `table`
+  - **`4`** : `table`
+  - **`40`** : `table`
+  - **`41`** : `table`
+  - **`42`** : `table`
+  - **`43`** : `table`
+  - **`44`** : `table`
+  - **`45`** : `table`
+  - **`46`** : `table`
+  - **`47`** : `table`
+  - **`48`** : `table`
+  - **`49`** : `table`
+  - **`5`** : `table`
+  - **`50`** : `table`
+  - **`51`** : `table`
+  - **`52`** : `table`
+  - **`53`** : `table`
+  - **`54`** : `table`
+  - **`55`** : `table`
+  - **`56`** : `table`
+  - **`57`** : `table`
+  - **`58`** : `table`
+  - **`59`** : `table`
+  - **`6`** : `table`
+  - **`60`** : `table`
+  - **`61`** : `table`
+  - **`62`** : `table`
+  - **`63`** : `table`
+  - **`64`** : `table`
+  - **`65`** : `table`
+  - **`66`** : `table`
+  - **`67`** : `table`
+  - **`68`** : `table`
+  - **`69`** : `table`
+  - **`7`** : `table`
+  - **`70`** : `table`
+  - **`71`** : `table`
+  - **`72`** : `table`
+  - **`73`** : `table`
+  - **`74`** : `table`
+  - **`75`** : `table`
+  - **`76`** : `table`
+  - **`77`** : `table`
+  - **`78`** : `table`
+  - **`79`** : `table`
+  - **`8`** : `table`
+  - **`9`** : `table`
+  - **`A`** : `table`
+  - **`ACC`** : `table`
+  - **`Axis1`** : `table`
+  - **`Axis1Axis2`** : `table`
+  - **`Axis2`** : `table`
+  - **`Axis3`** : `table`
+  - **`Axis3Axis4`** : `table`
+  - **`Axis4`** : `table`
+  - **`Axis5`** : `table`
+  - **`Axis5Axis6`** : `table`
+  - **`Axis6`** : `table`
+  - **`Axis7`** : `table`
+  - **`Axis7Axis8`** : `table`
+  - **`Axis8`** : `table`
+  - **`B`** : `table`
+  - **`BRK`** : `table`
+  - **`Back`** : `table`
+  - **`CLT`** : `table`
+  - **`Circle`** : `table`
+  - **`Cross`** : `table`
+  - **`DP-Down`** : `table`
+  - **`DP-Left`** : `table`
+  - **`DP-Press`** : `table`
+  - **`DP-Right`** : `table`
+  - **`DP-RightDP-Left`** : `table`
+  - **`DP-Up`** : `table`
+  - **`DP-UpDP-Down`** : `table`
+  - **`DP-UpDP-RightDP-DownDP-Left`** : `table`
+  - **`L1`** : `table`
+  - **`L2`** : `table`
+  - **`L3`** : `table`
+  - **`LB`** : `table`
+  - **`LS`** : `table`
+  - **`LS-X`** : `table`
+  - **`LS-XLS-Y`** : `table`
+  - **`LS-Y`** : `table`
+  - **`LT`** : `table`
+  - **`OR`** : `table`
+  - **`Options`** : `table`
+  - **`PLUS`** : `table`
+  - **`PS`** : `table`
+  - **`R1`** : `table`
+  - **`R2`** : `table`
+  - **`R3`** : `table`
+  - **`RB`** : `table`
+  - **`RS`** : `table`
+  - **`RS-X`** : `table`
+  - **`RS-XRS-Y`** : `table`
+  - **`RS-Y`** : `table`
+  - **`RT`** : `table`
+  - **`RX`** : `table`
+  - **`S1`** : `table`
+  - **`S1-X`** : `table`
+  - **`S1-XS1-Y`** : `table`
+  - **`S1-Y`** : `table`
+  - **`S1-Z`** : `table`
+  - **`S2`** : `table`
+  - **`S2-X`** : `table`
+  - **`S2-XS2-Y`** : `table`
+  - **`S2-Y`** : `table`
+  - **`S2-Z`** : `table`
+  - **`S3`** : `table`
+  - **`S3-X`** : `table`
+  - **`S3-XS3-Y`** : `table`
+  - **`S3-Y`** : `table`
+  - **`S3-Z`** : `table`
+  - **`S4`** : `table`
+  - **`S4-X`** : `table`
+  - **`S4-XS4-Y`** : `table`
+  - **`S4-Y`** : `table`
+  - **`S4-Z`** : `table`
+  - **`SET`** : `table`
+  - **`Square`** : `table`
+  - **`Start`** : `table`
+  - **`Touch`** : `table`
+  - **`Triangle`** : `table`
+  - **`X`** : `table`
+  - **`Y`** : `table`
+  - **`mobile_A`** : `table`
+  - **`mobile_B`** : `table`
+  - **`mobile_Back`** : `table`
+  - **`mobile_DP-Down`** : `table`
+  - **`mobile_DP-Left`** : `table`
+  - **`mobile_DP-Right`** : `table`
+  - **`mobile_DP-Rightmobile_DP-Left`** : `table`
+  - **`mobile_DP-Up`** : `table`
+  - **`mobile_DP-Upmobile_DP-Down`** : `table`
+  - **`mobile_DP-Upmobile_DP-Rightmobile_DP-Downmobile_DP-Left`** : `table`
+  - **`mobile_LB`** : `table`
+  - **`mobile_LS`** : `table`
+  - **`mobile_LS-X`** : `table`
+  - **`mobile_LS-Xmobile_LS-Y`** : `table`
+  - **`mobile_LS-Y`** : `table`
+  - **`mobile_LT`** : `table`
+  - **`mobile_RB`** : `table`
+  - **`mobile_RS`** : `table`
+  - **`mobile_RS-X`** : `table`
+  - **`mobile_RS-Xmobile_RS-Y`** : `table`
+  - **`mobile_RS-Y`** : `table`
+  - **`mobile_RT`** : `table`
+  - **`mobile_Start`** : `table`
+  - **`mobile_X`** : `table`
+  - **`mobile_Y`** : `table`
+  - **`mouse_AxisX`** : `table`
+  - **`mouse_AxisXmouse_AxisY`** : `table`
+  - **`mouse_AxisY`** : `table`
+  - **`mouse_MOUSE_BUTTON_LEFT`** : `table`
+  - **`mouse_MOUSE_BUTTON_LEFTmouse_AxisX`** : `table`
+  - **`mouse_MOUSE_BUTTON_LEFTmouse_AxisXmouse_MOUSE_BUTTON_LEFTmouse_AxisY`** : `table`
+  - **`mouse_MOUSE_BUTTON_LEFTmouse_AxisY`** : `table`
+  - **`mouse_MOUSE_BUTTON_LEFTmouse_MOUSE_BUTTON_RIGHT`** : `table`
+  - **`mouse_MOUSE_BUTTON_LEFTmouse_MOUSE_BUTTON_RIGHTmouse_AxisX`** : `table`
+  - **`mouse_MOUSE_BUTTON_LEFTmouse_MOUSE_BUTTON_RIGHTmouse_AxisXmouse_MOUSE_BUTTON_LEFTmouse_MOUSE_BUTTON_RIGHTmouse_AxisY`** : `table`
+  - **`mouse_MOUSE_BUTTON_LEFTmouse_MOUSE_BUTTON_RIGHTmouse_AxisY`** : `table`
+  - **`mouse_MOUSE_BUTTON_LEFTmouse_MOUSE_BUTTON_RIGHTmouse_MOUSE_BUTTON_MIDDLE`** : `table`
+  - **`mouse_MOUSE_BUTTON_LEFTmouse_MOUSE_BUTTON_RIGHTmouse_MOUSE_BUTTON_MIDDLEmouse_AxisX`** : `table`
+  - **`mouse_MOUSE_BUTTON_LEFTmouse_MOUSE_BUTTON_RIGHTmouse_MOUSE_BUTTON_MIDDLEmouse_AxisXmouse_MOUSE_BUTTON_LEFTmouse_MOUSE_BUTTON_RIGHTmouse_MOUSE_BUTTON_MIDDLEmouse_AxisY`** : `table`
+  - **`mouse_MOUSE_BUTTON_LEFTmouse_MOUSE_BUTTON_RIGHTmouse_MOUSE_BUTTON_MIDDLEmouse_AxisY`** : `table`
+  - **`mouse_MOUSE_BUTTON_MIDDLE`** : `table`
+  - **`mouse_MOUSE_BUTTON_MIDDLEmouse_AxisX`** : `table`
+  - **`mouse_MOUSE_BUTTON_MIDDLEmouse_AxisXmouse_MOUSE_BUTTON_MIDDLEmouse_AxisY`** : `table`
+  - **`mouse_MOUSE_BUTTON_MIDDLEmouse_AxisY`** : `table`
+  - **`mouse_MOUSE_BUTTON_NONE`** : `table`
+  - **`mouse_MOUSE_BUTTON_NONEmouse_AxisX`** : `table`
+  - **`mouse_MOUSE_BUTTON_NONEmouse_AxisY`** : `table`
+  - **`mouse_MOUSE_BUTTON_RIGHT`** : `table`
+  - **`mouse_MOUSE_BUTTON_RIGHTmouse_AxisX`** : `table`
+  - **`mouse_MOUSE_BUTTON_RIGHTmouse_AxisXmouse_MOUSE_BUTTON_RIGHTmouse_AxisY`** : `table`
+  - **`mouse_MOUSE_BUTTON_RIGHTmouse_AxisY`** : `table`
+  - **`mouse_MOUSE_BUTTON_WHEEL_DOWN`** : `table`
+  - **`mouse_MOUSE_BUTTON_WHEEL_UP`** : `table`
+  - **`mouse_MOUSE_BUTTON_WHEEL_UPmouse_MOUSE_BUTTON_WHEEL_DOWN`** : `table`
+  - **`ps4_Circle`** : `table`
+  - **`ps4_Cross`** : `table`
+  - **`ps4_DP-Down`** : `table`
+  - **`ps4_DP-Left`** : `table`
+  - **`ps4_DP-Right`** : `table`
+  - **`ps4_DP-Rightps4_DP-Left`** : `table`
+  - **`ps4_DP-Up`** : `table`
+  - **`ps4_DP-Upps4_DP-Down`** : `table`
+  - **`ps4_DP-Upps4_DP-Rightps4_DP-Downps4_DP-Left`** : `table`
+  - **`ps4_L1`** : `table`
+  - **`ps4_L2`** : `table`
+  - **`ps4_L3`** : `table`
+  - **`ps4_LS-X`** : `table`
+  - **`ps4_LS-Xps4_LS-Y`** : `table`
+  - **`ps4_LS-Y`** : `table`
+  - **`ps4_Options`** : `table`
+  - **`ps4_R1`** : `table`
+  - **`ps4_R2`** : `table`
+  - **`ps4_R3`** : `table`
+  - **`ps4_RS-X`** : `table`
+  - **`ps4_RS-Xps4_RS-Y`** : `table`
+  - **`ps4_RS-Y`** : `table`
+  - **`ps4_Square`** : `table`
+  - **`ps4_Touch`** : `table`
+  - **`ps4_Triangle`** : `table`
+  - **`ps5_Circle`** : `table`
+  - **`ps5_Cross`** : `table`
+  - **`ps5_DP-Down`** : `table`
+  - **`ps5_DP-Left`** : `table`
+  - **`ps5_DP-Right`** : `table`
+  - **`ps5_DP-Rightps5_DP-Left`** : `table`
+  - **`ps5_DP-Up`** : `table`
+  - **`ps5_DP-Upps5_DP-Down`** : `table`
+  - **`ps5_DP-Upps5_DP-Rightps5_DP-Downps5_DP-Left`** : `table`
+  - **`ps5_L1`** : `table`
+  - **`ps5_L2`** : `table`
+  - **`ps5_L3`** : `table`
+  - **`ps5_LS-X`** : `table`
+  - **`ps5_LS-Xps5_LS-Y`** : `table`
+  - **`ps5_LS-Y`** : `table`
+  - **`ps5_Options`** : `table`
+  - **`ps5_R1`** : `table`
+  - **`ps5_R2`** : `table`
+  - **`ps5_R3`** : `table`
+  - **`ps5_RS-X`** : `table`
+  - **`ps5_RS-Xps5_RS-Y`** : `table`
+  - **`ps5_RS-Y`** : `table`
+  - **`ps5_Square`** : `table`
+  - **`ps5_Touch`** : `table`
+  - **`ps5_Triangle`** : `table`
+  - **`stadia_A`** : `table`
+  - **`stadia_B`** : `table`
+  - **`stadia_DP-Down`** : `table`
+  - **`stadia_DP-Left`** : `table`
+  - **`stadia_DP-Right`** : `table`
+  - **`stadia_DP-Rightstadia_DP-Left`** : `table`
+  - **`stadia_DP-Up`** : `table`
+  - **`stadia_DP-Upstadia_DP-Down`** : `table`
+  - **`stadia_DP-Upstadia_DP-Rightstadia_DP-Downstadia_DP-Left`** : `table`
+  - **`stadia_L1`** : `table`
+  - **`stadia_L2`** : `table`
+  - **`stadia_L3`** : `table`
+  - **`stadia_LS`** : `table`
+  - **`stadia_LS-X`** : `table`
+  - **`stadia_LS-Xstadia_LS-Y`** : `table`
+  - **`stadia_LS-Y`** : `table`
+  - **`stadia_Menu`** : `table`
+  - **`stadia_Options`** : `table`
+  - **`stadia_R1`** : `table`
+  - **`stadia_R2`** : `table`
+  - **`stadia_R3`** : `table`
+  - **`stadia_RS`** : `table`
+  - **`stadia_RS-X`** : `table`
+  - **`stadia_RS-Xstadia_RS-Y`** : `table`
+  - **`stadia_RS-Y`** : `table`
+  - **`stadia_X`** : `table`
+  - **`stadia_Y`** : `table`
+  - **`switch_+`** : `table`
+  - **`switch_-`** : `table`
+  - **`switch_A`** : `table`
+  - **`switch_B`** : `table`
+  - **`switch_Back`** : `table`
+  - **`switch_DP-Down`** : `table`
+  - **`switch_DP-Left`** : `table`
+  - **`switch_DP-Right`** : `table`
+  - **`switch_DP-Rightswitch_DP-Left`** : `table`
+  - **`switch_DP-Up`** : `table`
+  - **`switch_DP-Upswitch_DP-Down`** : `table`
+  - **`switch_DP-Upswitch_DP-Rightswitch_DP-Downswitch_DP-Left`** : `table`
+  - **`switch_L`** : `table`
+  - **`switch_LB`** : `table`
+  - **`switch_LS`** : `table`
+  - **`switch_LS-X`** : `table`
+  - **`switch_LS-Xswitch_LS-Y`** : `table`
+  - **`switch_LS-Y`** : `table`
+  - **`switch_R`** : `table`
+  - **`switch_RB`** : `table`
+  - **`switch_RS`** : `table`
+  - **`switch_RS-X`** : `table`
+  - **`switch_RS-Xswitch_RS-Y`** : `table`
+  - **`switch_RS-Y`** : `table`
+  - **`switch_SL`** : `table`
+  - **`switch_SR`** : `table`
+  - **`switch_Start`** : `table`
+  - **`switch_X`** : `table`
+  - **`switch_Y`** : `table`
+  - **`switch_ZL`** : `table`
+  - **`switch_ZR`** : `table`
+  - **`xbox_A`** : `table`
+  - **`xbox_B`** : `table`
+  - **`xbox_Back`** : `table`
+  - **`xbox_DP-Down`** : `table`
+  - **`xbox_DP-Left`** : `table`
+  - **`xbox_DP-Right`** : `table`
+  - **`xbox_DP-Rightxbox_DP-Left`** : `table`
+  - **`xbox_DP-Up`** : `table`
+  - **`xbox_DP-Upxbox_DP-Down`** : `table`
+  - **`xbox_DP-Upxbox_DP-Rightxbox_DP-Downxbox_DP-Left`** : `table`
+  - **`xbox_LB`** : `table`
+  - **`xbox_LS`** : `table`
+  - **`xbox_LS-X`** : `table`
+  - **`xbox_LS-Xxbox_LS-Y`** : `table`
+  - **`xbox_LS-Y`** : `table`
+  - **`xbox_LT`** : `table`
+  - **`xbox_RB`** : `table`
+  - **`xbox_RS`** : `table`
+  - **`xbox_RS-X`** : `table`
+  - **`xbox_RS-Xxbox_RS-Y`** : `table`
+  - **`xbox_RS-Y`** : `table`
+  - **`xbox_RT`** : `table`
+  - **`xbox_Start`** : `table`
+  - **`xbox_X`** : `table`
+  - **`xbox_Y`** : `table`
+
+</details>
+
+<details>
+<summary><strong>Arrays (1)</strong></summary>
+
+- **`actionList`** : `table[]` (length: 285)
+
+</details>
+
+<details>
+<summary><strong>Global References (2)</strong></summary>
+
+- **`modManager`** : `global-ref` → [`g_modManager`](./g_modManager.md)
+- **`messageCenter`** : `global-ref` → [`g_messageCenter`](./g_messageCenter.md)
+
+</details>
+
+<details>
+<summary><strong>Primitives (5)</strong></summary>
+
+- **`isMobileVersion`** : `boolean`
+- **`isConsoleVersion`** : `boolean`
+- **`debugControllerSymbols`** : `boolean`
+- **`buttonIconSize`** : `number`
+- **`uiScale`** : `number`
+
+</details>
+
+<details>
+<summary><strong>Other (3)</strong></summary>
+
+- **`eventComboButtons`** : `map`
+- **`eventHelpElements`** : `map`
+- **`actionBindings`** : `reverse-hash-map`
+
+</details>
+
+
+## Usage Example
+
+```lua
+-- Access g_inputDisplayManager fields
+```

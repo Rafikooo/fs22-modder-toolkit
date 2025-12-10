@@ -1,0 +1,723 @@
+---
+title: g_settingsModel
+description: Global g_settingsModel - Runtime introspected API
+fieldTypes:
+  array: 76
+  function: 384
+  global-ref: 2
+  object: 95
+  other: 56
+  primitive: 33
+---
+
+# g_settingsModel
+
+Runtime-introspected API for `g_settingsModel`.
+
+**Source**: schemas (depth 2)  
+**Fields**: 329 top-level fields
+
+## Field Statistics
+
+Total fields: **329**
+
+- **Function**: 213
+- **Object**: 7
+- **Array**: 76
+- **Global-ref**: 2
+- **Primitive**: 23
+- **Other**: 8
+
+## Fields by Type
+
+<details>
+<summary><strong>Functions (213)</strong></summary>
+
+- **`getCurrentDeviceDeadzoneValue()`**
+- **`setDeviceDeadzoneValue()`**
+- **`initDeviceSettings()`**
+- **`getCurrentDeviceName()`**
+- **`nextDevice()`**
+- **`getNumDevices()`**
+- **`getDeviceHasAxisSensitivity()`**
+- **`getDeviceHasAxisDeadzone()`**
+- **`getHeadTrackingSensitivityTexts()`**
+- **`getSensitivityTexts()`**
+- **`getDeadzoneTexts()`**
+- **`applyCustomSettings()`**
+- **`applyPerformanceClass()`**
+- **`applyHDRPeakBrightness()`**
+- **`applyChanges()`**
+- **`needsRestartToApplyChanges()`**
+- **`hasChanges()`**
+- **`superClass()`**
+- **`copy()`**
+- **`class()`**
+- **`addShaderQualitySetting()`**
+- **`addXeSSSetting()`**
+- **`getModeFromResolutionState()`**
+- **`getConsoleResolutionStateFromMode()`**
+- **`addCloudQualitySetting()`**
+- **`addSSAOQualitySetting()`**
+- **`addShadowDistanceQualitySetting()`**
+- **`addShadingRateQualitySetting()`**
+- **`addSharpnessSetting()`**
+- **`setValue()`**
+- **`addValarSetting()`**
+- **`addFidelityFxSR30FrameInterpolationSetting()`**
+- **`addFidelityFxSR30Setting()`**
+- **`addFidelityFxSRSetting()`**
+- **`addDLSSSetting()`**
+- **`addPostProcessAntiAliasingSetting()`**
+- **`addMaxMirrorsSetting()`**
+- **`addRealBeaconLightsSetting()`**
+- **`addLightsProfileSetting()`**
+- **`addMaxTireTracksSetting()`**
+- **`addVolumeMeshTessellationSetting()`**
+- **`addTerrainLODDistanceSetting()`**
+- **`addLODDistanceSetting()`**
+- **`addFoliageShadowSetting()`**
+- **`addFoliageDrawDistanceSetting()`**
+- **`addObjectDrawDistanceSetting()`**
+- **`addTerrainQualitySetting()`**
+- **`makeDefaultWriterFunction()`**
+- **`addShadowMapFilteringSetting()`**
+- **`makeDefaultReaderFunction()`**
+- **`addShadowQualitySetting()`**
+- **`addTextureResolutionSetting()`**
+- **`addTextureFilteringSetting()`**
+- **`addMSAASetting()`**
+- **`addPerformanceClassSetting()`**
+- **`setVolumeMeshTessellationCoeff()`**
+- **`getVolumeMeshTessellationCoeff()`**
+- **`addManagedSettings()`**
+- **`createControlDisplayValues()`**
+- **`resetDeviceChanges()`**
+- **`hasDeviceChanges()`**
+- **`addDirectSetting()`**
+- **`addHDRPeakBrightnessSetting()`**
+- **`saveDeviceChanges()`**
+- **`addResolutionScaleSetting()`**
+- **`addConsoleRenderQualitySetting()`**
+- **`addConsoleResolutionSetting()`**
+- **`addCameraTiltingSetting()`**
+- **`addHintsSetting()`**
+- **`addGyroscopeSteeringSetting()`**
+- **`addFrameLimitSetting()`**
+- **`addForceFeedbackSetting()`**
+- **`addWoodHarvesterAutoCutSetting()`**
+- **`addHudSpeedGaugeSetting()`**
+- **`addGearShiftModeSetting()`**
+- **`addDirectionChangeModeSetting()`**
+- **`setConsolePerformanceSetting()`**
+- **`addActiveCameraSuspensionSetting()`**
+- **`addRealBeaconLightBrightnessSetting()`**
+- **`addVehicleArmSensitivitySetting()`**
+- **`getValue()`**
+- **`addSteeringSensitivitySetting()`**
+- **`addSteeringBackSpeedSetting()`**
+- **`addVoiceInputSensitivitySetting()`**
+- **`addVoiceModeSetting()`**
+- **`addVoiceInputVolumeSetting()`**
+- **`addVoiceVolumeSetting()`**
+- **`addVolumeGUISetting()`**
+- **`addRadioVolumeSetting()`**
+- **`addVehicleVolumeSetting()`**
+- **`addEnvironmentVolumeSetting()`**
+- **`addMusicVolumeSetting()`**
+- **`addMasterVolumeSetting()`**
+- **`initialize()`**
+- **`addFovYSetting()`**
+- **`addVSyncSetting()`**
+- **`addBrightnessSetting()`**
+- **`addInputHelpModeSetting()`**
+- **`addMPLanguageSetting()`**
+- **`addLanguageSetting()`**
+- **`getHasShadowFocusBoxByIndex()`**
+- **`addSetting()`**
+- **`addUIScaleSetting()`**
+- **`getShaderQualityIndex()`**
+- **`getShaderQualityByIndex()`**
+- **`getNumOfReflectionMapsByIndex()`**
+- **`getShadowMapFilterIndex()`**
+- **`getShadowMapFilterByIndex()`**
+- **`getMSAAFromIndex()`**
+- **`getMSAAIndex()`**
+- **`getTerrainQualityIndex()`**
+- **`getTerrainQualityByIndex()`**
+- **`getTextureResolutionByIndex()`**
+- **`getTextureResolutionIndex()`**
+- **`getTextureFilteringByIndex()`**
+- **`getTextureFilteringIndex()`**
+- **`getShadowQualityByIndex()`**
+- **`new()`**
+- **`getShadowQualityIndex()`**
+- **`addResolutionScale3dSetting()`**
+- **`getNumOfReflectionMapsIndex()`**
+- **`isa()`**
+- **`addCamerCheckCollisionSetting()`**
+- **`addCameraSensitivitySetting()`**
+- **`getVSyncIndex()`**
+- **`getVSyncByIndex()`**
+- **`addShadowMaxLightsSetting()`**
+- **`getScalingStateFromResolutionScaling()`**
+- **`getScalingFromResolutionScalingState()`**
+- **`refreshChangedValue()`**
+- **`saveChanges()`**
+- **`reset()`**
+- **`getConsoleResolutionTexts()`**
+- **`getConsoleIsRenderQualityDisabled()`**
+- **`getResolutionScale3dTexts()`**
+- **`getResolutionScaleTexts()`**
+- **`getRadioModeTexts()`**
+- **`getAreaUnitTexts()`**
+- **`getTemperatureUnitTexts()`**
+- **`getDistanceUnitTexts()`**
+- **`getMoneyUnitTexts()`**
+- **`getSteeringSensitivityTexts()`**
+- **`getSteeringBackSpeedTexts()`**
+- **`getRealBeaconLightBrightnessTexts()`**
+- **`getVehicleArmSensitivityTexts()`**
+- **`getCameraSensitivityTexts()`**
+- **`getVoiceModeTexts()`**
+- **`getRecordingVolumeTexts()`**
+- **`getForceFeedbackTexts()`**
+- **`getVoiceInputSensitivityTexts()`**
+- **`getAudioVolumeTexts()`**
+- **`getUiScaleTexts()`**
+- **`getFovYTexts()`**
+- **`getBrightnessTexts()`**
+- **`getMaxMirrorsTexts()`**
+- **`getMaxTireTracksTexts()`**
+- **`getVolumeMeshTessalationTexts()`**
+- **`getTerrainLODDistanceTexts()`**
+- **`getLODDistanceTexts()`**
+- **`getFoliageShadowTexts()`**
+- **`getFoliageDrawDistanceTexts()`**
+- **`getObjectDrawDistanceTexts()`**
+- **`getShadowMapLightsTexts()`**
+- **`getLightsProfileTexts()`**
+- **`getTerraingQualityTexts()`**
+- **`getShadowMapFilteringTexts()`**
+- **`getTextureFilteringTexts()`**
+- **`getTextureResolutionTexts()`**
+- **`getShaderQualityTexts()`**
+- **`getShadowDistanceQualityTexts()`**
+- **`getCloudQualityTexts()`**
+- **`getSSAOQualityTexts()`**
+- **`getShadowQualityTexts()`**
+- **`getShadingRateQualityTexts()`**
+- **`getSharpnessTexts()`**
+- **`getXeSSTexts()`**
+- **`getValarTexts()`**
+- **`getFidelityFxSR30FrameInterpolationTexts()`**
+- **`getFidelityFxSR30Texts()`**
+- **`getFidelityFxSRTexts()`**
+- **`getDLSSTexts()`**
+- **`getPostProcessAAToolTip()`**
+- **`getPostProcessAATexts()`**
+- **`getMSAATexts()`**
+- **`getHDRPeakBrightnessTexts()`**
+- **`getPerformanceClassTexts()`**
+- **`getIsLanguageDisabled()`**
+- **`getLanguageTexts()`**
+- **`getHudSpeedGaugeTexts()`**
+- **`getGearShiftModeTexts()`**
+- **`getDirectionChangeModeTexts()`**
+- **`getInputHelpModeTexts()`**
+- **`getFrameLimitTexts()`**
+- **`getMPLanguageTexts()`**
+- **`getFullscreenModeTexts()`**
+- **`getResolutionTexts()`**
+- **`getConsoleRenderQualityTexts()`**
+- **`refresh()`**
+- **`getConsoleIsRenderQualityVisible()`**
+- **`getConsoleIsResolutionVisible()`**
+- **`setSettingsFileHandle()`**
+- **`setConsoleResolution()`**
+- **`getIsDeviceMouse()`**
+- **`getHeadTrackingSensitivityValue()`**
+- **`getMouseSensitivityValue()`**
+- **`getDeviceAxisSensitivityValue()`**
+- **`getDeviceAxisDeadzoneValue()`**
+- **`setHeadTrackingSensitivity()`**
+- **`setMouseSensitivity()`**
+- **`getCurrentDeviceSensitivityValue()`**
+- **`setDeviceSensitivityValue()`**
+- **`defaultWriterFunction()`**
+- **`defaultReaderFunction()`**
+
+</details>
+
+<details open>
+<summary><strong>Objects/Tables (7)</strong></summary>
+
+- **`intialValues`** : `table`
+- **`l10n`** : `table`
+  - **Methods**: 47 available
+    - `setMoneyUnit()`
+    - `getCurrencySymbol()`
+    - `loadEntriesFromXML()`
+    - `saveUsedKeysToXML()`
+    - `formatNumMonth()`
+    - `formatDayInPeriod()`
+    - `superClass()`
+    - `load()`
+    - `formatMinutes()`
+    - `consoleCommandVerifyAll()`
+    - `getDistance()`
+    - `convertText()`
+    - `hasText()`
+    - `formatPeriod()`
+    - `getTemperature()`
+    - `addModI18N()`
+    - `new()`
+    - `getText()`
+    - `getCurrency()`
+    - `formatNumDay()`
+    - `isa()`
+    - `copy()`
+    - `class()`
+    - `getCurrentDate()`
+    - `formatMoney()`
+    - `getPower()`
+    - `formatMass()`
+    - `formatVolume()`
+    - `formatFluid()`
+    - `getTemperatureUnit()`
+    - `formatArea()`
+    - `formatTemperature()`
+    - `getSpeed()`
+    - `getSpeedMeasuringUnit()`
+    - `getMeasuringUnit()`
+    - `getAreaUnit()`
+    - `getArea()`
+    - `setText()`
+    - `getFluid()`
+    - `formatNumber()`
+    - `getCurrencyFactor()`
+    - `getVolumeUnit()`
+    - `getVolume()`
+    - `loadUsedKeysFromXML()`
+    - `setUseFahrenheit()`
+    - `setUseAcre()`
+    - `setUseMiles()`
+  - **`useAcre`** : `boolean`
+  - **`useFahrenheit`** : `boolean`
+  - **`useMiles`** : `boolean`
+  - **`thousandsGroupingChar`** : `string`
+  - **`powerFactorKW`** : `number`
+  - **`moneyUnit`** : `number`
+  - **`powerFactorHP`** : `number`
+  - **`fluidFactor`** : `number`
+  - **`modEnvironments`** : `table`
+  - **`texts`** : `table`
+  - **`decimalSeparator`** : `string`
+  - **`debugActive`** : `boolean`
+- **`fidelityFxSR30FrameInterpolationTexts`** : `table`
+- **`settings`** : `table`
+  - **`activeSuspensionCamera`** : `table`
+  - **`brightness`** : `table`
+  - **`cameraBobbing`** : `table`
+  - **`cameraCheckCollision`** : `table`
+  - **`cameraSensitivity`** : `table`
+  - **`cloudQuality`** : `table`
+  - **`directionChangeMode`** : `table`
+  - **`dlss`** : `table`
+  - **`easyArmControl`** : `table`
+  - **`environmentVolume`** : `table`
+  - **`fidelityFxSR`** : `table`
+  - **`fidelityFxSR30`** : `table`
+  - **`fidelityFxSR30FrameInterpolation`** : `table`
+  - **`foliageDrawDistance`** : `table`
+  - **`foliageShadow`** : `table`
+  - **`forceFeedback`** : `table`
+  - **`fovY`** : `table`
+  - **`frameLimit`** : `table`
+  - **`fullscreenMode`** : `table`
+  - **`gearShiftMode`** : `table`
+  - **`hudSpeedGauge`** : `table`
+  - **`inputHelpMode`** : `table`
+  - **`invertYLook`** : `table`
+  - **`isGamepadEnabled`** : `table`
+  - **`isHeadTrackingEnabled`** : `table`
+  - **`isTrainTabbable`** : `table`
+  - **`language`** : `table`
+  - **`lightsProfile`** : `table`
+  - **`lodDistance`** : `table`
+  - **`masterVolume`** : `table`
+  - **`maxLights`** : `table`
+  - **`maxNumMirrors`** : `table`
+  - **`maxTireTracks`** : `table`
+  - **`moneyUnit`** : `table`
+  - **`mpLanguage`** : `table`
+  - **`msaa`** : `table`
+  - **`musicVolume`** : `table`
+  - **`objectDrawDistance`** : `table`
+  - **`performanceClass`** : `table`
+  - **`postProcessAntiAliasing`** : `table`
+  - **`radioIsActive`** : `table`
+  - **`radioVehicleOnly`** : `table`
+  - **`radioVolume`** : `table`
+  - **`realBeaconLightBrightness`** : `table`
+  - **`realBeaconLights`** : `table`
+  - **`resetCamera`** : `table`
+  - **`resolution`** : `table`
+  - **`resolutionScale`** : `table`
+  - **`resolutionScale3d`** : `table`
+  - **`shaderQuality`** : `table`
+  - **`shadingRateQuality`** : `table`
+  - **`shadowDistanceQuality`** : `table`
+  - **`shadowMapFiltering`** : `table`
+  - **`shadowQuality`** : `table`
+  - **`sharpness`** : `table`
+  - **`showFieldInfo`** : `table`
+  - **`showHelpIcons`** : `table`
+  - **`showHelpMenu`** : `table`
+  - **`showHelpTrigger`** : `table`
+  - **`showMultiplayerNames`** : `table`
+  - **`showTriggerMarker`** : `table`
+  - **`ssaoQuality`** : `table`
+  - **`steeringBackSpeed`** : `table`
+  - **`steeringSensitivity`** : `table`
+  - **`terrainLODDistance`** : `table`
+  - **`terrainQuality`** : `table`
+  - **`textureFiltering`** : `table`
+  - **`textureResolution`** : `table`
+  - **`uiScale`** : `table`
+  - **`useAcre`** : `table`
+  - **`useColorblindMode`** : `table`
+  - **`useFahrenheit`** : `table`
+  - **`useMiles`** : `table`
+  - **`useWorldCamera`** : `table`
+  - **`vSync`** : `table`
+  - **`valar`** : `table`
+  - **`vehicleArmSensitivity`** : `table`
+  - **`vehicleVolume`** : `table`
+  - **`voiceInputThreshold`** : `table`
+  - **`voiceMode`** : `table`
+  - **`volumeGUI`** : `table`
+  - **`volumeMeshTessellation`** : `table`
+  - **`volumeVoice`** : `table`
+  - **`volumeVoiceInput`** : `table`
+  - **`woodHarvesterAutoCut`** : `table`
+  - **`xess`** : `table`
+- **`uiScaleValues`** : `table`
+- **`settingWriters`** : `table`
+  - **Methods**: 65 available
+    - `activeSuspensionCamera()`
+    - `brightness()`
+    - `cameraCheckCollision()`
+    - `cameraSensitivity()`
+    - `cloudQuality()`
+    - `directionChangeMode()`
+    - `dlss()`
+    - `environmentVolume()`
+    - `fidelityFxSR()`
+    - `fidelityFxSR30()`
+    - `fidelityFxSR30FrameInterpolation()`
+    - `foliageDrawDistance()`
+    - `foliageShadow()`
+    - `forceFeedback()`
+    - `fovY()`
+    - `frameLimit()`
+    - `fullscreenMode()`
+    - `gearShiftMode()`
+    - `hudSpeedGauge()`
+    - `inputHelpMode()`
+    - `language()`
+    - `lightsProfile()`
+    - `lodDistance()`
+    - `masterVolume()`
+    - `maxLights()`
+    - `maxNumMirrors()`
+    - `maxTireTracks()`
+    - `mpLanguage()`
+    - `msaa()`
+    - `musicVolume()`
+    - `objectDrawDistance()`
+    - `performanceClass()`
+    - `postProcessAntiAliasing()`
+    - `radioVolume()`
+    - `realBeaconLightBrightness()`
+    - `realBeaconLights()`
+    - `resolution()`
+    - `resolutionScale()`
+    - `resolutionScale3d()`
+    - `shaderQuality()`
+    - `shadingRateQuality()`
+    - `shadowDistanceQuality()`
+    - `shadowMapFiltering()`
+    - `shadowQuality()`
+    - `sharpness()`
+    - `ssaoQuality()`
+    - `steeringBackSpeed()`
+    - `steeringSensitivity()`
+    - `terrainLODDistance()`
+    - `terrainQuality()`
+    - `textureFiltering()`
+    - `textureResolution()`
+    - `uiScale()`
+    - `vSync()`
+    - `valar()`
+    - `vehicleArmSensitivity()`
+    - `vehicleVolume()`
+    - `voiceInputThreshold()`
+    - `voiceMode()`
+    - `volumeGUI()`
+    - `volumeMeshTessellation()`
+    - `volumeVoice()`
+    - `volumeVoiceInput()`
+    - `woodHarvesterAutoCut()`
+    - `xess()`
+  - **`cameraBobbing`** : `function-ref`
+  - **`easyArmControl`** : `function-ref`
+  - **`invertYLook`** : `function-ref`
+  - **`isGamepadEnabled`** : `function-ref`
+  - **`isHeadTrackingEnabled`** : `function-ref`
+  - **`isTrainTabbable`** : `function-ref`
+  - **`moneyUnit`** : `function-ref`
+  - **`radioIsActive`** : `function-ref`
+  - **`radioVehicleOnly`** : `function-ref`
+  - **`resetCamera`** : `function-ref`
+  - **`showFieldInfo`** : `function-ref`
+  - **`showHelpIcons`** : `function-ref`
+  - **`showHelpMenu`** : `function-ref`
+  - **`showHelpTrigger`** : `function-ref`
+  - **`showMultiplayerNames`** : `function-ref`
+  - **`showTriggerMarker`** : `function-ref`
+  - **`useAcre`** : `function-ref`
+  - **`useColorblindMode`** : `function-ref`
+  - **`useFahrenheit`** : `function-ref`
+  - **`useMiles`** : `function-ref`
+  - **`useWorldCamera`** : `function-ref`
+- **`settingReaders`** : `table`
+  - **Methods**: 59 available
+    - `brightness()`
+    - `cameraSensitivity()`
+    - `cloudQuality()`
+    - `dlss()`
+    - `environmentVolume()`
+    - `fidelityFxSR()`
+    - `fidelityFxSR30()`
+    - `fidelityFxSR30FrameInterpolation()`
+    - `foliageDrawDistance()`
+    - `foliageShadow()`
+    - `forceFeedback()`
+    - `fovY()`
+    - `frameLimit()`
+    - `fullscreenMode()`
+    - `inputHelpMode()`
+    - `language()`
+    - `lightsProfile()`
+    - `lodDistance()`
+    - `masterVolume()`
+    - `maxLights()`
+    - `maxNumMirrors()`
+    - `maxTireTracks()`
+    - `mpLanguage()`
+    - `msaa()`
+    - `musicVolume()`
+    - `objectDrawDistance()`
+    - `performanceClass()`
+    - `postProcessAntiAliasing()`
+    - `radioVolume()`
+    - `realBeaconLightBrightness()`
+    - `realBeaconLights()`
+    - `resolution()`
+    - `resolutionScale()`
+    - `resolutionScale3d()`
+    - `shaderQuality()`
+    - `shadingRateQuality()`
+    - `shadowDistanceQuality()`
+    - `shadowMapFiltering()`
+    - `shadowQuality()`
+    - `sharpness()`
+    - `ssaoQuality()`
+    - `steeringBackSpeed()`
+    - `steeringSensitivity()`
+    - `terrainLODDistance()`
+    - `terrainQuality()`
+    - `textureFiltering()`
+    - `textureResolution()`
+    - `uiScale()`
+    - `vSync()`
+    - `valar()`
+    - `vehicleArmSensitivity()`
+    - `vehicleVolume()`
+    - `voiceInputThreshold()`
+    - `voiceMode()`
+    - `volumeGUI()`
+    - `volumeMeshTessellation()`
+    - `volumeVoice()`
+    - `volumeVoiceInput()`
+    - `xess()`
+  - **`activeSuspensionCamera`** : `function-ref`
+  - **`cameraBobbing`** : `function-ref`
+  - **`cameraCheckCollision`** : `function-ref`
+  - **`directionChangeMode`** : `function-ref`
+  - **`easyArmControl`** : `function-ref`
+  - **`gearShiftMode`** : `function-ref`
+  - **`hudSpeedGauge`** : `function-ref`
+  - **`invertYLook`** : `function-ref`
+  - **`isGamepadEnabled`** : `function-ref`
+  - **`isHeadTrackingEnabled`** : `function-ref`
+  - **`isTrainTabbable`** : `function-ref`
+  - **`moneyUnit`** : `function-ref`
+  - **`radioIsActive`** : `function-ref`
+  - **`radioVehicleOnly`** : `function-ref`
+  - **`resetCamera`** : `function-ref`
+  - **`showFieldInfo`** : `function-ref`
+  - **`showHelpIcons`** : `function-ref`
+  - **`showHelpMenu`** : `function-ref`
+  - **`showHelpTrigger`** : `function-ref`
+  - **`showMultiplayerNames`** : `function-ref`
+  - **`showTriggerMarker`** : `function-ref`
+  - **`useAcre`** : `function-ref`
+  - **`useColorblindMode`** : `function-ref`
+  - **`useFahrenheit`** : `function-ref`
+  - **`useMiles`** : `function-ref`
+  - **`useWorldCamera`** : `function-ref`
+  - **`woodHarvesterAutoCut`** : `function-ref`
+
+</details>
+
+<details>
+<summary><strong>Arrays (76)</strong></summary>
+
+- **`deviceSettings`** : `table[]` (length: 1)
+- **`frameLimitTexts`** : `string[]` (length: 6)
+- **`hudSpeedGaugeTexts`** : `string[]` (length: 2)
+- **`gearShiftModeTexts`** : `string[]` (length: 3)
+- **`directionChangeModeTexts`** : `string[]` (length: 2)
+- **`inputHelpModeTexts`** : `string[]` (length: 3)
+- **`mpLanguageTexts`** : `string[]` (length: 24)
+- **`fullscreenModeTexts`** : `string[]` (length: 3)
+- **`resolutionTexts`** : `string[]` (length: 22)
+- **`cloudQualityTexts`** : `string[]` (length: 4)
+- **`ssaoQualityValues`** : `number[]` (length: 4)
+- **`foliageShadowTexts`** : `string[]` (length: 2)
+- **`maxMirrorsTexts`** : `string[]` (length: 8)
+- **`tireTracksTexts`** : `string[]` (length: 9)
+- **`tireTracksValues`** : `number[]` (length: 9)
+- **`perentageTexts`** : `string[]` (length: 31)
+- **`percentValues`** : `number[]` (length: 31)
+- **`hdrPeakBrightnessTexts`** : `string[]` (length: 51)
+- **`hdrPeakBrightnessValues`** : `number[]` (length: 51)
+- **`shadowMapMaxLightsTexts`** : `string[]` (length: 10)
+- **`textureFilteringTexts`** : `string[]` (length: 7)
+- **`lowHighTexts`** : `string[]` (length: 2)
+- **`fourStateTexts`** : `string[]` (length: 4)
+- **`shadowDistanceQualityTexts`** : `string[]` (length: 3)
+- **`shadowQualityTexts`** : `string[]` (length: 4)
+- **`msaaTexts`** : `string[]` (length: 4)
+- **`postProcessAntiAliasingTexts`** : `string[]` (length: 2)
+- **`sharpnessTexts`** : `string[]` (length: 21)
+- **`xeSSTexts`** : `string[]` (length: 1)
+- **`fidelityFxSR30Texts`** : `string[]` (length: 1)
+- **`fidelityFxSRTexts`** : `string[]` (length: 1)
+- **`dlssTexts`** : `string[]` (length: 1)
+- **`resolutionScale3dTexts`** : `string[]` (length: 16)
+- **`resolutionScaleTexts`** : `string[]` (length: 16)
+- **`radioModeTexts`** : `string[]` (length: 2)
+- **`areaUnitTexts`** : `string[]` (length: 2)
+- **`temperatureUnitTexts`** : `string[]` (length: 2)
+- **`distanceUnitTexts`** : `string[]` (length: 2)
+- **`moneyUnitTexts`** : `string[]` (length: 3)
+- **`steeringSensitivityStrings`** : `string[]` (length: 16)
+- **`steeringBackSpeedStrings`** : `string[]` (length: 11)
+- **`fidelityFxSR30MappingReverse`** : `number[]` (length: 1)
+- **`fidelityFxSRMappingReverse`** : `number[]` (length: 1)
+- **`dlssMappingReverse`** : `number[]` (length: 1)
+- **`steeringSensitivityValues`** : `number[]` (length: 16)
+- **`ssaoQualityTexts`** : `string[]` (length: 4)
+- **`steeringBackSpeedValues`** : `number[]` (length: 11)
+- **`realBeaconLightBrightnessStrings`** : `string[]` (length: 11)
+- **`realBeaconLightBrightnessValues`** : `number[]` (length: 11)
+- **`vehicleArmSensitivityStrings`** : `string[]` (length: 11)
+- **`vehicleArmSensitivityValues`** : `number[]` (length: 11)
+- **`cameraSensitivityStrings`** : `string[]` (length: 11)
+- **`cameraSensitivityValues`** : `number[]` (length: 11)
+- **`uiScaleTexts`** : `string[]` (length: 16)
+- **`indexToFovYMapping`** : `number[]` (length: 76)
+- **`fovYTexts`** : `string[]` (length: 76)
+- **`brightnessTexts`** : `string[]` (length: 16)
+- **`voiceModeTexts`** : `string[]` (length: 3)
+- **`recordingVolumeTexts`** : `string[]` (length: 12)
+- **`voiceInputThresholdTexts`** : `string[]` (length: 12)
+- **`volumeTexts`** : `string[]` (length: 11)
+- **`consoleRenderQualityTexts`** : `string[]` (length: 2)
+- **`consoleResolutionTexts`** : `string[]` (length: 2)
+- **`sortedSettings`** : `table[]` (length: 86)
+- **`frameLimitMappingReverse`** : `number[]` (length: 6)
+- **`postProcessAntiAliasingMappingReverse`** : `number[]` (length: 2)
+- **`postProcessAntiAliasingMapping`** : `number[]` (length: 2)
+- **`xeSSMappingReverse`** : `number[]` (length: 1)
+- **`valarMappingReverse`** : `number[]` (length: 1)
+- **`valarTexts`** : `string[]` (length: 1)
+- **`headTrackingSensitivityTexts`** : `string[]` (length: 21)
+- **`headTrackingSensitivityValues`** : `number[]` (length: 21)
+- **`sensitivityTexts`** : `string[]` (length: 7)
+- **`sensitivityValues`** : `number[]` (length: 7)
+- **`deadzoneTexts`** : `string[]` (length: 31)
+- **`deadzoneValues`** : `number[]` (length: 31)
+
+</details>
+
+<details>
+<summary><strong>Global References (2)</strong></summary>
+
+- **`soundMixer`** : `global-ref` → [`g_soundMixer`](./g_soundMixer.md)
+- **`gameSettings`** : `global-ref` → [`g_gameSettings`](./g_gameSettings.md)
+
+</details>
+
+<details>
+<summary><strong>Primitives (23)</strong></summary>
+
+- **`tireTracksStep`** : `number`
+- **`percentStep`** : `number`
+- **`hdrPeakBrightnessStep`** : `number`
+- **`steeringSensitivityStep`** : `number`
+- **`isConsoleVersion`** : `boolean`
+- **`steeringBackSpeedStep`** : `number`
+- **`realBeaconLightBrightnessStep`** : `number`
+- **`vehicleArmSensitivityStep`** : `number`
+- **`cameraSensitivityStep`** : `number`
+- **`settingsFileHandle`** : `number`
+- **`postProcessAntiAliasingToolTip`** : `string`
+- **`maxFovY`** : `number`
+- **`minFovY`** : `number`
+- **`headTrackingSensitivityStep`** : `number`
+- **`sensitivityStep`** : `number`
+- **`deadzoneStep`** : `number`
+- **`sharpnessStep`** : `number`
+- **`maxSharpness`** : `number`
+- **`minSharpness`** : `number`
+- **`brightnessStep`** : `number`
+- **`maxBrightness`** : `number`
+- **`minBrightness`** : `number`
+- **`currentDevice`** : `number`
+
+</details>
+
+<details>
+<summary><strong>Other (8)</strong></summary>
+
+- **`ssaoSamplesToQualityIndex`** : `map`
+- **`fidelityFxSR30Mapping`** : `map`
+- **`fidelityFxSRMapping`** : `map`
+- **`dlssMapping`** : `map`
+- **`fovYToIndexMapping`** : `map`
+- **`frameLimitMapping`** : `map`
+- **`xeSSMapping`** : `map`
+- **`valarMapping`** : `map`
+
+</details>
+
+
+## Usage Example
+
+```lua
+-- Access g_settingsModel fields
+```

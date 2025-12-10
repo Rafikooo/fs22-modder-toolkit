@@ -1,0 +1,515 @@
+---
+title: g_brandManager
+description: Global g_brandManager - Runtime introspected API
+fieldTypes:
+  array: 1
+  function: 12
+  object: 222
+  primitive: 222
+---
+
+# g_brandManager
+
+Runtime-introspected API for `g_brandManager`.
+
+**Source**: schemas (depth 2)  
+**Fields**: 17 top-level fields
+
+## Field Statistics
+
+Total fields: **17**
+
+- **Function**: 12
+- **Object**: 2
+- **Array**: 1
+- **Primitive**: 2
+
+## Fields by Type
+
+<details>
+<summary><strong>Functions (12)</strong></summary>
+
+- **`new()`**
+- **`addBrand()`**
+- **`isa()`**
+- **`copy()`**
+- **`class()`**
+- **`superClass()`**
+- **`getBrandByName()`**
+- **`initDataStructures()`**
+- **`getBrandByIndex()`**
+- **`getBrandIndexByName()`**
+- **`loadMapData()`**
+- **`getBrandIconByIndex()`**
+
+</details>
+
+<details open>
+<summary><strong>Objects/Tables (2)</strong></summary>
+
+- **`nameToBrand`** : `table`
+  - **`ABI`** : `table`
+  - **`AEBI`** : `table`
+  - **`AGCO`** : `table`
+  - **`AGRIO`** : `table`
+  - **`AGRISEM`** : `table`
+  - **`AGROMASZ`** : `table`
+  - **`ALBUTT`** : `table`
+  - **`ALDI`** : `table`
+  - **`ALPEGO`** : `table`
+  - **`AMAZONE`** : `table`
+  - **`AMITYTECH`** : `table`
+  - **`ANDERSONGROUP`** : `table`
+  - **`ANNABURGER`** : `table`
+  - **`APV`** : `table`
+  - **`ARCUSIN`** : `table`
+  - **`ARMATRAC`** : `table`
+  - **`BEDNAR`** : `table`
+  - **`BERGMANN`** : `table`
+  - **`BERTHOUD`** : `table`
+  - **`BKT`** : `table`
+  - **`BOECKMANN`** : `table`
+  - **`BOMECH`** : `table`
+  - **`BOURGAULT`** : `table`
+  - **`BRANTNER`** : `table`
+  - **`BREDAL`** : `table`
+  - **`BREMER`** : `table`
+  - **`BRIELMAIER`** : `table`
+  - **`BRIRI`** : `table`
+  - **`BUEHRER`** : `table`
+  - **`CAPELLO`** : `table`
+  - **`CASEIH`** : `table`
+  - **`CHALLENGER`** : `table`
+  - **`CLAAS`** : `table`
+  - **`CONTINENTAL`** : `table`
+  - **`CONVEYALL`** : `table`
+  - **`CORTEVA`** : `table`
+  - **`DALBO`** : `table`
+  - **`DAMCON`** : `table`
+  - **`DEGELMAN`** : `table`
+  - **`DEMCO`** : `table`
+  - **`DEUTZFAHR`** : `table`
+  - **`DEWULF`** : `table`
+  - **`DFM`** : `table`
+  - **`DUEVELSDORF`** : `table`
+  - **`EASYSHEDS`** : `table`
+  - **`EINBOECK`** : `table`
+  - **`ELHO`** : `table`
+  - **`ELMERSMFG`** : `table`
+  - **`ELTEN`** : `table`
+  - **`ENGELBERTSTRAUSS`** : `table`
+  - **`ERO`** : `table`
+  - **`FARESIN`** : `table`
+  - **`FARMAX`** : `table`
+  - **`FARMET`** : `table`
+  - **`FARMTECH`** : `table`
+  - **`FENDT`** : `table`
+  - **`FIAT`** : `table`
+  - **`FLEXICOIL`** : `table`
+  - **`FLIEGL`** : `table`
+  - **`FMZ`** : `table`
+  - **`FORTSCHRITT`** : `table`
+  - **`FORTUNA`** : `table`
+  - **`FSI`** : `table`
+  - **`FUHRMANN`** : `table`
+  - **`GESSNER`** : `table`
+  - **`GIANTS`** : `table`
+  - **`GOEWEIL`** : `table`
+  - **`GOLDHOFER`** : `table`
+  - **`GORENC`** : `table`
+  - **`GREATPLAINS`** : `table`
+  - **`GREGOIREBESSON`** : `table`
+  - **`GRIMME`** : `table`
+  - **`GROHA`** : `table`
+  - **`HARDI`** : `table`
+  - **`HATZENBICHLER`** : `table`
+  - **`HAUER`** : `table`
+  - **`HAWE`** : `table`
+  - **`HEIZOMAT`** : `table`
+  - **`HELM`** : `table`
+  - **`HOLARAS`** : `table`
+  - **`HOLMER`** : `table`
+  - **`HORSCH`** : `table`
+  - **`HUSQVARNA`** : `table`
+  - **`IMPEX`** : `table`
+  - **`ISEKI`** : `table`
+  - **`JCB`** : `table`
+  - **`JENZ`** : `table`
+  - **`JOHNDEERE`** : `table`
+  - **`JONSERED`** : `table`
+  - **`JOSKIN`** : `table`
+  - **`JUNGHEINRICH`** : `table`
+  - **`KAERCHER`** : `table`
+  - **`KAWECO`** : `table`
+  - **`KEMPER`** : `table`
+  - **`KESLA`** : `table`
+  - **`KINGSTON`** : `table`
+  - **`KINZE`** : `table`
+  - **`KLINE`** : `table`
+  - **`KNOCHE`** : `table`
+  - **`KOCKERLING`** : `table`
+  - **`KOLLER`** : `table`
+  - **`KOMATSU`** : `table`
+  - **`KONGSKILDE`** : `table`
+  - **`KOTSCHENREUTHER`** : `table`
+  - **`KOTTE`** : `table`
+  - **`KRAMER`** : `table`
+  - **`KRAMPE`** : `table`
+  - **`KROEGER`** : `table`
+  - **`KRONE`** : `table`
+  - **`KRONETRAILER`** : `table`
+  - **`KSAG`** : `table`
+  - **`KUBOTA`** : `table`
+  - **`KUHN`** : `table`
+  - **`KVERNELAND`** : `table`
+  - **`LACOTEC`** : `table`
+  - **`LANDINI`** : `table`
+  - **`LELY`** : `table`
+  - **`LEMKEN`** : `table`
+  - **`LINDNER`** : `table`
+  - **`LIZARD`** : `table`
+  - **`LODEKING`** : `table`
+  - **`MACK`** : `table`
+  - **`MAGSI`** : `table`
+  - **`MAHINDRA`** : `table`
+  - **`MAN`** : `table`
+  - **`MANITOU`** : `table`
+  - **`MASSEYFERGUSON`** : `table`
+  - **`MCCORMACK`** : `table`
+  - **`MCCORMICK`** : `table`
+  - **`MCCULLOCH`** : `table`
+  - **`MERIDIAN`** : `table`
+  - **`MICHELIN`** : `table`
+  - **`MICHIELETTO`** : `table`
+  - **`MITAS`** : `table`
+  - **`NARDI`** : `table`
+  - **`NEUERO`** : `table`
+  - **`NEWHOLLAND`** : `table`
+  - **`NOKIAN`** : `table`
+  - **`NONE`** : `table`
+  - **`NORDSTEN`** : `table`
+  - **`OLOFSFORS`** : `table`
+  - **`OXBO`** : `table`
+  - **`PALADIN`** : `table`
+  - **`PESSLINSTRUMENTS`** : `table`
+  - **`PFANZELT`** : `table`
+  - **`PIONEER`** : `table`
+  - **`PLANET`** : `table`
+  - **`PLOEGER`** : `table`
+  - **`POETTINGER`** : `table`
+  - **`PONSSE`** : `table`
+  - **`PORSCHEDIESEL`** : `table`
+  - **`PRINOTH`** : `table`
+  - **`PROVITA`** : `table`
+  - **`PROVITIS`** : `table`
+  - **`QUICKE`** : `table`
+  - **`RABE`** : `table`
+  - **`RANDON`** : `table`
+  - **`RAU`** : `table`
+  - **`REFORM`** : `table`
+  - **`REITER`** : `table`
+  - **`RIEDLER`** : `table`
+  - **`RIGITRAC`** : `table`
+  - **`RISUTEC`** : `table`
+  - **`ROPA`** : `table`
+  - **`ROSTSELMASH`** : `table`
+  - **`ROTTNE`** : `table`
+  - **`RUDOLFHOERMANN`** : `table`
+  - **`RUDOLPH`** : `table`
+  - **`SALEK`** : `table`
+  - **`SALFORD`** : `table`
+  - **`SAMASZ`** : `table`
+  - **`SAMPOROSENLEW`** : `table`
+  - **`SAMSONAGRO`** : `table`
+  - **`SCHAEFFER`** : `table`
+  - **`SCHAUMANN`** : `table`
+  - **`SCHOUTEN`** : `table`
+  - **`SCHUITEMAKER`** : `table`
+  - **`SCHWARZMUELLER`** : `table`
+  - **`SEPPKNUSEL`** : `table`
+  - **`SILOKING`** : `table`
+  - **`SIP`** : `table`
+  - **`STADIA`** : `table`
+  - **`STARA`** : `table`
+  - **`STARKINDUSTRIES`** : `table`
+  - **`STEPA`** : `table`
+  - **`STEYR`** : `table`
+  - **`STIHL`** : `table`
+  - **`STOLL`** : `table`
+  - **`STRAUTMANN`** : `table`
+  - **`SUER`** : `table`
+  - **`TAJFUN`** : `table`
+  - **`TATRA`** : `table`
+  - **`TENWINKEL`** : `table`
+  - **`THUERINGERAGRAR`** : `table`
+  - **`THUNDERCREEK`** : `table`
+  - **`TMCCANCELA`** : `table`
+  - **`TREFFLER`** : `table`
+  - **`TRELLEBORG`** : `table`
+  - **`TT`** : `table`
+  - **`UNIA`** : `table`
+  - **`UNVERFERTH`** : `table`
+  - **`VAEDERSTAD`** : `table`
+  - **`VALTRA`** : `table`
+  - **`VEENHUIS`** : `table`
+  - **`VERMEER`** : `table`
+  - **`VERSATILE`** : `table`
+  - **`VERVAET`** : `table`
+  - **`VICON`** : `table`
+  - **`VOLVO`** : `table`
+  - **`VREDESTEIN`** : `table`
+  - **`WALKABOUT`** : `table`
+  - **`WARZEE`** : `table`
+  - **`WEBERMT`** : `table`
+  - **`WELGER`** : `table`
+  - **`WESTTECH`** : `table`
+  - **`WIFO`** : `table`
+  - **`WILSON`** : `table`
+  - **`ZETOR`** : `table`
+  - **`ZIEGLER`** : `table`
+  - **`ZUNHAMMER`** : `table`
+- **`nameToIndex`** : `table`
+  - **`ABI`** : `number`
+  - **`AEBI`** : `number`
+  - **`AGCO`** : `number`
+  - **`AGRIO`** : `number`
+  - **`AGRISEM`** : `number`
+  - **`AGROMASZ`** : `number`
+  - **`ALBUTT`** : `number`
+  - **`ALDI`** : `number`
+  - **`ALPEGO`** : `number`
+  - **`AMAZONE`** : `number`
+  - **`AMITYTECH`** : `number`
+  - **`ANDERSONGROUP`** : `number`
+  - **`ANNABURGER`** : `number`
+  - **`APV`** : `number`
+  - **`ARCUSIN`** : `number`
+  - **`ARMATRAC`** : `number`
+  - **`BEDNAR`** : `number`
+  - **`BERGMANN`** : `number`
+  - **`BERTHOUD`** : `number`
+  - **`BKT`** : `number`
+  - **`BOECKMANN`** : `number`
+  - **`BOMECH`** : `number`
+  - **`BOURGAULT`** : `number`
+  - **`BRANTNER`** : `number`
+  - **`BREDAL`** : `number`
+  - **`BREMER`** : `number`
+  - **`BRIELMAIER`** : `number`
+  - **`BRIRI`** : `number`
+  - **`BUEHRER`** : `number`
+  - **`CAPELLO`** : `number`
+  - **`CASEIH`** : `number`
+  - **`CHALLENGER`** : `number`
+  - **`CLAAS`** : `number`
+  - **`CONTINENTAL`** : `number`
+  - **`CONVEYALL`** : `number`
+  - **`CORTEVA`** : `number`
+  - **`DALBO`** : `number`
+  - **`DAMCON`** : `number`
+  - **`DEGELMAN`** : `number`
+  - **`DEMCO`** : `number`
+  - **`DEUTZFAHR`** : `number`
+  - **`DEWULF`** : `number`
+  - **`DFM`** : `number`
+  - **`DUEVELSDORF`** : `number`
+  - **`EASYSHEDS`** : `number`
+  - **`EINBOECK`** : `number`
+  - **`ELHO`** : `number`
+  - **`ELMERSMFG`** : `number`
+  - **`ELTEN`** : `number`
+  - **`ENGELBERTSTRAUSS`** : `number`
+  - **`ERO`** : `number`
+  - **`FARESIN`** : `number`
+  - **`FARMAX`** : `number`
+  - **`FARMET`** : `number`
+  - **`FARMTECH`** : `number`
+  - **`FENDT`** : `number`
+  - **`FIAT`** : `number`
+  - **`FLEXICOIL`** : `number`
+  - **`FLIEGL`** : `number`
+  - **`FMZ`** : `number`
+  - **`FORTSCHRITT`** : `number`
+  - **`FORTUNA`** : `number`
+  - **`FSI`** : `number`
+  - **`FUHRMANN`** : `number`
+  - **`GESSNER`** : `number`
+  - **`GIANTS`** : `number`
+  - **`GOEWEIL`** : `number`
+  - **`GOLDHOFER`** : `number`
+  - **`GORENC`** : `number`
+  - **`GREATPLAINS`** : `number`
+  - **`GREGOIREBESSON`** : `number`
+  - **`GRIMME`** : `number`
+  - **`GROHA`** : `number`
+  - **`HARDI`** : `number`
+  - **`HATZENBICHLER`** : `number`
+  - **`HAUER`** : `number`
+  - **`HAWE`** : `number`
+  - **`HEIZOMAT`** : `number`
+  - **`HELM`** : `number`
+  - **`HOLARAS`** : `number`
+  - **`HOLMER`** : `number`
+  - **`HORSCH`** : `number`
+  - **`HUSQVARNA`** : `number`
+  - **`IMPEX`** : `number`
+  - **`ISEKI`** : `number`
+  - **`JCB`** : `number`
+  - **`JENZ`** : `number`
+  - **`JOHNDEERE`** : `number`
+  - **`JONSERED`** : `number`
+  - **`JOSKIN`** : `number`
+  - **`JUNGHEINRICH`** : `number`
+  - **`KAERCHER`** : `number`
+  - **`KAWECO`** : `number`
+  - **`KEMPER`** : `number`
+  - **`KESLA`** : `number`
+  - **`KINGSTON`** : `number`
+  - **`KINZE`** : `number`
+  - **`KLINE`** : `number`
+  - **`KNOCHE`** : `number`
+  - **`KOCKERLING`** : `number`
+  - **`KOLLER`** : `number`
+  - **`KOMATSU`** : `number`
+  - **`KONGSKILDE`** : `number`
+  - **`KOTSCHENREUTHER`** : `number`
+  - **`KOTTE`** : `number`
+  - **`KRAMER`** : `number`
+  - **`KRAMPE`** : `number`
+  - **`KROEGER`** : `number`
+  - **`KRONE`** : `number`
+  - **`KRONETRAILER`** : `number`
+  - **`KSAG`** : `number`
+  - **`KUBOTA`** : `number`
+  - **`KUHN`** : `number`
+  - **`KVERNELAND`** : `number`
+  - **`LACOTEC`** : `number`
+  - **`LANDINI`** : `number`
+  - **`LELY`** : `number`
+  - **`LEMKEN`** : `number`
+  - **`LINDNER`** : `number`
+  - **`LIZARD`** : `number`
+  - **`LODEKING`** : `number`
+  - **`MACK`** : `number`
+  - **`MAGSI`** : `number`
+  - **`MAHINDRA`** : `number`
+  - **`MAN`** : `number`
+  - **`MANITOU`** : `number`
+  - **`MASSEYFERGUSON`** : `number`
+  - **`MCCORMACK`** : `number`
+  - **`MCCORMICK`** : `number`
+  - **`MCCULLOCH`** : `number`
+  - **`MERIDIAN`** : `number`
+  - **`MICHELIN`** : `number`
+  - **`MICHIELETTO`** : `number`
+  - **`MITAS`** : `number`
+  - **`NARDI`** : `number`
+  - **`NEUERO`** : `number`
+  - **`NEWHOLLAND`** : `number`
+  - **`NOKIAN`** : `number`
+  - **`NONE`** : `number`
+  - **`NORDSTEN`** : `number`
+  - **`OLOFSFORS`** : `number`
+  - **`OXBO`** : `number`
+  - **`PALADIN`** : `number`
+  - **`PESSLINSTRUMENTS`** : `number`
+  - **`PFANZELT`** : `number`
+  - **`PIONEER`** : `number`
+  - **`PLANET`** : `number`
+  - **`PLOEGER`** : `number`
+  - **`POETTINGER`** : `number`
+  - **`PONSSE`** : `number`
+  - **`PORSCHEDIESEL`** : `number`
+  - **`PRINOTH`** : `number`
+  - **`PROVITA`** : `number`
+  - **`PROVITIS`** : `number`
+  - **`QUICKE`** : `number`
+  - **`RABE`** : `number`
+  - **`RANDON`** : `number`
+  - **`RAU`** : `number`
+  - **`REFORM`** : `number`
+  - **`REITER`** : `number`
+  - **`RIEDLER`** : `number`
+  - **`RIGITRAC`** : `number`
+  - **`RISUTEC`** : `number`
+  - **`ROPA`** : `number`
+  - **`ROSTSELMASH`** : `number`
+  - **`ROTTNE`** : `number`
+  - **`RUDOLFHOERMANN`** : `number`
+  - **`RUDOLPH`** : `number`
+  - **`SALEK`** : `number`
+  - **`SALFORD`** : `number`
+  - **`SAMASZ`** : `number`
+  - **`SAMPOROSENLEW`** : `number`
+  - **`SAMSONAGRO`** : `number`
+  - **`SCHAEFFER`** : `number`
+  - **`SCHAUMANN`** : `number`
+  - **`SCHOUTEN`** : `number`
+  - **`SCHUITEMAKER`** : `number`
+  - **`SCHWARZMUELLER`** : `number`
+  - **`SEPPKNUSEL`** : `number`
+  - **`SILOKING`** : `number`
+  - **`SIP`** : `number`
+  - **`STADIA`** : `number`
+  - **`STARA`** : `number`
+  - **`STARKINDUSTRIES`** : `number`
+  - **`STEPA`** : `number`
+  - **`STEYR`** : `number`
+  - **`STIHL`** : `number`
+  - **`STOLL`** : `number`
+  - **`STRAUTMANN`** : `number`
+  - **`SUER`** : `number`
+  - **`TAJFUN`** : `number`
+  - **`TATRA`** : `number`
+  - **`TENWINKEL`** : `number`
+  - **`THUERINGERAGRAR`** : `number`
+  - **`THUNDERCREEK`** : `number`
+  - **`TMCCANCELA`** : `number`
+  - **`TREFFLER`** : `number`
+  - **`TRELLEBORG`** : `number`
+  - **`TT`** : `number`
+  - **`UNIA`** : `number`
+  - **`UNVERFERTH`** : `number`
+  - **`VAEDERSTAD`** : `number`
+  - **`VALTRA`** : `number`
+  - **`VEENHUIS`** : `number`
+  - **`VERMEER`** : `number`
+  - **`VERSATILE`** : `number`
+  - **`VERVAET`** : `number`
+  - **`VICON`** : `number`
+  - **`VOLVO`** : `number`
+  - **`VREDESTEIN`** : `number`
+  - **`WALKABOUT`** : `number`
+  - **`WARZEE`** : `number`
+  - **`WEBERMT`** : `number`
+  - **`WELGER`** : `number`
+  - **`WESTTECH`** : `number`
+  - **`WIFO`** : `number`
+  - **`WILSON`** : `number`
+  - **`ZETOR`** : `number`
+  - **`ZIEGLER`** : `number`
+  - **`ZUNHAMMER`** : `number`
+
+</details>
+
+<details>
+<summary><strong>Arrays (1)</strong></summary>
+
+- **`indexToBrand`** : `table[]` (length: 220)
+
+</details>
+
+<details>
+<summary><strong>Primitives (2)</strong></summary>
+
+- **`numOfBrands`** : `number`
+- **`loadedMapData`** : `boolean`
+
+</details>
+
+
+## Usage Example
+
+```lua
+-- Access g_brandManager fields
+```

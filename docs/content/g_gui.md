@@ -1,0 +1,2454 @@
+---
+title: g_gui
+description: Global g_gui - Runtime introspected API
+fieldTypes:
+  array: 16
+  function: 250
+  global-ref: 4
+  object: 1854
+  other: 126
+  primitive: 135
+---
+
+# g_gui
+
+Runtime-introspected API for `g_gui`.
+
+**Source**: schemas (depth 2)  
+**Fields**: 98 top-level fields
+
+## Field Statistics
+
+Total fields: **98**
+
+- **Function**: 79
+- **Object**: 11
+- **Global-ref**: 1
+- **Primitive**: 5
+- **Other**: 2
+
+## Fields by Type
+
+<details>
+<summary><strong>Functions (79)</strong></summary>
+
+- **`getIsOverlayGuiVisible()`**
+- **`getIsMenuVisible()`**
+- **`getProfile()`**
+- **`loadProfiles()`**
+- **`update()`**
+- **`makePlaySampleClosure()`**
+- **`makeToggleCustomInputContextClosure()`**
+- **`makeChangeScreenClosure()`**
+- **`notifyControls()`**
+- **`new()`**
+- **`leaveMenuContext()`**
+- **`isa()`**
+- **`copy()`**
+- **`toggleCustomInputContext()`**
+- **`closeDialog()`**
+- **`setCurrentMission()`**
+- **`setClient()`**
+- **`setServer()`**
+- **`delete()`**
+- **`showConnectionFailedDialog()`**
+- **`loadProfileSet()`**
+- **`loadTraits()`**
+- **`loadPresets()`**
+- **`draw()`**
+- **`addScreen()`**
+- **`addFrame()`**
+- **`mouseEvent()`**
+- **`keyEvent()`**
+- **`loadGuiRec()`**
+- **`showModHubScreenshotDialog()`**
+- **`unloadMapData()`**
+- **`loadMapData()`**
+- **`showGameRateDialog()`**
+- **`showVoteDialog()`**
+- **`showServerSettingsDialog()`**
+- **`showGui()`**
+- **`class()`**
+- **`showUnblockDialog()`**
+- **`setIsMultiplayer()`**
+- **`showPlaceableInfoDialog()`**
+- **`superClass()`**
+- **`changeScreen()`**
+- **`registerMenuInput()`**
+- **`showDialog()`**
+- **`getIsDialogVisible()`**
+- **`loadGui()`**
+- **`closeAllDialogs()`**
+- **`touchEvent()`**
+- **`closeDialogByName()`**
+- **`enterMenuContext()`**
+- **`getIsGuiVisible()`**
+- **`showYesNoDialog()`**
+- **`showInfoDialog()`**
+- **`showMessageDialog()`**
+- **`onReleaseMovement()`**
+- **`onReleaseInput()`**
+- **`onMenuInput()`**
+- **`showTransferMoneyDialog()`**
+- **`showSleepDialog()`**
+- **`assignPlaySampleCallback()`**
+- **`resolveFrameReference()`**
+- **`showEditFarmDialog()`**
+- **`showSellItemDialog()`**
+- **`showAnimalDialog()`**
+- **`showRefillDialog()`**
+- **`showSiloDialog()`**
+- **`showDenyAcceptDialog()`**
+- **`showOptionDialog()`**
+- **`showLeaseYesNoDialog()`**
+- **`showPasswordDialog()`**
+- **`showTextInputDialog()`**
+- **`showLicensePlateDialog()`**
+- **`showColorPickerDialog()`**
+- **`getScreenInstanceByClass()`**
+- **`hasElementInputFocus()`**
+- **`changeScreen()`**
+- **`playSampleClosure()`**
+- **`toggleCustomInputContextClosure()`**
+- **`changeScreenClosure()`**
+
+</details>
+
+<details open>
+<summary><strong>Objects/Tables (11)</strong></summary>
+
+- **`guis`** : `table`
+  - **`AchievementsScreen`** : `map`
+  - **`AdditionalSettingsFrameReference`** : `map`
+  - **`AnimalDialog`** : `map`
+  - **`AnimalScreen`** : `map`
+  - **`CareerScreen`** : `map`
+  - **`ChatDialog`** : `map`
+  - **`ColorPickerDialog`** : `map`
+  - **`ConnectToMasterServerScreen`** : `map`
+  - **`ConnectionFailedDialog`** : `map`
+  - **`ConstructionScreen`** : `map`
+  - **`CreateGameScreen`** : `map`
+  - **`CreditsScreen`** : `map`
+  - **`DenyAcceptDialog`** : `map`
+  - **`DifficultyScreen`** : `map`
+  - **`EditFarmDialog`** : `map`
+  - **`EsportsScreen`** : `map`
+  - **`EsportsVideoScreen`** : `map`
+  - **`GameRateDialog`** : `map`
+  - **`GeScreen`** : `map`
+  - **`InGameMenu`** : `map`
+  - **`InfoDialog`** : `map`
+  - **`JoinGameScreen`** : `map`
+  - **`LeaseYesNoDialog`** : `map`
+  - **`LicensePlateDialog`** : `map`
+  - **`MPLoadingScreen`** : `map`
+  - **`MainScreen`** : `map`
+  - **`MapSelectionScreen`** : `map`
+  - **`MessageDialog`** : `map`
+  - **`ModHubScreen`** : `map`
+  - **`ModHubScreenshotDialog`** : `map`
+  - **`ModSelectionScreen`** : `map`
+  - **`MultiplayerScreen`** : `map`
+  - **`ObjectStorageDialog`** : `map`
+  - **`OptionDialog`** : `map`
+  - **`PasswordDialog`** : `map`
+  - **`PlaceableInfoDialog`** : `map`
+  - **`RefillDialog`** : `map`
+  - **`SavegameConflictDialog`** : `map`
+  - **`ScenariosScreen`** : `map`
+  - **`SellItemDialog`** : `map`
+  - **`ServerDetailScreen`** : `map`
+  - **`ServerSettingsDialog`** : `map`
+  - **`SettingsScreen`** : `map`
+  - **`ShopConfigScreen`** : `map`
+  - **`ShopMenu`** : `map`
+  - **`SiloDialog`** : `map`
+  - **`SleepDialog`** : `map`
+  - **`StartupScreen`** : `map`
+  - **`TextInputDialog`** : `map`
+  - **`TransferMoneyDialog`** : `map`
+  - **`UnBanDialog`** : `map`
+  - **`VoteDialog`** : `map`
+  - **`WardrobeScreen`** : `map`
+  - **`WorkshopScreen`** : `map`
+  - **`YesNoDialog`** : `map`
+  - **`cpBaleLoaderGamePadHudPage`** : `map`
+  - **`cpBunkerSiloGamePadHudPage`** : `map`
+  - **`cpFieldworkGamePadHudPage`** : `map`
+  - **`cpSiloLoaderGamePadHudPage`** : `map`
+  - **`cpUnloaderGamePadHudPage`** : `map`
+- **`actionEventIds`** : `table`
+  - **`MENU`** : `string[]` (length: 1)
+  - **`MENU_ACCEPT`** : `string[]` (length: 1)
+  - **`MENU_ACTIVATE`** : `string[]` (length: 1)
+  - **`MENU_AXIS_LEFT_RIGHT`** : `string[]` (length: 2)
+  - **`MENU_AXIS_UP_DOWN`** : `string[]` (length: 2)
+  - **`MENU_BACK`** : `string[]` (length: 1)
+  - **`MENU_CANCEL`** : `string[]` (length: 1)
+  - **`MENU_EXTRA_1`** : `string[]` (length: 1)
+  - **`MENU_EXTRA_2`** : `string[]` (length: 1)
+  - **`MENU_PAGE_NEXT`** : `string[]` (length: 2)
+  - **`MENU_PAGE_PREV`** : `string[]` (length: 2)
+  - **`TOGGLE_MAP`** : `string[]` (length: 1)
+  - **`TOGGLE_STORE`** : `string[]` (length: 1)
+- **`frames`** : `table`
+  - **`cpCourseManager`** : `map`
+  - **`cpGlobalSettings`** : `map`
+  - **`cpVehicleSettings`** : `map`
+  - **`garageOverview`** : `map`
+  - **`ingameMenuAI`** : `map`
+  - **`ingameMenuAdditionalSettings`** : `map`
+  - **`ingameMenuAnimals`** : `map`
+  - **`ingameMenuCalendar`** : `map`
+  - **`ingameMenuContracts`** : `map`
+  - **`ingameMenuFinances`** : `map`
+  - **`ingameMenuGameSettingsGame`** : `map`
+  - **`ingameMenuGameSettingsGeneral`** : `map`
+  - **`ingameMenuGameStats`** : `map`
+  - **`ingameMenuHelpLine`** : `map`
+  - **`ingameMenuMapOverview`** : `map`
+  - **`ingameMenuMultiplayerFarms`** : `map`
+  - **`ingameMenuMultiplayerUsers`** : `map`
+  - **`ingameMenuPrices`** : `map`
+  - **`ingameMenuProduction`** : `map`
+  - **`ingameMenuTour`** : `map`
+  - **`ingameMenuWeather`** : `map`
+  - **`modHubCategories`** : `map`
+  - **`modHubDetails`** : `map`
+  - **`modHubExtraContent`** : `map`
+  - **`modHubItems`** : `map`
+  - **`modHubLoading`** : `map`
+  - **`settingsAdvanced`** : `map`
+  - **`settingsConsole`** : `map`
+  - **`settingsControls`** : `map`
+  - **`settingsDevice`** : `map`
+  - **`settingsDisplay`** : `map`
+  - **`settingsGeneral`** : `map`
+  - **`settingsHDR`** : `map`
+  - **`shopCategories`** : `map`
+  - **`shopItems`** : `map`
+  - **`shopOthers`** : `map`
+  - **`wardrobeCharacters`** : `map`
+  - **`wardrobeColors`** : `map`
+  - **`wardrobeItems`** : `map`
+  - **`wardrobeOutfits`** : `map`
+- **`nameScreenTypes`** : `table`
+  - **`AchievementsScreen`** : `table`
+  - **`AdditionalSettingsFrameReference`** : `table`
+  - **`AnimalDialog`** : `table`
+  - **`AnimalScreen`** : `table`
+  - **`CareerScreen`** : `table`
+  - **`ChatDialog`** : `table`
+  - **`ColorPickerDialog`** : `table`
+  - **`ConnectToMasterServerScreen`** : `table`
+  - **`ConnectionFailedDialog`** : `table`
+  - **`ConstructionScreen`** : `table`
+  - **`CreateGameScreen`** : `table`
+  - **`CreditsScreen`** : `table`
+  - **`DenyAcceptDialog`** : `table`
+  - **`DifficultyScreen`** : `table`
+  - **`EditFarmDialog`** : `table`
+  - **`EsportsScreen`** : `table`
+  - **`EsportsVideoScreen`** : `table`
+  - **`GameRateDialog`** : `table`
+  - **`GeScreen`** : `table`
+  - **`InGameMenu`** : `table`
+  - **`InfoDialog`** : `table`
+  - **`JoinGameScreen`** : `table`
+  - **`LeaseYesNoDialog`** : `table`
+  - **`LicensePlateDialog`** : `table`
+  - **`MPLoadingScreen`** : `table`
+  - **`MainScreen`** : `table`
+  - **`MapSelectionScreen`** : `table`
+  - **`MessageDialog`** : `table`
+  - **`ModHubScreen`** : `table`
+  - **`ModHubScreenshotDialog`** : `table`
+  - **`ModSelectionScreen`** : `table`
+  - **`MultiplayerScreen`** : `table`
+  - **`ObjectStorageDialog`** : `table`
+  - **`OptionDialog`** : `table`
+  - **`PasswordDialog`** : `table`
+  - **`PlaceableInfoDialog`** : `table`
+  - **`RefillDialog`** : `table`
+  - **`SavegameConflictDialog`** : `table`
+  - **`ScenariosScreen`** : `table`
+  - **`SellItemDialog`** : `table`
+  - **`ServerDetailScreen`** : `table`
+  - **`ServerSettingsDialog`** : `table`
+  - **`SettingsScreen`** : `table`
+  - **`ShopConfigScreen`** : `table`
+  - **`ShopMenu`** : `table`
+  - **`SiloDialog`** : `table`
+  - **`SleepDialog`** : `table`
+  - **`StartupScreen`** : `table`
+  - **`TextInputDialog`** : `table`
+  - **`TransferMoneyDialog`** : `table`
+  - **`UnBanDialog`** : `table`
+  - **`VoteDialog`** : `table`
+  - **`WardrobeScreen`** : `table`
+  - **`WorkshopScreen`** : `table`
+  - **`YesNoDialog`** : `table`
+  - **`cpBaleLoaderGamePadHudPage`** : `table`
+  - **`cpBunkerSiloGamePadHudPage`** : `table`
+  - **`cpFieldworkGamePadHudPage`** : `table`
+  - **`cpSiloLoaderGamePadHudPage`** : `table`
+  - **`cpUnloaderGamePadHudPage`** : `table`
+- **`profiles`** : `table`
+  - **`achievementItem`** : `table`
+    - **`getBool`** : `None`
+    - **`new`** : `None`
+    - **`getNumber`** : `None`
+    - **`isa`** : `None`
+    - **`copy`** : `None`
+    - **`class`** : `None`
+    - **`getValue`** : `None`
+    - **`loadFromXML`** : `None`
+    - **`superClass`** : `None`
+    - **`name`** : `None`
+    - **`isTrait`** : `None`
+    - **`values`** : `None`
+    - **`parent`** : `None`
+    - **`traits`** : `None`
+    - **`profiles`** : `None`
+  - **`achievementItemIcon`** : `table`
+  - **`achievementItemLocked`** : `table`
+  - **`achievementItemText`** : `table`
+  - **`achievementItemTextDivider`** : `table`
+  - **`achievementItemTitle`** : `table`
+  - **`achievementList`** : `table`
+  - **`achievementListScrollButton`** : `table`
+  - **`achievementListScrollButtonDown`** : `table`
+  - **`achievementListScrollButtonUp`** : `table`
+  - **`achievementStatsBox`** : `table`
+  - **`achievementTextBox`** : `table`
+  - **`achievementTotalText`** : `table`
+  - **`achievementTotalValue`** : `table`
+  - **`achievementsIcon`** : `table`
+  - **`animalAttributeTitle`** : `table`
+  - **`animalAttributeTitleTotal`** : `table`
+  - **`animalAttributeValue`** : `table`
+  - **`animalAttributeValueBox`** : `table`
+  - **`animalAttributeValueBox2`** : `table`
+  - **`animalAttributeValueNeg`** : `table`
+  - **`animalAttributeValuePos`** : `table`
+  - **`animalButtonBox`** : `table`
+  - **`animalDealerFillIcon`** : `table`
+  - **`animalDealerFillLevel`** : `table`
+  - **`animalDealerIconPrice`** : `table`
+  - **`animalDealerIconTitle`** : `table`
+  - **`animalDealerInfo`** : `table`
+  - **`animalDealerInfoBox`** : `table`
+  - **`animalDealerInfoIcon`** : `table`
+  - **`animalDealerInfoText`** : `table`
+  - **`animalDealerInfoTitle`** : `table`
+  - **`animalDealerInfoValue`** : `table`
+  - **`animalDealerItemIconDisabled`** : `table`
+  - **`animalDealerList`** : `table`
+  - **`animalDealerListBoxCenterInfo`** : `table`
+  - **`animalDealerListBoxCenterMoney`** : `table`
+  - **`animalDealerListBoxLeft`** : `table`
+  - **`animalDealerListBoxRight`** : `table`
+  - **`animalDealerMoneyBox`** : `table`
+  - **`animalDealerMoneyTitle`** : `table`
+  - **`animalDealerMoneyValue`** : `table`
+  - **`animalDealerSlider`** : `table`
+  - **`animalDealerSliderBG`** : `table`
+  - **`animalDealerTargetIcon`** : `table`
+  - **`animalDealerTargetName`** : `table`
+  - **`animalDialogBg`** : `table`
+  - **`animalHeaderText`** : `table`
+  - **`animalIcon`** : `table`
+  - **`animalListItem`** : `table`
+  - **`animalListItemHighlight`** : `table`
+  - **`animalListItemIcon`** : `table`
+  - **`animalListItemName`** : `table`
+  - **`animalListItemPrice`** : `table`
+  - **`animalListScrollButtonDown`** : `table`
+  - **`animalListScrollButtonUp`** : `table`
+  - **`animalMoneyBox`** : `table`
+  - **`animalPriceBox`** : `table`
+  - **`animalPriceBuyBg`** : `table`
+  - **`animalPriceFeeBg`** : `table`
+  - **`animalPriceSellBg`** : `table`
+  - **`animalPriceTotalBg`** : `table`
+  - **`animalScreenMainBox`** : `table`
+  - **`animalShopList`** : `table`
+  - **`animalShopListAttributeInfo`** : `table`
+  - **`animalShopListAttributesBg`** : `table`
+  - **`animalShopListItem`** : `table`
+  - **`animalShopListItemMarker`** : `table`
+  - **`animalTargetBox`** : `table`
+  - **`animalTargetBoxHeader`** : `table`
+  - **`animalTargetBoxRight`** : `table`
+  - **`backgroundImage`** : `table`
+  - **`baseIcon`** : `table`
+  - **`baseReference`** : `table`
+  - **`bgBlack`** : `table`
+  - **`bgGlow`** : `table`
+  - **`bgGlowDialog`** : `table`
+  - **`bgVignette`** : `table`
+  - **`bottomScrollClipper`** : `table`
+  - **`buttonActivate`** : `table`
+  - **`buttonAnimal`** : `table`
+  - **`buttonAnimalBuyIcon`** : `table`
+  - **`buttonAnimalSellIcon`** : `table`
+  - **`buttonBack`** : `table`
+  - **`buttonBase`** : `table`
+  - **`buttonBlock`** : `table`
+  - **`buttonBox`** : `table`
+  - **`buttonBoxDialog`** : `table`
+  - **`buttonBoxDocked`** : `table`
+  - **`buttonBoxDockedOnScreen`** : `table`
+  - **`buttonBoxDockedOnScreenWithTabBar`** : `table`
+  - **`buttonBuy`** : `table`
+  - **`buttonBuyFarmland`** : `table`
+  - **`buttonBuyField`** : `table`
+  - **`buttonCancel`** : `table`
+  - **`buttonCircle`** : `table`
+  - **`buttonClean`** : `table`
+  - **`buttonConfigurate`** : `table`
+  - **`buttonCross`** : `table`
+  - **`buttonDelete`** : `table`
+  - **`buttonDeselectAll`** : `table`
+  - **`buttonDownloadMods`** : `table`
+  - **`buttonEnterVehicle`** : `table`
+  - **`buttonExtra1`** : `table`
+  - **`buttonExtra2`** : `table`
+  - **`buttonGarage`** : `table`
+  - **`buttonHotspot`** : `table`
+  - **`buttonLease`** : `table`
+  - **`buttonNo`** : `table`
+  - **`buttonOK`** : `table`
+  - **`buttonRecover`** : `table`
+  - **`buttonRectangle`** : `table`
+  - **`buttonRefuse`** : `table`
+  - **`buttonRepaint`** : `table`
+  - **`buttonRepair`** : `table`
+  - **`buttonResetVehicle`** : `table`
+  - **`buttonRide`** : `table`
+  - **`buttonSave`** : `table`
+  - **`buttonSelect`** : `table`
+  - **`buttonSelectAll`** : `table`
+  - **`buttonSelectIngame`** : `table`
+  - **`buttonSelectMap`** : `table`
+  - **`buttonSell`** : `table`
+  - **`buttonSellFarmland`** : `table`
+  - **`buttonServerDetails`** : `table`
+  - **`buttonSetMarker`** : `table`
+  - **`buttonShowInfo`** : `table`
+  - **`buttonSortTable`** : `table`
+  - **`buttonSwap`** : `table`
+  - **`buttonSwitchDevice`** : `table`
+  - **`buttonSwitchGarage`** : `table`
+  - **`buttonSwitchMapMode`** : `table`
+  - **`buttonTriangle`** : `table`
+  - **`buttonVisitPlace`** : `table`
+  - **`buttonYes`** : `table`
+  - **`characterCreationMenuBackground`** : `table`
+  - **`chatTextInput`** : `table`
+  - **`colorDialogBg`** : `table`
+  - **`colorDialogColorName`** : `table`
+  - **`consoleButton`** : `table`
+  - **`console_ingameMenuGarageTableHeader`** : `table`
+  - **`constructionCategoryButton`** : `table`
+  - **`constructionCategoryButtonBox`** : `table`
+  - **`constructionCategoryButtonDestruct`** : `table`
+  - **`constructionCategoryButtonDestructSelected`** : `table`
+  - **`constructionCategoryButtonInactive`** : `table`
+  - **`constructionCategoryButtonSelected`** : `table`
+  - **`constructionDetailsAttributesLayout`** : `table`
+  - **`constructionDetailsBox`** : `table`
+  - **`constructionDetailsInfo`** : `table`
+  - **`constructionDetailsInfoIcon`** : `table`
+  - **`constructionDetailsTitle`** : `table`
+  - **`constructionList`** : `table`
+  - **`constructionListAttributeFruitIcon`** : `table`
+  - **`constructionListAttributeIcon`** : `table`
+  - **`constructionListAttributeIconCapacity`** : `table`
+  - **`constructionListAttributeIconChicken`** : `table`
+  - **`constructionListAttributeIconCow`** : `table`
+  - **`constructionListAttributeIconFillTypes`** : `table`
+  - **`constructionListAttributeIconHorse`** : `table`
+  - **`constructionListAttributeIconIncomePerHour`** : `table`
+  - **`constructionListAttributeIconInput`** : `table`
+  - **`constructionListAttributeIconOutput`** : `table`
+  - **`constructionListAttributeIconPig`** : `table`
+  - **`constructionListAttributeIconPlus`** : `table`
+  - **`constructionListAttributeIconSheep`** : `table`
+  - **`constructionListAttributeIconSlots`** : `table`
+  - **`constructionListAttributeIconValue`** : `table`
+  - **`constructionListAttributeIconsLayout`** : `table`
+  - **`constructionListAttributeIconsLayoutBox`** : `table`
+  - **`constructionListAttributeText`** : `table`
+  - **`constructionListBox`** : `table`
+  - **`constructionListItem`** : `table`
+  - **`constructionListItemBg`** : `table`
+  - **`constructionListItemBgActive`** : `table`
+  - **`constructionListItemBrandIcon`** : `table`
+  - **`constructionListItemIcon`** : `table`
+  - **`constructionListItemIconNoBrand`** : `table`
+  - **`constructionListItemModDLC`** : `table`
+  - **`constructionListItemPrice`** : `table`
+  - **`constructionListItemTerrainIcon`** : `table`
+  - **`constructionListLeftScrollClipper`** : `table`
+  - **`constructionListMoreIndicatorLeft`** : `table`
+  - **`constructionListMoreIndicatorRight`** : `table`
+  - **`constructionListRightScrollClipper`** : `table`
+  - **`constructionMenuBox`** : `table`
+  - **`constructionTabButton`** : `table`
+  - **`constructionTabButtonBox`** : `table`
+  - **`constructionTabButtonInactive`** : `table`
+  - **`constructionTabButtonSelected`** : `table`
+  - **`controllerSettingsAbuseText`** : `table`
+  - **`controls2Seperator`** : `table`
+  - **`controls2SeperatorText`** : `table`
+  - **`controlsMessage`** : `table`
+  - **`controlsMessageBox`** : `table`
+  - **`controlsText`** : `table`
+  - **`controlsText2`** : `table`
+  - **`controlsTextAction`** : `table`
+  - **`cpControllerGuiLayout`** : `table`
+  - **`cpCourseGeneratorBackground`** : `table`
+  - **`cpDrawingCustomFieldHeader`** : `table`
+  - **`cpDrawingCustomFieldSubHeader`** : `table`
+  - **`cpIngameMenuSettingsBox`** : `table`
+  - **`cpIngameMenuSettingsLayout`** : `table`
+  - **`cpMultiTextOptionSettingsText`** : `table`
+  - **`cpMultiTextOptionSettingsTooltip`** : `table`
+  - **`cpMultiTextOptionText`** : `table`
+  - **`createGameBox1`** : `table`
+  - **`createGameBox2`** : `table`
+  - **`createGameScreenLayout`** : `table`
+  - **`creditsBoxLeft`** : `table`
+  - **`creditsBoxRight`** : `table`
+  - **`creditsDisclaimer`** : `table`
+  - **`creditsIcon`** : `table`
+  - **`creditsLogo`** : `table`
+  - **`creditsScrollBox`** : `table`
+  - **`creditsScrollLayout`** : `table`
+  - **`creditsText`** : `table`
+  - **`creditsTitle`** : `table`
+  - **`dialogBg`** : `table`
+  - **`dialogCircle`** : `table`
+  - **`dialogCircleWarning`** : `table`
+  - **`dialogDenyAcceptNameLayout`** : `table`
+  - **`dialogDenyAcceptNamePlatformIcon`** : `table`
+  - **`dialogDenyAcceptNameText`** : `table`
+  - **`dialogFullscreenBg`** : `table`
+  - **`dialogHeaderDocked`** : `table`
+  - **`dialogHeaderText`** : `table`
+  - **`dialogInfo`** : `table`
+  - **`dialogKey`** : `table`
+  - **`dialogLeaseKey`** : `table`
+  - **`dialogLeaseValue`** : `table`
+  - **`dialogLoading`** : `table`
+  - **`dialogQuestion`** : `table`
+  - **`dialogText`** : `table`
+  - **`dialogTextInput`** : `table`
+  - **`dialogTextPassword`** : `table`
+  - **`dialogTextWarning`** : `table`
+  - **`dialogTextWithTitle`** : `table`
+  - **`dialogTitle`** : `table`
+  - **`dialogUser`** : `table`
+  - **`dialogWarning`** : `table`
+  - **`difficultyIcon`** : `table`
+  - **`difficultyItem`** : `table`
+  - **`difficultyItemIcon`** : `table`
+  - **`difficultyItemSubtitle`** : `table`
+  - **`difficultyItemText`** : `table`
+  - **`difficultyItemTitle`** : `table`
+  - **`difficultyList`** : `table`
+  - **`directSellButtonNext`** : `table`
+  - **`directSellButtonPrev`** : `table`
+  - **`directSellDialogBg`** : `table`
+  - **`directSellDialogHeader`** : `table`
+  - **`directSellDialogImage`** : `table`
+  - **`directSellDialogInfo`** : `table`
+  - **`directSellDialogName`** : `table`
+  - **`directSellDialogNameSeparator`** : `table`
+  - **`directSellDialogProgressBar`** : `table`
+  - **`directSellDialogProgressBarBackground`** : `table`
+  - **`directSellDialogText`** : `table`
+  - **`directSellDialogValue`** : `table`
+  - **`editFarmDialogBg`** : `table`
+  - **`editFarmDialogColorsLayout`** : `table`
+  - **`editFarmDialogColorsTitle`** : `table`
+  - **`editFarmDialogFarmIcon`** : `table`
+  - **`editFarmDialogFarmIconBg`** : `table`
+  - **`editFarmDialogLayout`** : `table`
+  - **`editFarmDialogPasswordTextInput`** : `table`
+  - **`editFarmDialogTextInput`** : `table`
+  - **`emptyFullPanel`** : `table`
+  - **`emptyPanel`** : `table`
+  - **`esportsScreenBgArena`** : `table`
+  - **`esportsScreenBgBsc`** : `table`
+  - **`esportsScreenButton`** : `table`
+  - **`esportsScreenButtonPlay`** : `table`
+  - **`esportsScreenButtonPlayDescription`** : `table`
+  - **`esportsScreenButtonPlaySelector`** : `table`
+  - **`esportsScreenButtonSelector`** : `table`
+  - **`esportsScreenButtonsContainer`** : `table`
+  - **`esportsScreenDescription`** : `table`
+  - **`esportsScreenTitle`** : `table`
+  - **`esportsScreenTitleContainer`** : `table`
+  - **`esportsVideo`** : `table`
+  - **`esportsVideoSubtitles`** : `table`
+  - **`esportsVideoTime`** : `table`
+  - **`fButtonProfile`** : `table`
+  - **`farmLandOverview`** : `table`
+  - **`favButtonProfile`** : `table`
+  - **`framedEmptyPanel`** : `table`
+  - **`gButtonProfile`** : `table`
+  - **`gameRateDialogBg`** : `table`
+  - **`gamerTagText`** : `table`
+  - **`geDialogBg`** : `table`
+  - **`geDialogTextInput`** : `table`
+  - **`geGlobalBox`** : `table`
+  - **`geGlobalItemText`** : `table`
+  - **`geGlobalList`** : `table`
+  - **`geGlobalListItem`** : `table`
+  - **`geGlobalSlider`** : `table`
+  - **`geHeader`** : `table`
+  - **`geInputBox`** : `table`
+  - **`geLayoutBox`** : `table`
+  - **`geListBox`** : `table`
+  - **`geSlider`** : `table`
+  - **`geText`** : `table`
+  - **`geVarItemText`** : `table`
+  - **`geVarList`** : `table`
+  - **`geVarListItem`** : `table`
+  - **`glassEdgeOverlay`** : `table`
+  - **`graphicsProfileBg`** : `table`
+  - **`graphicsProfileText`** : `table`
+  - **`hButtonProfile`** : `table`
+  - **`hdrImageBox`** : `table`
+  - **`headerBoxDocked`** : `table`
+  - **`headerBoxDockedOnScreen`** : `table`
+  - **`headerBoxSelector`** : `table`
+  - **`headerText`** : `table`
+  - **`helpLineContentBox`** : `table`
+  - **`helpLineContentItem`** : `table`
+  - **`helpLineImage`** : `table`
+  - **`helpLineItemTitle`** : `table`
+  - **`helpLineListItemText`** : `table`
+  - **`helpLineSlider`** : `table`
+  - **`helpLineText`** : `table`
+  - **`helpLineTitle`** : `table`
+  - **`horizontalGlassListSlider`** : `table`
+  - **`horizontalGlassListSliderBackground`** : `table`
+  - **`horizontalListSliderBar`** : `table`
+  - **`horizontalListSliderRightDocked`** : `table`
+  - **`iconFriends`** : `table`
+  - **`iconModsMissing`** : `table`
+  - **`iconServerInternet`** : `table`
+  - **`iconServerLan`** : `table`
+  - **`iconServerPassword`** : `table`
+  - **`iconSlotsAvail`** : `table`
+  - **`iconSlotsAvailBg`** : `table`
+  - **`iconSlotsFull`** : `table`
+  - **`iconSlotsFullBg`** : `table`
+  - **`infoDialogBg`** : `table`
+  - **`ingameCalendarDividerBar`** : `table`
+  - **`ingameCalendarFruitIconCell`** : `table`
+  - **`ingameCalendarFruitNameCell`** : `table`
+  - **`ingameCalendarFruitRow`** : `table`
+  - **`ingameCalendarFruitRowLayout`** : `table`
+  - **`ingameCalendarGerminationCell`** : `table`
+  - **`ingameCalendarHeader`** : `table`
+  - **`ingameCalendarHeaderBox`** : `table`
+  - **`ingameCalendarHeaderPeriod`** : `table`
+  - **`ingameCalendarHeaderSeason`** : `table`
+  - **`ingameCalendarLegendBox`** : `table`
+  - **`ingameCalendarLegendIcon`** : `table`
+  - **`ingameCalendarLegendText`** : `table`
+  - **`ingameCalendarList`** : `table`
+  - **`ingameCalendarPeriodCell`** : `table`
+  - **`ingameCalendarPeriodCellHarvest`** : `table`
+  - **`ingameCalendarPeriodCellPlant`** : `table`
+  - **`ingameCalendarTodayBar`** : `table`
+  - **`ingameMapAcceptText`** : `table`
+  - **`ingameMapControl`** : `table`
+  - **`ingameMapControls`** : `table`
+  - **`ingameMapCursor`** : `table`
+  - **`ingameMapDynamicLoadingText`** : `table`
+  - **`ingameMapMenuAnimalBarRed`** : `table`
+  - **`ingameMapMenuAnimalBarYellow`** : `table`
+  - **`ingameMapOverview`** : `table`
+  - **`ingameMapTarget`** : `table`
+  - **`ingameMenuAIActionText`** : `table`
+  - **`ingameMenuAICreateLayout`** : `table`
+  - **`ingameMenuAICreateTitle`** : `table`
+  - **`ingameMenuAIErrorText`** : `table`
+  - **`ingameMenuAIGroup`** : `table`
+  - **`ingameMenuAILimitReached`** : `table`
+  - **`ingameMenuAIParameterBackground`** : `table`
+  - **`ingameMenuAIParameterButton`** : `table`
+  - **`ingameMenuAIParameterGroupTitle`** : `table`
+  - **`ingameMenuAIParameterIcon`** : `table`
+  - **`ingameMenuAIParameterInvalid`** : `table`
+  - **`ingameMenuAIParameterOption`** : `table`
+  - **`ingameMenuAIParameterPosition`** : `table`
+  - **`ingameMenuAIParameterPositionIcon`** : `table`
+  - **`ingameMenuAIParameterRotation`** : `table`
+  - **`ingameMenuAIParameterRotationIcon`** : `table`
+  - **`ingameMenuAIParameterText`** : `table`
+  - **`ingameMenuAIParameterTextTitle`** : `table`
+  - **`ingameMenuAIParameterVehicleIcon`** : `table`
+  - **`ingameMenuAIStatusText`** : `table`
+  - **`ingameMenuAIWorkerList`** : `table`
+  - **`ingameMenuAIWorkerListItem`** : `table`
+  - **`ingameMenuAIWorkerListItemHelper`** : `table`
+  - **`ingameMenuAIWorkerListItemIcon`** : `table`
+  - **`ingameMenuAIWorkerListItemText`** : `table`
+  - **`ingameMenuAIWorkerListItemTitle`** : `table`
+  - **`ingameMenuAnimalBar`** : `table`
+  - **`ingameMenuAnimalBarBg`** : `table`
+  - **`ingameMenuAnimalTableHeader`** : `table`
+  - **`ingameMenuAnimalsDetailAttribute`** : `table`
+  - **`ingameMenuAnimalsDetailAttributesBox`** : `table`
+  - **`ingameMenuAnimalsDetailAttributesLayout`** : `table`
+  - **`ingameMenuAnimalsDetailDescriptionBox`** : `table`
+  - **`ingameMenuAnimalsDetailDescriptionIcon`** : `table`
+  - **`ingameMenuAnimalsDetailDescriptionText`** : `table`
+  - **`ingameMenuAnimalsDetailInputBox`** : `table`
+  - **`ingameMenuAnimalsDetailNameBox`** : `table`
+  - **`ingameMenuAnimalsDetailOutputBox`** : `table`
+  - **`ingameMenuAnimalsDetailProductivityLabel`** : `table`
+  - **`ingameMenuAnimalsDetailTypeCount`** : `table`
+  - **`ingameMenuAnimalsDetailTypeImage`** : `table`
+  - **`ingameMenuAnimalsDetailTypeName`** : `table`
+  - **`ingameMenuAnimalsDetailTypeValue`** : `table`
+  - **`ingameMenuAnimalsDetailsBox`** : `table`
+  - **`ingameMenuAnimalsFoodRow`** : `table`
+  - **`ingameMenuAnimalsFoodRowTextPanel`** : `table`
+  - **`ingameMenuAnimalsHeaderIcon`** : `table`
+  - **`ingameMenuAnimalsHorseAttribute`** : `table`
+  - **`ingameMenuAnimalsHorseAttributeIcon`** : `table`
+  - **`ingameMenuAnimalsHorseAttributeIconCleanliness`** : `table`
+  - **`ingameMenuAnimalsHorseAttributeIconFitness`** : `table`
+  - **`ingameMenuAnimalsHorseAttributeIconHealth`** : `table`
+  - **`ingameMenuAnimalsLargeStatusBar`** : `table`
+  - **`ingameMenuAnimalsLargeStatusBarBackground`** : `table`
+  - **`ingameMenuAnimalsList`** : `table`
+  - **`ingameMenuAnimalsListBox`** : `table`
+  - **`ingameMenuAnimalsListHeader`** : `table`
+  - **`ingameMenuAnimalsListHeaderBox`** : `table`
+  - **`ingameMenuAnimalsListItem`** : `table`
+  - **`ingameMenuAnimalsListItemStatusLabel`** : `table`
+  - **`ingameMenuAnimalsListItemStatusValue`** : `table`
+  - **`ingameMenuAnimalsListItemTypeCount`** : `table`
+  - **`ingameMenuAnimalsListItemTypeIcon`** : `table`
+  - **`ingameMenuAnimalsListItemTypeName`** : `table`
+  - **`ingameMenuAnimalsListSectionHeader`** : `table`
+  - **`ingameMenuAnimalsListSectionHeaderText`** : `table`
+  - **`ingameMenuAnimalsNoHusbandries`** : `table`
+  - **`ingameMenuAnimalsProductivityHeader`** : `table`
+  - **`ingameMenuAnimalsProductivityLabel`** : `table`
+  - **`ingameMenuAnimalsProductivityLayout`** : `table`
+  - **`ingameMenuAnimalsProductivityRow`** : `table`
+  - **`ingameMenuAnimalsProductivityRowTextPanel`** : `table`
+  - **`ingameMenuAnimalsProductivityValue`** : `table`
+  - **`ingameMenuAnimalsRequirementsHeader`** : `table`
+  - **`ingameMenuAnimalsRequirementsLabel`** : `table`
+  - **`ingameMenuAnimalsRequirementsLabelBig`** : `table`
+  - **`ingameMenuAnimalsRequirementsLayout`** : `table`
+  - **`ingameMenuAnimalsRequirementsRow`** : `table`
+  - **`ingameMenuAnimalsRequirementsRowTextPanel`** : `table`
+  - **`ingameMenuAnimalsRequirementsValue`** : `table`
+  - **`ingameMenuAnimalsSmallStatusBar`** : `table`
+  - **`ingameMenuAnimalsSmallStatusBarBackground`** : `table`
+  - **`ingameMenuAnimalsSmallStatusBarBackgroundRatios`** : `table`
+  - **`ingameMenuAnimalsSmallStatusBarLow`** : `table`
+  - **`ingameMenuAnimalsSmallStatusBarMedium`** : `table`
+  - **`ingameMenuBox`** : `table`
+  - **`ingameMenuCalendarHeaderIcon`** : `table`
+  - **`ingameMenuCenterBox`** : `table`
+  - **`ingameMenuContentButtonLeft`** : `table`
+  - **`ingameMenuContentButtonRight`** : `table`
+  - **`ingameMenuContractsContractBox`** : `table`
+  - **`ingameMenuContractsContractTextBig`** : `table`
+  - **`ingameMenuContractsContractTextSmall`** : `table`
+  - **`ingameMenuContractsContractTitle`** : `table`
+  - **`ingameMenuContractsDetailsBox`** : `table`
+  - **`ingameMenuContractsEmptyBox`** : `table`
+  - **`ingameMenuContractsEmptyText`** : `table`
+  - **`ingameMenuContractsFarmerBox`** : `table`
+  - **`ingameMenuContractsFarmerCircle`** : `table`
+  - **`ingameMenuContractsFarmerDivider`** : `table`
+  - **`ingameMenuContractsFarmerImage`** : `table`
+  - **`ingameMenuContractsFarmerName`** : `table`
+  - **`ingameMenuContractsFarmerText`** : `table`
+  - **`ingameMenuContractsHeaderIcon`** : `table`
+  - **`ingameMenuContractsList`** : `table`
+  - **`ingameMenuContractsListBox`** : `table`
+  - **`ingameMenuContractsListCategory`** : `table`
+  - **`ingameMenuContractsListCategoryTitle`** : `table`
+  - **`ingameMenuContractsListItem`** : `table`
+  - **`ingameMenuContractsListItemAlternate`** : `table`
+  - **`ingameMenuContractsListItemContract`** : `table`
+  - **`ingameMenuContractsListItemField`** : `table`
+  - **`ingameMenuContractsListItemIndicator`** : `table`
+  - **`ingameMenuContractsListItemIndicatorActive`** : `table`
+  - **`ingameMenuContractsListItemIndicatorFailed`** : `table`
+  - **`ingameMenuContractsListItemIndicatorFinished`** : `table`
+  - **`ingameMenuContractsListItemReward`** : `table`
+  - **`ingameMenuContractsProgressBar`** : `table`
+  - **`ingameMenuContractsProgressBarBackground`** : `table`
+  - **`ingameMenuContractsTallyBox`** : `table`
+  - **`ingameMenuContractsTallyKey`** : `table`
+  - **`ingameMenuContractsTallyLine`** : `table`
+  - **`ingameMenuContractsTallyValue`** : `table`
+  - **`ingameMenuContractsTallyValueColored`** : `table`
+  - **`ingameMenuContractsVehiclesBox`** : `table`
+  - **`ingameMenuContractsVehiclesBoxMarquee`** : `table`
+  - **`ingameMenuContractsVehiclesItem`** : `table`
+  - **`ingameMenuContractsVehiclesMoreItemsText`** : `table`
+  - **`ingameMenuDeviceSettingsHeaderIcon`** : `table`
+  - **`ingameMenuDeviceSettingsValueBar`** : `table`
+  - **`ingameMenuDeviceSettingsValueBox`** : `table`
+  - **`ingameMenuDisplaySettingsHeaderIcon`** : `table`
+  - **`ingameMenuFillLevelFarmSeparator`** : `table`
+  - **`ingameMenuFillLevelSeparator`** : `table`
+  - **`ingameMenuFinancesBalance`** : `table`
+  - **`ingameMenuFinancesBalanceName`** : `table`
+  - **`ingameMenuFinancesBalanceValue`** : `table`
+  - **`ingameMenuFinancesBorrowButton`** : `table`
+  - **`ingameMenuFinancesBorrowIcon`** : `table`
+  - **`ingameMenuFinancesBox`** : `table`
+  - **`ingameMenuFinancesFooter`** : `table`
+  - **`ingameMenuFinancesFooterBox`** : `table`
+  - **`ingameMenuFinancesHeaderBox`** : `table`
+  - **`ingameMenuFinancesHeaderIcon`** : `table`
+  - **`ingameMenuFinancesHeaderName`** : `table`
+  - **`ingameMenuFinancesHeaderToday`** : `table`
+  - **`ingameMenuFinancesHeaderTodayMinusFour`** : `table`
+  - **`ingameMenuFinancesHeaderTodayMinusOne`** : `table`
+  - **`ingameMenuFinancesHeaderTodayMinusThree`** : `table`
+  - **`ingameMenuFinancesHeaderTodayMinusTwo`** : `table`
+  - **`ingameMenuFinancesList`** : `table`
+  - **`ingameMenuFinancesListItem`** : `table`
+  - **`ingameMenuFinancesListItemDay`** : `table`
+  - **`ingameMenuFinancesListItemDayNegative`** : `table`
+  - **`ingameMenuFinancesListItemName`** : `table`
+  - **`ingameMenuFinancesListItemToday`** : `table`
+  - **`ingameMenuFinancesListItemTodayMinusFour`** : `table`
+  - **`ingameMenuFinancesListItemTodayMinusOne`** : `table`
+  - **`ingameMenuFinancesListItemTodayMinusThree`** : `table`
+  - **`ingameMenuFinancesListItemTodayMinusTwo`** : `table`
+  - **`ingameMenuFinancesLoan`** : `table`
+  - **`ingameMenuFinancesLoanName`** : `table`
+  - **`ingameMenuFinancesLoanValue`** : `table`
+  - **`ingameMenuFinancesRepayButton`** : `table`
+  - **`ingameMenuFinancesRepayIcon`** : `table`
+  - **`ingameMenuFinancesRow`** : `table`
+  - **`ingameMenuFinancesRowBackground`** : `table`
+  - **`ingameMenuFinancesRowBackgroundAlternate`** : `table`
+  - **`ingameMenuFinancesRowCell`** : `table`
+  - **`ingameMenuFinancesRowCellNegative`** : `table`
+  - **`ingameMenuFinancesRowTypeCell`** : `table`
+  - **`ingameMenuFinancesRowTypeCellFooter`** : `table`
+  - **`ingameMenuFinancesSlider`** : `table`
+  - **`ingameMenuFinancesSliderBar`** : `table`
+  - **`ingameMenuFinancesTable`** : `table`
+  - **`ingameMenuFinancesTableHeader`** : `table`
+  - **`ingameMenuFinancesTableHeaderType`** : `table`
+  - **`ingameMenuFinancesTotal`** : `table`
+  - **`ingameMenuFinancesTotalName`** : `table`
+  - **`ingameMenuFinancesTotalToday`** : `table`
+  - **`ingameMenuFinancesTotalTodayMinusFour`** : `table`
+  - **`ingameMenuFinancesTotalTodayMinusOne`** : `table`
+  - **`ingameMenuFinancesTotalTodayMinusThree`** : `table`
+  - **`ingameMenuFinancesTotalTodayMinusTwo`** : `table`
+  - **`ingameMenuFrameHeaderPanel`** : `table`
+  - **`ingameMenuFrameHeaderText`** : `table`
+  - **`ingameMenuGameSettingsHeaderIcon`** : `table`
+  - **`ingameMenuGameSettingsTextInput`** : `table`
+  - **`ingameMenuGameSettingsTextInputWrapper`** : `table`
+  - **`ingameMenuGarageAge`** : `table`
+  - **`ingameMenuGarageDailyUpKeep`** : `table`
+  - **`ingameMenuGarageHeaderBg`** : `table`
+  - **`ingameMenuGarageHeaderBgSmall`** : `table`
+  - **`ingameMenuGarageHeaderBgVehicle`** : `table`
+  - **`ingameMenuGarageHeaderBox`** : `table`
+  - **`ingameMenuGarageHeaderIcon`** : `table`
+  - **`ingameMenuGarageLeasingCosts`** : `table`
+  - **`ingameMenuGarageSellPrice`** : `table`
+  - **`ingameMenuGarageTable`** : `table`
+  - **`ingameMenuGarageTableHeader`** : `table`
+  - **`ingameMenuGarageTableHeaderAge`** : `table`
+  - **`ingameMenuGarageTableHeaderBox`** : `table`
+  - **`ingameMenuGarageTableHeaderDamage`** : `table`
+  - **`ingameMenuGarageTableHeaderLeasing`** : `table`
+  - **`ingameMenuGarageTableHeaderOperatingHours`** : `table`
+  - **`ingameMenuGarageTableHeaderValue`** : `table`
+  - **`ingameMenuGarageTableHeaderVehicle`** : `table`
+  - **`ingameMenuGarageText`** : `table`
+  - **`ingameMenuGarageTextNegative`** : `table`
+  - **`ingameMenuGarageTitle`** : `table`
+  - **`ingameMenuGeneralSettingsHeaderIcon`** : `table`
+  - **`ingameMenuHelpBox`** : `table`
+  - **`ingameMenuHelpCategoryHeaderBackground`** : `table`
+  - **`ingameMenuHelpCategoryHeaderText`** : `table`
+  - **`ingameMenuHelpContentBox`** : `table`
+  - **`ingameMenuHelpHeaderIcon`** : `table`
+  - **`ingameMenuHelpList`** : `table`
+  - **`ingameMenuHelpListCategory`** : `table`
+  - **`ingameMenuHelpListCategoryTitle`** : `table`
+  - **`ingameMenuHelpListItem`** : `table`
+  - **`ingameMenuHelpListScrollButtonDown`** : `table`
+  - **`ingameMenuHelpListScrollButtonUp`** : `table`
+  - **`ingameMenuHelpNavigationBox`** : `table`
+  - **`ingameMenuHelpRowBg`** : `table`
+  - **`ingameMenuHelpRowIcon`** : `table`
+  - **`ingameMenuHelpRowText`** : `table`
+  - **`ingameMenuJobTypeOption`** : `table`
+  - **`ingameMenuMPActionsBox`** : `table`
+  - **`ingameMenuMPActionsListActionButton`** : `table`
+  - **`ingameMenuMPActionsListItem`** : `table`
+  - **`ingameMenuMPActionsListPermission`** : `table`
+  - **`ingameMenuMPActionsListPermissionCheckbox`** : `table`
+  - **`ingameMenuMPActionsListPermissionCheckboxTick`** : `table`
+  - **`ingameMenuMPActionsListPermissionCheckboxUntick`** : `table`
+  - **`ingameMenuMPFarmsIcon`** : `table`
+  - **`ingameMenuMPFarmsList`** : `table`
+  - **`ingameMenuMPFarmsListItem`** : `table`
+  - **`ingameMenuMPFarmsListItemFarmBalance`** : `table`
+  - **`ingameMenuMPFarmsListItemFarmIcon`** : `table`
+  - **`ingameMenuMPFarmsListItemFarmIconBg`** : `table`
+  - **`ingameMenuMPFarmsListItemFarmName`** : `table`
+  - **`ingameMenuMPFarmsListItemFarmNewIcon`** : `table`
+  - **`ingameMenuMPFarmsListItemFarmNewTitle`** : `table`
+  - **`ingameMenuMPFarmsListItemFarmPlayerCount`** : `table`
+  - **`ingameMenuMPFarmsListItemFarmPlayerName`** : `table`
+  - **`ingameMenuMPFarmsListItemFarmPlayerNameLayout`** : `table`
+  - **`ingameMenuMPFarmsListItemLineSeparator`** : `table`
+  - **`ingameMenuMPFarmsNoFarmsBox`** : `table`
+  - **`ingameMenuMPFarmsNoFarmsText`** : `table`
+  - **`ingameMenuMPPermissionsBox`** : `table`
+  - **`ingameMenuMPUsersContentBox`** : `table`
+  - **`ingameMenuMPUsersIcon`** : `table`
+  - **`ingameMenuMPUsersList`** : `table`
+  - **`ingameMenuMPUsersListBox`** : `table`
+  - **`ingameMenuMPUsersListFarm`** : `table`
+  - **`ingameMenuMPUsersListFarmBalance`** : `table`
+  - **`ingameMenuMPUsersListFarmDot`** : `table`
+  - **`ingameMenuMPUsersListFarmName`** : `table`
+  - **`ingameMenuMPUsersListItem`** : `table`
+  - **`ingameMenuMPUsersListItemAdmin`** : `table`
+  - **`ingameMenuMPUsersListItemAlternate`** : `table`
+  - **`ingameMenuMPUsersListItemAttribute`** : `table`
+  - **`ingameMenuMPUsersListItemAttributeBox`** : `table`
+  - **`ingameMenuMPUsersListItemFarmManager`** : `table`
+  - **`ingameMenuMPUsersListItemMuted`** : `table`
+  - **`ingameMenuMPUsersListItemNoMicrophone`** : `table`
+  - **`ingameMenuMPUsersListItemPlatform`** : `table`
+  - **`ingameMenuMPUsersListItemText`** : `table`
+  - **`ingameMenuMainButton`** : `table`
+  - **`ingameMenuMainContent`** : `table`
+  - **`ingameMenuMainContentText`** : `table`
+  - **`ingameMenuMainFrontBg`** : `table`
+  - **`ingameMenuMainFrontIcon`** : `table`
+  - **`ingameMenuMainLayout`** : `table`
+  - **`ingameMenuMapButton`** : `table`
+  - **`ingameMenuMapButtonBg`** : `table`
+  - **`ingameMenuMapButtonBg3`** : `table`
+  - **`ingameMenuMapButtonBg4`** : `table`
+  - **`ingameMenuMapButtonEnter`** : `table`
+  - **`ingameMenuMapButtonInactive`** : `table`
+  - **`ingameMenuMapButtonReset`** : `table`
+  - **`ingameMenuMapButtonTag`** : `table`
+  - **`ingameMenuMapButtonVisit`** : `table`
+  - **`ingameMenuMapButtonsBackground`** : `table`
+  - **`ingameMenuMapContextBox`** : `table`
+  - **`ingameMenuMapContextBoxFrameBottom`** : `table`
+  - **`ingameMenuMapContextBoxFrameTop`** : `table`
+  - **`ingameMenuMapContextBoxSmall`** : `table`
+  - **`ingameMenuMapContextCorner`** : `table`
+  - **`ingameMenuMapContextCornerBottomLeft`** : `table`
+  - **`ingameMenuMapContextCornerBottomRight`** : `table`
+  - **`ingameMenuMapContextCornerTopLeft`** : `table`
+  - **`ingameMenuMapContextCornerTopRight`** : `table`
+  - **`ingameMenuMapContextFarm`** : `table`
+  - **`ingameMenuMapContextImage`** : `table`
+  - **`ingameMenuMapContextText`** : `table`
+  - **`ingameMenuMapFieldInfoBox`** : `table`
+  - **`ingameMenuMapFilterBackground`** : `table`
+  - **`ingameMenuMapFilterBg`** : `table`
+  - **`ingameMenuMapFilterBox`** : `table`
+  - **`ingameMenuMapFilterButtonBg`** : `table`
+  - **`ingameMenuMapFilterButtonBgActive`** : `table`
+  - **`ingameMenuMapFilterButtonBox`** : `table`
+  - **`ingameMenuMapFilterButtonIconAI`** : `table`
+  - **`ingameMenuMapFilterButtonIconAIInactive`** : `table`
+  - **`ingameMenuMapFilterButtonIconAnimal`** : `table`
+  - **`ingameMenuMapFilterButtonIconAnimalInactive`** : `table`
+  - **`ingameMenuMapFilterButtonIconCombine`** : `table`
+  - **`ingameMenuMapFilterButtonIconCombineInactive`** : `table`
+  - **`ingameMenuMapFilterButtonIconFieldJobs`** : `table`
+  - **`ingameMenuMapFilterButtonIconFieldJobsInactive`** : `table`
+  - **`ingameMenuMapFilterButtonIconLoading`** : `table`
+  - **`ingameMenuMapFilterButtonIconLoadingInactive`** : `table`
+  - **`ingameMenuMapFilterButtonIconOther`** : `table`
+  - **`ingameMenuMapFilterButtonIconOtherInactive`** : `table`
+  - **`ingameMenuMapFilterButtonIconProduction`** : `table`
+  - **`ingameMenuMapFilterButtonIconProductionInactive`** : `table`
+  - **`ingameMenuMapFilterButtonIconSteerable`** : `table`
+  - **`ingameMenuMapFilterButtonIconSteerableInactive`** : `table`
+  - **`ingameMenuMapFilterButtonIconTipping`** : `table`
+  - **`ingameMenuMapFilterButtonIconTippingInactive`** : `table`
+  - **`ingameMenuMapFilterButtonIconTool`** : `table`
+  - **`ingameMenuMapFilterButtonIconToolInactive`** : `table`
+  - **`ingameMenuMapFilterButtonIconTrailer`** : `table`
+  - **`ingameMenuMapFilterButtonIconTrailerInactive`** : `table`
+  - **`ingameMenuMapFilterButtonIconVehicle`** : `table`
+  - **`ingameMenuMapFilterContents`** : `table`
+  - **`ingameMenuMapFilterDynamicButton`** : `table`
+  - **`ingameMenuMapFilterDynamicButtonAlt`** : `table`
+  - **`ingameMenuMapFilterDynamicColor`** : `table`
+  - **`ingameMenuMapFilterDynamicColorLarge`** : `table`
+  - **`ingameMenuMapFilterDynamicIcon`** : `table`
+  - **`ingameMenuMapFilterDynamicText`** : `table`
+  - **`ingameMenuMapFilterHeader`** : `table`
+  - **`ingameMenuMapFilterOptionPage`** : `table`
+  - **`ingameMenuMapFilterPaging`** : `table`
+  - **`ingameMenuMapFruit`** : `table`
+  - **`ingameMenuMapGlyphPlaceholder`** : `table`
+  - **`ingameMenuMapMoneyLabel`** : `table`
+  - **`ingameMenuMapMoneyValue`** : `table`
+  - **`ingameMenuMapMoneyValueNegative`** : `table`
+  - **`ingameMenuMapOverviewSelector`** : `table`
+  - **`ingameMenuMapSafeArea`** : `table`
+  - **`ingameMenuMapVehicle`** : `table`
+  - **`ingameMenuMapVehicleAttachIcon`** : `table`
+  - **`ingameMenuMapVehicleAttachText`** : `table`
+  - **`ingameMenuMapVehicleBox`** : `table`
+  - **`ingameMenuMapVehicleBrand`** : `table`
+  - **`ingameMenuMapVehicleName`** : `table`
+  - **`ingameMenuMapVehicleNothingAttachedText`** : `table`
+  - **`ingameMenuMapVehicleSeparator`** : `table`
+  - **`ingameMenuMapVehicleSmall`** : `table`
+  - **`ingameMenuMapVehicleText`** : `table`
+  - **`ingameMenuNoContentText`** : `table`
+  - **`ingameMenuPageState`** : `table`
+  - **`ingameMenuPageStateBg`** : `table`
+  - **`ingameMenuPriceArrow`** : `table`
+  - **`ingameMenuPriceArrowClimbing`** : `table`
+  - **`ingameMenuPriceArrowFalling`** : `table`
+  - **`ingameMenuPriceArrowGreatDemand`** : `table`
+  - **`ingameMenuPriceFluctuationBar`** : `table`
+  - **`ingameMenuPriceFluctuationBarBg`** : `table`
+  - **`ingameMenuPriceFluctuationBarBgDown`** : `table`
+  - **`ingameMenuPriceFluctuationBarBgUp`** : `table`
+  - **`ingameMenuPriceFluctuationBarDown`** : `table`
+  - **`ingameMenuPriceFluctuationBarUp`** : `table`
+  - **`ingameMenuPriceFluctuationBg`** : `table`
+  - **`ingameMenuPriceFluctuationBgAlternate`** : `table`
+  - **`ingameMenuPriceFluctuationCurrent`** : `table`
+  - **`ingameMenuPriceFluctuationHigh`** : `table`
+  - **`ingameMenuPriceFluctuationLayout`** : `table`
+  - **`ingameMenuPriceFluctuationLow`** : `table`
+  - **`ingameMenuPriceFluctuationMonth`** : `table`
+  - **`ingameMenuPriceFluctuationMonthLast`** : `table`
+  - **`ingameMenuPriceFruit`** : `table`
+  - **`ingameMenuPriceGoodsIcon`** : `table`
+  - **`ingameMenuPriceHeader`** : `table`
+  - **`ingameMenuPriceHeaderBg`** : `table`
+  - **`ingameMenuPriceHeaderBgStation`** : `table`
+  - **`ingameMenuPriceHeaderIcon`** : `table`
+  - **`ingameMenuPriceItemBuyPrice`** : `table`
+  - **`ingameMenuPriceItemHotspot`** : `table`
+  - **`ingameMenuPriceItemHotspotActive`** : `table`
+  - **`ingameMenuPriceItemPrice`** : `table`
+  - **`ingameMenuPriceItemStorage`** : `table`
+  - **`ingameMenuPriceItemTitle`** : `table`
+  - **`ingameMenuPriceItemTrend`** : `table`
+  - **`ingameMenuPriceLeftColumn`** : `table`
+  - **`ingameMenuPriceList`** : `table`
+  - **`ingameMenuPriceListItem`** : `table`
+  - **`ingameMenuPriceRightColumn`** : `table`
+  - **`ingameMenuPriceSellpointTitle`** : `table`
+  - **`ingameMenuPricesNoSellpointsText`** : `table`
+  - **`ingameMenuProductionColumnTitle`** : `table`
+  - **`ingameMenuProductionDetailKey`** : `table`
+  - **`ingameMenuProductionDetailRecipeArrow`** : `table`
+  - **`ingameMenuProductionDetailRecipeIcon`** : `table`
+  - **`ingameMenuProductionDetailRecipeLayout`** : `table`
+  - **`ingameMenuProductionDetailRecipeLayoutInput`** : `table`
+  - **`ingameMenuProductionDetailRecipeLayoutOutput`** : `table`
+  - **`ingameMenuProductionDetailRecipePlus`** : `table`
+  - **`ingameMenuProductionDetailRecipeText`** : `table`
+  - **`ingameMenuProductionDetailValue`** : `table`
+  - **`ingameMenuProductionDetailValueError`** : `table`
+  - **`ingameMenuProductionDetailsBox`** : `table`
+  - **`ingameMenuProductionEmptyBox`** : `table`
+  - **`ingameMenuProductionEmptyText`** : `table`
+  - **`ingameMenuProductionList`** : `table`
+  - **`ingameMenuProductionListBox`** : `table`
+  - **`ingameMenuProductionPointListItem`** : `table`
+  - **`ingameMenuProductionProductionActivity`** : `table`
+  - **`ingameMenuProductionProductionActivityActive`** : `table`
+  - **`ingameMenuProductionProductionActivityIssue`** : `table`
+  - **`ingameMenuProductionProductionTitle`** : `table`
+  - **`ingameMenuProductionStorageBar`** : `table`
+  - **`ingameMenuProductionStorageBarBackground`** : `table`
+  - **`ingameMenuProductionStorageBarDanger`** : `table`
+  - **`ingameMenuProductionStorageBox`** : `table`
+  - **`ingameMenuProductionStorageLevel`** : `table`
+  - **`ingameMenuProductionStorageList`** : `table`
+  - **`ingameMenuProductionStorageListItem`** : `table`
+  - **`ingameMenuProductionStorageListOutputItem`** : `table`
+  - **`ingameMenuProductionStorageMode`** : `table`
+  - **`ingameMenuProductionStorageTitle`** : `table`
+  - **`ingameMenuSettingsBox`** : `table`
+  - **`ingameMenuSettingsButton`** : `table`
+  - **`ingameMenuSettingsControlsHeaderHiddenButton`** : `table`
+  - **`ingameMenuSettingsControlsHeaderIconGamepad`** : `table`
+  - **`ingameMenuSettingsControlsHeaderIconKeyboard`** : `table`
+  - **`ingameMenuSettingsInviteButton`** : `table`
+  - **`ingameMenuSettingsLayout`** : `table`
+  - **`ingameMenuSettingsNativeHelpButton`** : `table`
+  - **`ingameMenuSettingsPauseButton`** : `table`
+  - **`ingameMenuSettingsUnpauseButton`** : `table`
+  - **`ingameMenuStatisticBg`** : `table`
+  - **`ingameMenuStatisticBg2`** : `table`
+  - **`ingameMenuStatisticBox`** : `table`
+  - **`ingameMenuStatisticHeader`** : `table`
+  - **`ingameMenuStatisticHeaderBg`** : `table`
+  - **`ingameMenuStatisticText`** : `table`
+  - **`ingameMenuStatisticTextBar`** : `table`
+  - **`ingameMenuStatisticTitle`** : `table`
+  - **`ingameMenuStatisticsContainer`** : `table`
+  - **`ingameMenuStatisticsHeaderIcon`** : `table`
+  - **`ingameMenuStatisticsRow`** : `table`
+  - **`ingameMenuStatisticsRowBackground`** : `table`
+  - **`ingameMenuStatisticsRowBackgroundAlternate`** : `table`
+  - **`ingameMenuStatisticsRowCell`** : `table`
+  - **`ingameMenuStatisticsRowTypeCell`** : `table`
+  - **`ingameMenuStatisticsTable`** : `table`
+  - **`ingameMenuStatisticsTableHeader`** : `table`
+  - **`ingameMenuStatisticsTableHeaderBox`** : `table`
+  - **`ingameMenuStatisticsTableHeaderType`** : `table`
+  - **`ingameMenuTableHeader`** : `table`
+  - **`ingameMenuTableHeaderBox`** : `table`
+  - **`ingameMenuTutorialHeaderIcon`** : `table`
+  - **`ingameMenuTutorialList`** : `table`
+  - **`ingameMenuTutorialListItem`** : `table`
+  - **`ingameMenuTutorialListItemAlternate`** : `table`
+  - **`ingameMenuTutorialListItemText`** : `table`
+  - **`ingameMenuTutorialListItemTick`** : `table`
+  - **`ingameMenuUsersButtonBox`** : `table`
+  - **`ingameMenuUsersHeaderBgLang`** : `table`
+  - **`ingameMenuUsersHeaderBgMoney`** : `table`
+  - **`ingameMenuUsersHeaderBgName`** : `table`
+  - **`ingameMenuUsersHeaderBgPlayTime`** : `table`
+  - **`ingameMenuUsersHeaderBox`** : `table`
+  - **`ingameMenuUsersHeaderCenter`** : `table`
+  - **`ingameMenuUsersHeaderLeft`** : `table`
+  - **`ingameMenuUsersHeaderRight`** : `table`
+  - **`ingameMenuVehicleRow`** : `table`
+  - **`ingameMenuVehicleRowAttributeCell`** : `table`
+  - **`ingameMenuVehicleRowAttributeCellActive`** : `table`
+  - **`ingameMenuVehicleRowAttributeCellActiveNegative`** : `table`
+  - **`ingameMenuVehicleRowAttributeCellNegative`** : `table`
+  - **`ingameMenuVehicleRowBackground`** : `table`
+  - **`ingameMenuVehicleRowBackgroundAlternate`** : `table`
+  - **`ingameMenuVehicleRowVehicleCell`** : `table`
+  - **`ingameMenuVehicleRowVehicleCellActive`** : `table`
+  - **`ingameMenuVehicleTableHeaderSortAscending`** : `table`
+  - **`ingameMenuVehicleTableHeaderSortDescending`** : `table`
+  - **`ingameMenuWeatherDailyBox`** : `table`
+  - **`ingameMenuWeatherDailyList`** : `table`
+  - **`ingameMenuWeatherDailyListItem`** : `table`
+  - **`ingameMenuWeatherHeaderIcon`** : `table`
+  - **`ingameMenuWeatherHorizontalSeparator`** : `table`
+  - **`ingameMenuWeatherHourlyBox`** : `table`
+  - **`ingameMenuWeatherHourlyList`** : `table`
+  - **`ingameMenuWeatherHourlyListItem`** : `table`
+  - **`ingameMenuWeatherListItemIcon`** : `table`
+  - **`ingameMenuWeatherListItemSeparator`** : `table`
+  - **`ingameMenuWeatherListItemTemperature`** : `table`
+  - **`ingameMenuWeatherListItemTemperatureLow`** : `table`
+  - **`ingameMenuWeatherListItemTitle`** : `table`
+  - **`ingameMenuWeatherTodayBox`** : `table`
+  - **`ingameMenuWeatherTodayIcon`** : `table`
+  - **`ingameMenuWeatherTodayMonth`** : `table`
+  - **`ingameMenuWeatherTodayNow`** : `table`
+  - **`ingameMenuWeatherTodayTemperature`** : `table`
+  - **`ingameMenuWeatherTodayTemperatureUnit`** : `table`
+  - **`ingameMenuWeatherTodayWindSpeedBox`** : `table`
+  - **`ingameMenuWeatherTodayWindSpeedTitle`** : `table`
+  - **`ingameMenuWeatherVerticalSeparator`** : `table`
+  - **`ingameMenuWeatherWindIndicatorBox`** : `table`
+  - **`ingameMenuWeatherWindIndicatorIcon`** : `table`
+  - **`ingameMenuWeatherWindIndicatorText`** : `table`
+  - **`inputTextBox`** : `table`
+  - **`joinGameBaseIcon`** : `table`
+  - **`joinGameScreenBoxLeft`** : `table`
+  - **`joinGameScreenBoxRight`** : `table`
+  - **`joinGameScreenFilterOption`** : `table`
+  - **`joinGameScreenFilterOptionBg`** : `table`
+  - **`joinGameScreenFilterServername`** : `table`
+  - **`joinGameScreenFilters`** : `table`
+  - **`joinGameScreenFiltersTitle`** : `table`
+  - **`joinGameScreenIconPlatform`** : `table`
+  - **`joinGameScreenLangText`** : `table`
+  - **`joinGameScreenLangTextFilterOut`** : `table`
+  - **`joinGameScreenList`** : `table`
+  - **`joinGameScreenListHeader`** : `table`
+  - **`joinGameScreenListHeaderButton`** : `table`
+  - **`joinGameScreenListHeaderSortAscending`** : `table`
+  - **`joinGameScreenListHeaderSortDescending`** : `table`
+  - **`joinGameScreenListItem`** : `table`
+  - **`joinGameScreenLoading`** : `table`
+  - **`joinGameScreenMapText`** : `table`
+  - **`joinGameScreenMapTextFilterOut`** : `table`
+  - **`joinGameScreenNameFilter`** : `table`
+  - **`joinGameScreenNameText`** : `table`
+  - **`joinGameScreenNameTextFilterOut`** : `table`
+  - **`joinGameScreenPlayersText`** : `table`
+  - **`joinGameScreenPlayersTextFilterOut`** : `table`
+  - **`largeSelectorLeft`** : `table`
+  - **`largeSelectorLeftBigFrame`** : `table`
+  - **`largeSelectorLeftGamepad`** : `table`
+  - **`largeSelectorRight`** : `table`
+  - **`largeSelectorRightBigFrame`** : `table`
+  - **`largeSelectorRightGamepad`** : `table`
+  - **`leftScrollClipper`** : `table`
+  - **`licensePlateColorButton`** : `table`
+  - **`licensePlateCursor`** : `table`
+  - **`licensePlateCursorLeft`** : `table`
+  - **`licensePlateCursorRight`** : `table`
+  - **`licensePlateDialogBg`** : `table`
+  - **`licensePlateKeyboardAlpha`** : `table`
+  - **`licensePlateKeyboardButton`** : `table`
+  - **`licensePlateKeyboardNumeric`** : `table`
+  - **`licensePlateKeyboardSpecial`** : `table`
+  - **`licensePlateMultiTextOption`** : `table`
+  - **`licensePlateRender`** : `table`
+  - **`lineSeparator`** : `table`
+  - **`list`** : `table`
+  - **`listItem`** : `table`
+  - **`listItemPermanentSelector`** : `table`
+  - **`listItemSelector`** : `table`
+  - **`listItemSelectorSelected`** : `table`
+  - **`listSectionHeader`** : `table`
+  - **`listSectionHeaderTitle`** : `table`
+  - **`loadingStatus`** : `table`
+  - **`mainMenuButton`** : `table`
+  - **`mainMenuButtonActive`** : `table`
+  - **`mainMenuButtonBoxDocked`** : `table`
+  - **`mainMenuListItemSelector`** : `table`
+  - **`mainMenuSettingsBox`** : `table`
+  - **`mainScreenBackgroundBlur`** : `table`
+  - **`mainScreenButtonBox`** : `table`
+  - **`mainScreenLogo`** : `table`
+  - **`mainScreenSidebar`** : `table`
+  - **`mainScreenTractor`** : `table`
+  - **`mapPreview`** : `table`
+  - **`mapPreviewList`** : `table`
+  - **`mapPreviewListItem`** : `table`
+  - **`mapSelectText`** : `table`
+  - **`mapSelectTitle`** : `table`
+  - **`mapSelectionBG`** : `table`
+  - **`mapSelectionBox`** : `table`
+  - **`mapSelectionHeader`** : `table`
+  - **`mapSelectionHeaderIcon`** : `table`
+  - **`mapSelectionHeaderText`** : `table`
+  - **`mapSelectionSelectionState`** : `table`
+  - **`mapSelectionSelectionStateBox`** : `table`
+  - **`masterServerList`** : `table`
+  - **`masterServerListItem`** : `table`
+  - **`masterServerText`** : `table`
+  - **`menuHeaderIcon`** : `table`
+  - **`mobileMainMenuContainer`** : `table`
+  - **`mobileMainMenuContentContainer`** : `table`
+  - **`mobile_achievementItem`** : `table`
+  - **`mobile_achievementItemIcon`** : `table`
+  - **`mobile_achievementItemText`** : `table`
+  - **`mobile_achievementItemTextDivider`** : `table`
+  - **`mobile_achievementItemTitle`** : `table`
+  - **`mobile_achievementList`** : `table`
+  - **`mobile_animalDealerFillIcon`** : `table`
+  - **`mobile_animalDealerIconPrice`** : `table`
+  - **`mobile_animalDealerIconTitle`** : `table`
+  - **`mobile_animalDealerInfo`** : `table`
+  - **`mobile_animalDealerInfoIcon`** : `table`
+  - **`mobile_animalDealerList`** : `table`
+  - **`mobile_animalDealerListBoxCenterMoney`** : `table`
+  - **`mobile_animalDealerListBoxLeft`** : `table`
+  - **`mobile_animalDealerMoneyTitle`** : `table`
+  - **`mobile_animalDealerMoneyValue`** : `table`
+  - **`mobile_animalDialogBg`** : `table`
+  - **`mobile_animalHeaderText`** : `table`
+  - **`mobile_animalIcon`** : `table`
+  - **`mobile_animalListItem`** : `table`
+  - **`mobile_animalListItemIcon`** : `table`
+  - **`mobile_animalListItemName`** : `table`
+  - **`mobile_animalListItemPrice`** : `table`
+  - **`mobile_backgroundImage`** : `table`
+  - **`mobile_buttonBoxDocked`** : `table`
+  - **`mobile_buttonBoxDockedOnScreen`** : `table`
+  - **`mobile_creditsScrollBox`** : `table`
+  - **`mobile_creditsScrollLayout`** : `table`
+  - **`mobile_creditsTitle`** : `table`
+  - **`mobile_dialogBg`** : `table`
+  - **`mobile_dialogCircle`** : `table`
+  - **`mobile_dialogFullscreenBg`** : `table`
+  - **`mobile_dialogInfo`** : `table`
+  - **`mobile_dialogLoading`** : `table`
+  - **`mobile_dialogQuestion`** : `table`
+  - **`mobile_dialogText`** : `table`
+  - **`mobile_dialogTextWarning`** : `table`
+  - **`mobile_dialogTextWithTitle`** : `table`
+  - **`mobile_dialogTitle`** : `table`
+  - **`mobile_dialogUser`** : `table`
+  - **`mobile_dialogWarning`** : `table`
+  - **`mobile_headerBoxDocked`** : `table`
+  - **`mobile_headerText`** : `table`
+  - **`mobile_helpLineContentBox`** : `table`
+  - **`mobile_helpLineImage`** : `table`
+  - **`mobile_helpLineListItemText`** : `table`
+  - **`mobile_helpLineText`** : `table`
+  - **`mobile_helpLineTitle`** : `table`
+  - **`mobile_ingameMenuAnimalsDetailAttributesBox`** : `table`
+  - **`mobile_ingameMenuAnimalsDetailInputBox`** : `table`
+  - **`mobile_ingameMenuAnimalsDetailNameBox`** : `table`
+  - **`mobile_ingameMenuAnimalsDetailOutputBox`** : `table`
+  - **`mobile_ingameMenuAnimalsDetailTypeImage`** : `table`
+  - **`mobile_ingameMenuAnimalsDetailTypeName`** : `table`
+  - **`mobile_ingameMenuAnimalsDetailsBox`** : `table`
+  - **`mobile_ingameMenuAnimalsList`** : `table`
+  - **`mobile_ingameMenuAnimalsListBox`** : `table`
+  - **`mobile_ingameMenuAnimalsListItem`** : `table`
+  - **`mobile_ingameMenuAnimalsListItemStatusLabel`** : `table`
+  - **`mobile_ingameMenuAnimalsListItemStatusValue`** : `table`
+  - **`mobile_ingameMenuAnimalsListItemTypeCount`** : `table`
+  - **`mobile_ingameMenuAnimalsListItemTypeIcon`** : `table`
+  - **`mobile_ingameMenuAnimalsListItemTypeName`** : `table`
+  - **`mobile_ingameMenuAnimalsProductivityLayout`** : `table`
+  - **`mobile_ingameMenuAnimalsProductivityRow`** : `table`
+  - **`mobile_ingameMenuAnimalsProductivityRowTextPanel`** : `table`
+  - **`mobile_ingameMenuAnimalsRequirementsLabel`** : `table`
+  - **`mobile_ingameMenuAnimalsRequirementsRow`** : `table`
+  - **`mobile_ingameMenuAnimalsRequirementsRowTextPanel`** : `table`
+  - **`mobile_ingameMenuAnimalsRequirementsValue`** : `table`
+  - **`mobile_ingameMenuAnimalsSmallStatusBar`** : `table`
+  - **`mobile_ingameMenuAnimalsSmallStatusBarBackground`** : `table`
+  - **`mobile_ingameMenuBox`** : `table`
+  - **`mobile_ingameMenuCenterBox`** : `table`
+  - **`mobile_ingameMenuContractsEmptyBox`** : `table`
+  - **`mobile_ingameMenuContractsEmptyText`** : `table`
+  - **`mobile_ingameMenuFinancesBalance`** : `table`
+  - **`mobile_ingameMenuFinancesBox`** : `table`
+  - **`mobile_ingameMenuFinancesFooter`** : `table`
+  - **`mobile_ingameMenuFinancesFooterBox`** : `table`
+  - **`mobile_ingameMenuFinancesHeaderBox`** : `table`
+  - **`mobile_ingameMenuFinancesHeaderName`** : `table`
+  - **`mobile_ingameMenuFinancesHeaderToday`** : `table`
+  - **`mobile_ingameMenuFinancesHeaderTodayMinusFour`** : `table`
+  - **`mobile_ingameMenuFinancesHeaderTodayMinusOne`** : `table`
+  - **`mobile_ingameMenuFinancesHeaderTodayMinusThree`** : `table`
+  - **`mobile_ingameMenuFinancesHeaderTodayMinusTwo`** : `table`
+  - **`mobile_ingameMenuFinancesList`** : `table`
+  - **`mobile_ingameMenuFinancesListItem`** : `table`
+  - **`mobile_ingameMenuFinancesListItemName`** : `table`
+  - **`mobile_ingameMenuFinancesListItemToday`** : `table`
+  - **`mobile_ingameMenuFinancesListItemTodayMinusFour`** : `table`
+  - **`mobile_ingameMenuFinancesListItemTodayMinusOne`** : `table`
+  - **`mobile_ingameMenuFinancesListItemTodayMinusThree`** : `table`
+  - **`mobile_ingameMenuFinancesListItemTodayMinusTwo`** : `table`
+  - **`mobile_ingameMenuFinancesLoan`** : `table`
+  - **`mobile_ingameMenuFinancesRow`** : `table`
+  - **`mobile_ingameMenuFinancesRowCell`** : `table`
+  - **`mobile_ingameMenuFinancesRowTypeCell`** : `table`
+  - **`mobile_ingameMenuFinancesSlider`** : `table`
+  - **`mobile_ingameMenuFinancesSliderBar`** : `table`
+  - **`mobile_ingameMenuFinancesTable`** : `table`
+  - **`mobile_ingameMenuFinancesTableHeader`** : `table`
+  - **`mobile_ingameMenuFinancesTableHeaderType`** : `table`
+  - **`mobile_ingameMenuFinancesTotalToday`** : `table`
+  - **`mobile_ingameMenuFinancesTotalTodayMinusFour`** : `table`
+  - **`mobile_ingameMenuFinancesTotalTodayMinusOne`** : `table`
+  - **`mobile_ingameMenuFinancesTotalTodayMinusThree`** : `table`
+  - **`mobile_ingameMenuFinancesTotalTodayMinusTwo`** : `table`
+  - **`mobile_ingameMenuGarageTable`** : `table`
+  - **`mobile_ingameMenuGarageTableHeader`** : `table`
+  - **`mobile_ingameMenuGarageTableHeaderVehicle`** : `table`
+  - **`mobile_ingameMenuHelpContentBox`** : `table`
+  - **`mobile_ingameMenuHelpList`** : `table`
+  - **`mobile_ingameMenuHelpListCategoryTitle`** : `table`
+  - **`mobile_ingameMenuHelpListItem`** : `table`
+  - **`mobile_ingameMenuHelpNavigationBox`** : `table`
+  - **`mobile_ingameMenuMapButton`** : `table`
+  - **`mobile_ingameMenuMapFilterBox`** : `table`
+  - **`mobile_ingameMenuMapFilterContents`** : `table`
+  - **`mobile_ingameMenuMapFilterDynamicButton`** : `table`
+  - **`mobile_ingameMenuMapFilterDynamicColor`** : `table`
+  - **`mobile_ingameMenuMapFilterDynamicColorLarge`** : `table`
+  - **`mobile_ingameMenuMapFilterDynamicIcon`** : `table`
+  - **`mobile_ingameMenuMapFilterDynamicText`** : `table`
+  - **`mobile_ingameMenuMapFilterOptionPage`** : `table`
+  - **`mobile_ingameMenuMapFilterPaging`** : `table`
+  - **`mobile_ingameMenuNoContentText`** : `table`
+  - **`mobile_ingameMenuSettingsBox`** : `table`
+  - **`mobile_ingameMenuSettingsLayout`** : `table`
+  - **`mobile_ingameMenuStatisticsContainer`** : `table`
+  - **`mobile_ingameMenuStatisticsRow`** : `table`
+  - **`mobile_ingameMenuStatisticsRowBackground`** : `table`
+  - **`mobile_ingameMenuStatisticsRowCell`** : `table`
+  - **`mobile_ingameMenuStatisticsRowTypeCell`** : `table`
+  - **`mobile_ingameMenuStatisticsTable`** : `table`
+  - **`mobile_ingameMenuStatisticsTableHeader`** : `table`
+  - **`mobile_ingameMenuStatisticsTableHeaderBox`** : `table`
+  - **`mobile_ingameMenuStatisticsTableHeaderType`** : `table`
+  - **`mobile_ingameMenuTableHeader`** : `table`
+  - **`mobile_ingameMenuTableHeaderBox`** : `table`
+  - **`mobile_ingameMenuVehicleRowAttributeCell`** : `table`
+  - **`mobile_ingameMenuVehicleRowVehicleCell`** : `table`
+  - **`mobile_mainMenuButton`** : `table`
+  - **`mobile_mainMenuButtonBoxDocked`** : `table`
+  - **`mobile_mainScreenBackgroundBlur`** : `table`
+  - **`mobile_mainScreenButtonBox`** : `table`
+  - **`mobile_mainScreenLogo`** : `table`
+  - **`mobile_mainScreenSidebar`** : `table`
+  - **`mobile_mainScreenTractor`** : `table`
+  - **`mobile_mapPreview`** : `table`
+  - **`mobile_mapSelectText`** : `table`
+  - **`mobile_mapSelectTitle`** : `table`
+  - **`mobile_mpLoadingAnimation`** : `table`
+  - **`mobile_multiTextOption`** : `table`
+  - **`mobile_multiTextOptionAnimal`** : `table`
+  - **`mobile_multiTextOptionBg`** : `table`
+  - **`mobile_multiTextOptionBgSilo`** : `table`
+  - **`mobile_multiTextOptionLeft`** : `table`
+  - **`mobile_multiTextOptionSettings`** : `table`
+  - **`mobile_multiTextOptionSilo`** : `table`
+  - **`mobile_multiTextOptionSiloIcon`** : `table`
+  - **`mobile_multiTextOptionText`** : `table`
+  - **`mobile_multiTextOptionTextSilo`** : `table`
+  - **`mobile_multiTextOptionTitle`** : `table`
+  - **`mobile_savegameList`** : `table`
+  - **`mobile_savegameListItem`** : `table`
+  - **`mobile_savegameListItemDataBox`** : `table`
+  - **`mobile_savegameListItemHeaderText`** : `table`
+  - **`mobile_savegameListItemText`** : `table`
+  - **`mobile_savegameListItemUnused`** : `table`
+  - **`mobile_selectionStateBoxDocked`** : `table`
+  - **`mobile_selectionStateDocked`** : `table`
+  - **`mobile_sellDialogBg`** : `table`
+  - **`mobile_sellDialogImage`** : `table`
+  - **`mobile_sellDialogName`** : `table`
+  - **`mobile_sellDialogNameSeparator`** : `table`
+  - **`mobile_sellDialogPrice`** : `table`
+  - **`mobile_sellDialogText`** : `table`
+  - **`mobile_shopBalance`** : `table`
+  - **`mobile_shopCategoryItem`** : `table`
+  - **`mobile_shopCategoryItemImage`** : `table`
+  - **`mobile_shopCategoryItemImagePanel`** : `table`
+  - **`mobile_shopCategoryItemText`** : `table`
+  - **`mobile_shopCategoryList`** : `table`
+  - **`mobile_shopItemsDetailAttributesRow`** : `table`
+  - **`mobile_shopItemsDetailBox`** : `table`
+  - **`mobile_shopItemsList`** : `table`
+  - **`mobile_shopItemsListItem`** : `table`
+  - **`mobile_shopItemsListItemBrandImage`** : `table`
+  - **`mobile_shopItemsListItemLabelText`** : `table`
+  - **`mobile_shopItemsListItemValueText`** : `table`
+  - **`mobile_shopListAttributeBox`** : `table`
+  - **`mobile_shopListAttributeFruitIcon`** : `table`
+  - **`mobile_shopListAttributeIcon`** : `table`
+  - **`mobile_shopListAttributeInfo`** : `table`
+  - **`mobile_shopListAttributeText`** : `table`
+  - **`mobile_shopMoney`** : `table`
+  - **`mobile_siloDialogBg`** : `table`
+  - **`mobile_siloDialogMessage`** : `table`
+  - **`mobile_siloDialogMessageBg`** : `table`
+  - **`mobile_siloDialogText`** : `table`
+  - **`mobile_uiFullInGameBackground`** : `table`
+  - **`mobile_uiInGameMenuFrame`** : `table`
+  - **`mobile_uiInGameMenuHeader`** : `table`
+  - **`mobile_uiInGameMenuHeaderSelector`** : `table`
+  - **`mobile_uiInGameMenuPageHeader`** : `table`
+  - **`mobile_uiInGameMenuPaging`** : `table`
+  - **`mobile_uiInGameMenuPagingTabList`** : `table`
+  - **`mobile_uiInGameMenuPagingTitle`** : `table`
+  - **`mobile_voteDialogLayout`** : `table`
+  - **`mobile_voteDialogStarButton`** : `table`
+  - **`mobile_wideButton`** : `table`
+  - **`mobile_yesNoDialogBg`** : `table`
+  - **`modHubAttributeBox`** : `table`
+  - **`modHubAttributeInfo`** : `table`
+  - **`modHubAttributeInfoSpace`** : `table`
+  - **`modHubAttributeName`** : `table`
+  - **`modHubAttributeRatingBox`** : `table`
+  - **`modHubAttributeRatingStar`** : `table`
+  - **`modHubAttributeRatingStarActive`** : `table`
+  - **`modHubAttributeRatingStarHalf`** : `table`
+  - **`modHubCategoryItem`** : `table`
+  - **`modHubCategoryItemImage`** : `table`
+  - **`modHubCategoryItemImagePanel`** : `table`
+  - **`modHubCategoryList`** : `table`
+  - **`modHubDetailBox`** : `table`
+  - **`modHubDetailDescription`** : `table`
+  - **`modHubDetailDescriptionLayout`** : `table`
+  - **`modHubDetailInfoBox`** : `table`
+  - **`modHubDetailInfoKey`** : `table`
+  - **`modHubDetailInfoValue`** : `table`
+  - **`modHubDetailInfoValueAuthor`** : `table`
+  - **`modHubDetailPreview`** : `table`
+  - **`modHubDetailVerticalSeparator`** : `table`
+  - **`modHubDiscSpace`** : `table`
+  - **`modHubFrame`** : `table`
+  - **`modHubInfoBox`** : `table`
+  - **`modHubItemCircle`** : `table`
+  - **`modHubItemsList`** : `table`
+  - **`modHubItemsListContainer`** : `table`
+  - **`modHubItemsListItem`** : `table`
+  - **`modHubListItemAbuseText`** : `table`
+  - **`modHubListItemImage`** : `table`
+  - **`modHubListItemLabelText`** : `table`
+  - **`modHubMarkerBox`** : `table`
+  - **`modHubMarkerConflict`** : `table`
+  - **`modHubMarkerNew`** : `table`
+  - **`modHubMarkerText`** : `table`
+  - **`modHubMarkerUpdate`** : `table`
+  - **`modHubNavLayout`** : `table`
+  - **`modHubPaging`** : `table`
+  - **`modHubScreenshotBg`** : `table`
+  - **`modHubScreenshotDialogImage`** : `table`
+  - **`modHubScreenshotDialogItem`** : `table`
+  - **`modHubScreenshotDialogList`** : `table`
+  - **`modHubStatusBox`** : `table`
+  - **`modHubStatusBoxBar`** : `table`
+  - **`modHubStatusBoxText`** : `table`
+  - **`modSelectionLayout`** : `table`
+  - **`modSelectionList`** : `table`
+  - **`modSelectionListItem`** : `table`
+  - **`modSelectionListItemBox`** : `table`
+  - **`modSelectionListItemImage`** : `table`
+  - **`modSelectionListItemItemTick`** : `table`
+  - **`modSelectionListItemSelector`** : `table`
+  - **`modSelectionListItemTitle`** : `table`
+  - **`modSelectionListItemVersion`** : `table`
+  - **`modSelectionListItemVersionTitle`** : `table`
+  - **`modsIcon`** : `table`
+  - **`mpLoadingAnimation`** : `table`
+  - **`mpLoadingAnimationDone`** : `table`
+  - **`mpLoadingBackground`** : `table`
+  - **`mpLoadingBar`** : `table`
+  - **`mpLoadingBarBg`** : `table`
+  - **`mpLoadingBarPercentage`** : `table`
+  - **`mpLoadingHint`** : `table`
+  - **`mpLoadingMapTitle`** : `table`
+  - **`mpLoadingSelectionState`** : `table`
+  - **`mpLoadingSelectionStateBox`** : `table`
+  - **`multiTextOption`** : `table`
+  - **`multiTextOptionAnimal`** : `table`
+  - **`multiTextOptionAnimalDealerNumAnimals`** : `table`
+  - **`multiTextOptionAnimalDealerNumAnimalsBg`** : `table`
+  - **`multiTextOptionAnimalDealerNumAnimalsLeft`** : `table`
+  - **`multiTextOptionAnimalDealerNumAnimalsRight`** : `table`
+  - **`multiTextOptionBg`** : `table`
+  - **`multiTextOptionBgSilo`** : `table`
+  - **`multiTextOptionLeft`** : `table`
+  - **`multiTextOptionObjectStorageAmount`** : `table`
+  - **`multiTextOptionObjectStorageObject`** : `table`
+  - **`multiTextOptionRight`** : `table`
+  - **`multiTextOptionSettings`** : `table`
+  - **`multiTextOptionSettingsBg`** : `table`
+  - **`multiTextOptionSettingsLeft`** : `table`
+  - **`multiTextOptionSettingsRight`** : `table`
+  - **`multiTextOptionSettingsText`** : `table`
+  - **`multiTextOptionSettingsTitle`** : `table`
+  - **`multiTextOptionSettingsTooltip`** : `table`
+  - **`multiTextOptionSilo`** : `table`
+  - **`multiTextOptionSiloIcon`** : `table`
+  - **`multiTextOptionText`** : `table`
+  - **`multiTextOptionTextSilo`** : `table`
+  - **`multiTextOptionTitle`** : `table`
+  - **`multiTextOptionTransferMoney`** : `table`
+  - **`multiTextOptionTransferMoneyLeft`** : `table`
+  - **`multiTextOptionTransferMoneyRight`** : `table`
+  - **`multiplayerButton`** : `table`
+  - **`multiplayerButtonIcon`** : `table`
+  - **`multiplayerButtonIconArena`** : `table`
+  - **`multiplayerButtonIconBsc`** : `table`
+  - **`multiplayerButtonIconCreate`** : `table`
+  - **`multiplayerButtonIconJoin`** : `table`
+  - **`multiplayerButtonIconRent`** : `table`
+  - **`multiplayerButtonIconWide`** : `table`
+  - **`multiplayerButtonText`** : `table`
+  - **`multiplayerButtonTitle`** : `table`
+  - **`multiplayerIcon`** : `table`
+  - **`multiplayerLogin`** : `table`
+  - **`multiplayerOnlinePresenceNameText`** : `table`
+  - **`multiplayerScreenContainer`** : `table`
+  - **`multiplayerScreenList`** : `table`
+  - **`natWarning`** : `table`
+  - **`natWarningBg`** : `table`
+  - **`newLayer`** : `table`
+  - **`notificationBg`** : `table`
+  - **`notificationDate`** : `table`
+  - **`notificationHeader`** : `table`
+  - **`notificationHeaderIcon`** : `table`
+  - **`notificationHeaderTitle`** : `table`
+  - **`notificationImage`** : `table`
+  - **`notificationIndexLayout`** : `table`
+  - **`notificationIndexState`** : `table`
+  - **`notificationLayout`** : `table`
+  - **`notificationLeft`** : `table`
+  - **`notificationOpen`** : `table`
+  - **`notificationRight`** : `table`
+  - **`notificationSelectionState`** : `table`
+  - **`notificationText`** : `table`
+  - **`notificationTitle`** : `table`
+  - **`objectStorageDialogBg`** : `table`
+  - **`passwordDialogBg`** : `table`
+  - **`passwordDialogTextInput`** : `table`
+  - **`placeableiInfoDialogBg`** : `table`
+  - **`placementCrosshair`** : `table`
+  - **`ps_buttonCircle`** : `table`
+  - **`ps_buttonCross`** : `table`
+  - **`ps_buttonRectangle`** : `table`
+  - **`ps_buttonTriangle`** : `table`
+  - **`ps_mainMenuButton`** : `table`
+  - **`ps_xoSwap_buttonCircle`** : `table`
+  - **`ps_xoSwap_buttonCross`** : `table`
+  - **`ps_xoSwap_mainMenuButton`** : `table`
+  - **`refillDialogBg`** : `table`
+  - **`rightScrollClipper`** : `table`
+  - **`savegameConflictDataBox`** : `table`
+  - **`savegameConflictDialogBg`** : `table`
+  - **`savegameConflictDialogSeparator`** : `table`
+  - **`savegameConflictItemText`** : `table`
+  - **`savegameConflictItemTitle`** : `table`
+  - **`savegameConflictSaveTitle`** : `table`
+  - **`savegameIcon`** : `table`
+  - **`savegameList`** : `table`
+  - **`savegameListItem`** : `table`
+  - **`savegameListItemDataBox`** : `table`
+  - **`savegameListItemEmptyBox`** : `table`
+  - **`savegameListItemHeaderText`** : `table`
+  - **`savegameListItemIcon`** : `table`
+  - **`savegameListItemImage`** : `table`
+  - **`savegameListItemText`** : `table`
+  - **`savegameListItemTextIcon`** : `table`
+  - **`savegameListItemTitle`** : `table`
+  - **`savegameListItemUnused`** : `table`
+  - **`savegameListSeparator`** : `table`
+  - **`selectMasterServerBg`** : `table`
+  - **`selectionState`** : `table`
+  - **`selectionStateBox`** : `table`
+  - **`selectionStateBoxDocked`** : `table`
+  - **`selectionStateDocked`** : `table`
+  - **`sellDialogBg`** : `table`
+  - **`sellDialogHeader`** : `table`
+  - **`sellDialogImage`** : `table`
+  - **`sellDialogName`** : `table`
+  - **`sellDialogNameSeparator`** : `table`
+  - **`sellDialogPrice`** : `table`
+  - **`sellDialogText`** : `table`
+  - **`serverDetailDataBg`** : `table`
+  - **`serverDetailDetailsBox`** : `table`
+  - **`serverDetailDetailsLayout`** : `table`
+  - **`serverDetailGameName`** : `table`
+  - **`serverDetailInfoKey`** : `table`
+  - **`serverDetailInfoPlatformIcon`** : `table`
+  - **`serverDetailInfoText`** : `table`
+  - **`serverDetailInfoValue`** : `table`
+  - **`serverDetailInfoValueDanger`** : `table`
+  - **`serverDetailInfoValueGameName`** : `table`
+  - **`serverDetailList`** : `table`
+  - **`serverDetailListItem`** : `table`
+  - **`serverDetailMapPreview`** : `table`
+  - **`serverDetailMapPreviewClipper`** : `table`
+  - **`serverDetailModAuthorUnavailable`** : `table`
+  - **`serverDetailModAvailability`** : `table`
+  - **`serverDetailModAvailabilityUnavailable`** : `table`
+  - **`serverDetailModHashUnavailable`** : `table`
+  - **`serverDetailModIcon`** : `table`
+  - **`serverDetailModTitle`** : `table`
+  - **`serverDetailModTitleUnavailable`** : `table`
+  - **`serverDetailModVersion`** : `table`
+  - **`serverDetailModVersionBox`** : `table`
+  - **`serverDetailModVersionBoxUnavailable`** : `table`
+  - **`serverDetailModVersionTitle`** : `table`
+  - **`serverDetailNoModsDLCs`** : `table`
+  - **`serverDetailNumPlayers`** : `table`
+  - **`serverDetailPlayerBg`** : `table`
+  - **`serverDetailPlayerCircleEmpty`** : `table`
+  - **`serverDetailPlayerCircleFull`** : `table`
+  - **`serverDetailPlayerCircleOk`** : `table`
+  - **`serverDetailPlayerIcon`** : `table`
+  - **`serverDetailSeparator`** : `table`
+  - **`serverDetailText`** : `table`
+  - **`serverDetailTitle`** : `table`
+  - **`serverDetailWarningError`** : `table`
+  - **`serverDetailWarningOk`** : `table`
+  - **`serverDetailWarningTextError`** : `table`
+  - **`serverDetailWarningTextOk`** : `table`
+  - **`serverSettingsBoxLayout`** : `table`
+  - **`serverSettingsDialogBg`** : `table`
+  - **`settingsBox`** : `table`
+  - **`settingsButton`** : `table`
+  - **`settingsButtonAdvanced`** : `table`
+  - **`settingsButtonDefaults`** : `table`
+  - **`settingsButtonPause`** : `table`
+  - **`settingsButtonUnpause`** : `table`
+  - **`settingsControlHeaderBox`** : `table`
+  - **`settingsControlsActionHeaderBg`** : `table`
+  - **`settingsControlsHeaderBg`** : `table`
+  - **`settingsControlsHeaderBg2`** : `table`
+  - **`settingsControlsListHeaderText`** : `table`
+  - **`settingsControlsMessageBox`** : `table`
+  - **`settingsControlsMessageText`** : `table`
+  - **`settingsControlsMessageWarningIcon`** : `table`
+  - **`settingsControlsPage`** : `table`
+  - **`settingsControlsTable`** : `table`
+  - **`settingsControlsTableActionHeader`** : `table`
+  - **`settingsControlsTableActionNameCell`** : `table`
+  - **`settingsControlsTableActionText`** : `table`
+  - **`settingsControlsTableBindingCell`** : `table`
+  - **`settingsControlsTableBindingGamepadCell`** : `table`
+  - **`settingsControlsTableGamepadHeader`** : `table`
+  - **`settingsControlsTableHeader`** : `table`
+  - **`settingsControlsTableHeaderBox`** : `table`
+  - **`settingsControlsTableKeyboardHeader`** : `table`
+  - **`settingsControlsTableRow`** : `table`
+  - **`settingsControlsTableRowGamepad`** : `table`
+  - **`settingsControlsTableSectionHeader`** : `table`
+  - **`settingsControlsTableSectionHeaderTitle`** : `table`
+  - **`settingsControlsTableText`** : `table`
+  - **`settingsDefaultBg`** : `table`
+  - **`settingsMenuSubtitle`** : `table`
+  - **`shipConfigPriceTotalBox`** : `table`
+  - **`shopBalance`** : `table`
+  - **`shopBalanceDocked`** : `table`
+  - **`shopCategoryItem`** : `table`
+  - **`shopCategoryItemCoins`** : `table`
+  - **`shopCategoryItemCoinsSelected`** : `table`
+  - **`shopCategoryItemImage`** : `table`
+  - **`shopCategoryItemImagePanel`** : `table`
+  - **`shopCategoryItemText`** : `table`
+  - **`shopCategoryList`** : `table`
+  - **`shopColorButton`** : `table`
+  - **`shopConfigAttributeIconAdditionalWeight`** : `table`
+  - **`shopConfigAttributeIconAttacher`** : `table`
+  - **`shopConfigAttributeIconBaleSizeRound`** : `table`
+  - **`shopConfigAttributeIconBaleSizeSquare`** : `table`
+  - **`shopConfigAttributeIconBaleWrapperBaleSizeRound`** : `table`
+  - **`shopConfigAttributeIconBaleWrapperBaleSizeSquare`** : `table`
+  - **`shopConfigAttributeIconCapacity`** : `table`
+  - **`shopConfigAttributeIconElectricCharge`** : `table`
+  - **`shopConfigAttributeIconFuel`** : `table`
+  - **`shopConfigAttributeIconIncomePerHour`** : `table`
+  - **`shopConfigAttributeIconLifeTime`** : `table`
+  - **`shopConfigAttributeIconMaintenanceCosts`** : `table`
+  - **`shopConfigAttributeIconMaxSpeed`** : `table`
+  - **`shopConfigAttributeIconMaxTreeSize`** : `table`
+  - **`shopConfigAttributeIconMethane`** : `table`
+  - **`shopConfigAttributeIconOperatingHours`** : `table`
+  - **`shopConfigAttributeIconPower`** : `table`
+  - **`shopConfigAttributeIconPowerReq`** : `table`
+  - **`shopConfigAttributeIconSlots`** : `table`
+  - **`shopConfigAttributeIconTransmission`** : `table`
+  - **`shopConfigAttributeIconWeight`** : `table`
+  - **`shopConfigAttributeIconWheels`** : `table`
+  - **`shopConfigAttributeIconWorkSpeed`** : `table`
+  - **`shopConfigAttributeIconWorkingWidth`** : `table`
+  - **`shopConfigAttributesIcon`** : `table`
+  - **`shopConfigAttributesItem`** : `table`
+  - **`shopConfigAttributesLayout`** : `table`
+  - **`shopConfigAttributesSeparator`** : `table`
+  - **`shopConfigAttributesValue`** : `table`
+  - **`shopConfigBrandIcon`** : `table`
+  - **`shopConfigColorButton`** : `table`
+  - **`shopConfigColorButtonPicked`** : `table`
+  - **`shopConfigColorButtonPickedMetallic`** : `table`
+  - **`shopConfigConfigurationButton`** : `table`
+  - **`shopConfigConfigurationItem`** : `table`
+  - **`shopConfigConfigurationItemLarge`** : `table`
+  - **`shopConfigConfigurationLayout`** : `table`
+  - **`shopConfigConfigurationsTitle`** : `table`
+  - **`shopConfigContainer`** : `table`
+  - **`shopConfigContainerLeft`** : `table`
+  - **`shopConfigContainerRight`** : `table`
+  - **`shopConfigGlow`** : `table`
+  - **`shopConfigInputGlyph`** : `table`
+  - **`shopConfigInputGlyphText`** : `table`
+  - **`shopConfigItemName`** : `table`
+  - **`shopConfigListAttributeText`** : `table`
+  - **`shopConfigMoneyBox`** : `table`
+  - **`shopConfigNoAvailable`** : `table`
+  - **`shopConfigPriceTitle`** : `table`
+  - **`shopConfigPriceTitleTotal`** : `table`
+  - **`shopConfigPriceValue`** : `table`
+  - **`shopConfigPriceValueTotal`** : `table`
+  - **`shopConfigSummaryBox`** : `table`
+  - **`shopConfigSummaryContainer`** : `table`
+  - **`shopConfigSummaryTitle`** : `table`
+  - **`shopItemDetailName`** : `table`
+  - **`shopItemDetailOwned`** : `table`
+  - **`shopItemDetailsSeparator`** : `table`
+  - **`shopItemsDetailAttributesRow`** : `table`
+  - **`shopItemsDetailBox`** : `table`
+  - **`shopItemsList`** : `table`
+  - **`shopItemsListItem`** : `table`
+  - **`shopItemsListItemBrandImage`** : `table`
+  - **`shopItemsListItemImage`** : `table`
+  - **`shopItemsListItemLabelText`** : `table`
+  - **`shopItemsListItemModDlcText`** : `table`
+  - **`shopItemsListItemValueText`** : `table`
+  - **`shopItemsNavArrow`** : `table`
+  - **`shopItemsNavFilledArrow`** : `table`
+  - **`shopItemsNavFilledArrowActive`** : `table`
+  - **`shopItemsNavItem`** : `table`
+  - **`shopItemsNavItemText`** : `table`
+  - **`shopItemsNavItemTextActive`** : `table`
+  - **`shopItemsNavItemTextBackdrop`** : `table`
+  - **`shopItemsNavItemTextBackdropActive`** : `table`
+  - **`shopItemsNavLayout`** : `table`
+  - **`shopItemsTooltipIcon`** : `table`
+  - **`shopItemsTooltipLayout`** : `table`
+  - **`shopItemsTooltipText`** : `table`
+  - **`shopList`** : `table`
+  - **`shopListAttributeBox`** : `table`
+  - **`shopListAttributeFruitIcon`** : `table`
+  - **`shopListAttributeIcon`** : `table`
+  - **`shopListAttributeIconAdditionalWeight`** : `table`
+  - **`shopListAttributeIconAttacher`** : `table`
+  - **`shopListAttributeIconBaleSizeRound`** : `table`
+  - **`shopListAttributeIconBaleSizeSquare`** : `table`
+  - **`shopListAttributeIconBaleWrapperBaleSizeRound`** : `table`
+  - **`shopListAttributeIconBaleWrapperBaleSizeSquare`** : `table`
+  - **`shopListAttributeIconCapacity`** : `table`
+  - **`shopListAttributeIconChicken`** : `table`
+  - **`shopListAttributeIconCombinations`** : `table`
+  - **`shopListAttributeIconCondition`** : `table`
+  - **`shopListAttributeIconCow`** : `table`
+  - **`shopListAttributeIconElectricCharge`** : `table`
+  - **`shopListAttributeIconFillTypes`** : `table`
+  - **`shopListAttributeIconFuel`** : `table`
+  - **`shopListAttributeIconHorse`** : `table`
+  - **`shopListAttributeIconIncomePerHour`** : `table`
+  - **`shopListAttributeIconInfo`** : `table`
+  - **`shopListAttributeIconInput`** : `table`
+  - **`shopListAttributeIconLeased`** : `table`
+  - **`shopListAttributeIconLicensePlate`** : `table`
+  - **`shopListAttributeIconLifeTime`** : `table`
+  - **`shopListAttributeIconMaintenanceCosts`** : `table`
+  - **`shopListAttributeIconMaxSpeed`** : `table`
+  - **`shopListAttributeIconMaxTreeSize`** : `table`
+  - **`shopListAttributeIconMethane`** : `table`
+  - **`shopListAttributeIconOperatingHours`** : `table`
+  - **`shopListAttributeIconOutput`** : `table`
+  - **`shopListAttributeIconOwned`** : `table`
+  - **`shopListAttributeIconPig`** : `table`
+  - **`shopListAttributeIconPlus`** : `table`
+  - **`shopListAttributeIconPower`** : `table`
+  - **`shopListAttributeIconPowerReq`** : `table`
+  - **`shopListAttributeIconSaleRemaining`** : `table`
+  - **`shopListAttributeIconSeeds`** : `table`
+  - **`shopListAttributeIconSheep`** : `table`
+  - **`shopListAttributeIconSlots`** : `table`
+  - **`shopListAttributeIconTransmission`** : `table`
+  - **`shopListAttributeIconValue`** : `table`
+  - **`shopListAttributeIconWeight`** : `table`
+  - **`shopListAttributeIconWheels`** : `table`
+  - **`shopListAttributeIconWorkSpeed`** : `table`
+  - **`shopListAttributeIconWorkingWidth`** : `table`
+  - **`shopListAttributeIconsLayout`** : `table`
+  - **`shopListAttributeIconsLayoutBox`** : `table`
+  - **`shopListAttributeInfo`** : `table`
+  - **`shopListAttributeRow`** : `table`
+  - **`shopListAttributeText`** : `table`
+  - **`shopListAttributesBg`** : `table`
+  - **`shopListAttributesSeparator`** : `table`
+  - **`shopListBg`** : `table`
+  - **`shopListItem`** : `table`
+  - **`shopListItemDLC`** : `table`
+  - **`shopListItemIconBrand`** : `table`
+  - **`shopListItemIconVehicle`** : `table`
+  - **`shopListItemMarker`** : `table`
+  - **`shopListItemMod`** : `table`
+  - **`shopListItemPrice`** : `table`
+  - **`shopListItemPriceBox`** : `table`
+  - **`shopListItemSale`** : `table`
+  - **`shopListItemSeparator`** : `table`
+  - **`shopListItemTitle`** : `table`
+  - **`shopListItemTitleBg`** : `table`
+  - **`shopListNoVehicles`** : `table`
+  - **`shopListSeparator`** : `table`
+  - **`shopMoney`** : `table`
+  - **`shopMoneyBox`** : `table`
+  - **`shopMoneyNeg`** : `table`
+  - **`shopMultiTextOption`** : `table`
+  - **`shopMultiTextOptionBg`** : `table`
+  - **`shopMultiTextOptionConfigSets`** : `table`
+  - **`shopMultiTextOptionGradientBottom`** : `table`
+  - **`shopMultiTextOptionGradientTop`** : `table`
+  - **`shopMultiTextOptionLarge`** : `table`
+  - **`shopMultiTextOptionLargeBg`** : `table`
+  - **`shopMultiTextOptionLargeIcon`** : `table`
+  - **`shopMultiTextOptionLargeLeft`** : `table`
+  - **`shopMultiTextOptionLargeRight`** : `table`
+  - **`shopMultiTextOptionLeft`** : `table`
+  - **`shopMultiTextOptionPrice`** : `table`
+  - **`shopMultiTextOptionRight`** : `table`
+  - **`shopMultiTextOptionTitle`** : `table`
+  - **`shopOtherItem`** : `table`
+  - **`shopOtherList`** : `table`
+  - **`shopOtherListItemImage`** : `table`
+  - **`shopPageBox`** : `table`
+  - **`shopPageSeparatorArrow`** : `table`
+  - **`shopPageTitleText`** : `table`
+  - **`shopPageTitleTextLast`** : `table`
+  - **`shopSlotBox`** : `table`
+  - **`shopSlotFreeText`** : `table`
+  - **`shopSlotFreeTitle`** : `table`
+  - **`shopSlotIcon`** : `table`
+  - **`shopSlotsIcon`** : `table`
+  - **`shopTable`** : `table`
+  - **`shopTableItem`** : `table`
+  - **`shopTableItemIconBg`** : `table`
+  - **`shopTableItemIconBrand`** : `table`
+  - **`shopTableItemIconCategory`** : `table`
+  - **`shopTableItemText`** : `table`
+  - **`signInText`** : `table`
+  - **`siloDialogBg`** : `table`
+  - **`siloDialogMessage`** : `table`
+  - **`siloDialogMessageBg`** : `table`
+  - **`siloDialogText`** : `table`
+  - **`singleLineSeparator`** : `table`
+  - **`sleepDialogMultiTextOption`** : `table`
+  - **`sleepDialogText`** : `table`
+  - **`sliderHorizontal`** : `table`
+  - **`sliderInvisible`** : `table`
+  - **`sliderVertical`** : `table`
+  - **`textDefault`** : `table`
+  - **`textInput`** : `table`
+  - **`topScrollClipper`** : `table`
+  - **`tourMenuItem`** : `table`
+  - **`tourMenuItemAlt`** : `table`
+  - **`tourMenuItemControls`** : `table`
+  - **`tourMenuItemControlsGlyph`** : `table`
+  - **`tourMenuItemControlsItem`** : `table`
+  - **`tourMenuItemControlsItemFirst`** : `table`
+  - **`tourMenuItemControlsText`** : `table`
+  - **`tourMenuItemCurrent`** : `table`
+  - **`tourMenuItemText`** : `table`
+  - **`tourMenuLayout`** : `table`
+  - **`transferMoneyDialogAmountConsole`** : `table`
+  - **`transferMoneyDialogBg`** : `table`
+  - **`transferMoneyDialogOptionBox`** : `table`
+  - **`tutorialItemCircle`** : `table`
+  - **`tutorialItemCircleChecked`** : `table`
+  - **`tutorialItemIcon`** : `table`
+  - **`tutorialItemText`** : `table`
+  - **`tutorialItemTextDivider`** : `table`
+  - **`tutorialItemTick`** : `table`
+  - **`tutorialItemTitle`** : `table`
+  - **`tutorialsIcon`** : `table`
+  - **`tutorialsList`** : `table`
+  - **`tutorialsListItem`** : `table`
+  - **`tutorialsStatsBox`** : `table`
+  - **`tutorialsTotalText`** : `table`
+  - **`tutorialsTotalValue`** : `table`
+  - **`uiElementBaseFooter`** : `table`
+  - **`uiElementBaseHeader`** : `table`
+  - **`uiElementCenter`** : `table`
+  - **`uiElementCenterBg`** : `table`
+  - **`uiElementContainerFullScreen`** : `table`
+  - **`uiElementContainerFullScreenSpanning`** : `table`
+  - **`uiFullBlackBackground`** : `table`
+  - **`uiFullBlurBG`** : `table`
+  - **`uiFullInGameBackground`** : `table`
+  - **`uiInGameMenuFrame`** : `table`
+  - **`uiInGameMenuHeader`** : `table`
+  - **`uiInGameMenuHeaderDark`** : `table`
+  - **`uiInGameMenuHeaderSelector`** : `table`
+  - **`uiInGameMenuHeaderSubPagingSelector`** : `table`
+  - **`uiInGameMenuMapFrame`** : `table`
+  - **`uiInGameMenuPageHeader`** : `table`
+  - **`uiInGameMenuPaging`** : `table`
+  - **`uiInGameMenuPagingButtonLeft`** : `table`
+  - **`uiInGameMenuPagingButtonRight`** : `table`
+  - **`uiInGameMenuPagingTabList`** : `table`
+  - **`uiInGameMenuPagingTabNext`** : `table`
+  - **`uiInGameMenuPagingTabNextIcon`** : `table`
+  - **`uiInGameMenuPagingTabPrevIcon`** : `table`
+  - **`uiInGameMenuPagingTabPrevious`** : `table`
+  - **`uiInGameMenuPagingTitle`** : `table`
+  - **`uiInGameMenuSubPagingButtonLeft`** : `table`
+  - **`uiInGameMenuSubPagingButtonRight`** : `table`
+  - **`uiTabbedMenuPageTab`** : `table`
+  - **`uiTabbedMenuPageTabButton`** : `table`
+  - **`unBanDialogEmptyText`** : `table`
+  - **`unBanDialogHeaderBox`** : `table`
+  - **`unBanDialogList`** : `table`
+  - **`unBanDialogListBox`** : `table`
+  - **`unBanDialogListItem`** : `table`
+  - **`unBanDialogListText`** : `table`
+  - **`unBandDialogHeaderText`** : `table`
+  - **`upButtonProfile`** : `table`
+  - **`usersButtonBan`** : `table`
+  - **`usersButtonBlank`** : `table`
+  - **`usersButtonIcon`** : `table`
+  - **`usersButtonInvite`** : `table`
+  - **`usersButtonKick`** : `table`
+  - **`usersButtonMoney`** : `table`
+  - **`usersButtonProfile`** : `table`
+  - **`versionText`** : `table`
+  - **`verticalGlassListSlider`** : `table`
+  - **`verticalGlassListSliderBackground`** : `table`
+  - **`verticalListSliderBar`** : `table`
+  - **`verticalListSliderRightDocked`** : `table`
+  - **`voteDialogBg`** : `table`
+  - **`voteDialogLayout`** : `table`
+  - **`voteDialogStarButton`** : `table`
+  - **`voteDialogStarButtonActive`** : `table`
+  - **`voteDialogStarButtonZero`** : `table`
+  - **`wardrobeCharacterIcon`** : `table`
+  - **`wardrobeCharacterList`** : `table`
+  - **`wardrobeCharacterListItem`** : `table`
+  - **`wardrobeColorIcon`** : `table`
+  - **`wardrobeColorList`** : `table`
+  - **`wardrobeColorListItem`** : `table`
+  - **`wardrobeFrame`** : `table`
+  - **`wardrobeFrameInfoText`** : `table`
+  - **`wardrobeFrameTitle`** : `table`
+  - **`wardrobeItemIcon`** : `table`
+  - **`wardrobeItemList`** : `table`
+  - **`wardrobeItemListItem`** : `table`
+  - **`wardrobeItemMoreIndicator`** : `table`
+  - **`wardrobeItemMoreIndicatorIcon`** : `table`
+  - **`wardrobeItemSelection`** : `table`
+  - **`wardrobeItemSelectionTick`** : `table`
+  - **`wardrobeListFrame`** : `table`
+  - **`wardrobePaging`** : `table`
+  - **`wideButton`** : `table`
+  - **`workshopDetailRow`** : `table`
+  - **`workshopDetailRowLabel`** : `table`
+  - **`workshopDetailRowTextPanel`** : `table`
+  - **`workshopDetailRowValue`** : `table`
+  - **`workshopDetailRowWithBar`** : `table`
+  - **`workshopDetailsBox`** : `table`
+  - **`workshopDetailsLayout`** : `table`
+  - **`workshopInfoKey`** : `table`
+  - **`workshopInfoValue`** : `table`
+  - **`workshopItemBrand`** : `table`
+  - **`workshopItemIcon`** : `table`
+  - **`workshopItemName`** : `table`
+  - **`workshopList`** : `table`
+  - **`workshopListBoxLeft`** : `table`
+  - **`workshopListItem`** : `table`
+  - **`workshopStatusBar`** : `table`
+  - **`workshopStatusBarDanger`** : `table`
+  - **`workshopStatusBarWarning`** : `table`
+  - **`workshopVehicleImage`** : `table`
+  - **`workshopVehicleName`** : `table`
+  - **`worldHeaderIcon`** : `table`
+  - **`xbox_buttonCircle`** : `table`
+  - **`xbox_buttonRectangle`** : `table`
+  - **`xbox_buttonTriangle`** : `table`
+  - **`xbox_mainMenuButton`** : `table`
+  - **`yesNoDialogBg`** : `table`
+- **`presets`** : `table`
+  - **`achievementIconUVs`** : `string`
+  - **`arrowIconUVs`** : `string`
+  - **`colorBlack`** : `string`
+  - **`colorBlack2`** : `string`
+  - **`colorBlack3`** : `string`
+  - **`colorBlack3_0`** : `string`
+  - **`colorBlack3_70`** : `string`
+  - **`colorBlack3_90`** : `string`
+  - **`colorBlack3_97`** : `string`
+  - **`colorBlue`** : `string`
+  - **`colorCharacterCreation`** : `string`
+  - **`colorCharacterCreation_10`** : `string`
+  - **`colorCharacterCreation_20`** : `string`
+  - **`colorCharacterCreation_30`** : `string`
+  - **`colorCharacterCreation_40`** : `string`
+  - **`colorCharacterCreation_60`** : `string`
+  - **`colorCharacterCreation_70`** : `string`
+  - **`colorCharacterCreation_80`** : `string`
+  - **`colorCharacterCreation_90`** : `string`
+  - **`colorDarkGrey`** : `string`
+  - **`colorDarkGrey2`** : `string`
+  - **`colorDarkGrey2_50`** : `string`
+  - **`colorDarkGrey2_70`** : `string`
+  - **`colorDarkGrey3`** : `string`
+  - **`colorDarkGrey4`** : `string`
+  - **`colorDarkGrey5`** : `string`
+  - **`colorDarkGrey6`** : `string`
+  - **`colorDarkGrey7`** : `string`
+  - **`colorDarkGrey_0`** : `string`
+  - **`colorDarkRed`** : `string`
+  - **`colorDarkRed_50`** : `string`
+  - **`colorDarkRed_75`** : `string`
+  - **`colorDescriptionText`** : `string`
+  - **`colorDescriptionText2`** : `string`
+  - **`colorDescriptionText3`** : `string`
+  - **`colorDescriptionText4`** : `string`
+  - **`colorDetailBackground`** : `string`
+  - **`colorDialogBackdrop`** : `string`
+  - **`colorDialogBackdropMobile`** : `string`
+  - **`colorDialogBackground`** : `string`
+  - **`colorDisabled`** : `string`
+  - **`colorFocusBackgroundGradient`** : `string`
+  - **`colorGlass`** : `string`
+  - **`colorGlassDark`** : `string`
+  - **`colorGlassExtremelyLight`** : `string`
+  - **`colorGlassLight`** : `string`
+  - **`colorGlassLight_50`** : `string`
+  - **`colorGlassLight_75`** : `string`
+  - **`colorGlassMedium`** : `string`
+  - **`colorGlassVeryDark`** : `string`
+  - **`colorGlassVeryLight`** : `string`
+  - **`colorGlass_50`** : `string`
+  - **`colorGreen`** : `string`
+  - **`colorGreen2`** : `string`
+  - **`colorHeaderText`** : `string`
+  - **`colorItemBgNormal`** : `string`
+  - **`colorItemBgSelected`** : `string`
+  - **`colorLightGrey`** : `string`
+  - **`colorListHeaderBackground`** : `string`
+  - **`colorListRowAlternateBackground`** : `string`
+  - **`colorListRowBackground`** : `string`
+  - **`colorMainUI`** : `string`
+  - **`colorMainUIAlt`** : `string`
+  - **`colorMainUI_10`** : `string`
+  - **`colorMainUI_20`** : `string`
+  - **`colorMainUI_30`** : `string`
+  - **`colorMainUI_40`** : `string`
+  - **`colorMainUI_50`** : `string`
+  - **`colorMainUI_6`** : `string`
+  - **`colorMainUI_60`** : `string`
+  - **`colorMainUI_70`** : `string`
+  - **`colorMainUI_80`** : `string`
+  - **`colorOrange`** : `string`
+  - **`colorRed`** : `string`
+  - **`colorRed_50`** : `string`
+  - **`colorRed_75`** : `string`
+  - **`colorSelectorInactive`** : `string`
+  - **`colorSeparator`** : `string`
+  - **`colorSlider`** : `string`
+  - **`colorSliderBackground`** : `string`
+  - **`colorSliderHighlight`** : `string`
+  - **`colorSliderKnob`** : `string`
+  - **`colorTextOnDark`** : `string`
+  - **`colorTextOnLight`** : `string`
+  - **`colorTextShadow`** : `string`
+  - **`colorTransparent`** : `string`
+  - **`colorUVs`** : `string`
+  - **`colorWhite`** : `string`
+  - **`colorWhite_25`** : `string`
+  - **`colorWhite_50`** : `string`
+  - **`colorWhite_80`** : `string`
+  - **`diskIconUVs`** : `string`
+  - **`glassEdgeIconUVs`** : `string`
+  - **`imageDoublesidedGradient`** : `string`
+  - **`imageFocusBackgroundGradient`** : `string`
+  - **`keyBoardKeyUVs`** : `string`
+  - **`ps4_O_ButtonUVs`** : `string`
+  - **`ps4_X_ButtonUVs`** : `string`
+  - **`xbox_A_ButtonUVs`** : `string`
+- **`dialogs`** : `table`
+- **`inputManager`** : `table`
+  - **Methods**: 163 available
+    - `checkEventCollision()`
+    - `validateActionEventParameters()`
+    - `createContext()`
+    - `notifyEventChanges()`
+    - `storeDisplayActionEvents()`
+    - `storeEventBindings()`
+    - `neutralizeEventBindingInput()`
+    - `removeEventInternal()`
+    - `iterateEvents()`
+    - `setEventActive()`
+    - `superClass()`
+    - `class()`
+    - `notifyInputModeChange()`
+    - `assignLastInputHelpMode()`
+    - `reloadModActions()`
+    - `addBinding()`
+    - `touchEvent()`
+    - `captureGamepadInput()`
+    - `captureMouseInput()`
+    - `captureKeyboardInput()`
+    - `loadActionsFromXMLPath()`
+    - `clearAllContexts()`
+    - `setPreviousContext()`
+    - `setContext()`
+    - `resetActiveActionBindings()`
+    - `assignActionPrimaryBindings()`
+    - `mouseEvent()`
+    - `keyEvent()`
+    - `upgradeBindingVersion()`
+    - `getDeviceCategory()`
+    - `debugPrintInputContext()`
+    - `printAll()`
+    - `isAxisZero()`
+    - `getIsDPadInput()`
+    - `shadowLinkedBindings()`
+    - `getIsMouseWheelInput()`
+    - `getActionByName()`
+    - `getAllDeviceIdsWithoutBindings()`
+    - `deleteBinding()`
+    - `applyGamepadDeadzones()`
+    - `loadDeviceSettingsFromXML()`
+    - `enumerateGamepadDevices()`
+    - `createDefaultDevices()`
+    - `resetDeviceInformation()`
+    - `getIsHalfAxis()`
+    - `resolveBindingDefaultDevice()`
+    - `setActionEventTextVisibility()`
+    - `loadModBindingDefaults()`
+    - `assignComboMasks()`
+    - `registerActionEvent()`
+    - `getBindingForceFeedbackInfo()`
+    - `checkDefaultInputExclusiveActionBindings()`
+    - `loadActionBindingsFromXMLPath()`
+    - `checkSettingsIntegrity()`
+    - `notifyBindingChanges()`
+    - `loadBindingsFromXML()`
+    - `loadActionBindingsFromXML()`
+    - `getMouseMotionScale()`
+    - `validateAndRepairComboActionBindings()`
+    - `getFirstActiveEventForActionName()`
+    - `getActionBindings()`
+    - `consoleCommandShowRegisteredActions()`
+    - `getBindingComboMask()`
+    - `consoleCommandShowInputContext()`
+    - `copy()`
+    - `consoleCommandPrintInputContext()`
+    - `deleteContext()`
+    - `consoleCommandEnableInputDebug()`
+    - `disableAlternateBindingsForAction()`
+    - `assignPlatformBindingPaths()`
+    - `getIsMouseInput()`
+    - `getActionList()`
+    - `saveDeviceSettings()`
+    - `saveToXMLFile()`
+    - `resolveBindingDevice()`
+    - `updateDebugDisplay()`
+    - `resetContinuousEventBindings()`
+    - `storeComboInputMappings()`
+    - `getKeyboardMouseInputActiveAndValue()`
+    - `checkBindings()`
+    - `getIsGamepadInput()`
+    - `getIsKeyboardInput()`
+    - `clearActiveBindingBuffer()`
+    - `getGamepadInputActiveAndValue()`
+    - `getIsAnalogInput()`
+    - `updateBinding()`
+    - `validateBinding()`
+    - `migrateDevicesCategory()`
+    - `adjustBindingSlotIndex()`
+    - `resolveBindingDevices()`
+    - `draw()`
+    - `getGamepadAxisOrButtonValue()`
+    - `update()`
+    - `getGamepadAxisValue()`
+    - `finalizeMouseInput()`
+    - `updateInput()`
+    - `updateMouseInput()`
+    - `checkGamepadActive()`
+    - `checkGamepadsCategoryChanged()`
+    - `checkGamepadsChanged()`
+    - `debugRenderRegisteredActions()`
+    - `debugRenderInputContext()`
+    - `new()`
+    - `isa()`
+    - `getIsPhysicalFullAxis()`
+    - `setContextEventsActive()`
+    - `updateBindingInput()`
+    - `setEventChangeCallback()`
+    - `setMouseMotionScale()`
+    - `updateComboBindings()`
+    - `getEventsForActionName()`
+    - `getActionBindingsCopy()`
+    - `getContextName()`
+    - `revertContext()`
+    - `hasBindingForPressedMouseComboMask()`
+    - `refreshEventCollections()`
+    - `updateEventBindings()`
+    - `restoreInputContexts()`
+    - `storeLinkedBindings()`
+    - `getComboCommandPressedMask()`
+    - `getGamepadDevices()`
+    - `restoreDefaultBindings()`
+    - `stopInputGathering()`
+    - `startInputCapture()`
+    - `rollbackBindingChanges()`
+    - `commitBindingChanges()`
+    - `startBindingChanges()`
+    - `getMouseButtonState()`
+    - `initializeGamepadMapping()`
+    - `getHasMissingDevices()`
+    - `getMissingDeviceById()`
+    - `getDeviceByInternalId()`
+    - `getInternalIdByDeviceId()`
+    - `getComboActionNameForAxisSet()`
+    - `setActionEventsActiveByTarget()`
+    - `setActionEventActive()`
+    - `loadActions()`
+    - `setActionEventIcon()`
+    - `setActionEventText()`
+    - `getDisplayActionEvents()`
+    - `clearState()`
+    - `removeActionEventsByTarget()`
+    - `removeActionEventsByActionName()`
+    - `removeActionEvent()`
+    - `endActionEventsModification()`
+    - `beginActionEventsModification()`
+    - `getLastInputMode()`
+    - `getInputHelpMode()`
+    - `getBindingCategorySet()`
+    - `getAllDevicesWithBindings()`
+    - `getDeviceById()`
+    - `getAllDeviceIdsWithBindings()`
+    - `load()`
+    - `getShowMouseCursor()`
+    - `getDeviceHasAnyBindings()`
+    - `setShowMouseCursor()`
+    - `overwriteSettingsWithDefault()`
+    - `getActionEventsHasBinding()`
+    - `setActionEventTextPriority()`
+    - `loadModActions()`
+    - `loadDefaultBindings()`
+    - `getMousePosition()`
+    - `eventChangeCallback()`
+  - **`isInputCapturing`** : `boolean`
+  - **`devicesToMigrateCategory`** : `table`
+  - **`mouseMotionScaleY`** : `number`
+  - **`mouseMotionScaleX`** : `number`
+  - **`saveCursorY`** : `number`
+  - **`saveCursorX`** : `number`
+  - **`wrapMousePositionEnabled`** : `boolean`
+  - **`needUpdateAbort`** : `boolean`
+  - **`pressedGamepadComboMask`** : `number`
+  - **`pressedMouseComboMask`** : `number`
+  - **`comboInputBindings`** : `table`
+  - **`comboInputActions`** : `reverse-hash-map`
+  - **`comboInputAxisMasks`** : `reverse-hash-map`
+  - **`inputMouseYAxisValue`** : `number`
+  - **`registrationContext`** : `table`
+  - **`inputMouseXAxisValue`** : `number`
+  - **`contexts`** : `table`
+  - **`numGamepads`** : `number`
+  - **`currentContextName`** : `string`
+  - **`linkedBindings`** : `reverse-hash-map`
+  - **`eventBindings`** : `reverse-hash-map`
+  - **`activeBindings`** : `reverse-hash-map`
+  - **`loadedBindings`** : `table`
+  - **`eventOrder`** : `table[]` (length: 25)
+  - **`events`** : `table`
+  - **`displayActionEvents`** : `table[]` (length: 3)
+  - **`actionEvents`** : `reverse-hash-map`
+  - **`accumMouseMovementY`** : `number`
+  - **`accumMouseMovementX`** : `number`
+  - **`mouseMovementY`** : `number`
+  - **`mouseMovementX`** : `number`
+  - **`activeDeviceBindingsBuffer`** : `map`
+  - **`version`** : `number`
+  - **`nameActions`** : `table`
+  - **`actions`** : `table[]` (length: 285)
+  - **`missingDevices`** : `table`
+  - **`newlyConnectedDevices`** : `table`
+  - **`internalIdToEngineDeviceId`** : `table`
+  - **`engineDeviceIdCounts`** : `table`
+  - **`internalToDeviceId`** : `table`
+  - **`deviceIdToInternal`** : `table`
+  - **`devicesByCategory`** : `map`
+  - **`devicesByInternalId`** : `map`
+  - **`isConsoleVersion`** : `boolean`
+  - **`debugRegisteredActions`** : `boolean`
+  - **`debugContextEnabled`** : `boolean`
+  - **`mousePosYLast`** : `number`
+  - **`mousePosXLast`** : `number`
+  - **`inputBindingPathTemplate`** : `string`
+  - **`debugEnabled`** : `boolean`
+  - **`modManager`** : `global-ref` → [`g_modManager`](./g_modManager.md)
+  - **`isGamepadEnabled`** : `boolean`
+  - **`inputHelpModeSetting`** : `number`
+  - **`settingsPath`** : `string`
+  - **`lastInputMode`** : `number`
+  - **`lastInputHelpMode`** : `number`
+  - **`messageCenter`** : `global-ref` → [`g_messageCenter`](./g_messageCenter.md)
+  - **`timeSinceLastInputHelpModeChange`** : `number`
+  - **`gamepadInputState`** : `table`
+- **`traits`** : `table`
+  - **`alternateRow`** : `table`
+  - **`alternating`** : `table`
+  - **`anchorBottomCenter`** : `table`
+  - **`anchorBottomLeft`** : `table`
+  - **`anchorBottomRight`** : `table`
+  - **`anchorFullscreenScalable`** : `table`
+  - **`anchorMiddleCenter`** : `table`
+  - **`anchorMiddleLeft`** : `table`
+  - **`anchorMiddleRight`** : `table`
+  - **`anchorTopCenter`** : `table`
+  - **`anchorTopLeft`** : `table`
+  - **`anchorTopRight`** : `table`
+  - **`constructionListIcon`** : `table`
+  - **`debugging`** : `table`
+  - **`defaultGameFrame`** : `table`
+  - **`ingameMenuBox`** : `table`
+  - **`ingameMenuBoxMobile`** : `table`
+  - **`ingameMenuMapFilterButtonIconInactive`** : `table`
+  - **`joinGameScreenFilterOutIcon`** : `table`
+  - **`joinGameScreenFilterOutText`** : `table`
+  - **`lightFrame`** : `table`
+  - **`mainMenuLeftsideFrame`** : `table`
+  - **`mobilePaginatedList`** : `table`
+  - **`touchButton`** : `table`
+- **`soundPlayer`** : `table`
+  - **Methods**: 8 available
+    - `new()`
+    - `loadSounds()`
+    - `isa()`
+    - `copy()`
+    - `playSample()`
+    - `delete()`
+    - `superClass()`
+    - `class()`
+  - **`soundSamples`** : `table`
+  - **`soundManager`** : `global-ref` → [`g_soundManager`](./g_soundManager.md)
+- **`focusElements`** : `table`
+
+</details>
+
+<details>
+<summary><strong>Global References (1)</strong></summary>
+
+- **`messageCenter`** : `global-ref` → [`g_messageCenter`](./g_messageCenter.md)
+
+</details>
+
+<details>
+<summary><strong>Primitives (5)</strong></summary>
+
+- **`isInputListening`** : `boolean`
+- **`currentlyReloading`** : `boolean`
+- **`languageSuffix`** : `string`
+- **`currentGuiName`** : `string`
+- **`frameInputHandled`** : `boolean`
+
+</details>
+
+<details>
+<summary><strong>Other (2)</strong></summary>
+
+- **`screenControllers`** : `reverse-hash-map`
+- **`screens`** : `reverse-hash-map`
+
+</details>
+
+
+## Usage Example
+
+```lua
+-- Access g_gui fields
+```

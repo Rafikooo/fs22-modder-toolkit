@@ -51,7 +51,7 @@ def get_field_type_display(field: Dict[str, Any]) -> str:
         return f"`{valuetype}[]` (length: {length})"
     elif field_type == 'global-ref':
         ref = field.get('ref', '?')
-        return f"`{field_type}` → [`{ref}`](../globals/{ref}.md)"
+        return f"`{field_type}` → [`{ref}`](./{ref}.md)"
     elif field_type == 'class-instance':
         first_at = field.get('firstExportedAt', '?')
         instance_num = field.get('instanceNumber', '?')

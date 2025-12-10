@@ -1,0 +1,65 @@
+﻿<?xml version="1.0" encoding="utf-8" standalone="no" ?>
+<modDesc descVersion="80">
+    <author>Rafikooo</author>
+    <version>0.0.1.0</version>
+    <multiplayer supported="true"/>
+
+    <title>
+        <en>Runtime Inspector</en>
+    </title>
+
+    <description>
+        <en>Runtime schema extraction for Farming Simulator 22 modding toolkit</en>
+    </description>
+
+    <extraSourceFiles>
+        <sourceFile filename="scripts/Init.lua"/>
+
+        <sourceFile filename="scripts/utils/FileSystem.lua"/>
+        <sourceFile filename="scripts/utils/TableHelpers.lua"/>
+        <sourceFile filename="scripts/utils/GlobalDiscovery.lua"/>
+        <sourceFile filename="scripts/utils/FunctionIntrospection.lua"/>
+        <sourceFile filename="scripts/utils/FunctionProber.lua"/>
+
+        <sourceFile filename="scripts/stats/StatsCollector.lua"/>
+        <sourceFile filename="scripts/stats/trackers/TypeTracker.lua"/>
+        <sourceFile filename="scripts/stats/trackers/DepthTracker.lua"/>
+        <sourceFile filename="scripts/stats/trackers/GlobalRefTracker.lua"/>
+        <sourceFile filename="scripts/stats/trackers/CycleTracker.lua"/>
+        <sourceFile filename="scripts/stats/trackers/EventListenerTracker.lua"/>
+        <sourceFile filename="scripts/stats/trackers/FunctionDeduplicationTracker.lua"/>
+        <sourceFile filename="scripts/stats/trackers/ReverseHashMapTracker.lua"/>
+        <sourceFile filename="scripts/stats/trackers/ArrayTracker.lua"/>
+        <sourceFile filename="scripts/stats/trackers/MapTracker.lua"/>
+        <sourceFile filename="scripts/stats/trackers/ClassInstanceTracker.lua"/>
+        <sourceFile filename="scripts/stats/trackers/ClassFirstInstanceTracker.lua"/>
+        <sourceFile filename="scripts/stats/trackers/MethodsExportedTracker.lua"/>
+        <sourceFile filename="scripts/stats/trackers/ProcessorTracker.lua"/>
+
+        <sourceFile filename="scripts/export/ExportContext.lua"/>
+        <sourceFile filename="scripts/export/ExportMetadata.lua"/>
+        <sourceFile filename="scripts/export/ExportStatistics.lua"/>
+        <sourceFile filename="scripts/export/ExportOrchestrator.lua"/>
+        <sourceFile filename="scripts/export/ExportSingle.lua"/>
+        <sourceFile filename="scripts/export/ExportBatch.lua"/>
+
+        <sourceFile filename="scripts/Export.lua"/>
+
+        <sourceFile filename="scripts/processors/PrimitiveProcessor.lua"/>
+        <sourceFile filename="scripts/processors/UserdataProcessor.lua"/>
+        <sourceFile filename="scripts/processors/CycleProcessor.lua"/>
+        <sourceFile filename="scripts/processors/GlobalReferenceProcessor.lua"/>
+        <sourceFile filename="scripts/processors/FunctionDeduplicationProcessor.lua"/>
+        <sourceFile filename="scripts/processors/MemoryAddressKeyFilterProcessor.lua"/>
+        <sourceFile filename="scripts/processors/ArrayProcessor.lua"/>
+        <sourceFile filename="scripts/processors/MapProcessor.lua"/>
+        <sourceFile filename="scripts/processors/ObjectProcessor.lua"/>
+        <sourceFile filename="scripts/processors/MetatableProcessor.lua"/>
+        <sourceFile filename="scripts/processors/MethodExportProcessor.lua"/>
+        <sourceFile filename="scripts/processors/TableProcessor.lua"/>
+
+        <sourceFile filename="scripts/CommandRegistry.lua"/>
+
+        <sourceFile filename="scripts/RuntimeInspector.lua"/>
+    </extraSourceFiles>
+</modDesc>

@@ -1,0 +1,26 @@
+---
+title: g_fovYDefault
+description: Global g_fovYDefault - Runtime introspected API
+fieldTypes:
+---
+
+# g_fovYDefault
+
+Runtime-introspected API for `g_fovYDefault`.
+
+**Source**: schemas (depth 2)  
+**Fields**: 0 top-level fields
+
+## Field Statistics
+
+Total fields: **0**
+
+
+## Fields by Type
+
+
+## Usage Example
+
+```lua
+-- Access g_fovYDefault fields
+```

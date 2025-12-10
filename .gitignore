@@ -1,7 +1,7 @@
 # FS22 Modder Toolkit - Git Ignore Configuration
 #
 # Strategy:
-# - COMMIT: Markdown docs (dist/docs/docs/*.md) for GitHub Actions
+# - COMMIT: Markdown docs (docs/content/*.md) for GitHub Actions
 # - IGNORE: XML/JSON/Stubs (generated locally from game runtime)
 # - IGNORE: node_modules, build artifacts
 
@@ -45,7 +45,7 @@ data/schemas/
 # Intermediate conversions (JSON, Stubs, Engine signatures)
 data/json/
 data/stubs/
-data/engine-signatures/
+data/engine-sigs/
 
 # Large binary files
 *.bin
@@ -57,28 +57,25 @@ data/engine-signatures/
 # ============================================================================
 
 # Dependencies (npm install on CI)
-dist/docs/node_modules/
-dist/docs/package-lock.json
-src/docs-generator/outputs/node_modules/
-src/docs-generator/outputs/package-lock.json
+docs/node_modules/
 
-# Build output (generated on CI)
-dist/docs/build/
-dist/docs/.docusaurus/
-dist/docs/.cache-loader/
-src/docs-generator/outputs/build/
-src/docs-generator/outputs/.docusaurus/
-src/docs-generator/outputs/.cache-loader/
+# Build output (final HTML - generated on CI)
+dist/
+
+# Docusaurus cache
+docs/.docusaurus/
+docs/.cache-loader/
 
 # ============================================================================
 # IMPORTANT: These ARE committed (needed for GitHub Actions)
 # ============================================================================
-# ✓ dist/docs/docs/*.md           (generated markdown docs)
-# ✓ dist/docs/package.json        (npm dependencies)
-# ✓ dist/docs/docusaurus.config.js (Docusaurus config)
-# ✓ dist/docs/sidebars.js         (sidebar structure)
-# ✓ dist/docs/src/                (custom components)
-# ✓ dist/docs/static/             (static assets)
+# ✓ docs/content/*.md             (generated markdown docs)
+# ✓ docs/package.json             (npm dependencies)
+# ✓ docs/package-lock.json        (npm lockfile for CI)
+# ✓ docs/docusaurus.config.js     (Docusaurus config)
+# ✓ docs/sidebars.js              (sidebar structure)
+# ✓ docs/src/                     (custom components)
+# ✓ docs/static/                  (static assets)
 
 # ============================================================================
 # Legacy / Obsolete
